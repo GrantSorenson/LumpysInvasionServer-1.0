@@ -1,0 +1,2 @@
+PlayerSkins.utx filter=lfs diff=lfs merge=lfs -text
+UT2004PlayerSkins.utx filter=lfs diff=lfs merge=lfs -text
