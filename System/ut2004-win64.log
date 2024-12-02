@@ -1,0 +1,177 @@
+Log: Log file open, 07/20/22 01:29:57
+Init: Name subsystem initialized
+Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
+Init: Version: 3369 (128.29)
+Init: Compiled: Dec  5 2005 03:55:07
+Init: Command line: 
+Init: (This is Win64 patch version 3369.0)
+Init: Character set: Unicode
+Init: Base directory: G:\NewUT2004\UT2004\System\
+Init: Ini:ut2004-win64.ini   UserIni:User.ini
+Init: Build label:  Build UT2004_Build_[2005-11-23_16.22]
+Init: Object subsystem initialized
+Log: Splash screen filename is '..\Help\ut2004-win64Logo.bmp'
+Localization: No localization: ut2004-win64.General.Start (int)
+Log: 	nvldumdx.dll/NVIDIA GeForce RTX 2070 SUPER
+Log: 	nvldumdx.dll/NVIDIA GeForce RTX 2070 SUPER
+Log: Game class is 'GameInfo'
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.661000...
+ScriptLog: GameInfo::InitGame : bEnableStatLogging False
+Log: Browse: NvidiaLogo.ut2?Name=Player?Class=Engine.Pawn?Character=Jakob?team=255
+Log: Collecting garbage
+Log: Purging garbage
+Log: Garbage: objects: 33885->33882; refs: 350285
+Log: Game class is 'CinematicGame'
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 2.038000...
+Log: (Karma): Autodetecting CPU for SSE
+Log: (Karma): Using SSE Optimizations
+ScriptLog: GameInfo::InitGame : bEnableStatLogging False
+Log: ALAudio: Using DirectSound to record audio.
+ScriptLog: New Player Player id=ee5ca7064cd04fc3da40cff9e0e8976d
+Localization: No localization: ut2004-win64.General.Product (int)
+Localization: No localization: ut2004-win64.General.Product (int)
+Localization: No localization: ut2004-win64.General.Product (int)
+Localization: No localization: ut2004-win64.General.Product (int)
+Log: Opened viewport
+Log: Enter SetRes: 1680x1050 Fullscreen 1
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 77(32-bit)
+Log: Creating device
+Log: xD3D9Helper::Init (QuadEmulation)
+Log: Startup time: 2.260000 seconds
+Localization: No localization: ut2004-win64.General.Run (int)
+Log: Precaching: NvidiaLogo.LevelInfo0
+Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
+Log: Allocating 16384 byte dynamic index buffer.
+Log: Allocating 65536 byte dynamic vertex buffer.
+Log: Finished precaching geometry in 0.030 seconds
+Log: Finished precaching textures in 0.027 seconds
+Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
+Log: URL: Adding default option Name=Player
+Log: URL: Adding default option Class=Engine.Pawn
+Log: URL: Adding default option Character=Jakob
+Log: URL: Adding default option team=255
+Log: Browse: Index.ut2?disconnect?Name=Player?Class=Engine.Pawn?Character=Jakob?team=255
+Log: Failed; returning to Entry
+ScriptLog: UT2k4MainMenu NotifyLevelChange  PendingConnection:False
+Log: GP=FALSE
+Log: Spawning new actor for Viewport WindowsViewport
+ScriptLog: New Player Player id=ee5ca7064cd04fc3da40cff9e0e8976d
+Log: Static mesh batches: 0 vertex bytes, 0 index bytes
+Warning: Failed to load 'NULL': Can't resolve package name
+Warning: Failed to load 'Mesh None.': Can't resolve package name
+ScriptLog: Could not load mesh:  For player: 
+Debug: UT2k4MainMenu.Opened()   Sender:None
+Log: Time=877.346797 ms
+IRC: 2 Servers 0 Channels
+Log: Defaulting to false
+ScriptLog: UT2k4Browser_ServerListPageFavorites Spawned new ServerQueryClient 'Entry.ServerQueryClient'
+Log: Defaulting to false
+Log: Resolving ut2004master1.epicgames.com...
+Log: Resolved ut2004master1.epicgames.com -> 3.218.5.215
+Log: Connection established.
+Log: Allocating 195408 byte dynamic vertex buffer.
+Warning: GUI2K4QuestionPage Package.GUI2K4QuestionPage (Function GUI2K4.GUI2K4QuestionPage.ButtonClick:0050) Accessed None 'Controller'
+Log: Resolving ut2004master1.epicgames.com...
+Log: Resolved ut2004master1.epicgames.com -> 3.218.5.215
+Log: Connection established.
+Log: Resolving ut2004master1.epicgames.com...
+Log: Resolved ut2004master1.epicgames.com -> 3.218.5.215
+Log: Connection established.
+Debug: UT2k4MainMenu.Opened()   Sender:None
+ScriptLog: PreClientTravel
+Log: URL: Adding default option Name=Lumps
+Log: URL: Adding default option Class=Engine.Pawn
+Log: URL: Adding default option Character=Jakob
+Log: URL: Adding default option team=255
+Log: Browse: 173.225.184.201/Index.ut2?Name=Lumps?Class=Engine.Pawn?Character=Jakob?team=255
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Log: Decoded IP 173.225.184.201 (173.225.184.201)
+Warning: Missing Package Package WOPMonsterPackTextures.Test
+Warning: Missing Package Package WOPMonsterPackTextures.Test
+Warning: Missing Texture Texture WOPMonsterPackTextures.Test.FireBallTexture
+ScriptLog: UT2k4Browser_ServerListPageFavorites Destroying ServerQueryClient 'ServerQueryClient'
+Log: NetMode now NM_Client
+Log: Collecting garbage
+Log: Purging garbage
+Log: (Karma): Level Karma Terminated.
+Log: Garbage: objects: 58568->55777; refs: 775647
+Log: Bringing Level DM-Noxious-Fumes[F].myLevel up for play (90) appSeconds: 77.974000...
+Log: (Karma): Autodetecting CPU for SSE
+Log: (Karma): Using SSE Optimizations
+Log: Spawning new actor for Viewport WindowsViewport
+ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
+Log: Collecting garbage
+Log: Purging garbage
+Log: Garbage: objects: 56255->56254; refs: 783642
+Warning: UT2K4Tab_PlayerLoginControlsInvasion Package.UT2K4Tab_PlayerLoginControlsInvasion (Function GUI2K4.UT2K4Tab_PlayerLoginControlsInvasion.InitGRI:000C) Accessed None 'GameReplicationInfo'
+Log: xPlayer setplayer WindowsViewport
+ScriptLog: ======= Preloading Monsters on Client Side Complete! =======
+Log: Precaching: DM-Noxious-Fumes[F].LevelInfo0
+ScriptLog: ======= Preloading Enhanced WOP on Client Side Complete! =======
+Log: Static mesh batches: 15428412 vertex bytes, 1687458 index bytes
+Log: Allocating 16384 byte dynamic index buffer.
+Log: Allocating 65536 byte dynamic vertex buffer.
+Log: Allocating 89880 byte dynamic vertex buffer.
+Log: Finished precaching geometry in 0.262 seconds
+Log: Finished precaching textures in 0.161 seconds
+Warning: AwarenessInvasionHUD DM-Noxious-Fumes[F].AwarenessInvasionHUD (Function XInterface.HudBase.LocalizedMessage:007C) Accessed None 'PlayerOwner'
+Warning: AwarenessInvasionHUD DM-Noxious-Fumes[F].AwarenessInvasionHUD (Function XInterface.HudBase.LocalizedMessage:007C) Accessed None 'PlayerOwner'
+Warning: AwarenessInvasionHUD DM-Noxious-Fumes[F].AwarenessInvasionHUD (Function XInterface.HudBase.LocalizedMessage:007C) Accessed None 'PlayerOwner'
+Warning: AwarenessInvasionHUD DM-Noxious-Fumes[F].AwarenessInvasionHUD (Function XInterface.HudBase.LocalizedMessage:007C) Accessed None 'PlayerOwner'
+Warning: AwarenessInvasionHUD DM-Noxious-Fumes[F].AwarenessInvasionHUD (Function XInterface.HudBase.LocalizedMessage:007C) Accessed None 'PlayerOwner'
+Warning: AwarenessInvasionHUD DM-Noxious-Fumes[F].AwarenessInvasionHUD (Function XInterface.HudBase.LocalizedMessage:007C) Accessed None 'PlayerOwner'
+Warning: AwarenessInvasionHUD DM-Noxious-Fumes[F].AwarenessInvasionHUD (Function XInterface.HudBase.LocalizedMessage:007C) Accessed None 'PlayerOwner'
+Warning: AwarenessInvasionHUD DM-Noxious-Fumes[F].AwarenessInvasionHUD (Function XInterface.HudBase.LocalizedMessage:007C) Accessed None 'PlayerOwner'
+Warning: AwarenessInvasionHUD DM-Noxious-Fumes[F].AwarenessInvasionHUD (Function XInterface.HudBase.LocalizedMessage:007C) Accessed None 'PlayerOwner'
+Warning: AwarenessInvasionHUD DM-Noxious-Fumes[F].AwarenessInvasionHUD (Function XInterface.HudBase.LocalizedMessage:007C) Accessed None 'PlayerOwner'
+Warning: AwarenessInvasionHUD DM-Noxious-Fumes[F].AwarenessInvasionHUD (Function XInterface.HudBase.LocalizedMessage:007C) Accessed None 'PlayerOwner'
+Warning: AwarenessInvasionHUD DM-Noxious-Fumes[F].AwarenessInvasionHUD (Function XInterface.HudBase.LocalizedMessage:007C) Accessed None 'PlayerOwner'
+Log: Preprocessing:  Vertex stream total vertices: 433 Orig wedges: 433
+Log: appRequestExit(0)
+Localization: No localization: ut2004-win64.General.Exit (int)
+Exit: Preparing to exit.
+Log: Purging garbage
+Exit: Game engine shut down
+Exit: Windows client shut down
+Log: Waiting for file streaming thread to finish...
+Exit: OpenAL Audio subsystem shut down.
+NetComeGo: Close TcpipConnection 173.225.184.201:7777 07/20/22 01:31:47
+Exit: Socket shut down
+Log: (Karma): Level Karma Terminated.
+Log: Garbage: objects: 71548->0; refs: 783642
+Exit: Object subsystem successfully closed.
+Exit: Exiting.
+Log: FileManager: Reading 0 GByte 507 MByte 572 KByte 255 Bytes from HD took 0.920993 seconds (0.861993 reading, 0.059000 seeking).
+Log: FileManager: 10.347116 seconds spent with misc. duties
+Uninitialized: Name subsystem shut down
+Uninitialized: Allocation checking disabled
+Uninitialized: Log file closed, 07/20/22 01:31:47

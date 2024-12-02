@@ -1,0 +1,130 @@
+Log: Log file open, 11/12/23 13:52:15
+Init: Name subsystem initialized
+Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
+Init: Version: 3369 (128.29)
+Init: Compiled: Nov 23 2005 16:23:34
+Init: Command line: DM-Flux2?game=InvasionProv1_7.InvasionPro?mutator=UT2004RPG.MutUT2004RPG,WeaponsOfPower.WeaponsOfPower,MonsterArtifactDropv2.MutMonsterDrop ini=UT2004.ini log=server.log
+Init: Character set: Unicode
+Init: Base directory: G:\RPGTest1\UT2004\System\
+Init: Ini:UT2004.ini   UserIni:User.ini
+Init: Build label:  Build UT2004_Build_[2005-11-23_16.22]
+Init: Object subsystem initialized
+Log: Executing Class Engine.ServerCommandlet
+Log: Browse: DM-Flux2?Name=Lumps?Class=Engine.Pawn?Character=Jakob?team=255?SpectatorOnly=1?game=InvasionProv1_7.InvasionPro?mutator=UT2004RPG.MutUT2004RPG,WeaponsOfPower.WeaponsOfPower,MonsterArtifactDropv2.MutMonsterDrop
+Log: Collecting garbage
+Log: Purging garbage
+Log: Garbage: objects: 27026->27014; refs: 302980
+Log: Game class is 'InvasionPro'
+Log: Bringing Level DM-Flux2.myLevel up for play (20) appSeconds: 2.267000...
+Log: (Karma): Autodetecting CPU for SSE
+Log: (Karma): Using SSE Optimizations
+ScriptLog: Mutators UT2004RPG.MutUT2004RPG,WeaponsOfPower.WeaponsOfPower,MonsterArtifactDropv2.MutMonsterDrop
+ScriptLog: GameInfo::InitGame : bEnableStatLogging True
+ScriptLog: MasterServerGameStats initializing
+ScriptLog: UdpServerQuery(crt): Port 7787 successfully bound.
+Log: Resolving master0.gamespy.com...
+Log: Defaulting to false
+Log: Defaulting to false
+Log: Resolving utmaster.openspy.net...
+WebAdmin: Loading Available Maps
+WebAdmin: Loading Game Types
+WebAdmin: xWebAdmin.UTServerAdmin Initialized on port 80
+Log: MasterServerUplink: Resolved utmaster.openspy.net as 157.245.212.59.
+Log: AInternetLink Resolve failed: Can't find host master0.gamespy.com (WSAHOST_NOT_FOUND)
+ScriptLog: UdpGameSpyUplink: Failed to resolve master server address, aborting.
+Log: MasterServerUplink: Connection to utmaster.openspy.net established.
+Log: Approval APPROVED
+Log: Master server assigned our MatchID: 1234
+NetComeGo: Open myLevel 11/12/23 13:52:59 68.47.34.245:61458
+Log: Client netspeed is 9636
+ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
+Warning: Failed to load 'AK47BinBF': Can't find file for package 'AK47BinBF'
+Warning: Failed to load 'Class AK47BinBF.AK47Binslayer': Can't find file for package 'AK47BinBF'
+ScriptLog: START MATCH
+NetComeGo: Open myLevel 11/12/23 13:53:31 68.47.34.245:54080
+Log: Client netspeed is 9636
+NetComeGo: Close TcpipConnection 68.47.34.245:61458 11/12/23 13:53:31
+ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
+ScriptLog: Lumps logged in as Administrator.
+MaplistManager: No maplist entries found matching the current command line (mapname search).  Performing blind switch to index 5 of current maplist
+ScriptLog: ProcessServerTravel: DM-DE-OSIRIS2
+ScriptLog: PreClientTravel
+Log: Server switch level: DM-DE-OSIRIS2
+Log: Browse: DM-DE-OSIRIS2?Name=Lumps?Class=Engine.Pawn?Character=Jakob?team=255?SpectatorOnly=1?game=InvasionProv1_7.InvasionPro?mutator=UT2004RPG.MutUT2004RPG,WeaponsOfPower.WeaponsOfPower,MonsterArtifactDropv2.MutMonsterDrop
+NetComeGo: Close TcpipConnection 68.47.34.245:54080 11/12/23 13:54:03
+ScriptLog: Lumps logged out.
+Exit: Socket shut down
+Log: Collecting garbage
+Log: Purging garbage
+Log: (Karma): Level Karma Terminated.
+Log: Garbage: objects: 57319->36537; refs: 446450
+Log: Game class is 'InvasionPro'
+Log: Bringing Level DM-DE-OSIRIS2.myLevel up for play (20) appSeconds: 108.884000...
+Log: (Karma): Autodetecting CPU for SSE
+Log: (Karma): Using SSE Optimizations
+ScriptLog: Mutators UT2004RPG.MutUT2004RPG,WeaponsOfPower.WeaponsOfPower,MonsterArtifactDropv2.MutMonsterDrop
+ScriptLog: GameInfo::InitGame : bEnableStatLogging True
+ScriptLog: MasterServerGameStats initializing
+ScriptLog: UdpServerQuery(crt): Port 7787 successfully bound.
+Log: Resolving master0.gamespy.com...
+Log: Defaulting to false
+Log: Defaulting to false
+Log: Resolving utmaster.openspy.net...
+WebAdmin: Loading Available Maps
+WebAdmin: Loading Game Types
+WebAdmin: xWebAdmin.UTServerAdmin Initialized on port 80
+NetComeGo: Open myLevel 11/12/23 13:54:04 68.47.34.245:54130
+Log: MasterServerUplink: Resolved utmaster.openspy.net as 157.245.212.59.
+Log: AInternetLink Resolve failed: Can't find host master0.gamespy.com (WSAHOST_NOT_FOUND)
+ScriptLog: UdpGameSpyUplink: Failed to resolve master server address, aborting.
+Log: Client netspeed is 9636
+Log: MasterServerUplink: Connection to utmaster.openspy.net established.
+Log: Approval APPROVED
+Log: Master server assigned our MatchID: 1234
+NetComeGo: Open myLevel 11/12/23 13:54:05 68.47.34.245:54080
+ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
+Warning: Failed to load 'AK47BinBF': Can't find file for package 'AK47BinBF'
+Warning: Failed to load 'Class AK47BinBF.AK47Binslayer': Can't find file for package 'AK47BinBF'
+ScriptLog: START MATCH
+ScriptLog: Lumps logged in as Administrator.
+NetComeGo: Close TcpipConnection 68.47.34.245:54080 11/12/23 13:57:25
+ScriptLog: Lumps logged out.
+ScriptLog: Lumps logged in as Administrator.
+NetComeGo: Close TcpipConnection 68.47.34.245:54130 11/12/23 14:00:12
+ScriptLog: Lumps logged out.
+NetComeGo: Open myLevel 11/12/23 14:00:18 68.47.34.245:54130
+ScriptLog: ProcessServerTravel: DM-GESTALT
+ScriptLog: PreClientTravel
+Log: Server switch level: DM-GESTALT
+Log: Browse: DM-GESTALT?Name=Lumps?Class=Engine.Pawn?Character=Jakob?team=255?SpectatorOnly=1?game=InvasionProv1_7.InvasionPro?mutator=UT2004RPG.MutUT2004RPG,WeaponsOfPower.WeaponsOfPower,MonsterArtifactDropv2.MutMonsterDrop
+NetComeGo: Close TcpipConnection 68.47.34.245:54130 11/12/23 14:00:48
+Exit: Socket shut down
+Log: Collecting garbage
+Log: Purging garbage
+Critical: UObject::GetPathName
+Critical: UObject::GetPathName
+Critical: UObject::GetPathName
+Critical: UObject::GetFullName
+Critical: DispatchDestroy
+Critical: UObject::GetPathName
+Critical: UObject::GetPathName
+Critical: UObject::GetPathName
+Critical: UObject::GetFullName
+Critical: DispatchDestroys
+Critical: UObject::PurgeGarbage
+Critical: UObject::CollectGarbage
+Critical: Cleanup
+Critical: UGameEngine::LoadMap
+Critical: LocalMapURL
+Critical: UGameEngine::Browse
+Critical: ServerTravel
+Critical: UGameEngine::Tick
+Critical: Level Gestalt
+Critical: UpdateWorld
+Critical: UServerCommandlet::Main
+Exit: Executing UObject::StaticShutdownAfterError
+Exit: Exiting.
+Log: FileManager: Reading 0 GByte 159 MByte 904 KByte 38 Bytes from HD took 0.725996 seconds (0.617996 reading, 0.108000 seeking).
+Log: FileManager: 0.718997 seconds spent with misc. duties
+Uninitialized: Name subsystem shut down
+Uninitialized: Log file closed, 11/12/23 14:00:48

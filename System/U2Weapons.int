@@ -1,0 +1,415 @@
+[MutU2Weapons]
+U2WeaponDisplayText[0]="Include the Combat Assault Rifle"
+U2WeaponDisplayText[1]="Replace this with the M32 Duster CAR"
+U2WeaponDisplayText[2]="Include the Shock Lance"
+U2WeaponDisplayText[3]="Replace this with the Shock Lance"
+U2WeaponDisplayText[4]="Use XMP-style fire power?"
+U2WeaponDisplayText[5]="Use alternative options?"
+U2WeaponDisplayText[6]="Include the Flamethrower"
+U2WeaponDisplayText[7]="Replace this with the Vulcan"
+U2WeaponDisplayText[8]="Include the Magnum Pistol"
+U2WeaponDisplayText[9]="Replace this with the Magnum Pistol"
+U2WeaponDisplayText[10]="Include the Auto Turret"
+U2WeaponDisplayText[11]="Replace this with the Auto Turret"
+U2WeaponDisplayText[12]="Include the Shark Rocket Launcher"
+U2WeaponDisplayText[13]="Replace this with the Shark"
+U2WeaponDisplayText[14]="Include the Grenade Launcher"
+U2WeaponDisplayText[15]="Replace this with the Hydra"
+U2WeaponDisplayText[16]="Include the Widowmaker Sniper (1)"
+U2WeaponDisplayText[17]="Replace this with the Widowmaker Rifle"
+U2WeaponDisplayText[18]="Include the Widowmaker Sniper (2)"
+U2WeaponDisplayText[19]="Replace this with the Widowmaker Rifle too"
+U2WeaponDisplayText[20]="Include the Rocket Turret"
+U2WeaponDisplayText[21]="Replace this with the Rocket Turret"
+U2WeaponDisplayText[22]="Include the Land Mine"
+U2WeaponDisplayText[23]="Replace this with the Land Mine"
+U2WeaponDisplayText[24]="Include the Laser Trip Mine"
+U2WeaponDisplayText[25]="Replace this with the Laser Trip Mine"
+U2WeaponDisplayText[26]="Include the Crowd Pleaser Shotgun"
+U2WeaponDisplayText[27]="Replace this with the Crowd Pleaser"
+U2WeaponDisplayText[28]="Include the Field Generator"
+U2WeaponDisplayText[29]="Include the Proximity Sensor"
+U2WeaponDisplayText[30]="Firepower damping percentage"
+U2WeaponDisplayText[31]="Integrate with Shield Reward"
+U2WeaponDisplayText[32]="Concussion grenade behaviour"
+U2WeaponDescText[0]="Include the M32 Duster Combat Assault Rifle in the game, i.e. enable it?"
+U2WeaponDescText[1]="What weapon should be replaced with the CAR. By default it's the Minigun."
+U2WeaponDescText[2]="Enable the Shock Lance Energy Rifle?"
+U2WeaponDescText[3]="What weapon should be replaced with the Energy Rifle. By default it's the Assault Rifle. NOTE: Changing this value is not recommended."
+U2WeaponDescText[4]="If enabled, this option will make all weapon firepower the same as in Unreal II XMP; if not, the firepower is consistent with Unreal II SP."
+U2WeaponDescText[5]="If enabled, will make the Shock Lance use another, limited, secondary fire mode and allow Combat Assault Rifle use Unreal: Return to Na Pali fire style (shooting out of 2 barrels)."
+U2WeaponDescText[6]="Enable the Vulcan Flamethrower?"
+U2WeaponDescText[7]="What weapon should be replaced with the Flamethrower. By default it's the Bio Rifle."
+U2WeaponDescText[8]="Enable the Magnum Pistol?"
+U2WeaponDescText[9]="What weapon should be replaced with the Magnum Pistol. By default it's the Shock Rifle."
+U2WeaponDescText[10]="Enable the Automatic Turret?"
+U2WeaponDescText[11]="What weapon should be replaced with the Auto Turret. By default it's the Onslaught Grenade Launcher."
+U2WeaponDescText[12]="Enable the Shark Rocket Launcher?"
+U2WeaponDescText[13]="What weapon should be replaced with the Shark Rocket Launcher. By default it's the Rocket Launcher."
+U2WeaponDescText[14]="Enable the Hydra Grenade Launcher?"
+U2WeaponDescText[15]="What weapon should be replaced with the Hydra Grenade Launcher. By default it's the Flak Cannon."
+U2WeaponDescText[16]="Should the Lightning Gun be replaced with the Widowmaker Sniper Rifle?"
+U2WeaponDescText[17]="What weapon should be replaced with the Widowmaker Sniper Rifle. By default it's the Lightning Gun here."
+U2WeaponDescText[18]="Should the Classic Sniper Rifle be replaced with the Widowmaker Sniper Rifle?"
+U2WeaponDescText[19]="What weapon should be replaced with the Widowmaker Sniper Rifle. By default it's the Classic Sniper Rifle here."
+U2WeaponDescText[20]="Enable the Rocket Turret delpoyable?"
+U2WeaponDescText[21]="What weapon should be replaced with the Rocket Turret deployable. By default it's the Mine Layer."
+U2WeaponDescText[22]="Enable the Land Mine?"
+U2WeaponDescText[23]="What weapon should be replaced with the Land Mine. By default it's the Redeemer."
+U2WeaponDescText[24]="Enable the Laser Trip Mine?"
+U2WeaponDescText[25]="What weapon should be replaced with the Laser Trip Mine. By default it's the Ion Painter."
+U2WeaponDescText[26]="Enable the Crowd Pleaser Shotgun? It won't replace the Link Gun in matches with vehicles."
+U2WeaponDescText[27]="What weapon should be replaced with the Crowd Pleaser Shotgun. By default it's the Link Gun. It does not replace it in vehicle matches."
+U2WeaponDescText[28]="Enable the Field Generator? If enabled, you start with one."
+U2WeaponDescText[29]="Enable the Proximity Sensor? If enabled, you start with one."
+U2WeaponDescText[30]="This number controls how powerful all weapons are. By deafult the firepower is set to 55% of the original in order to compensate for the fact that players in UT2004 don't have shields or damage filtering."
+U2WeaponDescText[31]="If checked, the Shield Reward mutator produces Unreal II shield pickups."
+U2WeaponDescText[32]="Choose between no white overlay, overlay depending on the player's view (XMP style) and overlay depending on the distance from the player (default, foolproof)."
+FriendlyName="Unreal II or XMP Weapons"
+Description="Add the Unreal II weapons to other gametypes. Fully customisable, you can choose between Unreal II and XMP weapon behaviour."
+
+[U2AmmoEnergyRifle]
+ItemName="Energy Rifle clip"
+
+[U2AmmoFieldGenerator]
+ItemName="Field Generator"
+
+[U2AmmoFlameThrower]
+ItemName="Flame Thrower recharge cylinder"
+
+[U2AmmoGrenadeLauncher]
+ItemName="Grenade"
+
+[U2AmmoLandMine]
+ItemName="Land Mine"
+
+[U2AmmoLaserTripMine]
+ItemName="Laser Trip Mine"
+
+[U2AmmoPistol]
+ItemName="Pistol clip"
+
+[U2AmmoRocketLauncher]
+ItemName="Rocket Cannon clip"
+
+[U2AmmoRocketTurret]
+ItemName="Rocket Turret"
+
+[U2AmmoShotgun]
+ItemName="Shotgun shells"
+
+[U2AmmoSniper]
+ItemName="Sniper Rifle clip"
+
+[U2AssaultRifleAmmoInv]
+ItemName="Assault Rifle clip"
+
+[U2AssaultRifleAmmoPickup]
+PickupMessage="You picked up an Assault Rifle clip."
+
+[U2AssaultRifleInv]
+Description="The M32 Duster Comber Assault Rifle is the standard infantry weapon for the Terran Military grunt. Very effective overall - you can hose down an area using the primary fire mode or deliver a lethal single punch with the alternate fire."
+ItemName="Duster Combat Assault Rifle"
+
+[U2AssaultRiflePickup]
+PickupMessage="You got a Combat Assault Rifle."
+
+[U2AutoTurretAmmo]
+ItemName="AutoTurret"
+
+[U2AutoTurretDeploy]
+Description="The Automatic Turret is an automated deployable, used as field support or as an automated defence. It has a dual mounted chaingun that has properties similar to the ones of Combat Assault Rifle."
+ItemName="Auto Turret"
+
+[U2DamTypeAltHSPistol]
+DeathString="%k put 3 incendiary bullets into %o's brains! That had to hurt!"
+FemaleSuicide="%o thoroughly incinerated herself."
+MaleSuicide="%o thoroughly incinerated himself."
+
+[U2DamTypeAltPistol]
+DeathString="%o was assassinated by %k with a stealthy Magnum."
+FemaleSuicide="%o assassinated herself with the Magnum."
+MaleSuicide="%o assassinated himself with the Magnum."
+
+[U2DamTypeAltShotgun]
+DeathString="%o was charred by %k's Shotgun."
+FemaleSuicide="%o incinerated herself with a Shotgun."
+MaleSuicide="%o incinerated himself with a Shotgun."
+
+[U2DamTypeAssaultRifle]
+DeathString="%o was dusted by %k's Combat Assault Rifle."
+FemaleSuicide="%o died of dust inhalation."
+MaleSuicide="%o died of dust inhalation."
+
+[U2DamTypeAssaultSlug]
+DeathString="%o was blasted off by %k's incendiary slug."
+FemaleSuicide="%o didn't know who to shoot at so she incinerated herself."
+MaleSuicide="%o didn't know who to shoot at so he incinerated himself."
+
+[U2DamTypeAutoTurret]
+DeathString="%o was dusted by %k's Auto Turret."
+FemaleSuicide="%o made her turret mad."
+MaleSuicide="%o made his turret mad."
+
+[U2DamTypeConc]
+DeathString="%o was shot out of the universe by %k's Concussion Grenade."
+FemaleSuicide="%o tried to Concussion Jump... And failed."
+MaleSuicide="%o tried to Concussion Jump... And failed."
+
+[U2DamTypeConcussionGrenade]
+DeathString="%o was blinded and thrown away by %k's Concussion Grenade."
+FemaleSuicide="%o decided to try out one of her Concussion Grenades."
+MaleSuicide="%o decided to try out one of his Concussion Grenades."
+
+[U2DamTypeEMP]
+DeathString="%o couldn't stand the electromagnetic force of %k's EMP Shock Ball."
+FemaleSuicide="%o decided to electrocute herself with her Shock Lance."
+MaleSuicide="%o decided to electrocute himself with his Shock Lance."
+
+[U2DamTypeEMPGrenade]
+DeathString="%o was smacked down by %k's EMP grenade."
+FemaleSuicide="%o ran into her own EM field."
+MaleSuicide="%o ran into his own EM field."
+
+[U2DamTypeFire]
+DeathString="%o ran into %k's Incendiary Grenade and was toasted."
+FemaleSuicide="%o tried to jump over her own Incendiary Grenade flames."
+MaleSuicide="%o tried to jump over his own Incendiary Grenade flames."
+
+[U2DamTypeFragGrenade]
+DeathString="%o was fragged by %k's Frag Grenade."
+FemaleSuicide="%o used a Frag Grenade against herself."
+MaleSuicide="%o used a Frag Grenade against himself."
+
+[U2DamTypeGas]
+DeathString="%o died of toxic gas inhalation from %k's Toxic Grenade."
+FemaleSuicide="%o poisoned herself."
+MaleSuicide="%o poisoned himself."
+
+[U2DamTypeHSPistol]
+DeathString="%k incinerated %o's brains with an incendiary Magnum bullet."
+FemaleSuicide="%o headshot herself and is is now a zombie."
+MaleSuicide="%o headshot himself and is is now a zombie."
+
+[U2DamTypeIncendiaryGrenade]
+DeathString="%o ran into %k's Incendiary Grenade and was toasted."
+FemaleSuicide="%o tried to jump over her own Incendiary Grenade flames."
+MaleSuicide="%o tried to jump over his own Incendiary Grenade flames."
+
+[U2DamTypeLandMine]
+DeathString="%o tripped over %k's land mine."
+FemaleSuicide="%o forgot she planted a land mine."
+MaleSuicide="%o forgot he planted a land mine."
+
+[U2DamTypeLaserTripMine]
+DeathString="%o didn't notice the laser from %k's Laser Trip Mine."
+FemaleSuicide="%o now knows why they're named 'Laser Trip Mines'."
+MaleSuicide="%o now knows why they're named 'Laser Trip Mines'."
+
+[U2DamTypeNapalm]
+DeathString="%o was ignited by %k's napalm."
+FemaleSuicide="%o tripped over her own napalm."
+MaleSuicide="%o tripped over his own napalm."
+
+[U2DamTypePistol]
+DeathString="%o was filled full of holes by %k's Magnum."
+FemaleSuicide="%o wondered what it's like to lose internal organs with the Magnum."
+MaleSuicide="%o wondered what it's like to lose internal organs with the Magnum."
+
+[U2DamTypeRocket]
+DeathString="%o was throughly eradicated by %k's Shark quad Rocket."
+FemaleSuicide="%o tried to make a Rocket Jump... and failed."
+MaleSuicide="%o tried to make a Rocket Jump... and failed."
+
+[U2DamTypeRocketDrunken]
+DeathString="%o went to drink with %k's drunken Rocket Warhead."
+FemaleSuicide="%o went to drink with her own drunken Rocket Warhead."
+MaleSuicide="%o went to drink with his own drunken Rocket Warhead."
+
+[U2DamTypeRocketSeeking]
+DeathString="%o wasn't quick enough to avoid %k's heat seeking Rocket Warhead."
+FemaleSuicide="%o's heat seeking rocket turned against her."
+MaleSuicide="%o's heat seeking rocket turned against him."
+
+[U2DamTypeRocketTurret]
+DeathString="%o was throughly eradicated by a rocket from %k's Rocket Turret."
+FemaleSuicide="%o made her Rocket Turret mad."
+MaleSuicide="%o made his Rocket Turret mad."
+
+[U2DamTypeShockLance]
+DeathString="%o was electrified by %k's Shock Lance bolt."
+FemaleSuicide="%o jumped on her bouncy Shock Lance bolt."
+MaleSuicide="%o jumped on his bouncy Shock Lance bolt."
+
+[U2DamTypeShotgun]
+DeathString="%o was blasted by %k's Shotgun."
+FemaleSuicide="%o somehow managed to blast herself."
+MaleSuicide="%o somehow managed to blast himself."
+
+[U2DamTypeSmokeGrenade]
+DeathString="%o managed to die by jumping on %k's Smoke Grenade. What a loser!"
+FemaleSuicide="%o probably died of smoke inhalation."
+MaleSuicide="%o probably died of smoke inhalation."
+
+[U2DamTypeSniper]
+DeathString="%o didn't notice %k with a Widowmaker lurking in the shadow."
+FemaleSuicide="%o tried to headshot herself... She failed, yet died."
+MaleSuicide="%o tried to headshot himself... He failed, yet died."
+
+[U2DamTypeSniperHeadshot]
+DeathString="%k made someone %o knew a widow by beheading with a Widowmaker."
+FemaleSuicide="%o was so skilled that she managed to make her bullet come back to her head."
+MaleSuicide="%o was so skilled that he managed to make his bullet come back to his head."
+
+[U2DamTypeThermalFlaming]
+DeathString="%o was toasted by %k's Flamethrower."
+FemaleSuicide="%o couldn't avoid the heat from her own Flamethrower."
+MaleSuicide="%o couldn't avoid the heat from his own Flamethrower."
+
+[U2DamTypeToxicGrenade]
+DeathString="%o died of poison from %k's Toxic Grenade."
+FemaleSuicide="%o poisoned herself."
+MaleSuicide="%o poisoned himself."
+
+[U2DeployableAutoTurret]
+Description="Automatic Turret"
+PickupMessage="You picked up an Auto Turret."
+
+[U2DeployableInventory]
+ItemName="Deployable Item"
+
+[U2DeployedRocketTurret]
+Description="Rocket Turret Deployable"
+PickupMessage="You picked up a Rocket Turret."
+
+[U2DeployedTurret]
+Description="Turret"
+
+[U2FieldGenerator]
+Description="Field Generator"
+PickupMessage="You picked up a Field Generator."
+
+[U2ForceWall]
+Description="Disable Force Wall"
+
+[U2PickupAmmoEnergyRifle]
+PickupMessage="You picked up a Shock Lance plasma pack."
+
+[U2PickupAmmoFlameThrower]
+PickupMessage="You picked up a Napalm cannister."
+
+[U2PickupAmmoGrenade]
+PickupMessage="You picked up a Grenade pack."
+
+[U2PickupAmmoPistol]
+PickupMessage="You picked up a clip of explosive Magnum ammo."
+
+[U2PickupAmmoRocket]
+PickupMessage="You picked up a Rocket pack."
+
+[U2PickupAmmoShotgun]
+PickupMessage="You picked up 8 shotgun shells."
+
+[U2PickupAmmoSniper]
+PickupMessage="You picked up a Sniper Rifle clip."
+
+[U2PickupAutoTurret]
+PickupMessage="You got an Auto Turret."
+
+[U2PickupEnergyRifle]
+PickupMessage="You got an Energy Rifle."
+
+[U2PickupFieldGenerator]
+PickupMessage="You got a Field Generator."
+
+[U2PickupFlameThrower]
+PickupMessage="You got a Flamethrower."
+
+[U2PickupGrenadeLauncher]
+PickupMessage="You got a Grenade Launcher."
+
+[U2PickupLandMine]
+PickupMessage="You got a Land Mine."
+
+[U2PickupLaserTripMine]
+PickupMessage="You got a Laser Trip Mine."
+
+[U2PickupPistol]
+PickupMessage="You got a Magnum Pistol."
+
+[U2PickupProximitySensor]
+PickupMessage="You got a Proximity Sensor."
+
+[U2PickupRocketLauncher]
+PickupMessage="You got a Shark Rocket Launcher."
+
+[U2PickupRocketTurret]
+PickupMessage="You got a Rocket Turret."
+
+[U2PickupShotgun]
+PickupMessage="You got a Crowd Pleaser Shotgun."
+
+[U2PickupSniper]
+PickupMessage="You got a Widowmaker Sniper Rifle."
+
+[U2ProximitySensor]
+Description="Proximity Sensor"
+PickupMessage="You picked up a Proximity Sensor."
+
+[U2ProximitySensorAmmo]
+ItemName="Proximity Sensor"
+
+[U2ProximitySensorDeploy]
+Description="Proximity Sensors are small devices made entirely for scanning the area for any activity. When in the area, scanned by radio waves, a living object appears, it has to have the team's identification badge, otherwise the Proximity Sensor automatically sets off an alarm."
+ItemName="Proximity Sensor"
+
+[U2WeaponEnergyRifle]
+Description="The Shock Lance Energy Rifle is the favourite weapon of the Izarians, the strike force of one of the Skaarj clans. The Izarians use the weapon mainly for frightening enemies, as a beacon for Skaarj or to fry electronics. Therefore it isn't at all effective against enemies, but extremely effective against vehicles and deployables."
+ItemName="Shock Lance"
+
+[U2WeaponFieldGenerator]
+Description="The Field Generator is a small device that, when within proximity of another Field Generator, creates a strong force field that stops enemies from going through."
+ItemName="Field Generator"
+
+[U2WeaponFlameThrower]
+Description="The UA69 Vulcan Flamethrower is the most lethal short-range weapon in the Terran arsenal - you can incinerate entire squads of enemies at close quarters."
+ItemName="Vulcan Flamethrower"
+
+[U2WeaponGrenadeLauncher]
+GrenadeNames[0]="Selected Fragmentation Grenades"
+GrenadeNames[1]="Selected Toxic Grenades"
+GrenadeNames[2]="Selected Incendiary Grenades"
+GrenadeNames[3]="Selected Smoke Grenades"
+GrenadeNames[4]="Selected Concussion Grenades"
+GrenadeNames[5]="Selected EMP Grenades"
+Description="The M406 Hydra Grenade Launcher is an amazingly versatile and effective piece of military hardware, perhaps the best all-around portable weapon in the Terran arsenal. It uses universal Grenades that explode in various ways."
+ItemName="Hydra Grenade Launcher"
+
+[U2WeaponLandMine]
+Description="Land Mines are explosives that detonate when anyone trips over them. They are extremely lethal - there is almost no chance of surviving the blast if you trip on one. Be very cautious, because friendly mines are almost as dangerous as enemy mines."
+ItemName="Land Mine"
+
+[U2WeaponLaserTripMine]
+Description="TG-17 anti-personnel explosive Laser Trip Mines are often useful for sealing off areas. They emit a small laser beam that helps them scan the area for any kind of movement. Once it's detected, the Laser Trip Mine detonates."
+ItemName="Laser Trip Mine"
+
+[U2WeaponPistol]
+Description="The Magnum is the most powerful sidearm out there. Best for medium range targets, when you’re too far away for the shotgun, but too close for the sniper rifle.|The pistol uses special 0.50 caliber explosive bullets that are quite rare, but powerful. They explode a few miliseconds after hitting the target, effectively incinerating its internal organs."
+ItemName="Magnum Pistol"
+
+[U2WeaponRocketLauncher]
+Description="Nothing beats the primary fire mode of the Shark Rocket Launcher for accurate, long-range devastation with significant splash damage. The alt-fire drunken missiles are wildly unpredictable, but are good for saturating an area or providing suppressing fire."
+ItemName="Shark Rocket Launcher"
+
+[U2WeaponRocketTurret]
+Description="The Rocket Turret is an automated deployable, used as field support or as an automated defence. It has a dual mounted Rocket Launcher that fires rockets similar to those of the Shark Rocket Launcher."
+ItemName="Rocket Turret"
+
+[U2WeaponShotgun]
+Description="The M700 12G Semiautomatic Riot 'Crowd Pleaser' Shotgun is absolutely devastating at close range - perfect for clearing a room or taking out an enemy (or small group of enemies) right in front of you. Don't use it at long distances, the effectiveness drops off quickly as the pellets scatter."
+ItemName="Crowd Pleaser Shotgun"
+
+[U2WeaponSniper]
+Description="The T72 Widowmaker Sniper Rifle is a highly specialized weapon that should be used only for long-range sniping, but it does its job very, very well. Its targeting system compensates for wind and other variables to create an instant hit on virtually any target you can see."
+ItemName="Widowmaker Sniper Rifle"
+

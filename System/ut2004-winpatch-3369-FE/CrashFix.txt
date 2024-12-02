@@ -1,0 +1,15 @@
+UT2004 3369 Server Crash Exploit Fix
+12/19/2006
+
+[Description]
+
+This archive contains 2 .DLL files (core.dll and engine.dll) that contain native fixes for a server crashing exploit that is active in the cheating community. 
+
+[Requirements]
+
+These dlls can only be used with Unreal Tournament 2004 version 3369 running on the Win32 platform.  If you are not running v3369 you should upgrade at the as soon as possible then apply this fix.    If you are on the Linux platform, you should by using the file: ut2004-lnxpatch3369-2.tar.bz2.  Links to this file can be found in the UT2004 server admins list archive.
+
+[Installation]
+
+**REPLACE OLD v3369 files**
+Copy the 2 .dll files from this archive to the \System directory of your 3369 install overwriting the previous versions.

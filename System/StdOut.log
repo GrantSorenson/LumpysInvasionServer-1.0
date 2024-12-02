@@ -1,0 +1,67 @@
+Log file open, 12/02/24 08:19:33
+----------------------------Core - Release----------------------------
+---------------------------Engine - Release---------------------------
+----------------------------Fire - Release----------------------------
+---------------------------Editor - Release---------------------------
+--------------------------UnrealEd - Release--------------------------
+---------------------------IpDrv - Release----------------------------
+----------------------------UWeb - Release----------------------------
+--------------------------GamePlay - Release--------------------------
+-------------------------UnrealGame - Release-------------------------
+--------------------------XGame_rc - Release--------------------------
+--------------------------XEffects - Release--------------------------
+------------------------XWeapons_rc - Release-------------------------
+------------------------XPickups_rc - Release-------------------------
+--------------------------XPickups - Release--------------------------
+---------------------------XGame - Release----------------------------
+--------------------------XWeapons - Release--------------------------
+-------------------------XInterface - Release-------------------------
+---------------------------XAdmin - Release---------------------------
+-------------------------XWebAdmin - Release--------------------------
+--------------------------Vehicles - Release--------------------------
+-------------------------BonusPack - Release--------------------------
+-----------------------SkaarjPack_rc - Release------------------------
+-------------------------SkaarjPack - Release-------------------------
+-------------------------UTClassic - Release--------------------------
+------------------------UT2k4Assault - Release------------------------
+-------------------------Onslaught - Release--------------------------
+---------------------------GUI2K4 - Release---------------------------
+----------------------UT2k4AssaultFull - Release----------------------
+-----------------------OnslaughtFull - Release------------------------
+--------------------------xVoting - Release---------------------------
+------------------------StreamlineFX - Release------------------------
+--------------------------UTV2004c - Release--------------------------
+--------------------------UTV2004s - Release--------------------------
+-----------------------LumpysInvasion - Release-----------------------
+Analyzing...
+Parsing LumpysInvasionGameReplicationInfo
+Parsing LumpysInvasion
+Parsing LumpysInvasionWaveMessage
+Parsing MapListLumpysInvasion
+Parsing LumpysInvasionHUD
+Parsing LumpysInvasionWaveHandler
+Compiling LumpysInvasionGameReplicationInfo
+Compiling LumpysInvasion
+Compiling LumpysInvasionWaveMessage
+Compiling MapListLumpysInvasion
+Compiling LumpysInvasionHUD
+Compiling LumpysInvasionWaveHandler
+Importing Defaults for LumpysInvasionGameReplicationInfo
+Importing Defaults for LumpysInvasion
+Importing Defaults for LumpysInvasionWaveMessage
+Importing Defaults for MapListLumpysInvasion
+Importing Defaults for LumpysInvasionHUD
+Importing Defaults for LumpysInvasionWaveHandler
+-------------------------LumpysRPG - Release--------------------------
+--------------------------tK_BaseW - Release--------------------------
+-----------------------tk_FHIWeapons - Release------------------------
+------------------------tk_ZenCoders - Release------------------------
+--------------------tk_RainbowShockRifle - Release--------------------
+------------------------tk_MagicWand - Release------------------------
+--------------------------tk_AK47 - Release---------------------------
+-------------------------tk_LilLady - Release-------------------------
+---------------------tk_HolyHandGrenade - Release---------------------
+-----------------------lumpysinvasion - Release-----------------------
+Game exported successfully: LumpysInvasion.LumpysInvasion
+Success - 0 error(s), 0 warning(s)
+Log file closed, 12/02/24 08:19:35

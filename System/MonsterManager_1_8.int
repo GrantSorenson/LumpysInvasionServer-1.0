@@ -1,0 +1,3 @@
+[Public]
+Object=(Class=Class,MetaClass=Engine.Mutator,Name=MonsterManager_1_8.MutMonsterManager,Description="Manage monster attributes, configure random various changes to monster attributes, including size, speed, points and health, and customize waves.")
+Object=(Class=class,MetaClass=Xinterface.GUIUserKeyBinding,Name=MonsterManager_1_8.MMKeyBinding)

@@ -1,0 +1,7 @@
+[MutShieldReward]
+FriendlyName="Shield Reward"
+Description="Any remaining shields are thrown from players when they are fragged. Also includes Unreal II-style shield pickups."
+
+[ShieldReward]
+PickupMessage="You picked up a Shield Pack."
+

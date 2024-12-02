@@ -1,0 +1,1 @@
+Weapon=(ClassName=tk_AK47.AK47Weapon,PickupClassName=tk_AK47.AK47Pickup,AttachmentClassName=tk_AK47.AK47Attachment,FriendlyName=tk_AK47.AK47Weapon.ItemName,Description=tk_AK47.AK47Weapon.Description,FallbackName="AK47",FallbackDesc="AK47 that shoots exploding bullets")

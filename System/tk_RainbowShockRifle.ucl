@@ -1,0 +1,1 @@
+Weapon=(ClassName=tk_RainbowShockRifle.RainbowShockRifle,PickupClassName=tk_RainbowShockRifle.RainbowShockRiflePickup,AttachmentClassName=tk_RainbowShockRifle.RainbowShockAttachment,FriendlyName=tk_RainbowShockRifle.RainbowShockRifle.ItemName,Description=tk_RainbowShockRifle.RainbowShockRifle.Description,FallbackName="Rainbow Shock Rifle",FallbackDesc="The Rainbow Shock Rifle!")

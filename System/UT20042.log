@@ -1,0 +1,113 @@
+Log: Log file open, 11/12/23 13:52:30
+Init: Name subsystem initialized
+Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
+Init: Version: 3369 (128.29)
+Init: Compiled: Nov 23 2005 16:23:34
+Init: Command line: 
+Init: Character set: Unicode
+Init: Base directory: G:\RPGTest1\UT2004\System\
+Init: Ini:UT20042.ini   UserIni:User.ini
+Init: Build label: UT2004 Build UT2004_Build_[2005-11-23_16.22]
+Init: Object subsystem initialized
+Log: Splash screen filename is '..\Help\UT20042Logo.bmp'
+Log: Initializing OpenGLDrv...
+Log: Game class is 'GameInfo'
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.206000...
+ScriptLog: GameInfo::InitGame : bEnableStatLogging False
+Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Jakob?team=255?SpectatorOnly=1
+Log: Collecting garbage
+Log: Purging garbage
+Log: Garbage: objects: 27933->27933; refs: 284015
+Log: Game class is 'CinematicGame'
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.632000...
+Log: (Karma): Autodetecting CPU for SSE
+Log: (Karma): Using SSE Optimizations
+ScriptLog: GameInfo::InitGame : bEnableStatLogging False
+Log: ALAudio: Using DirectSound to record audio.
+ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
+Log: Opened viewport
+Log: Enter SetRes: 800x600 Fullscreen 1
+Log: Using pixel format 9
+Log: GL_VENDOR     : NVIDIA Corporation
+Log: GL_RENDERER   : NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2
+Log: GL_VERSION    : 4.6.0 NVIDIA 537.58
+Log: OpenGL: Device supports: GL
+Log: OpenGL: Device supports: GL_EXT_bgra
+Log: OpenGL: Device supports: GL_ARB_texture_compression
+Log: OpenGL: Device supports: GL_EXT_texture_compression_s3tc
+Log: OpenGL: Device supports: GL_ARB_texture_cube_map
+Log: OpenGL: Device supports: GL_ARB_texture_env_combine
+Log: OpenGL: Device supports: GL_NV_texture_env_combine4
+Log: OpenGL: Device supports: GL_ARB_texture_env_crossbar
+Log: OpenGL: Device supports: GL_EXT_texture_lod_bias
+Log: OpenGL: Device supports: GL_ARB_multitexture
+Log: OpenGL: Device supports: GL_NV_vertex_array_range
+Log: OpenGL: Device supports: GL_NV_vertex_array_range2
+Log: OpenGL: Device supports: GL_ARB_multisample
+Log: OpenGL: Device supports: GL_NV_multisample_filter_hint
+Log: OpenGL: Device supports: GL_EXT_texture_filter_anisotropic
+Log: OpenGL: Device supports: WGL_EXT_swap_control
+Log: OpenGL: Device supports: GL_ARB_vertex_buffer_object
+Log: OpenGL: Device supports: GL_ARB_fragment_program
+Log: OpenGL: Device supports: GL_ARB_vertex_program
+Log: OpenGL: Device supports: GL_EXT_framebuffer_object
+Log: OpenGL: C32 RGB888 Z24 S0
+Log: OpenGL: Level of anisotropy is 1.000000 (max 16.000000).
+Log: OpenGL: Forcibly disabled pixel shaders.
+Log: OpenGL: Forcibly disabled render-to-texture.
+Log: OpenGL: allocated 32 MByte of AGP memory
+Log: Startup time: 1.821000 seconds
+Log: Precaching: NvidiaLogo.LevelInfo0
+Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
+Log: Allocating 32768 byte dynamic index buffer.
+Log: Allocating 65536 byte dynamic vertex buffer.
+Log: Finished precaching geometry in 0.020 seconds
+Log: Finished precaching textures in 0.031 seconds
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] () ()
+Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
+ModAuthor: Restoring previously open menus (0 menus to restore)
+Log: URL: Adding default option Name=Lumps
+Log: URL: Adding default option Class=Engine.Pawn
+Log: URL: Adding default option Character=Jakob
+Log: URL: Adding default option team=255
+Log: Browse: Index.ut2?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Jakob?team=255
+Log: Failed; returning to Entry
+ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
+ScriptLog: UT2k4MainMenu NotifyLevelChange  PendingConnection:False
+Log: GP=FALSE
+Log: Spawning new actor for Viewport WindowsViewport
+ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
+Log: Static mesh batches: 0 vertex bytes, 0 index bytes
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
+Log: appRequestExit(0)
+Exit: Preparing to exit.
+Log: Purging garbage
+Log: Unbound to Window.dll
+Log: Unbound to Core.dll
+Log: Unbound to Engine.dll
+Exit: Game engine shut down
+Log: Unbound to WinDrv.dll
+Exit: Windows client shut down
+Log: Unbound to OpenGLDrv.dll
+Log: Unbound to XGame.dll
+Log: Unbound to IpDrv.dll
+Log: Unbound to Editor.dll
+Log: Unbound to Fire.dll
+Log: Unbound to XInterface.dll
+Log: Unbound to UWeb.dll
+Log: Unbound to Onslaught.dll
+Log: (Karma): Level Karma Terminated.
+Log: Unbound to ALAudio.dll
+Log: Waiting for file streaming thread to finish...
+Exit: OpenAL Audio subsystem shut down.
+Log: Garbage: objects: 29542->0; refs: 284015
+Exit: Object subsystem successfully closed.
+Exit: Exiting.
+Log: FileManager: Reading 0 GByte 60 MByte 787 KByte 818 Bytes from HD took 0.188000 seconds (0.152000 reading, 0.036000 seeking).
+Log: FileManager: 0.077000 seconds spent with misc. duties
+Uninitialized: Name subsystem shut down
+Uninitialized: Memory Allocation Status
+Uninitialized: Curr Memory  0.192M /  2.934M
+Uninitialized: Peak Memory  65.413M /  67.059M
+Uninitialized: Allocs         562 Current /  1137365 Total
+Uninitialized: Log file closed, 11/12/23 13:52:38
