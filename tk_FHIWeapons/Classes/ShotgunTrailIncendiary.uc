@@ -1,0 +1,29 @@
+class ShotgunTrailIncendiary extends xEmitter;
+
+defaultproperties
+{
+     mStartParticles=0
+     mLifeRange(0)=0.950000
+     mLifeRange(1)=0.950000
+     mRegenRange(0)=56.000000
+     mRegenRange(1)=56.000000
+     mDirDev=(Y=-0.210000)
+     mPosDev=(Y=3.000000)
+     mSpeedRange(0)=225.000000
+     mSpeedRange(1)=225.000000
+     mAirResistance=0.000000
+     mOwnerVelocityFactor=1.000000
+     mSpinRange(0)=-500.000000
+     mSpinRange(1)=500.000000
+     mSizeRange(1)=15.000000
+     mGrowthRate=-3.000000
+     mColorRange(0)=(B=95,G=202,R=233)
+     mColorRange(1)=(B=95,G=127,R=233)
+     mAttenKa=0.000000
+     mRandTextures=True
+     mNumTileColumns=2
+     mNumTileRows=2
+     Physics=PHYS_Trailer
+     Skins(0)=Texture'EmitterTextures.MultiFrame.MistTexture'
+     Style=STY_Additive
+}

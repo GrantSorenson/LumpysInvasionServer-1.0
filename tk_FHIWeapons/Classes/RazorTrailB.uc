@@ -1,0 +1,29 @@
+class RazorTrailB extends xEmitter;
+
+defaultproperties
+{
+     mStartParticles=0
+     mMaxParticles=100
+     mLifeRange(0)=0.950000
+     mLifeRange(1)=0.950000
+     mRegenRange(0)=56.000000
+     mRegenRange(1)=56.000000
+     mDirDev=(Y=-0.210000)
+     mPosDev=(Y=3.000000)
+     mSpeedRange(0)=225.000000
+     mSpeedRange(1)=225.000000
+     mAirResistance=0.000000
+     mOwnerVelocityFactor=1.000000
+     mSpinRange(0)=-500.000000
+     mSpinRange(1)=500.000000
+     mSizeRange(0)=30.000000
+     mSizeRange(1)=30.000000
+     mGrowthRate=-3.000000
+     mColorRange(0)=(B=40,G=133,R=220)
+     mColorRange(1)=(B=56,G=213,R=232)
+     mAttenKa=0.000000
+     bHighDetail=True
+     Physics=PHYS_Trailer
+     Skins(0)=Texture'AW-2004Particles.Weapons.PlasmaStar2'
+     Style=STY_Additive
+}

@@ -1,0 +1,34 @@
+class RailgunParticleRing extends xEmitter;
+
+defaultproperties
+{
+     mSpawningType=ST_Explode
+     mRegen=False
+     mStartParticles=15
+     mMaxParticles=15
+     mLifeRange(0)=1.000000
+     mLifeRange(1)=1.400000
+     mRegenRange(0)=0.000000
+     mRegenRange(1)=0.000000
+     mPosDev=(X=15.000000,Y=15.000000,Z=15.000000)
+     mSpeedRange(0)=100.000000
+     mSpeedRange(1)=100.000000
+     mPosRelative=True
+     mAirResistance=1.000000
+     mRandOrient=True
+     mSpinRange(0)=-50.000000
+     mSpinRange(1)=50.000000
+     mSizeRange(0)=25.000000
+     mSizeRange(1)=25.000000
+     mGrowthRate=10.000000
+     mColorRange(0)=(B=225,R=175)
+     mColorRange(1)=(B=215,R=175)
+     mAttenKa=0.000000
+     mAttenKb=0.500000
+     mAttenFunc=ATF_SmoothStep
+     mRandTextures=True
+     mNumTileColumns=4
+     mNumTileRows=4
+     Skins(0)=Texture'AW-2004Particles.Fire.MuchSmoke2t'
+     Style=STY_Translucent
+}
