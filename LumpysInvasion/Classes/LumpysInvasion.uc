@@ -3,6 +3,13 @@ class LumpysInvasion extends Invasion
 
 var() int MonsterPlayerMulti;
 var() LumpysInvasionWaveHandler WaveHandler;
+var() const localized string LumpysInvasionGroup; //new in game menu group
+var() config string MonsterConfigMenu; //the ingame monster stats menu
+var() config Object MonsterConfig;
+var() config int Test;
+const LUMPPROPNUM = 2;
+var localized string LumpPropText[LUMPPROPNUM];
+var localized string LumpDescText[LUMPPROPNUM];
 
 // struct WaveInfo
 // {
@@ -267,97 +274,134 @@ function NotifyNextWave()
 {
    BroadcastLocalizedMessage(class'LumpysInvasionWaveMessage', WaveNum,,,WaveHandler);
 }
+
+static function FillPlayInfo(PlayInfo PI)
+{
+    Super(xTeamGame).FillPlayInfo(PI);
+    PI.AddSetting(default.LumpysInvasionGroup, "MonsterConfig", GetDisplayText("MonsterConfig"), 60, 0, "Custom", ";;"$default.MonsterConfigMenu,,,True);
+    PI.AddSetting(default.LumpysInvasionGroup,   "Test",  GetDisplayText("Test"), 50,  0,  "Text", "2;0:"$(0),,False,True);
+
+    PI.PopClass();
+}
+
+static event string GetDescriptionText(string PropName)
+{
+    //Super.GetDescriptionText(PropName);
+
+    switch (PropName)
+    {
+        case "MonsterConfig":        return default.LumpDescText[0];
+        case "Test":        return default.LumpDescText[1];
+    }
+
+    return Super(xTeamGame).GetDescriptionText(PropName);
+}
+
+static event string GetDisplayText( string PropName )
+{
+    //Super.GetDisplayText(PropName);
+
+    switch (PropName)
+    {
+        case "MonsterConfig": return default.LumpPropText[0];
+        case "Test": return default.LumpPropText[1];
+        }
+
+    return Super(xTeamGame).GetDisplayText( PropName );
+}
+
+static event bool AcceptPlayInfoProperty(string PropName)
+{
+	if ( (PropName == "bBalanceTeams") || (PropName == "bPlayersBalanceTeams") || (PropName == "GoalScore") || (PropName == "TimeLimit") || (PropName == "SpawnProtectionTime") ||(PropName == "EndTimeDelay") )
+	{
+		return false;
+	}
+
+    return Super(xTeamGame).AcceptPlayInfoProperty(PropName);
+}
+
+
 defaultproperties
 {
-     MonsterPlayerMulti = 100
-     MonsterClass(0)=Class'SkaarjPack.SkaarjPupae'
-     MonsterClass(1)=Class'SkaarjPack.Razorfly'
-     MonsterClass(2)=Class'SkaarjPack.Manta'
-     MonsterClass(3)=Class'SkaarjPack.Krall'
-     MonsterClass(4)=Class'SkaarjPack.EliteKrall'
-     MonsterClass(5)=Class'SkaarjPack.Gasbag'
-     MonsterClass(6)=Class'SkaarjPack.Brute'
-     MonsterClass(7)=Class'SkaarjPack.Skaarj'
-     MonsterClass(8)=Class'SkaarjPack.Behemoth'
-     MonsterClass(9)=Class'SkaarjPack.IceSkaarj'
-     MonsterClass(10)=Class'SkaarjPack.FireSkaarj'
-     MonsterClass(11)=Class'SkaarjPack.WarLord'
-     MonsterClass(12)=Class'SkaarjPack.SkaarjPupae'
-     MonsterClass(13)=Class'SkaarjPack.SkaarjPupae'
-     MonsterClass(14)=Class'SkaarjPack.Razorfly'
-     MonsterClass(15)=Class'SkaarjPack.Razorfly'
-     WaveConfigMenu="GUI2K4.UT2K4InvasionWaveConfig"
-     FallbackMonsterClass="SkaarjPack.EliteKrall"
-     FinalWave=13
-     InvasionPropText(0)="Starting Wave"
-     InvasionPropText(1)="Final Wave"
-     InvasionPropText(2)="Wave Configuration"
-     InvasionPropText(3)="Invaders"
-     InvasionPropText(4)="Wave Number"
-     InvasionPropText(5)="Max Invaders"
-     InvasionPropText(6)="Duration"
-     InvasionPropText(7)="Difficulty"
-     InvasionDescText(0)="Specify the first wave of incoming monsters for a map."
-     InvasionDescText(1)="Specify the final wave which must be defeated to complete a map."
-     InvasionDescText(2)="Configure the properties for each wave."
-     InvasionDescText(3)="Select the wave to configure"
-     InvasionDescText(4)="Place a check next to each monster which should be part of this wave."
-     InvasionDescText(5)="Maximum amount of monsters that may be in the map at one time."
-     InvasionDescText(6)="Length of time (in seconds) the wave should last."
-     InvasionDescText(7)="Adjusts the relative intelligence of the invaders"
-     WaveCountDown=15
-     InvasionBotNames(1)="Gorge"
-     InvasionBotNames(2)="Cannonball"
-     InvasionBotNames(3)="Annika"
-     InvasionBotNames(4)="Riker"
-     InvasionBotNames(5)="BlackJack"
-     InvasionBotNames(6)="Sapphire"
-     InvasionBotNames(7)="Jakob"
-     InvasionBotNames(8)="Othello"
-     InvasionEnd(0)="SKAARJtermination"
-     InvasionEnd(1)="SKAARJslaughter"
-     InvasionEnd(2)="SKAARJextermination"
-     InvasionEnd(3)="SKAARJerradication"
-     InvasionEnd(4)="SKAARJbloodbath"
-     InvasionEnd(5)="SKAARJannihilation"
-     Waves(0)=(WaveMask=20491,WaveMaxMonsters=20,WaveDuration=30)
-     Waves(1)=(WaveMask=60,WaveMaxMonsters=20,WaveDuration=90)
-     Waves(2)=(WaveMask=105,WaveMaxMonsters=20,WaveDuration=90)
-     Waves(3)=(WaveMask=186,WaveMaxMonsters=20,WaveDuration=90,WaveDifficulty=0.500000)
-     Waves(4)=(WaveMask=225,WaveMaxMonsters=20,WaveDuration=90,WaveDifficulty=0.500000)
-     Waves(5)=(WaveMask=966,WaveMaxMonsters=20,WaveDuration=90,WaveDifficulty=0.500000)
-     Waves(6)=(WaveMask=4771,WaveMaxMonsters=25,WaveDuration=120,WaveDifficulty=1.000000)
-     Waves(7)=(WaveMask=917,WaveMaxMonsters=25,WaveDuration=120,WaveDifficulty=1.000000)
-     Waves(8)=(WaveMask=1689,WaveMaxMonsters=25,WaveDuration=120,WaveDifficulty=1.000000)
-     Waves(9)=(WaveMask=18260,WaveMaxMonsters=25,WaveDuration=120,WaveDifficulty=1.000000)
-     Waves(10)=(WaveMask=14340,WaveMaxMonsters=25,WaveDuration=180,WaveDifficulty=1.500000)
-     Waves(11)=(WaveMask=4021,WaveMaxMonsters=31,WaveDuration=180,WaveDifficulty=1.500000)
-     Waves(12)=(WaveMask=3729,WaveMaxMonsters=31,WaveDuration=180,WaveDifficulty=1.500000)
-     Waves(13)=(WaveMask=3972,WaveMaxMonsters=31,WaveDuration=180,WaveDifficulty=2.000000)
-     Waves(14)=(WaveMask=3712,WaveMaxMonsters=31,WaveDuration=180,WaveDifficulty=2.000000)
-     Waves(15)=(WaveMask=2048,WaveMaxMonsters=35,WaveDuration=255,WaveDifficulty=2.000000)
-     TeamAIType(0)=Class'SkaarjPack.InvasionTeamAI'
-     TeamAIType(1)=Class'SkaarjPack.InvasionTeamAI'
-     bAllowTrans=True
-     bForceNoPlayerLights=True
-     DefaultMaxLives=1
-     InitialBots=2
-     EndGameSoundName(0)="You_Have_Won_the_Match"
-     EndGameSoundName(1)="You_Have_Lost_the_Match"
-     LoginMenuClass="GUI2K4.UT2K4InvasionLoginMenu"
-     SPBotDesc="Specify the number of bots (max 2 for invasion) that should join."
-     ScoreBoardType="Skaarjpack.ScoreboardInvasion"
-     HUDType="LumpysInvasion.LumpysInvasionHUD"
-     MapListType="LumpysInvasion.MapListLumpysInvasion"
-     GoalScore=60
-     MaxLives=1
-     DeathMessageClass=Class'SkaarjPack.InvasionDeathMessage'
-     MutatorClass="Skaarjpack.InvasionMutator"
-     GameReplicationInfoClass=Class'LumpysInvasion.LumpysInvasionGameReplicationInfo'
-     GameName="Lumpys Invasion"
-     Description="Along side the other players, you must hold out as long as possible against the waves of attacking monsters."
-     ScreenShotName="UT2004Thumbnails.InvasionShots"
-     Acronym="LINV"
-     GIPropsDisplayText(0)="Monster Skill"
-     GIPropDescText(0)="Set the skill of the invading monsters."
+    LumpysInvasionGroup="Lumpys Invasion"
+    MonsterConfigMenu="LumpysInvasion.IPMonsterConfig"
+    MonsterPlayerMulti = 100
+    MonsterClass(0)=Class'SkaarjPack.SkaarjPupae'
+    MonsterClass(1)=Class'SkaarjPack.Razorfly'
+    MonsterClass(2)=Class'SkaarjPack.Manta'
+    MonsterClass(3)=Class'SkaarjPack.Krall'
+    MonsterClass(4)=Class'SkaarjPack.EliteKrall'
+    MonsterClass(5)=Class'SkaarjPack.Gasbag'
+    MonsterClass(6)=Class'SkaarjPack.Brute'
+    MonsterClass(7)=Class'SkaarjPack.Skaarj'
+    MonsterClass(8)=Class'SkaarjPack.Behemoth'
+    MonsterClass(9)=Class'SkaarjPack.IceSkaarj'
+    MonsterClass(10)=Class'SkaarjPack.FireSkaarj'
+    MonsterClass(11)=Class'SkaarjPack.WarLord'
+    MonsterClass(12)=Class'SkaarjPack.SkaarjPupae'
+    MonsterClass(13)=Class'SkaarjPack.SkaarjPupae'
+    MonsterClass(14)=Class'SkaarjPack.Razorfly'
+    MonsterClass(15)=Class'SkaarjPack.Razorfly'
+    WaveConfigMenu="GUI2K4.UT2K4InvasionWaveConfig"
+    FallbackMonsterClass="SkaarjPack.EliteKrall"
+    FinalWave=13
+    LumpPropText(0)="MonsterConfig"
+    LumpPropText(1)="Test"
+    LumpDescText(0)="Adjusts the relative intelligence of the invaders"
+    LumpDescText(1)="Test Desc"
+    WaveCountDown=15
+    InvasionBotNames(1)="Gorge"
+    InvasionBotNames(2)="Cannonball"
+    InvasionBotNames(3)="Annika"
+    InvasionBotNames(4)="Riker"
+    InvasionBotNames(5)="BlackJack"
+    InvasionBotNames(6)="Sapphire"
+    InvasionBotNames(7)="Jakob"
+    InvasionBotNames(8)="Othello"
+    InvasionEnd(0)="SKAARJtermination"
+    InvasionEnd(1)="SKAARJslaughter"
+    InvasionEnd(2)="SKAARJextermination"
+    InvasionEnd(3)="SKAARJerradication"
+    InvasionEnd(4)="SKAARJbloodbath"
+    InvasionEnd(5)="SKAARJannihilation"
+    Waves(0)=(WaveMask=20491,WaveMaxMonsters=20,WaveDuration=30)
+    Waves(1)=(WaveMask=60,WaveMaxMonsters=20,WaveDuration=90)
+    Waves(2)=(WaveMask=105,WaveMaxMonsters=20,WaveDuration=90)
+    Waves(3)=(WaveMask=186,WaveMaxMonsters=20,WaveDuration=90,WaveDifficulty=0.500000)
+    Waves(4)=(WaveMask=225,WaveMaxMonsters=20,WaveDuration=90,WaveDifficulty=0.500000)
+    Waves(5)=(WaveMask=966,WaveMaxMonsters=20,WaveDuration=90,WaveDifficulty=0.500000)
+    Waves(6)=(WaveMask=4771,WaveMaxMonsters=25,WaveDuration=120,WaveDifficulty=1.000000)
+    Waves(7)=(WaveMask=917,WaveMaxMonsters=25,WaveDuration=120,WaveDifficulty=1.000000)
+    Waves(8)=(WaveMask=1689,WaveMaxMonsters=25,WaveDuration=120,WaveDifficulty=1.000000)
+    Waves(9)=(WaveMask=18260,WaveMaxMonsters=25,WaveDuration=120,WaveDifficulty=1.000000)
+    Waves(10)=(WaveMask=14340,WaveMaxMonsters=25,WaveDuration=180,WaveDifficulty=1.500000)
+    Waves(11)=(WaveMask=4021,WaveMaxMonsters=31,WaveDuration=180,WaveDifficulty=1.500000)
+    Waves(12)=(WaveMask=3729,WaveMaxMonsters=31,WaveDuration=180,WaveDifficulty=1.500000)
+    Waves(13)=(WaveMask=3972,WaveMaxMonsters=31,WaveDuration=180,WaveDifficulty=2.000000)
+    Waves(14)=(WaveMask=3712,WaveMaxMonsters=31,WaveDuration=180,WaveDifficulty=2.000000)
+    Waves(15)=(WaveMask=2048,WaveMaxMonsters=35,WaveDuration=255,WaveDifficulty=2.000000)
+    TeamAIType(0)=Class'SkaarjPack.InvasionTeamAI'
+    TeamAIType(1)=Class'SkaarjPack.InvasionTeamAI'
+    bAllowTrans=True
+    bForceNoPlayerLights=True
+    DefaultMaxLives=1
+    InitialBots=2
+    EndGameSoundName(0)="You_Have_Won_the_Match"
+    EndGameSoundName(1)="You_Have_Lost_the_Match"
+    LoginMenuClass="GUI2K4.UT2K4InvasionLoginMenu"
+    SPBotDesc="Specify the number of bots (max 2 for invasion) that should join."
+    ScoreBoardType="Skaarjpack.ScoreboardInvasion"
+    HUDType="LumpysInvasion.LumpysInvasionHUD"
+    MapListType="LumpysInvasion.MapListLumpysInvasion"
+    GoalScore=60
+    MaxLives=1
+    DeathMessageClass=Class'SkaarjPack.InvasionDeathMessage'
+    MutatorClass="LumpysInvasion.LumpysInvasionMutator"
+    GameReplicationInfoClass=Class'LumpysInvasion.LumpysInvasionGameReplicationInfo'
+    GameName="Lumpys Invasion"
+    Description="Along side the other players, you must hold out as long as possible against the waves of attacking monsters."
+    ScreenShotName="UT2004Thumbnails.InvasionShots"
+    Acronym="LINV"
+    GIPropsDisplayText(0)="Monster Skill"
+    GIPropDescText(0)="Set the skill of the invading monsters."
 }
