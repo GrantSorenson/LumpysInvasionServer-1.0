@@ -9,7 +9,7 @@ var() config string LumpyWaveConfigMenu;//Ingame wave config menu
 var() config string BossConfigMenu;
 
 var() config Object MonsterConfig;
-var() config Object WaveConfig;
+var() config Object LWaveConfig;
 var() config Object BossConfig;
 var() config int Test;
 
@@ -286,7 +286,7 @@ static function FillPlayInfo(PlayInfo PI)
 {
     Super(xTeamGame).FillPlayInfo(PI);
     PI.AddSetting(default.LumpysInvasionGroup, "MonsterConfig", GetDisplayText("MonsterConfig"), 60, 1, "Custom", ";;"$default.MonsterConfigMenu,,,True);
-    PI.AddSetting(default.LumpysInvasionGroup, "WaveConfig", GetDisplayText("WaveConfig"), 60, 2, "Custom", ";;"$default.LumpyWaveConfigMenu,,,True);
+    PI.AddSetting(default.LumpysInvasionGroup, "LWaveConfig", GetDisplayText("LWaveConfig"), 60, 2, "Custom", ";;"$default.LumpyWaveConfigMenu,,,True);
     PI.AddSetting(default.LumpysInvasionGroup, "BossConfig", GetDisplayText("BossConfig"), 60, 3, "Custom", ";;"$default.BossConfigMenu,,,True);
     PI.AddSetting(default.LumpysInvasionGroup,   "Test",  GetDisplayText("Test"), 50,  4,  "Text", "2;0:"$(0),,False,True);
 
@@ -301,7 +301,7 @@ static event string GetDescriptionText(string PropName)
     {
         case "MonsterConfig":       return default.LumpDescText[0];
         case "Test":                return default.LumpDescText[1];
-        case "WaveCofig":           return default.LumpDescText[2];
+        case "LWaveCofig":           return default.LumpDescText[2];
         case "BossConfig":          return default.LumpDescText[3];
     }
 
@@ -316,7 +316,7 @@ static event string GetDisplayText( string PropName )
     {
         case "MonsterConfig":   return default.LumpPropText[0];
         case "Test":            return default.LumpPropText[1];
-        case "WaveConfig":      return default.LumpPropText[2];
+        case "LWaveConfig":      return default.LumpPropText[2];
         case "BossConfig":      return default.LumpPropText[3];
         }
 
@@ -338,7 +338,7 @@ defaultproperties
 {
     LumpysInvasionGroup="Lumpys Invasion"
     MonsterConfigMenu="LumpysInvasion.IPMonsterConfig"
-    LumpyWaveConfigMenu=""
+    LumpyWaveConfigMenu="LumpysInvasion.IPWaveConfig"
     BossConfigMenu=""
     MonsterPlayerMulti = 100
     MonsterClass(0)=Class'SkaarjPack.SkaarjPupae'

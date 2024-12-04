@@ -1,4 +1,4 @@
-Log: Log file open, 12/03/24 19:55:18
+Log: Log file open, 12/03/24 23:22:16
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -14,14 +14,14 @@ Log: Splash screen filename is '..\Help\UT2004Logo.bmp'
 Localization: No localization: UT2004.General.Start (int)
 Log: Initializing OpenGLDrv...
 Log: Game class is 'GameInfo'
-Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 2.552000...
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.555000...
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
 Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?SpectatorOnly=1?Sex=M
 Log: Collecting garbage
 Log: Purging garbage
 Log: Garbage: objects: 33900->33897; refs: 350345
 Log: Game class is 'CinematicGame'
-Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 2.970000...
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.888000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
@@ -63,14 +63,14 @@ Log: OpenGL: Level of anisotropy is 1.000000 (max 16.000000).
 Log: OpenGL: Forcibly disabled pixel shaders.
 Log: OpenGL: Forcibly disabled render-to-texture.
 Log: OpenGL: allocated 32 MByte of AGP memory
-Log: Startup time: 3.166000 seconds
+Log: Startup time: 1.648000 seconds
 Localization: No localization: UT2004.General.Run (int)
 Log: Precaching: NvidiaLogo.LevelInfo0
 Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
 Log: Allocating 32768 byte dynamic index buffer.
 Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.038 seconds
-Log: Finished precaching textures in 0.024 seconds
+Log: Finished precaching geometry in 0.015 seconds
+Log: Finished precaching textures in 0.022 seconds
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] () ()
 Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
 ModAuthor: Restoring previously open menus (0 menus to restore)
@@ -88,123 +88,38 @@ ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
 Log: Static mesh batches: 0 vertex bytes, 0 index bytes
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4GamePageSP] () ()
 ModAuthor: # # # # Gametype ShowPanel()  True
-MenuText: No description configured for property 'WaveConfig'
+MenuText: No description configured for property 'LWaveConfig'
 ModAuthor: # # # # Select Map ShowPanel()  True
 ModAuthor: # # # # Gametype ShowPanel()  False
 ModAuthor: # # # # Mutators ShowPanel()  True
 ModAuthor: # # # # Select Map ShowPanel()  False
 ModAuthor: # # # # Game Rules ShowPanel()  True
 ModAuthor: # # # # Mutators ShowPanel()  False
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysInvasion.IPWaveConfig] () ()
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [IPWaveConfig]
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysInvasion.IPMonsterConfig] () ()
 Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:030B) Accessed None 'b_Play'
 Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:031A) Accessed None 'b_Pause'
-Log: Preprocessing:  Vertex stream total vertices: 185 Orig wedges: 185
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [IPMonsterConfig]
-ModAuthor: # # # # Mutators ShowPanel()  True
-ModAuthor: # # # # Game Rules ShowPanel()  False
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 2 menus open)
-ModAuthor:    Menu[0]:UT2k4MainMenu
-ModAuthor:    Menu[1]:UT2K4GamePageSP
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4GamePageSP]
-Debug: UT2k4MainMenu.Opened()   Sender:None
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 0 menus open)
-ScriptLog: Attempting to close a non-existing menu page
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: DM-Flux2?BonusVehicles=false?Game=LumpysInvasion.LumpysInvasion?Mutator=AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim?bAutoNumBots=False?NumBots=0?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: Collecting garbage
-Log: Purging garbage
-Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 43543->40613; refs: 467492
-Log: Game class is 'LumpysInvasion'
-Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 98.574000...
-Log: (Karma): Autodetecting CPU for SSE
-Log: (Karma): Using SSE Optimizations
-ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim
-Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:001F) Accessed None 'AccessControl'
-Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:0027) Attempt to assign variable through None
-ScriptLog: GameInfo::InitGame : bEnableStatLogging True
-ScriptLog: bAutoNumBots: False
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: Precaching: DM-Flux2.LevelInfo0
-Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
-Log: Allocating 32768 byte dynamic index buffer.
-Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.072 seconds
-Log: Finished precaching textures in 0.174 seconds
-ScriptLog: START MATCH
 Log: Preprocessing:  Vertex stream total vertices: 595 Orig wedges: 595
-Log: Preprocessing:  Vertex stream total vertices: 502 Orig wedges: 502
-Warning: Gasbag DM-Flux2.Gasbag (Function SkaarjPack.Gasbag.PoundDamageTarget:0023) Accessed None 'Target'
-Warning: Gasbag DM-Flux2.Gasbag (Function SkaarjPack.Gasbag.PoundDamageTarget:0023) Accessed None 'Target'
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
-ModAuthor: # # # # Game ShowPanel()  True
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: Index.ut2?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-Log: Failed; returning to Entry
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: GP=FALSE
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: MatchViewportsToActors: GUI2K4.UT2K4MainMenu
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] (?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255) (MatchingViewport)
-Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
-ModAuthor: Restoring previously open menus (1 menus to restore)
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4GamePageSP] (Mutators) ()
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [IPMonsterConfig]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [] () ()
+Warning: Failed to load 'NULL': Can't resolve package name
+Warning: Failed to load 'Class None.': Can't resolve package name
+ScriptLog: Could not DLO menu ''
+ScriptLog: Could not open menu 
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysInvasion.IPWaveConfig] () ()
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [IPWaveConfig]
 ModAuthor: # # # # Gametype ShowPanel()  True
-ModAuthor: # # # # Mutators ShowPanel()  True
-MenuText: No description configured for property 'WaveConfig'
+ModAuthor: # # # # Game Rules ShowPanel()  False
+ModAuthor: # # # # Select Map ShowPanel()  True
 ModAuthor: # # # # Gametype ShowPanel()  False
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 2 menus open)
-ModAuthor:    Menu[0]:UT2k4MainMenu
-ModAuthor:    Menu[1]:UT2K4GamePageSP
+ModAuthor: # # # # Game Rules ShowPanel()  True
+ModAuthor: # # # # Select Map ShowPanel()  False
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [InvasionProv1_7.InvasionProBossConfig] () ()
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [InvasionProBossConfig]
 ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4GamePageSP]
 Debug: UT2k4MainMenu.Opened()   Sender:None
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 0 menus open)
-ScriptLog: Attempting to close a non-existing menu page
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: DM-Flux2?BonusVehicles=false?Game=LumpysInvasion.LumpysInvasion?Mutator=AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim?bAutoNumBots=False?NumBots=0?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: (Karma): Level Karma Terminated.
-Log: Collecting garbage
-Log: Purging garbage
-Log: Garbage: objects: 56500->40678; refs: 471244
-Log: Game class is 'LumpysInvasion'
-Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 131.272000...
-Log: (Karma): Autodetecting CPU for SSE
-Log: (Karma): Using SSE Optimizations
-ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim
-Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:001F) Accessed None 'AccessControl'
-Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:0027) Attempt to assign variable through None
-ScriptLog: GameInfo::InitGame : bEnableStatLogging True
-ScriptLog: bAutoNumBots: False
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: Precaching: DM-Flux2.LevelInfo0
-Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
-Log: Allocating 32768 byte dynamic index buffer.
-Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.078 seconds
-Log: Finished precaching textures in 0.098 seconds
-ScriptLog: START MATCH
-Warning: MonsterController DM-Flux2.MonsterController (Function Engine.AIController.MoverFinished:0012) Accessed None 'myMarker'
-Warning: MonsterController DM-Flux2.MonsterController (Function Engine.AIController.MoverFinished:0012) Accessed None 'myMarker'
-Warning: MonsterController DM-Flux2.MonsterController (Function Engine.AIController.MoverFinished:0012) Accessed None 'myMarker'
-Warning: MonsterController DM-Flux2.MonsterController (Function Engine.AIController.MoverFinished:0012) Accessed None 'myMarker'
-ScriptLog: Last Cred: 280 Stat Cred: 293
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
-ModAuthor: # # # # Game ShowPanel()  True
+Log: Time=28.241900 ms
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
 Log: appRequestExit(0)
 Localization: No localization: UT2004.General.Exit (int)
@@ -212,14 +127,14 @@ Exit: Preparing to exit.
 Log: Purging garbage
 Exit: Game engine shut down
 Exit: Windows client shut down
+Log: (Karma): Level Karma Terminated.
 Log: Waiting for file streaming thread to finish...
 Exit: OpenAL Audio subsystem shut down.
-Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 55007->0; refs: 471244
+Log: Garbage: objects: 50005->0; refs: 350345
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 352 MByte 539 KByte 317 Bytes from HD took 1.143995 seconds (1.090995 reading, 0.053000 seeking).
-Log: FileManager: 2.212998 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 102 MByte 865 KByte 665 Bytes from HD took 0.268000 seconds (0.237000 reading, 0.031000 seeking).
+Log: FileManager: 0.188000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/03/24 20:03:19
+Uninitialized: Log file closed, 12/03/24 23:26:35

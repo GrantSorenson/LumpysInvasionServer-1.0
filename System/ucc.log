@@ -1,4 +1,4 @@
-Log: Log file open, 12/03/24 13:45:57
+Log: Log file open, 12/03/24 23:22:09
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -50,6 +50,9 @@ Log: Analyzing...
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPAnimationManager.uc)
 Log: Class: IPAnimationManager extends Object
 Log: Imported: Class LumpysInvasion.IPAnimationManager
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPConfigs.uc)
+Log: Class: IPConfigs extends Object
+Log: Imported: Class LumpysInvasion.IPConfigs
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPCopyPaste.uc)
 Log: Class: IPCopyPaste extends Object
 Log: Imported: Class LumpysInvasion.IPCopyPaste
@@ -62,6 +65,9 @@ Log: Imported: Class LumpysInvasion.IPCylinderFinalBlend
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPCylinderShader.uc)
 Log: Class: IPCylinderShader extends Shader
 Log: Imported: Class LumpysInvasion.IPCylinderShader
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPDefaultWaves.uc)
+Log: Class: IPDefaultWaves extends Object
+Log: Imported: Class LumpysInvasion.IPDefaultWaves
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPMonsterConfig.uc)
 Log: Class: IPMonsterConfig extends GUICustomPropertyPage
 Log: Imported: Class LumpysInvasion.IPMonsterConfig
@@ -71,6 +77,9 @@ Log: Imported: Class LumpysInvasion.IPMonsterTable
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPSpinnyMonster.uc)
 Log: Class: IPSpinnyMonster extends Actor
 Log: Imported: Class LumpysInvasion.IPSpinnyMonster
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPWaveConfig.uc)
+Log: Class: IPWaveConfig extends GUICustomPropertyPage
+Log: Imported: Class LumpysInvasion.IPWaveConfig
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasion.uc)
 Log: Class: LumpysInvasion extends Invasion
 Log: Imported: Class LumpysInvasion.LumpysInvasion
@@ -104,8 +113,11 @@ Log: Parsing LumpysInvasionWaveHandler
 Log: Parsing IPCylinderShader
 Log: Parsing IPCylinderFinalBlend
 Log: Parsing IPMonsterConfig
+Log: Parsing IPWaveConfig
 Log: Parsing IPAnimationManager
+Log: Parsing IPConfigs
 Log: Parsing IPCopyPaste
+Log: Parsing IPDefaultWaves
 Log: Parsing IPMonsterTable
 Log: Compiling LumpysInvasionGameReplicationInfo
 Log: Compiling LumpysInvasionMutator
@@ -119,8 +131,11 @@ Log: Compiling LumpysInvasionWaveHandler
 Log: Compiling IPCylinderShader
 Log: Compiling IPCylinderFinalBlend
 Log: Compiling IPMonsterConfig
+Log: Compiling IPWaveConfig
 Log: Compiling IPAnimationManager
+Log: Compiling IPConfigs
 Log: Compiling IPCopyPaste
+Log: Compiling IPDefaultWaves
 Log: Compiling IPMonsterTable
 Log: Importing Defaults for LumpysInvasionGameReplicationInfo
 Log: Importing Defaults for LumpysInvasionMutator
@@ -134,12 +149,15 @@ Log: Importing Defaults for LumpysInvasionWaveHandler
 Log: Importing Defaults for IPCylinderShader
 Log: Importing Defaults for IPCylinderFinalBlend
 Log: Importing Defaults for IPMonsterConfig
+Log: Importing Defaults for IPWaveConfig
 Log: Importing Defaults for IPAnimationManager
+Log: Importing Defaults for IPConfigs
 Log: Importing Defaults for IPCopyPaste
+Log: Importing Defaults for IPDefaultWaves
 Log: Importing Defaults for IPMonsterTable
-Log: Success: Compiled 3003 line(s), 307 statement(s).
+Log: Success: Compiled 3658 line(s), 378 statement(s).
 
-Log: Save=14.621464
+Log: Save=17.113354
 Log: Moving 'Save.tmp' to 'LumpysInvasion.u'
 Heading: -------------------------LumpysRPG - Release--------------------------
 Heading: --------------------------tK_BaseW - Release--------------------------
@@ -165,11 +183,11 @@ Log: Unbound to UWeb.dll
 Log: Unbound to XGame.dll
 Log: Unbound to XInterface.dll
 Log: Unbound to Onslaught.dll
-Log: Garbage: objects: 81370->0; refs: 0
+Log: Garbage: objects: 81561->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 123 MByte 128 KByte 463 Bytes from HD took 0.444999 seconds (0.366999 reading, 0.078000 seeking).
-Log: FileManager: 0.071000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 123 MByte 358 KByte 663 Bytes from HD took 0.442999 seconds (0.371999 reading, 0.071000 seeking).
+Log: FileManager: 0.073000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/03/24 13:45:59
+Uninitialized: Log file closed, 12/03/24 23:22:12
