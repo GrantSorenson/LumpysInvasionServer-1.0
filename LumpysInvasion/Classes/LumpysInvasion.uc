@@ -5,9 +5,16 @@ var() int MonsterPlayerMulti;
 var() LumpysInvasionWaveHandler WaveHandler;
 var() const localized string LumpysInvasionGroup; //new in game menu group
 var() config string MonsterConfigMenu; //the ingame monster stats menu
+var() config string LumpyWaveConfigMenu;//Ingame wave config menu
+var() config string BossConfigMenu;
+
 var() config Object MonsterConfig;
+var() config Object WaveConfig;
+var() config Object BossConfig;
 var() config int Test;
-const LUMPPROPNUM = 2;
+
+//Settings Variables
+const LUMPPROPNUM = 4;
 var localized string LumpPropText[LUMPPROPNUM];
 var localized string LumpDescText[LUMPPROPNUM];
 
@@ -278,8 +285,10 @@ function NotifyNextWave()
 static function FillPlayInfo(PlayInfo PI)
 {
     Super(xTeamGame).FillPlayInfo(PI);
-    PI.AddSetting(default.LumpysInvasionGroup, "MonsterConfig", GetDisplayText("MonsterConfig"), 60, 0, "Custom", ";;"$default.MonsterConfigMenu,,,True);
-    PI.AddSetting(default.LumpysInvasionGroup,   "Test",  GetDisplayText("Test"), 50,  0,  "Text", "2;0:"$(0),,False,True);
+    PI.AddSetting(default.LumpysInvasionGroup, "MonsterConfig", GetDisplayText("MonsterConfig"), 60, 1, "Custom", ";;"$default.MonsterConfigMenu,,,True);
+    PI.AddSetting(default.LumpysInvasionGroup, "WaveConfig", GetDisplayText("WaveConfig"), 60, 2, "Custom", ";;"$default.LumpyWaveConfigMenu,,,True);
+    PI.AddSetting(default.LumpysInvasionGroup, "BossConfig", GetDisplayText("BossConfig"), 60, 3, "Custom", ";;"$default.BossConfigMenu,,,True);
+    PI.AddSetting(default.LumpysInvasionGroup,   "Test",  GetDisplayText("Test"), 50,  4,  "Text", "2;0:"$(0),,False,True);
 
     PI.PopClass();
 }
@@ -290,8 +299,10 @@ static event string GetDescriptionText(string PropName)
 
     switch (PropName)
     {
-        case "MonsterConfig":        return default.LumpDescText[0];
-        case "Test":        return default.LumpDescText[1];
+        case "MonsterConfig":       return default.LumpDescText[0];
+        case "Test":                return default.LumpDescText[1];
+        case "WaveCofig":           return default.LumpDescText[2];
+        case "BossConfig":          return default.LumpDescText[3];
     }
 
     return Super(xTeamGame).GetDescriptionText(PropName);
@@ -303,8 +314,10 @@ static event string GetDisplayText( string PropName )
 
     switch (PropName)
     {
-        case "MonsterConfig": return default.LumpPropText[0];
-        case "Test": return default.LumpPropText[1];
+        case "MonsterConfig":   return default.LumpPropText[0];
+        case "Test":            return default.LumpPropText[1];
+        case "WaveConfig":      return default.LumpPropText[2];
+        case "BossConfig":      return default.LumpPropText[3];
         }
 
     return Super(xTeamGame).GetDisplayText( PropName );
@@ -325,6 +338,8 @@ defaultproperties
 {
     LumpysInvasionGroup="Lumpys Invasion"
     MonsterConfigMenu="LumpysInvasion.IPMonsterConfig"
+    LumpyWaveConfigMenu=""
+    BossConfigMenu=""
     MonsterPlayerMulti = 100
     MonsterClass(0)=Class'SkaarjPack.SkaarjPupae'
     MonsterClass(1)=Class'SkaarjPack.Razorfly'
@@ -342,13 +357,16 @@ defaultproperties
     MonsterClass(13)=Class'SkaarjPack.SkaarjPupae'
     MonsterClass(14)=Class'SkaarjPack.Razorfly'
     MonsterClass(15)=Class'SkaarjPack.Razorfly'
-    WaveConfigMenu="GUI2K4.UT2K4InvasionWaveConfig"
     FallbackMonsterClass="SkaarjPack.EliteKrall"
     FinalWave=13
-    LumpPropText(0)="MonsterConfig"
+    LumpPropText(0)="Monster Config"
     LumpPropText(1)="Test"
+    LumpPropText(2)="Wave Config"
+    LumpPropText(3)="Boss Config"
     LumpDescText(0)="Adjusts the relative intelligence of the invaders"
     LumpDescText(1)="Test Desc"
+    LumpDescText(2)="Create new Waves and adjust Wave Settings"
+    LumpDescText(3)="Create new Bosses and adjust boss settings"
     WaveCountDown=15
     InvasionBotNames(1)="Gorge"
     InvasionBotNames(2)="Cannonball"

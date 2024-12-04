@@ -1418,6 +1418,26 @@ defaultproperties
     end object
     currentAnimList=moComboBox'IPMonsterConfig.c_animlist'
 
+    begin object name=LockedCancelButton class=GUIButton
+        WinWidth=0.171970
+		WinHeight=0.048624
+		WinLeft=0.787296
+		WinTop=0.895495
+        OnClick=IPMonsterConfig.ExitMonster
+        Caption="Close"
+    end object
+    b_Cancel=GUIButton'IPMonsterConfig.LockedCancelButton'
+
+    begin object name=LockedOKButton class=GUIButton
+        WinWidth=0.202528
+		WinHeight=0.044743
+		WinLeft=0.043377
+		WinTop=0.895495
+        OnClick=IPMonsterConfig.SaveMonster
+        Caption="Save"
+    end object
+    b_OK=GUIButton'IPMonsterConfig.LockedOKButton'
+
     // b_UArrow=GUIGFXButton'IPMonsterConfig.PanUp'
     // b_DArrow=GUIGFXButton'IPMonsterConfig.PanDown'
     // b_LArrow=GUIGFXButton'IPMonsterConfig.PanLeft'
@@ -1425,8 +1445,5 @@ defaultproperties
     // b_CArrow=GUIGFXButton'IPMonsterConfig.PanReset'
     // b_Play=GUIGFXButton'IPMonsterConfig.Play'
     // b_Pause=GUIGFXButton'IPMonsterConfig.Pause'
-    // b_Cancel=GUIButton'IPMonsterConfig.LockedCancelButton'
-    // b_OK=GUIButton'IPMonsterConfig.LockedOKButton'
-
 
 }
