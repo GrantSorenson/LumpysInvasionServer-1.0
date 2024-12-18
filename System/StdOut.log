@@ -1,4 +1,4 @@
-Log file open, 12/03/24 23:22:10
+Log file open, 12/18/24 17:06:16
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -55,49 +55,7 @@ Parsing IPMonsterTable
 Compiling LumpysInvasionGameReplicationInfo
 Compiling LumpysInvasionMutator
 Compiling LumpysInvasion
-Compiling LumpysInvasionWaveMessage
-Compiling MapListLumpysInvasion
-Compiling LumpysInvasionHUD
-Compiling IPCylinderActor
-Compiling IPSpinnyMonster
-Compiling LumpysInvasionWaveHandler
-Compiling IPCylinderShader
-Compiling IPCylinderFinalBlend
-Compiling IPMonsterConfig
-Compiling IPWaveConfig
-Compiling IPAnimationManager
-Compiling IPConfigs
-Compiling IPCopyPaste
-Compiling IPDefaultWaves
-Compiling IPMonsterTable
-Importing Defaults for LumpysInvasionGameReplicationInfo
-Importing Defaults for LumpysInvasionMutator
-Importing Defaults for LumpysInvasion
-Importing Defaults for LumpysInvasionWaveMessage
-Importing Defaults for MapListLumpysInvasion
-Importing Defaults for LumpysInvasionHUD
-Importing Defaults for IPCylinderActor
-Importing Defaults for IPSpinnyMonster
-Importing Defaults for LumpysInvasionWaveHandler
-Importing Defaults for IPCylinderShader
-Importing Defaults for IPCylinderFinalBlend
-Importing Defaults for IPMonsterConfig
-Importing Defaults for IPWaveConfig
-Importing Defaults for IPAnimationManager
-Importing Defaults for IPConfigs
-Importing Defaults for IPCopyPaste
-Importing Defaults for IPDefaultWaves
-Importing Defaults for IPMonsterTable
--------------------------LumpysRPG - Release--------------------------
---------------------------tK_BaseW - Release--------------------------
------------------------tk_FHIWeapons - Release------------------------
-------------------------tk_ZenCoders - Release------------------------
---------------------tk_RainbowShockRifle - Release--------------------
-------------------------tk_MagicWand - Release------------------------
---------------------------tk_AK47 - Release---------------------------
--------------------------tk_LilLady - Release-------------------------
----------------------tk_HolyHandGrenade - Release---------------------
------------------------lumpysinvasion - Release-----------------------
-Game exported successfully: LumpysInvasion.LumpysInvasion
-Success - 0 error(s), 0 warning(s)
-Log file closed, 12/03/24 23:22:12
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\LumpysInvasion.uc(61) : Error, 'WaveNames': Bad command or expression
+Compile aborted due to errors.
+Failure - 1 error(s), 0 warning(s)
+Log file closed, 12/18/24 17:06:18

@@ -1,12 +1,12 @@
-Log: Log file open, 12/03/24 23:22:09
+Log: Log file open, 12/18/24 17:06:16
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
 Init: Compiled: Nov 23 2005 16:23:34
-Init: Command line: ini=ucc_comp.ini
+Init: Command line: ini=ut2004.ini
 Init: Character set: Unicode
 Init: Base directory: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\
-Init: Ini:ucc_comp.ini   UserIni:User.ini
+Init: Ini:ut2004.ini   UserIni:User.ini
 Init: Build label:  Build UT2004_Build_[2005-11-23_16.22]
 Init: Object subsystem initialized
 Log: Executing Class Editor.MakeCommandlet
@@ -122,55 +122,9 @@ Log: Parsing IPMonsterTable
 Log: Compiling LumpysInvasionGameReplicationInfo
 Log: Compiling LumpysInvasionMutator
 Log: Compiling LumpysInvasion
-Log: Compiling LumpysInvasionWaveMessage
-Log: Compiling MapListLumpysInvasion
-Log: Compiling LumpysInvasionHUD
-Log: Compiling IPCylinderActor
-Log: Compiling IPSpinnyMonster
-Log: Compiling LumpysInvasionWaveHandler
-Log: Compiling IPCylinderShader
-Log: Compiling IPCylinderFinalBlend
-Log: Compiling IPMonsterConfig
-Log: Compiling IPWaveConfig
-Log: Compiling IPAnimationManager
-Log: Compiling IPConfigs
-Log: Compiling IPCopyPaste
-Log: Compiling IPDefaultWaves
-Log: Compiling IPMonsterTable
-Log: Importing Defaults for LumpysInvasionGameReplicationInfo
-Log: Importing Defaults for LumpysInvasionMutator
-Log: Importing Defaults for LumpysInvasion
-Log: Importing Defaults for LumpysInvasionWaveMessage
-Log: Importing Defaults for MapListLumpysInvasion
-Log: Importing Defaults for LumpysInvasionHUD
-Log: Importing Defaults for IPCylinderActor
-Log: Importing Defaults for IPSpinnyMonster
-Log: Importing Defaults for LumpysInvasionWaveHandler
-Log: Importing Defaults for IPCylinderShader
-Log: Importing Defaults for IPCylinderFinalBlend
-Log: Importing Defaults for IPMonsterConfig
-Log: Importing Defaults for IPWaveConfig
-Log: Importing Defaults for IPAnimationManager
-Log: Importing Defaults for IPConfigs
-Log: Importing Defaults for IPCopyPaste
-Log: Importing Defaults for IPDefaultWaves
-Log: Importing Defaults for IPMonsterTable
-Log: Success: Compiled 3658 line(s), 378 statement(s).
-
-Log: Save=17.113354
-Log: Moving 'Save.tmp' to 'LumpysInvasion.u'
-Heading: -------------------------LumpysRPG - Release--------------------------
-Heading: --------------------------tK_BaseW - Release--------------------------
-Heading: -----------------------tk_FHIWeapons - Release------------------------
-Heading: ------------------------tk_ZenCoders - Release------------------------
-Heading: --------------------tk_RainbowShockRifle - Release--------------------
-Heading: ------------------------tk_MagicWand - Release------------------------
-Heading: --------------------------tk_AK47 - Release---------------------------
-Heading: -------------------------tk_LilLady - Release-------------------------
-Heading: ---------------------tk_HolyHandGrenade - Release---------------------
-Heading: -----------------------lumpysinvasion - Release-----------------------
-Log: Game exported successfully: LumpysInvasion.LumpysInvasion
-Log: Success - 0 error(s), 0 warning(s)
+Error: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\LumpysInvasion.uc(61) : Error, 'WaveNames': Bad command or expression
+Log: Compile aborted due to errors.
+Log: Failure - 1 error(s), 0 warning(s)
 Exit: Preparing to exit.
 Log: Purging garbage
 Log: Unbound to Core.dll
@@ -183,11 +137,11 @@ Log: Unbound to UWeb.dll
 Log: Unbound to XGame.dll
 Log: Unbound to XInterface.dll
 Log: Unbound to Onslaught.dll
-Log: Garbage: objects: 81561->0; refs: 0
+Log: Garbage: objects: 73039->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 123 MByte 358 KByte 663 Bytes from HD took 0.442999 seconds (0.371999 reading, 0.071000 seeking).
-Log: FileManager: 0.073000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 106 MByte 1017 KByte 450 Bytes from HD took 0.392999 seconds (0.316999 reading, 0.076000 seeking).
+Log: FileManager: 0.066000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/03/24 23:22:12
+Uninitialized: Log file closed, 12/18/24 17:06:18

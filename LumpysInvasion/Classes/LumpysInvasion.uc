@@ -52,8 +52,14 @@ function int NumHostileMonsters()
 
 function PostBeginPlay()
 {
+    local int i;
 
     WaveHandler = spawn(class'LumpysInvasionWaveHandler');
+
+    for(i=0;i<class'IPConfigs'.default.Waves.length;i++)
+	{
+		WaveHandler.WaveNames.WaveName[i] = class'IPConfigs'.default.Waves[i].WaveName;
+	}
 
     Super(xTeamGame).PostBeginPlay();
 
@@ -153,6 +159,7 @@ State MatchInProgress
                 if ( PlayerCount > 1 )
                     MaxMonsters = Waves[WaveNum].WaveMaxMonsters;
             }
+            MaxMonsters=1;
             if ( (Level.TimeSeconds > WaveEndTime) && (WaveMonsters >= 2*MaxMonsters+(default.MonsterPlayerMulti*NumPlayers)) )// more players more monsters longer games more xp
             {//cull monsters after player has killed at least 2*maxmonsters per wave
                 // if ( Level.TimeSeconds > WaveEndTime + 90 )
@@ -172,7 +179,7 @@ State MatchInProgress
                     WaveNum++;
                 }
             }
-            else if ( (Level.TimeSeconds > NextMonsterTime) && (NumMonsters < MaxMonsters) )
+            else if ( (Level.TimeSeconds > NextMonsterTime) && (NumMonsters > MaxMonsters) )
             {
               count = Rand(3);
               switch(count){

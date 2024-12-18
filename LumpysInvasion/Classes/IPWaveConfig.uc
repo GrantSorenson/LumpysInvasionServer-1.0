@@ -972,8 +972,8 @@ defaultproperties
         Caption="B"
         MaxValue=255
         MinValue=0
-        ComponentWidth=-1
-        CaptionWidth=0.1
+                MaxValue=255
+        MinValue=0
     end object
     currentWaveColourB=moSlider'IPWaveConfig.WaveColourB'
 
