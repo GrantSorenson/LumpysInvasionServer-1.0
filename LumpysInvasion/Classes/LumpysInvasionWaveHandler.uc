@@ -1,16 +1,17 @@
 class LumpysInvasionWaveHandler extends Actor;
 
-struct WaveNameInfo
-{
-  var() string WaveName;
-  var() Color WaveColor;
-};
- var() config WaveNameInfo WaveNames[21];
+// struct WaveNameInfo
+// {
+//   var() string WaveName;
+//   var() Color WaveColor;
+// };
+ var() string WaveNames[30];
+ var() Color WaveColor;
 
 replication
 {
     reliable if(bNetInitial && Role==ROLE_Authority)
-        WaveNames;
+        WaveNames,WaveColor;
 }
 
 event PreBeginPlay()
@@ -19,32 +20,33 @@ event PreBeginPlay()
 }
 
 function string GetTitle(int Index) {
-    return WaveNames[Index].WaveName;
+    return WaveNames[Index];
 }
 
 defaultproperties
 {
-     WaveNames(0)=(WaveName=" Wave 1:",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(1)=(WaveName=" Wave 2",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(2)=(WaveName=" Wave 3",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(3)=(WaveName=" Wave 4",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(4)=(WaveName=" Wave 5",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(5)=(WaveName=" Wave 6",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(6)=(WaveName=" Wave 7",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(7)=(WaveName=" Wave 8",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(8)=(WaveName=" Wave 9",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(9)=(WaveName=" Wave 10",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(10)=(WaveName=" Wave 11",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(11)=(WaveName=" Wave 12",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(12)=(WaveName=" Wave 13",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(13)=(WaveName=" Wave 14",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(14)=(WaveName=" Wave 15",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(15)=(WaveName=" Wave 16",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(16)=(WaveName=" Wave 17",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(17)=(WaveName=" Wave 18",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(18)=(WaveName=" Wave 19",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(19)=(WaveName=" Wave 20",WaveColor=(B=255,G=255,R=255,A=255))
-     WaveNames(20)=(WaveName=" Wave 21",WaveColor=(B=255,G=255,R=255,A=255))
+     WaveColor=(R=0,B=0,G=255,A=255)
+     WaveNames(0)=" Welcome to Lumpy Invasion "
+     WaveNames(1)=" Wave 2"
+     WaveNames(2)=" Wave 3"
+     WaveNames(3)=" Wave 4"
+     WaveNames(4)=" Wave 5"
+     WaveNames(5)=" Wave 6"
+     WaveNames(6)=" Wave 7"
+     WaveNames(7)=" Wave 8"
+     WaveNames(8)=" Wave 9"
+     WaveNames(9)=" Wave 10"
+     WaveNames(10)=" Wave 11"
+     WaveNames(11)=" Wave 12"
+     WaveNames(12)=" Wave 13"
+     WaveNames(13)=" Wave 14"
+     WaveNames(14)=" Wave 15"
+     WaveNames(15)=" Wave 16"
+     WaveNames(16)=" Wave 17"
+     WaveNames(17)=" Wave 18"
+     WaveNames(18)=" Wave 19"
+     WaveNames(19)=" Wave 20"
+     WaveNames(20)=" Wave 21"
      bHidden=True
      bAlwaysRelevant=True
 }

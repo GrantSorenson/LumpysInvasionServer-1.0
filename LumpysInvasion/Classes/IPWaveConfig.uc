@@ -6,6 +6,8 @@ var() Automated GUIButton b_Paste;
 var() Automated GUIButton b_Reset;
 var() Automated GUIButton b_Random;
 var() Automated GUIButton b_Default;
+// var() Automated GUIButton b_OK;
+// var() Automated GUIButton b_Cancel;
 var() Automated moCheckBox currentbBossWave;
 var() Automated moCheckBox currentbBossesSpawnTogether;
 var() Automated moFloatEdit currentWaveDifficulty;
@@ -972,8 +974,8 @@ defaultproperties
         Caption="B"
         MaxValue=255
         MinValue=0
-                MaxValue=255
-        MinValue=0
+        ComponentWidth=-1
+        CaptionWidth=0.1
     end object
     currentWaveColourB=moSlider'IPWaveConfig.WaveColourB'
 
