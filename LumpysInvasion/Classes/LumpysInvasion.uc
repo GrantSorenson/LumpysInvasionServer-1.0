@@ -16,7 +16,7 @@ var() config int Test;
 var() int WaveMaxMonsters;
 //var() int WaveMonsters; //how many monsters have been spawned on the wave so far
 var() int NumKilledMonsters; //how many monsters have died on the wave so far
-var() class<Monster> WaveMonsterClass[30];
+var() class<tk_Monster> WaveMonsterClass[30];
 var() NavigationPoint OldNode;
 var() config int MonsterSpawnDistance;
 var() config bool bSpawnAtBases;
@@ -31,7 +31,14 @@ var() string CurrentMapPrefix;
 var() config string CustomGameTypePrefix;
 var() config bool bWaveTimeLimit;
 var() config bool bWaveMonsterLimit;
+var() int WaveNameDuration;
 
+struct WaveMonsterInfo
+{
+	var() class<tk_Monster> WaveMonsterClass[30];
+	var() string WaveMonsterName[30];
+};
+var() WaveMonsterInfo WaveMonsterClasses;
 
 
 
@@ -68,6 +75,101 @@ event InitGame( string Options, out string Error )
 	//TotalGames++;
     Super(xTeamGame).InitGame(Options, Error);
 	bForceRespawn = true;
+}
+
+function bool ShouldMonsterAttack(Actor CurrentTarget, Controller C)
+{
+	if(CurrentTarget != None && C != None)
+	{
+		if( Pawn(CurrentTarget) != None && Pawn(CurrentTarget).Controller != None )
+		{
+			if( Pawn(CurrentTarget).Controller.IsA('PetController') || Pawn(CurrentTarget).Controller.IsA('AnimalController'))
+			{
+				return false;
+			}
+			else if( C.IsA('MonsterController') )
+			{
+				if( Pawn(CurrentTarget).Controller.IsA('PlayerController') || Pawn(CurrentTarget).Controller.IsA('FriendlyMonsterController'))
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+			else if(  C.IsA('FriendlyMonsterController') )
+			{
+				if( Pawn(CurrentTarget).Controller.IsA('PlayerController') || Pawn(CurrentTarget).Controller.IsA('FriendlyMonsterController'))
+				{
+					return false;
+				}
+				else
+				{
+					return true;
+				}
+			}
+		}
+	}
+
+	return false;
+}
+
+function Actor GetMonsterTarget()
+{
+	local Controller C;
+
+	for ( C = Level.ControllerList; C!=None; C=C.nextController )
+	{
+        if ( C.IsA('PlayerController') && (C.Pawn != None) )
+        {
+			return C.Pawn;
+		}
+	}
+}
+
+function ForceNextWave()
+{
+	local Monster M;
+
+	foreach DynamicActors(class'Monster', M)
+	{
+		if(M != None && M.Health > 0 && M.Controller != None)
+		{
+			if(!M.Controller.IsA('PetController') && !M.Controller.IsA('FriendlyMonsterController') )
+			{
+				M.KilledBy( M );
+			}
+		}
+	}
+
+	bWaveInProgress = false;
+	WaveCountDown = 15;
+	WaveNum++;
+}
+
+function UpdatePlayerGRI()
+{
+	local Controller C;
+	local int i, PlayerCounter;
+
+	PlayerCounter = 0;
+
+	for(i=0;i<32;i++)
+	{
+		LumpysInvasionGameReplicationInfo(GameReplicationInfo).PlayerNames[i] = "";
+		LumpysInvasionGameReplicationInfo(GameReplicationInfo).PlayerLives[i] = 0;
+	}
+
+	for ( C = Level.ControllerList; C!=None; C=C.NextController )
+	{
+		if ( C.PlayerReplicationInfo != None )
+		{
+			LumpysInvasionGameReplicationInfo(GameReplicationInfo).PlayerNames[PlayerCounter] = C.PlayerReplicationInfo.PlayerName;
+			LumpysInvasionGameReplicationInfo(GameReplicationInfo).PlayerLives[PlayerCounter] = C.PlayerReplicationInfo.NumLives;
+			PlayerCounter++;
+		}
+	}
 }
 
 function int NumHostileMonsters()
@@ -116,7 +218,7 @@ event PreBeginPlay()
 function SetupWave()
 {
     local int i,h;
-	local class<Monster> CurrentMonsterClass; //current monster class being loaded
+	local class<tk_Monster> CurrentMonsterClass; //current monster class being loaded
 	local string FallBackMonsterName; //short hand fallbackmonster, will be made into a full class in order to load
 
     WaveMonsters = 0;
@@ -141,13 +243,16 @@ function SetupWave()
 			//search for matching monster classes
 			if(class'IPConfigs'.default.Waves[WaveNum].Monsters[i] != "None" && class'IPConfigs'.default.Waves[WaveNum].Monsters[i] ~= class'IPMonsterTable'.default.MonsterTable[h].MonsterName)
 			{
-				CurrentMonsterClass = class<Monster>(DynamicLoadObject(class'IPMonsterTable'.default.MonsterTable[h].MonsterClassName, class'Class',true));
+				CurrentMonsterClass = class<tk_Monster>(DynamicLoadObject(class'IPMonsterTable'.default.MonsterTable[h].MonsterClassName, class'Class',true));
+				WaveMonsterClasses.WaveMonsterName[WaveNumClasses] = class'IPMonsterTable'.default.MonsterTable[h].MonsterName;
 			}
 		}
 
 		if(CurrentMonsterClass != None)
 		{
+			
 			WaveMonsterClass[WaveNumClasses] = CurrentMonsterClass;
+			WaveMonsterClasses.WaveMonsterClass[WaveNumClasses] = CurrentMonsterClass;
 			WaveNumClasses++;
 		}
 	}
@@ -174,41 +279,11 @@ function SetupWave()
 	// {
 	// 	BossTimeLimit = class'InvasionProConfigs'.default.Waves[WaveNum].BossTimeLimit;
 	// 	bInfiniteBossTime = (BossTimeLimit <= 0);
-	// 	InvasionProGameReplicationInfo(GameReplicationInfo).bInfiniteBossTime = bInfiniteBossTime;
+	// 	LumpysInvasionGameReplicationInfo(GameReplicationInfo).bInfiniteBossTime = bInfiniteBossTime;
 	// 	OverTimeDamage = class'InvasionProConfigs'.default.Waves[WaveNum].BossOverTimeDamage;
 	// 	bBossWave = true;
 	// 	SetUpBosses();
 	// }
-}
-
-function SetupRandomWave()
-{
-    local int i,j, Mask;
-    local float NewMaxMonsters;
-
-    NewMaxMonsters = 15;
-    if ( NumPlayers > 4 )
-        NewMaxMonsters *= FMin(NumPlayers/4,2);
-    else
-        NewMaxMonsters = NewMaxMonsters * (FMin(GameDifficulty,7) + 3)/10;
-    MaxMonsters = NewMaxMonsters + 1;
-    WaveEndTime = Level.TimeSeconds + 180;
-    AdjustedDifficulty = GameDifficulty + 3;
-    GameDifficulty += 0.5;
-
-    WaveNumClasses = 0;
-    Mask = 2048 + Rand(2047);
-    j = 1;
-
-    for ( i=0; i<16; i++ )
-    {
-        if ( (j & Mask) != 0 )
-        {
-            WaveMonsterClass[WaveNumClasses] = MonsterClass[i];
-            WaveNumClasses++;
-        }
-        j *= 2;
-    }
 }
 
 State MatchInProgress
@@ -216,13 +291,10 @@ State MatchInProgress
     function Timer()
     {
         local Controller C;
-        local int PlayerCount,count;
 
 
         Super(xTeamGame).Timer();
         UpdateGRI();
-
-        Log("Wave Max Monsters:"$WaveMaxMonsters$", WaveMonsters:"$WaveMonsters,'LumpysInvasion');
 
         if ( bWaveInProgress )
         {
@@ -243,31 +315,7 @@ State MatchInProgress
                     WaveNum++;
                 }
             }
-
-            //else if ( (Level.TimeSeconds > NextMonsterTime) && (NumMonsters < MaxMonsters) )
-            // else
-            // {
-            // //   count = Rand(3);
-            // //   switch(count){
-            // //     case 1:
-            // //     AddMonster();
-            // //     case 2:
-            // //     AddMonster();
-            // //     AddMonster();
-            // //     case 3:
-            // //     AddMonster();
-            // //     AddMonster();
-            // //     AddMonster();
-            // //     default:
-            //     AddMonster();
-            //   }
-
-            // if ( NumMonsters <  20  )
-            //     NextMonsterTime = Level.TimeSeconds + 1;
-            // else
-            //     NextMonsterTime = Level.TimeSeconds + 1;
         }
-        //}
         else if ( NumMonsters <= 0 )
         {
             if ( WaveNum == FinalWave )
@@ -342,10 +390,10 @@ function bool ShouldAdvanceWave()
 	// {
 	// 	return ShouldEndBossWave();
 	// }
-        Log("Wave End Time: "$WaveEndTime$" bWaveMonsterLimit: "$bWaveMonsterLimit,'LumpysInvasion');
+
 	if(bWaveTimeLimit && Level.TimeSeconds > WaveEndTime)
 	{
-        Log("Wave End Time: "$WaveEndTime,'LumpysInvasion');
+
 		return true;
 	}
 
@@ -392,13 +440,15 @@ function UpdateMonsterTimer()
 function AddMonster()
 {
     local NavigationPoint StartSpot; //spawn location
-    local Monster NewMonster; //the newly spawned monster
-    local class<Monster> NewMonsterClass; //current monster to spawn
-
-    log("We Should have Added A Monster",'LumpysInvasion');
+    local tk_Monster NewMonster; //the newly spawned monster
+    local class<tk_Monster> NewMonsterClass; //current monster to spawn
+    local Inventory Inv;
+	local int index;
 	//if(!bBossWave)
 	//{
-		NewMonsterClass = WaveMonsterClass[Rand(WaveNumClasses)];
+
+		index = Rand(WaveNumClasses);
+		NewMonsterClass = WaveMonsterClasses.WaveMonsterClass[index];
 		if(NewMonsterClass != None)
 		{
 		    StartSpot = FindPlayerStart(None,0, string(NewMonsterClass));
@@ -416,25 +466,114 @@ function AddMonster()
 		{
 			StartSpot = FindPlayerStart(None,0, string(FallBackMonster));
 			//else spawn the fall back using an average monsters size specifications
-			NewMonster = Spawn(FallBackMonster,,,StartSpot.Location+(FallBackMonster.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation);
+			NewMonster = tK_Monster(Spawn(FallBackMonster,,,StartSpot.Location+(FallBackMonster.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation));
 		}
 
 		if ( NewMonster != None )
 		{
 			//TotalSpawned++;
 			WaveMonsters++;
+			NewMonster.MonsterName = WaveMonsterClasses.WaveMonsterName[index];
+			UpdateNewMonsterClass(NewMonster);
 			//UpdateMonsterTypeStats(NewMonster.Class, 1, 0, 0);
-			//InvasionProMutator(BaseMutator).ModifyMonster(NewMonster,false,false);
-			// Inv = NewMonster.FindInventoryType(class'InvasionProMonsterIDInv');
-			// if(InvasionProMonsterIDInv(Inv) != None)
-			// {
-			// 	InvasionProMonsterIDInv(Inv).bSummoned = false;
-			// 	InvasionProMonsterIDInv(Inv).bBoss = false;
-			// 	InvasionProMonsterIDInv(Inv).bFriendly = false;
-			// }
+			//LumpysInvasionMutator(BaseMutator).ModifyMonster(NewMonster,false,false);
+            
+			Inv = NewMonster.FindInventoryType(class'IPMonsterIDInv');
+			if(IPMonsterIDInv(Inv) != None)
+			{		
+				IPMonsterIDInv(Inv).bSummoned = false;
+				IPMonsterIDInv(Inv).bBoss = false;
+				IPMonsterIDInv(Inv).bFriendly = false;
+			}
+			//UpdateNewMonsterClass(NewMonster);
+			Log("New Monster Name"$NewMonster.MonsterName,'LumpysInvasion');
 		}
 
         NumHostileMonsters();
+}
+
+function UpdateNewMonsterClass(tk_Monster MonsterClass)
+{
+    local int i;
+    local int RandValue;
+	local int fRandValue;
+	//local tk_Monster M;
+
+	//M = tK_Monster(MonsterClass);
+
+    for( i=0;i<class'IPMonsterTable'.default.MonsterTable.Length;i++ )
+    {
+        if( class'IPMonsterTable'.default.MonsterTable[i].MonsterName ~= MonsterClass.MonsterName )
+        {
+            if( class'IPMonsterTable'.default.MonsterTable[i].bRandomHealth )
+            {
+                RandValue = Max(100,Rand(1000));
+
+                MonsterClass.Health = RandValue;
+                MonsterClass.HealthMax = RandValue;
+            }
+            else
+            {
+                MonsterClass.Health = class'IPMonsterTable'.default.MonsterTable[i].NewHealth;
+                MonsterClass.HealthMax = class'IPMonsterTable'.default.MonsterTable[i].NewMaxHealth;
+                Log("M.Health is now: "$MonsterClass.Health$" M.HealthMax is now: "$MonsterClass.HealthMax,'LumpysInvasion');
+            }
+
+            if( class'IPMonsterTable'.default.MonsterTable[i].bRandomSpeed )
+            {
+                RandValue = Max(200,Rand(1000));
+
+                MonsterClass.GroundSpeed = RandValue;
+                MonsterClass.AirSpeed = RandValue;
+                MonsterClass.WaterSpeed = RandValue;
+                MonsterClass.JumpZ = RandValue;
+            }
+            else
+            {
+                MonsterClass.GroundSpeed = class'IPMonsterTable'.default.MonsterTable[i].NewGroundSpeed;
+                MonsterClass.AirSpeed = class'IPMonsterTable'.default.MonsterTable[i].NewAirSpeed;
+                MonsterClass.WaterSpeed = class'IPMonsterTable'.default.MonsterTable[i].NewWaterSpeed;
+                MonsterClass.JumpZ =class'IPMonsterTable'.default.MonsterTable[i].NewJumpZ;
+            }
+
+            if( class'IPMonsterTable'.default.MonsterTable[i].bRandomSize )
+            {
+                fRandValue = Rand( (5.0 * 1000) - (0.2 * 1000) ) ;
+                fRandValue /= 1000;
+                fRandValue += 0.2;
+
+                if(fRandValue < 1)
+                {
+                    fRandValue = 1;
+                }
+                MonsterClass.SetLocation( MonsterClass.Location + vect(0,0,1) * ( MonsterClass.CollisionHeight * fRandValue) );
+                MonsterClass.SetDrawScale(MonsterClass.Drawscale * fRandValue);
+                MonsterClass.SetCollisionSize( MonsterClass.CollisionRadius * fRandValue, MonsterClass.CollisionHeight * fRandValue );
+                MonsterClass.Prepivot.X = MonsterClass.Prepivot.X * fRandValue;
+                MonsterClass.Prepivot.Y = MonsterClass.Prepivot.Y * fRandValue;
+                MonsterClass.Prepivot.Z = MonsterClass.Prepivot.Z * fRandValue;
+            }
+            else
+            {
+                MonsterClass.SetLocation( MonsterClass.Location + vect(0,0,1) * ( MonsterClass.CollisionHeight * class'IPMonsterTable'.default.MonsterTable[i].NewDrawScale) );
+                MonsterClass.SetDrawScale(class'IPMonsterTable'.default.MonsterTable[i].NewDrawScale);
+                MonsterClass.SetCollisionSize(class'IPMonsterTable'.default.MonsterTable[i].NewCollisionRadius,class'IPMonsterTable'.default.MonsterTable[i].NewCollisionHeight);
+                MonsterClass.Prepivot = class'IPMonsterTable'.default.MonsterTable[i].NewPrepivot;
+            }
+
+            /*
+            M.GibCountCalf *= class'IPMonsterTable'.default.MonsterTable[i].NewGibMultiplier;
+            M.GibCountForearm *= class'IPMonsterTable'.default.MonsterTable[i].NewGibMultiplier;
+            M.GibCountHead *= class'IPMonsterTable'.default.MonsterTable[i].NewGibMultiplier;
+            M.GibCountTorso *= class'IPMonsterTable'.default.MonsterTable[i].NewGibMultiplier;
+            M.GibCountUpperArm *= class'IPMonsterTable'.default.MonsterTable[i].NewGibMultiplier;
+            */
+
+            MonsterClass.ScoringValue = class'IPMonsterTable'.default.MonsterTable[i].NewScoreAward;
+            //MonsterClass.MonsterName = class'IPMonsterTable'.default.MonsterTable[i].MonsterName;
+            
+        }
+    }
 }
 
 //over writing all inTeam and settings 1 for players and 0 for monsters

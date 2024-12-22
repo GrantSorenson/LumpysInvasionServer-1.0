@@ -1,0 +1,7 @@
+class Bob_Omb_DamageType extends MM_DamageType abstract;
+
+defaultproperties
+{
+     DeathString="%o was killed by a Bob-omb."
+     bLocationalHit=False
+}

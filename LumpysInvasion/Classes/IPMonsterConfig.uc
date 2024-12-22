@@ -47,6 +47,8 @@ var() string m_descrip;
 
 var() string AssembledInformation;
 
+var() Automated moEditBox newMonsterName;
+
 var() Automated GUIScrollTextBox  absoluteDefaults;
 
 var() Automated GUILabel monsterPrePivotLabel;
@@ -84,6 +86,7 @@ var() Automated GUIButton b_defaults; //set the defaults
 var() Automated GUIButton b_EditMode;
 var() Automated GUIButton b_WireMode;
 var() Automated GUIButton b_Copy; //copy drawscale,collision height + radius, prepivot to the monster clipboard
+var() Automated GUIButton b_SaveUnique;
 
 var() Automated moComboBox currentMonster;
 var() Automated moComboBox currentAnimList;
@@ -190,6 +193,7 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	b_Cancel.WinTop=0.895495;
 
 	b_Copy.FontScale = FNS_Small;
+	b_SaveUnique.FontScale = FNS_Small;
 
 	//resize scrolling information window
 	absoluteDefaults.MyScrollText.FontScale=FNS_Small;
@@ -424,6 +428,7 @@ function ClearAllData()
 	b_EditMode.DisableMe();
 	b_WireMode.DisableMe();
 	b_Copy.DisableMe();
+	b_SaveUnique.DisableMe();
 	currentHealth.DisableMe();
 	currentDamageMultiplier.DisableMe();
 	currentMaxHealth.DisableMe();
@@ -847,6 +852,11 @@ function InternalOnChange(GUIComponent Sender)
 		CurrentAnim = StringToName( currentAnimList.GetText() );
 		PlayNewAnim();
 	}
+
+	if(Sender == newMonsterName)
+	{
+		
+	}
 }
 
 function name StringToName(string str)
@@ -901,6 +911,7 @@ function SetAvailableConfigs()
 
 	if(!bEditMode)
 	{
+		b_SaveUnique.DisableMe();
 		currentDrawScale.DisableMe();
 		currentCollisionHeight.DisableMe();
 		currentCollisionRadius.DisableMe();
@@ -913,6 +924,7 @@ function SetAvailableConfigs()
 		return;
 	}
 
+	b_SaveUnique.EnableMe();
 	currentDrawScale.EnableMe();
 	currentCollisionHeight.EnableMe();
 	currentCollisionRadius.EnableMe();
@@ -1042,6 +1054,42 @@ function bool CopySize(GUIComponent Sender)
 	return true;
 }
 
+function bool SaveUniqueMonster(GUIComponent Sender)
+{
+	class'IPMonsterTable'.default.MonsterTable.Insert(class'IPMonsterTable'.default.MonsterTable.length-1,1);
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].MonsterClassName = class'IPMonsterTable'.default.MonsterTable[ActiveMonster].MonsterClassName;
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].MonsterName = newMonsterName.GetText();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewHealth = currentHealth.GetValue();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewMaxHealth = currentMaxHealth.GetValue();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewGroundSpeed = currentGroundSpeed.GetValue();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewAirSpeed = currentAirSpeed.GetValue();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewWaterSpeed = currentWaterSpeed.GetValue();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewJumpZ = currentJumpZ.GetValue();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewScoreAward = currentScoreAward.GetValue();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewGibMultiplier = currentGibMultiplier.GetValue();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewGibSizeMultiplier = currentGibSizeMultiplier.GetValue();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].DamageMultiplier = currentDamageMultiplier.GetValue();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].bRandomHealth = currentbRandomHealth.IsChecked();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].bRandomSpeed = currentbRandomSpeed.IsChecked();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].bRandomSize = currentbRandomSize.IsChecked();
+
+	if(bEditMode || !class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].bSetup)
+	{
+		class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewDrawScale = currentDrawScale.GetValue();
+		class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewCollisionHeight = currentCollisionHeight.GetValue();
+		class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewCollisionRadius = currentCollisionRadius.GetValue();
+		class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewPrePivot.X = currentPrePivotX.GetValue();
+		class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewPrePivot.Y = currentPrePivotY.GetValue();
+		class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].NewPrePivot.Z = currentPrePivotZ.GetValue();
+	}
+
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].bSetup = true;
+
+	class'IPMonsterTable'.static.StaticSaveConfig();
+
+	return true;
+}
+
 defaultproperties
 {
     ShaderClass=Class'IPCylinderShader'
@@ -1054,6 +1102,16 @@ defaultproperties
     WinHeight=1.00
     bScaleToParent=True
     SpinnyDudeOffset=(X=70.00,Y=0.00,Z=0.00)
+
+	begin object name=NewerMonsterName class=moEditBox
+		WinWidth=0.339162
+		WinHeight=0.030000
+		WinLeft=0.047217
+		WinTop=0.130517
+        Caption="New Monster Name"
+		OnChange=IPMonsterConfig.InternalOnChange
+    end object
+    newMonsterName=moEditBox'IPMonsterConfig.NewerMonsterName'
 
     begin object name=DropTarget class=GUIButton
         StyleName="NoBackground"
@@ -1077,14 +1135,14 @@ defaultproperties
 		WinLeft=0.664232
 		WinTop=0.090465
         OnChange = IPMonsterConfig.InternalOnChange
-        MaxValue=100.0
+        MaxValue=400.0
         MinValue=0.0
         Caption="Zoom"
         ComponentJustification = TXTA_Left
         ComponentWidth = -1
         CaptionWidth = 100
         bAutoSizeCaption = true
-        IniOption="@Internal"
+        //IniOption="@Internal"
     end object
     currentModelFOV=moSlider'IPMonsterConfig.ModelFOV'
 
@@ -1136,7 +1194,7 @@ defaultproperties
 		WinHeight=0.030000
 		WinLeft=0.047634
 		WinTop=0.219076
-        Caption="Regen Health Max"
+        Caption="Max Health"
     end object
     currentMaxHealth=moNumericEdit'IPMonsterConfig.cMaxHealth'
 
@@ -1396,6 +1454,16 @@ defaultproperties
         OnClick=IPMonsterConfig.CopySize
     end object
     b_Copy=GUIButton'IPMonsterConfig.CopyButton'
+
+	begin object name=SaveUniqueButton class=GUIButton
+		WinWidth=0.135340
+		WinHeight=0.035712
+		WinLeft=0.188284
+		WinTop=0.593192
+        Caption="Save Unique"
+        OnClick=IPMonsterConfig.SaveUniqueMonster
+    end object
+    b_SaveUnique=GUIButton'IPMonsterConfig.SaveUniqueButton'
 
     begin object name=cMonster class=moComboBox
         WinWidth=0.339162
