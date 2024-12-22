@@ -328,6 +328,8 @@ function UpdateMonster()
 		if(M.default.bUseCylinderCollision == false)
 		{
 			b_EditMode.DisableMe();
+						b_EditMode.EnableMe();
+
 		}
 		else
 		{

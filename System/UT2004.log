@@ -1,4 +1,4 @@
-Log: Log file open, 12/22/24 10:35:19
+Log: Log file open, 12/22/24 11:11:36
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -14,14 +14,14 @@ Log: Splash screen filename is '..\Help\UT2004Logo.bmp'
 Localization: No localization: UT2004.General.Start (int)
 Log: Initializing OpenGLDrv...
 Log: Game class is 'GameInfo'
-Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.575000...
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.549000...
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
 Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?SpectatorOnly=1?Sex=M
 Log: Collecting garbage
 Log: Purging garbage
 Log: Garbage: objects: 33900->33897; refs: 350345
 Log: Game class is 'CinematicGame'
-Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.907000...
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.875000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
@@ -63,13 +63,13 @@ Log: OpenGL: Level of anisotropy is 1.000000 (max 16.000000).
 Log: OpenGL: Forcibly disabled pixel shaders.
 Log: OpenGL: Forcibly disabled render-to-texture.
 Log: OpenGL: allocated 32 MByte of AGP memory
-Log: Startup time: 1.647000 seconds
+Log: Startup time: 1.604000 seconds
 Localization: No localization: UT2004.General.Run (int)
 Log: Precaching: NvidiaLogo.LevelInfo0
 Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
 Log: Allocating 32768 byte dynamic index buffer.
 Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.013 seconds
+Log: Finished precaching geometry in 0.016 seconds
 Log: Finished precaching textures in 0.018 seconds
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] () ()
 Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
@@ -93,8 +93,15 @@ ModAuthor: # # # # Select Map ShowPanel()  True
 ModAuthor: # # # # Gametype ShowPanel()  False
 ModAuthor: # # # # Game Rules ShowPanel()  True
 ModAuthor: # # # # Select Map ShowPanel()  False
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysInvasion.IPWaveConfig] () ()
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [IPWaveConfig]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [] () ()
+Warning: Failed to load 'NULL': Can't resolve package name
+Warning: Failed to load 'Class None.': Can't resolve package name
+ScriptLog: Could not DLO menu ''
+ScriptLog: Could not open menu 
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysInvasion.IPMonsterConfig] () ()
+Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:030B) Accessed None 'b_Play'
+Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:031A) Accessed None 'b_Pause'
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [IPMonsterConfig]
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysInvasion.IPMonsterConfig] () ()
 Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:030B) Accessed None 'b_Play'
 Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:031A) Accessed None 'b_Pause'
@@ -115,9 +122,9 @@ ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
 Log: Collecting garbage
 Log: Purging garbage
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 45010->40937; refs: 472390
+Log: Garbage: objects: 44304->40972; refs: 472588
 Log: Game class is 'LumpysInvasion'
-Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 25.496000...
+Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 50.615000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim
@@ -131,33 +138,36 @@ Log: Precaching: DM-Flux2.LevelInfo0
 Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
 Log: Allocating 32768 byte dynamic index buffer.
 Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.080 seconds
-Log: Finished precaching textures in 0.120 seconds
+Log: Finished precaching geometry in 0.079 seconds
+Log: Finished precaching textures in 0.110 seconds
 ScriptLog: START MATCH
-LumpysInvasion: M.Health is now: 400 M.HealthMax is now: 400
-LumpysInvasion: M.Health is now: 400 M.HealthMax is now: 400.00
-LumpysInvasion: New Monster NameSuper Mario Angry Sun
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameClone Trooper
-LumpysInvasion: M.Health is now: 400 M.HealthMax is now: 400
-LumpysInvasion: M.Health is now: 400 M.HealthMax is now: 400.00
-LumpysInvasion: New Monster NameSuper Mario Angry Sun
-LumpysInvasion: M.Health is now: 60 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 60 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NamePupae
+LumpysInvasion: New Monster NameDragon
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameRazor Fly
-Log: Preprocessing:  Vertex stream total vertices: 209 Orig wedges: 209
-LumpysInvasion: M.Health is now: 60 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 300 M.HealthMax is now: 300.00
-LumpysInvasion: New Monster NameSmall Poops
-Log: Preprocessing:  Vertex stream total vertices: 185 Orig wedges: 185
-ScriptLog: Last Cred: 3757 Stat Cred: 3772
+LumpysInvasion: New Monster NameEarth Dragon
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameRazor Fly
+LumpysInvasion: New Monster NameDragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+ScriptLog: Last Cred: 3798 Stat Cred: 3808
+ScriptLog: Last Cred: 3808 Stat Cred: 3819
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
+ScriptLog: Last Cred: 3819 Stat Cred: 3836
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
 ModAuthor: # # # # Game ShowPanel()  True
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
@@ -170,11 +180,11 @@ Exit: Windows client shut down
 Log: Waiting for file streaming thread to finish...
 Exit: OpenAL Audio subsystem shut down.
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 56482->0; refs: 472390
+Log: Garbage: objects: 55785->0; refs: 472588
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 238 MByte 148 KByte 837 Bytes from HD took 0.385999 seconds (0.352999 reading, 0.033000 seeking).
-Log: FileManager: 0.327000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 237 MByte 342 KByte 338 Bytes from HD took 0.376999 seconds (0.329999 reading, 0.047000 seeking).
+Log: FileManager: 0.281000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/22/24 10:36:37
+Uninitialized: Log file closed, 12/22/24 11:13:04
