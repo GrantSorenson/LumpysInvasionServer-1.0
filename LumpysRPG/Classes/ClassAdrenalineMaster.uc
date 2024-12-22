@@ -14,4 +14,5 @@ defaultproperties
 	CostAddPerLevel=0
 	MaxLevel=20
   bMasterAbility=true;
+  MasterClass="AM"
 }

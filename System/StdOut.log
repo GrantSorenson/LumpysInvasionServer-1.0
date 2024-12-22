@@ -1,4 +1,4 @@
-Log file open, 12/22/24 11:11:32
+Log file open, 12/22/24 16:16:40
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -34,87 +34,274 @@ Log file open, 12/22/24 11:11:32
 --------------------------UTV2004s - Release--------------------------
 --------------------------tk_BaseM - Release--------------------------
 -----------------------LumpysInvasion - Release-----------------------
-Analyzing...
-Parsing LumpysInvasionGameReplicationInfo
-Parsing IPProxyReplicationInfo
-Parsing LumpysInvasionFakeFriendlyMonsterReplicationInfo
-Parsing LumpysInvasionFriendlyMonsterReplicationInfo
-Parsing IPMonsterReplicationInfo
-Parsing LumpysInvasionMutator
-Parsing LumpysInvasion
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\LumpysInvasion.uc(19) : Warning, 'WaveMonsterClass' obscures 'WaveMonsterClass' defined in base class 'Invasion'.
-Parsing LumpysInvasionWaveMessage
-Parsing MapListLumpysInvasion
-Parsing FriendlyMonsterController
-Parsing IPMonsterIDInv
-Parsing LumpysInvasionHUD
-Parsing IPCollisionTestActor
-Parsing IPCylinderActor
-Parsing IPPetAnchor
-Parsing IPSpinnyMonster
-Parsing LumpysInvasionWaveHandler
-Parsing IPCylinderShader
-Parsing IPCylinderFinalBlend
-Parsing IPMonsterConfig
-Parsing IPWaveConfig
-Parsing IPAnimationManager
-Parsing IPConfigs
-Parsing IPCopyPaste
-Parsing IPDefaultWaves
-Parsing IPMonsterTable
-Compiling LumpysInvasionGameReplicationInfo
-Compiling IPProxyReplicationInfo
-Compiling LumpysInvasionFakeFriendlyMonsterReplicationInfo
-Compiling LumpysInvasionFriendlyMonsterReplicationInfo
-Compiling IPMonsterReplicationInfo
-Compiling LumpysInvasionMutator
-Compiling LumpysInvasion
-Compiling LumpysInvasionWaveMessage
-Compiling MapListLumpysInvasion
-Compiling FriendlyMonsterController
-Compiling IPMonsterIDInv
-Compiling LumpysInvasionHUD
-Compiling IPCollisionTestActor
-Compiling IPCylinderActor
-Compiling IPPetAnchor
-Compiling IPSpinnyMonster
-Compiling LumpysInvasionWaveHandler
-Compiling IPCylinderShader
-Compiling IPCylinderFinalBlend
-Compiling IPMonsterConfig
-Compiling IPWaveConfig
-Compiling IPAnimationManager
-Compiling IPConfigs
-Compiling IPCopyPaste
-Compiling IPDefaultWaves
-Compiling IPMonsterTable
-Importing Defaults for LumpysInvasionGameReplicationInfo
-Importing Defaults for IPProxyReplicationInfo
-Importing Defaults for LumpysInvasionFakeFriendlyMonsterReplicationInfo
-Importing Defaults for LumpysInvasionFriendlyMonsterReplicationInfo
-Importing Defaults for IPMonsterReplicationInfo
-Importing Defaults for LumpysInvasionMutator
-Importing Defaults for LumpysInvasion
-Importing Defaults for LumpysInvasionWaveMessage
-Importing Defaults for MapListLumpysInvasion
-Importing Defaults for FriendlyMonsterController
-Importing Defaults for IPMonsterIDInv
-Importing Defaults for LumpysInvasionHUD
-Importing Defaults for IPCollisionTestActor
-Importing Defaults for IPCylinderActor
-Importing Defaults for IPPetAnchor
-Importing Defaults for IPSpinnyMonster
-Importing Defaults for LumpysInvasionWaveHandler
-Importing Defaults for IPCylinderShader
-Importing Defaults for IPCylinderFinalBlend
-Importing Defaults for IPMonsterConfig
-Importing Defaults for IPWaveConfig
-Importing Defaults for IPAnimationManager
-Importing Defaults for IPConfigs
-Importing Defaults for IPCopyPaste
-Importing Defaults for IPDefaultWaves
-Importing Defaults for IPMonsterTable
 -------------------------LumpysRPG - Release--------------------------
+Analyzing...
+Parsing AwarenessInteraction
+Parsing RPGInteraction
+Parsing MutLumpysRPG
+Parsing AdrenalConditionMessage
+Parsing EmptyMessage
+Parsing GainLevelMessage
+Parsing HealedConditionMessage
+Parsing IdentifyMessage
+Parsing LevelUpHUDMessage
+Parsing RPGNameMessage
+Parsing RPGRules
+Parsing LumpysArtifactManager
+Parsing FlightEffect
+Parsing FriendlyMonsterEffect
+Parsing LevelUpEffect
+Parsing RPGLinkAttachment
+Parsing DamTypeLightningRod
+Parsing FriendlyMonsterController
+Parsing RPGArtifact
+Parsing ArtifactFlight
+Parsing ArtifactInvulnerability
+Parsing ArtifactLightningRod
+Parsing ArtifactMagicWeaponMaker
+Parsing ArtifactMedicWeaponMaker
+Parsing ArtifactSuperMagicWeaponMaker
+Parsing ArtifactTripleDamage
+Parsing RPGLinkGun
+Parsing FakeMonsterWeapon
+Parsing RPGPlayerDataObject
+Parsing RPGStatsInv
+Parsing RPGWeapon
+Parsing RW_Adrenal
+Parsing RW_Healing
+Parsing RW_MedicHealing
+Parsing RW_Rejuvination
+Parsing FriendlyMonsterKillMarker
+Parsing GhostInv
+Parsing RPGLinkGunPickup
+Parsing RPGWeaponPickup
+Parsing RPGArtifactPickup
+Parsing ArtifactFlightPickup
+Parsing ArtifactInvulnerabilityPickup
+Parsing ArtifactLightningRodPickup
+Parsing ArtifactMagicWeaponMakerPickup
+Parsing ArtifactSuperMagicWeaponMakerPickup
+Parsing ArtifactTripleDamagePickup
+Parsing ExperiencePickup
+Parsing RPGWeaponLocker
+Parsing PickupEXPShard
+Parsing HudCDeathmatchHelper
+Parsing RPGShockProjectile
+Parsing RPGPainterBeamEffect
+Parsing AwarenessEnemyList
+Parsing CredBonkTimer
+Parsing VampireMarker
+Parsing RPGLinkFire
+Parsing RPGShockProjFire
+Parsing RPGPainterFire
+Parsing RPGTabAbilities
+Parsing RPGTabCharacter
+Parsing RPGTabStats
+Parsing RPGTabStore
+Parsing RPGTabWelcome
+Parsing RPGAbilityDescMenu
+Parsing RPGPlayerLevelsMenu
+Parsing RPGLumpyStatMenu
+Parsing RPGResetConfirmPage
+Parsing RPGStatsMenu
+Parsing RPGStoreList
+Parsing STY_ResetButton
+Parsing STY_AbilityList
+Parsing AbilityListFont
+Parsing LumpysRPGKeyBinds
+Parsing RPGAbility
+Parsing AbilityAwareness
+Parsing AbilityHermesSandals
+Parsing AbilityJumpZ
+Parsing AbilitySpeed
+Parsing CA_AdrenalineArtifacts
+Parsing CA_MedicArtifacts
+Parsing RPGClass
+Parsing ClassAdrenalineMaster
+Parsing ClassMedicMaster
+Parsing ClassWeaponMaster
+Parsing Colors
+Compiling AwarenessInteraction
+Compiling RPGInteraction
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGInteraction.uc(217) : Warning, 'CredStock' : unreferenced local variable
+Compiling MutLumpysRPG
+Compiling AdrenalConditionMessage
+Compiling EmptyMessage
+Compiling GainLevelMessage
+Compiling HealedConditionMessage
+Compiling IdentifyMessage
+Compiling LevelUpHUDMessage
+Compiling RPGNameMessage
+Compiling RPGRules
+Compiling LumpysArtifactManager
+Compiling FlightEffect
+Compiling FriendlyMonsterEffect
+Compiling LevelUpEffect
+Compiling RPGLinkAttachment
+Compiling DamTypeLightningRod
+Compiling FriendlyMonsterController
+Compiling RPGArtifact
+Compiling ArtifactFlight
+Compiling ArtifactInvulnerability
+Compiling ArtifactLightningRod
+Compiling ArtifactMagicWeaponMaker
+Compiling ArtifactMedicWeaponMaker
+Compiling ArtifactSuperMagicWeaponMaker
+Compiling ArtifactTripleDamage
+Compiling RPGLinkGun
+Compiling FakeMonsterWeapon
+Compiling RPGWeapon
+Compiling RW_Adrenal
+Compiling RW_Healing
+Compiling RW_MedicHealing
+Compiling RW_Rejuvination
+Compiling FriendlyMonsterKillMarker
+Compiling GhostInv
+Compiling RPGStatsInv
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGStatsInv.uc(116) : Warning, 'i' : unreferenced local variable
+Compiling RPGLinkGunPickup
+Compiling RPGWeaponPickup
+Compiling RPGArtifactPickup
+Compiling ArtifactFlightPickup
+Compiling ArtifactInvulnerabilityPickup
+Compiling ArtifactLightningRodPickup
+Compiling ArtifactMagicWeaponMakerPickup
+Compiling ArtifactSuperMagicWeaponMakerPickup
+Compiling ArtifactTripleDamagePickup
+Compiling ExperiencePickup
+Compiling RPGWeaponLocker
+Compiling PickupEXPShard
+Compiling HudCDeathmatchHelper
+Compiling RPGShockProjectile
+Compiling RPGPainterBeamEffect
+Compiling AwarenessEnemyList
+Compiling CredBonkTimer
+Compiling VampireMarker
+Compiling RPGLinkFire
+Compiling RPGShockProjFire
+Compiling RPGPainterFire
+Compiling RPGTabAbilities
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGTabAbilities.uc(38) : Warning, 'PC' : unreferenced local variable
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGTabAbilities.uc(39) : Warning, 'TempDataObject' : unreferenced local variable
+Compiling RPGTabCharacter
+Compiling RPGTabStats
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGTabStats.uc(14) : Warning, 'PC' : unreferenced local variable
+Compiling RPGTabStore
+Compiling RPGTabWelcome
+Compiling RPGAbilityDescMenu
+Compiling RPGPlayerLevelsMenu
+Compiling RPGLumpyStatMenu
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGLumpyStatMenu.uc(11) : Warning, 'i' : unreferenced local variable
+Compiling RPGResetConfirmPage
+Compiling RPGStatsMenu
+Compiling RPGStoreList
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGStoreList.uc(28) : Warning, 'Team' : unreferenced local variable
+Compiling STY_ResetButton
+Compiling STY_AbilityList
+Compiling AbilityListFont
+Compiling LumpysRPGKeyBinds
+Compiling RPGAbility
+Compiling AbilityAwareness
+Compiling AbilityHermesSandals
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\AbilityHermesSandals.uc(101) : Warning, 'P' : unreferenced local variable
+Compiling AbilityJumpZ
+Compiling AbilitySpeed
+Compiling CA_AdrenalineArtifacts
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\CA_AdrenalineArtifacts.uc(13) : Warning, 'Arti' : unreferenced local variable
+Compiling CA_MedicArtifacts
+Compiling RPGClass
+Compiling ClassAdrenalineMaster
+Compiling ClassMedicMaster
+Compiling ClassWeaponMaster
+Compiling Colors
+Compiling RPGPlayerDataObject
+Importing Defaults for AwarenessInteraction
+Importing Defaults for RPGInteraction
+Importing Defaults for MutLumpysRPG
+Importing Defaults for AdrenalConditionMessage
+Importing Defaults for EmptyMessage
+Importing Defaults for GainLevelMessage
+Importing Defaults for HealedConditionMessage
+Importing Defaults for IdentifyMessage
+Importing Defaults for LevelUpHUDMessage
+Importing Defaults for RPGNameMessage
+Importing Defaults for RPGRules
+Importing Defaults for LumpysArtifactManager
+Importing Defaults for FlightEffect
+Importing Defaults for FriendlyMonsterEffect
+Importing Defaults for LevelUpEffect
+Importing Defaults for RPGLinkAttachment
+Importing Defaults for DamTypeLightningRod
+Importing Defaults for FriendlyMonsterController
+Importing Defaults for RPGArtifact
+Importing Defaults for ArtifactFlight
+Importing Defaults for ArtifactInvulnerability
+Importing Defaults for ArtifactLightningRod
+Importing Defaults for ArtifactMagicWeaponMaker
+Importing Defaults for ArtifactMedicWeaponMaker
+Importing Defaults for ArtifactSuperMagicWeaponMaker
+Importing Defaults for ArtifactTripleDamage
+Importing Defaults for RPGLinkGun
+Importing Defaults for FakeMonsterWeapon
+Importing Defaults for RPGWeapon
+Importing Defaults for RW_Adrenal
+Importing Defaults for RW_Healing
+Importing Defaults for RW_MedicHealing
+Importing Defaults for RW_Rejuvination
+Importing Defaults for FriendlyMonsterKillMarker
+Importing Defaults for GhostInv
+Importing Defaults for RPGStatsInv
+Importing Defaults for RPGLinkGunPickup
+Importing Defaults for RPGWeaponPickup
+Importing Defaults for RPGArtifactPickup
+Importing Defaults for ArtifactFlightPickup
+Importing Defaults for ArtifactInvulnerabilityPickup
+Importing Defaults for ArtifactLightningRodPickup
+Importing Defaults for ArtifactMagicWeaponMakerPickup
+Importing Defaults for ArtifactSuperMagicWeaponMakerPickup
+Importing Defaults for ArtifactTripleDamagePickup
+Importing Defaults for ExperiencePickup
+Importing Defaults for RPGWeaponLocker
+Importing Defaults for PickupEXPShard
+Importing Defaults for HudCDeathmatchHelper
+Importing Defaults for RPGShockProjectile
+Importing Defaults for RPGPainterBeamEffect
+Importing Defaults for AwarenessEnemyList
+Importing Defaults for CredBonkTimer
+Importing Defaults for VampireMarker
+Importing Defaults for RPGLinkFire
+Importing Defaults for RPGShockProjFire
+Importing Defaults for RPGPainterFire
+Importing Defaults for RPGTabAbilities
+Importing Defaults for RPGTabCharacter
+Importing Defaults for RPGTabStats
+Importing Defaults for RPGTabStore
+Importing Defaults for RPGTabWelcome
+Importing Defaults for RPGAbilityDescMenu
+Importing Defaults for RPGPlayerLevelsMenu
+Importing Defaults for RPGLumpyStatMenu
+Importing Defaults for RPGResetConfirmPage
+Importing Defaults for RPGStatsMenu
+Importing Defaults for RPGStoreList
+Importing Defaults for STY_ResetButton
+Importing Defaults for STY_AbilityList
+... deferring
+Importing Defaults for AbilityListFont
+Importing Defaults for LumpysRPGKeyBinds
+Importing Defaults for RPGAbility
+Importing Defaults for AbilityAwareness
+Importing Defaults for AbilityHermesSandals
+Importing Defaults for AbilityJumpZ
+Importing Defaults for AbilitySpeed
+Importing Defaults for CA_AdrenalineArtifacts
+Importing Defaults for CA_MedicArtifacts
+Importing Defaults for RPGClass
+Importing Defaults for ClassAdrenalineMaster
+Importing Defaults for ClassMedicMaster
+Importing Defaults for ClassWeaponMaster
+Importing Defaults for Colors
+Importing Defaults for RPGPlayerDataObject
+Importing Defaults for STY_AbilityList
 --------------------------tK_BaseW - Release--------------------------
 -----------------------tk_FHIWeapons - Release------------------------
 ------------------------tk_ZenCoders - Release------------------------
@@ -123,7 +310,7 @@ Importing Defaults for IPMonsterTable
 --------------------------tk_AK47 - Release---------------------------
 -------------------------tk_LilLady - Release-------------------------
 ---------------------tk_HolyHandGrenade - Release---------------------
------------------------lumpysinvasion - Release-----------------------
-Game exported successfully: LumpysInvasion.LumpysInvasion
-Success - 0 error(s), 1 warning(s)
-Log file closed, 12/22/24 11:11:34
+-------------------------lumpysRPG - Release--------------------------
+Mutator exported successfully: LumpysRPG.MutLumpysRPG
+Success - 0 error(s), 9 warning(s)
+Log file closed, 12/22/24 16:16:43

@@ -1416,7 +1416,8 @@ defaultproperties
 	Abilities(4)=Class'LumpysRPG.ClassAdrenalineMaster'
 	Abilities(5)=Class'LumpysRPG.ClassWeaponMaster'
 	Abilities(6)=Class'LumpysRPG.CA_MedicArtifacts'
-	Abilities(7)=Class'LumpysRPG.AbilityAwareness'
+	Abilities(7)=Class'LumpysRPG.CA_AdrenalineArtifacts'
+	Abilities(8)=Class'LumpysRPG.AbilityAwareness'
 
   //These berakpoints should be used for XP ability unlock requirements and increase gain by 50x
   XPBreakPoints(0)=(Level=500,XPRequired=500)

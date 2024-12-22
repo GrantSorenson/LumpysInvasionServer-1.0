@@ -73,6 +73,10 @@ function RefreshAbilityBox()
 	}
 
 	GetOwnedClasses();
+  for(x=0;x<OwnedClasses.length;x++)
+  {
+    Log("Owned Class #"$x$": "$OwnedClasses[x],'LumpysInvasion');
+  }
 
   //Adding sections to a list box can be done by adding an entry like  list.Add(CustomGameCaption,None,"",true); to the correct position
   //Yea i know i can make this faster. I will. Eventually.
