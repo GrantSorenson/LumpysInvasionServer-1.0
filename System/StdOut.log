@@ -1,4 +1,4 @@
-Log file open, 12/23/24 12:17:29
+Log file open, 12/23/24 13:10:06
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -117,6 +117,7 @@ Parsing AbilityJumpZ
 Parsing AbilitySpeed
 Parsing CA_AdrenalineArtifacts
 Parsing CA_MedicArtifacts
+Parsing CA_MedicSprites
 Parsing RPGClass
 Parsing ClassAdrenalineMaster
 Parsing ClassMedicMaster
@@ -202,6 +203,7 @@ Compiling AbilityJumpZ
 Compiling AbilitySpeed
 Compiling CA_AdrenalineArtifacts
 Compiling CA_MedicArtifacts
+Compiling CA_MedicSprites
 Compiling RPGClass
 Compiling ClassAdrenalineMaster
 Compiling ClassMedicMaster
@@ -289,6 +291,7 @@ Importing Defaults for AbilityJumpZ
 Importing Defaults for AbilitySpeed
 Importing Defaults for CA_AdrenalineArtifacts
 Importing Defaults for CA_MedicArtifacts
+Importing Defaults for CA_MedicSprites
 Importing Defaults for RPGClass
 Importing Defaults for ClassAdrenalineMaster
 Importing Defaults for ClassMedicMaster
@@ -307,4 +310,4 @@ Importing Defaults for STY_AbilityList
 ---------------------tk_HolyHandGrenade - Release---------------------
 Mutator exported successfully: LumpysRPG.MutLumpysRPG
 Success - 0 error(s), 0 warning(s)
-Log file closed, 12/23/24 12:17:32
+Log file closed, 12/23/24 13:10:10

@@ -19,6 +19,7 @@ class ArtifactMedicWeaponMaker extends ArtifactMagicWeaponMaker;
   defaultproperties
   {
     CostPerSec=20
+    MinActivationTime=5.00000
     IconMaterial=Texture'LumpysTextures.ArtifactIcons.tex_MedicWeaponMaker'
     ItemName="Medic Weapon Maker"
   }

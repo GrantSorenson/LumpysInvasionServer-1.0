@@ -1,4 +1,4 @@
-Log: Log file open, 12/23/24 12:17:28
+Log: Log file open, 12/23/24 13:10:05
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -121,6 +121,9 @@ Log: Imported: Class LumpysRPG.CA_AdrenalineArtifacts
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\CA_MedicArtifacts.uc)
 Log: Class: CA_MedicArtifacts extends RPGAbility
 Log: Imported: Class LumpysRPG.CA_MedicArtifacts
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\CA_MedicSprites.uc)
+Log: Class: CA_MedicSprites extends RPGAbility
+Log: Imported: Class LumpysRPG.CA_MedicSprites
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ClassAdrenalineMaster.uc)
 Log: Class: ClassAdrenalineMaster extends RPGClass
 Log: Imported: Class LumpysRPG.ClassAdrenalineMaster
@@ -391,6 +394,7 @@ Log: Parsing AbilityJumpZ
 Log: Parsing AbilitySpeed
 Log: Parsing CA_AdrenalineArtifacts
 Log: Parsing CA_MedicArtifacts
+Log: Parsing CA_MedicSprites
 Log: Parsing RPGClass
 Log: Parsing ClassAdrenalineMaster
 Log: Parsing ClassMedicMaster
@@ -476,6 +480,7 @@ Log: Compiling AbilityJumpZ
 Log: Compiling AbilitySpeed
 Log: Compiling CA_AdrenalineArtifacts
 Log: Compiling CA_MedicArtifacts
+Log: Compiling CA_MedicSprites
 Log: Compiling RPGClass
 Log: Compiling ClassAdrenalineMaster
 Log: Compiling ClassMedicMaster
@@ -563,6 +568,7 @@ Log: Importing Defaults for AbilityJumpZ
 Log: Importing Defaults for AbilitySpeed
 Log: Importing Defaults for CA_AdrenalineArtifacts
 Log: Importing Defaults for CA_MedicArtifacts
+Log: Importing Defaults for CA_MedicSprites
 Log: Importing Defaults for RPGClass
 Log: Importing Defaults for ClassAdrenalineMaster
 Log: Importing Defaults for ClassMedicMaster
@@ -570,9 +576,9 @@ Log: Importing Defaults for ClassWeaponMaster
 Log: Importing Defaults for Colors
 Log: Importing Defaults for RPGPlayerDataObject
 Log: Importing Defaults for STY_AbilityList
-Log: Success: Compiled 20226 line(s), 1932 statement(s).
+Log: Success: Compiled 20237 line(s), 1935 statement(s).
 
-Log: Save=43.718390
+Log: Save=45.082402
 Log: Moving 'Save.tmp' to 'LumpysRPG.u'
 Heading: ------------------------LumpyJumping - Release------------------------
 Heading: --------------------------tK_BaseW - Release--------------------------
@@ -583,6 +589,7 @@ Heading: ------------------------tk_MagicWand - Release------------------------
 Heading: --------------------------tk_AK47 - Release---------------------------
 Heading: -------------------------tk_LilLady - Release-------------------------
 Heading: ---------------------tk_HolyHandGrenade - Release---------------------
+Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
@@ -607,11 +614,11 @@ Log: Unbound to UWeb.dll
 Log: Unbound to XGame.dll
 Log: Unbound to XInterface.dll
 Log: Unbound to Onslaught.dll
-Log: Garbage: objects: 84227->0; refs: 0
+Log: Garbage: objects: 84233->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 134 MByte 979 KByte 707 Bytes from HD took 0.488998 seconds (0.406998 reading, 0.082000 seeking).
-Log: FileManager: 0.086000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 134 MByte 982 KByte 908 Bytes from HD took 0.479999 seconds (0.386999 reading, 0.093000 seeking).
+Log: FileManager: 0.090000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/23/24 12:17:32
+Uninitialized: Log file closed, 12/23/24 13:10:10

@@ -155,8 +155,8 @@ static function string GetLocalString(optional int Switch, optional PlayerReplic
 
 defaultproperties
 {
-    CostPerSec=20
-    MinActivationTime=0.50000
+    CostPerSec=300
+    MinActivationTime=1.00000
     IconMaterial=Texture'LumpysTextures.ArtifactIcons.tex_SuperMedicWeaponMaker'
     ItemName="Super Medic Weapon Maker"
 }
