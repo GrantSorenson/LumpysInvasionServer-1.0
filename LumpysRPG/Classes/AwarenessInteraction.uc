@@ -62,6 +62,12 @@ function PreRender(Canvas Canvas)
 		{
 			Canvas.DrawColor = class'Colors'.default.White;
 			Canvas.DrawText(Enemy.Health$"/"$Enemy.HealthMax);
+			if(tk_Monster(Enemy) != None)
+			{
+				Canvas.SetPos(BarLoc.X, BarLoc.Y+20);
+				Canvas.DrawText(tk_Monster(Enemy).MonsterName);
+				Canvas.SetPos(BarLoc.X, BarLoc.Y);
+			}
 		}
  		else if (AbilityLevel > 1)
 		{

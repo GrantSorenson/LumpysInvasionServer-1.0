@@ -1,0 +1,3 @@
+Weapon=(ClassName=tk_StarWars.DC15x,AttachmentClassName=tk_StarWars.DC15xAttachment,FriendlyName=tk_StarWars.DC15x.ItemName,FallbackName="DC-15x Sniper Rifle",FallbackDesc="DC-15x Sniper Rifle")
+Weapon=(ClassName=tk_StarWars.DroidWeapon,AttachmentClassName=tk_StarWars.DroidWeaponAttachment,FriendlyName=tk_StarWars.DroidWeapon.ItemName,FallbackName="Droid Blaster",FallbackDesc="Droid Blaster")
+Weapon=(ClassName=tk_StarWars.ImperialBlaster,AttachmentClassName=tk_StarWars.ImperialBlasterAttachment,FriendlyName=tk_StarWars.ImperialBlaster.ItemName,FallbackName="Droid Blaster",FallbackDesc="Droid Blaster")

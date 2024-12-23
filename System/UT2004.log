@@ -1,4 +1,4 @@
-Log: Log file open, 12/02/24 08:19:37
+Log: Log file open, 12/23/24 01:41:55
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -6,7 +6,7 @@ Init: Compiled: Dec  5 2005 03:55:07
 Init: Command line: 
 Init: (This is Win64 patch version 3369.0)
 Init: Character set: Unicode
-Init: Base directory: G:\RPGTest1\UT2004\System\
+Init: Base directory: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\
 Init: Ini:UT2004.ini   UserIni:User.ini
 Init: Build label:  Build UT2004_Build_[2005-11-23_16.22]
 Init: Object subsystem initialized
@@ -14,14 +14,14 @@ Log: Splash screen filename is '..\Help\UT2004Logo.bmp'
 Localization: No localization: UT2004.General.Start (int)
 Log: Initializing OpenGLDrv...
 Log: Game class is 'GameInfo'
-Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.580000...
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.639000...
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
 Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?SpectatorOnly=1?Sex=M
 Log: Collecting garbage
 Log: Purging garbage
 Log: Garbage: objects: 33900->33897; refs: 350345
 Log: Game class is 'CinematicGame'
-Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.913000...
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.953000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
@@ -63,14 +63,14 @@ Log: OpenGL: Level of anisotropy is 1.000000 (max 16.000000).
 Log: OpenGL: Forcibly disabled pixel shaders.
 Log: OpenGL: Forcibly disabled render-to-texture.
 Log: OpenGL: allocated 32 MByte of AGP memory
-Log: Startup time: 1.669000 seconds
+Log: Startup time: 1.726000 seconds
 Localization: No localization: UT2004.General.Run (int)
 Log: Precaching: NvidiaLogo.LevelInfo0
 Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
 Log: Allocating 32768 byte dynamic index buffer.
 Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.017 seconds
-Log: Finished precaching textures in 0.021 seconds
+Log: Finished precaching geometry in 0.013 seconds
+Log: Finished precaching textures in 0.013 seconds
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] () ()
 Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
 ModAuthor: Restoring previously open menus (0 menus to restore)
@@ -88,59 +88,9 @@ ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
 Log: Static mesh batches: 0 vertex bytes, 0 index bytes
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4GamePageSP] () ()
 ModAuthor: # # # # Gametype ShowPanel()  True
+MenuText: No description configured for property 'LWaveConfig'
 ModAuthor: # # # # Select Map ShowPanel()  True
 ModAuthor: # # # # Gametype ShowPanel()  False
-ModAuthor: # # # # Mutators ShowPanel()  True
-ModAuthor: # # # # Select Map ShowPanel()  False
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.MutatorConfigMenu] () ()
-Warning: Property 'Levels' not found in class 'Class LumpysRPG.MutLumpysRPG'
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [MonsterManager_1_8.MMConfigMenu] () ()
-ModAuthor: # # # # Manager ShowPanel()  True
-ModAuthor: # # # # Monsters ShowPanel()  True
-ModAuthor: # # # # Manager ShowPanel()  False
-Log: Allocating 66096 byte dynamic vertex buffer.
-Log: Allocating 66672 byte dynamic vertex buffer.
-Log: Allocating 67392 byte dynamic vertex buffer.
-Log: Allocating 67824 byte dynamic vertex buffer.
-Log: Allocating 68688 byte dynamic vertex buffer.
-Log: Allocating 69552 byte dynamic vertex buffer.
-Log: Allocating 69984 byte dynamic vertex buffer.
-Log: Allocating 70848 byte dynamic vertex buffer.
-Log: Allocating 71568 byte dynamic vertex buffer.
-Log: Allocating 73152 byte dynamic vertex buffer.
-Log: Allocating 74016 byte dynamic vertex buffer.
-Log: Allocating 74592 byte dynamic vertex buffer.
-Log: Allocating 76320 byte dynamic vertex buffer.
-Log: Allocating 76464 byte dynamic vertex buffer.
-Log: Allocating 76896 byte dynamic vertex buffer.
-Log: Allocating 77616 byte dynamic vertex buffer.
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MMConfigMenu]
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [MonsterManager_1_8.MMConfigMenu] () ()
-ModAuthor: # # # # Manager ShowPanel()  True
-ModAuthor: # # # # Monster Cfg ShowPanel()  True
-ModAuthor: # # # # Manager ShowPanel()  False
-ModAuthor: # # # # Random Cfg ShowPanel()  True
-ModAuthor: # # # # Monster Cfg ShowPanel()  False
-ModAuthor: # # # # Waves ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  False
-ModAuthor: # # # # Random Cfg ShowPanel()  True
-ModAuthor: # # # # Waves ShowPanel()  False
-ModAuthor: # # # # Monster Cfg ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  False
-ModAuthor: # # # # Monsters ShowPanel()  True
-ModAuthor: # # # # Monster Cfg ShowPanel()  False
-ModAuthor: # # # # Random Cfg ShowPanel()  True
-ModAuthor: # # # # Monsters ShowPanel()  False
-ModAuthor: # # # # Waves ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  False
-ModAuthor: # # # # Monsters ShowPanel()  True
-ModAuthor: # # # # Waves ShowPanel()  False
-ModAuthor: # # # # Manager ShowPanel()  True
-ModAuthor: # # # # Monsters ShowPanel()  False
-ModAuthor: # # # # Waves ShowPanel()  True
-ModAuthor: # # # # Manager ShowPanel()  False
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MMConfigMenu]
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MutatorConfigMenu]
 ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 2 menus open)
 ModAuthor:    Menu[0]:UT2k4MainMenu
 ModAuthor:    Menu[1]:UT2K4GamePageSP
@@ -152,173 +102,17 @@ Log: URL: Adding default option Name=Lumps
 Log: URL: Adding default option Class=Engine.Pawn
 Log: URL: Adding default option Character=Kragoth
 Log: URL: Adding default option team=255
-Log: Browse: DM-Flux2?BonusVehicles=false?Game=LumpysInvasion.LumpysInvasion?Mutator=AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,MonsterManager_1_8.MutMonsterManager,tK_BaseW.MutTKWeaponsShim?bAutoNumBots=False?NumBots=0?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
+Log: Browse: DM-Flux2?BonusVehicles=false?Game=LumpysInvasion.LumpysInvasion?Mutator=AdminPlus_v14.MutAdminPlus,LumpyJumping.MutLumpyJumping,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim?bAutoNumBots=False?NumBots=0?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
 ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
 Log: Collecting garbage
 Log: Purging garbage
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 58811->40563; refs: 466804
+Log: Garbage: objects: 43354->40891; refs: 471523
 Log: Game class is 'LumpysInvasion'
-Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 141.272000...
+Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 6.852000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
-ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,MonsterManager_1_8.MutMonsterManager,tK_BaseW.MutTKWeaponsShim
-Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:001F) Accessed None 'AccessControl'
-Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:0027) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.C5Alien': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.Brick': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.C5Brute': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.EliteGimp': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.FlyBag': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.Gasbag': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.C5Grunt': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.C5Mulcher': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.C5OverLord': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.Zeeblo': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-ScriptLog: GameInfo::InitGame : bEnableStatLogging True
-ScriptLog: bAutoNumBots: False
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: Precaching: DM-Flux2.LevelInfo0
-Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
-Log: Allocating 32768 byte dynamic index buffer.
-Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.150 seconds
-Log: Finished precaching textures in 0.119 seconds
-ScriptLog: START MATCH
-Log: Preprocessing:  Vertex stream total vertices: 369 Orig wedges: 369
-Log: Preprocessing:  Vertex stream total vertices: 502 Orig wedges: 502
-Log: Preprocessing:  Vertex stream total vertices: 408 Orig wedges: 408
-Log: Preprocessing:  Vertex stream total vertices: 257 Orig wedges: 257
-Log: Allocating 67648 byte dynamic vertex buffer.
-Log: Allocating 68572 byte dynamic vertex buffer.
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
-ModAuthor: # # # # Game ShowPanel()  True
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4QuitPage]
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: Index.ut2?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-Log: Failed; returning to Entry
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: GP=FALSE
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: MatchViewportsToActors: GUI2K4.UT2K4MainMenu
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] (?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255) (MatchingViewport)
-Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
-ModAuthor: Restoring previously open menus (1 menus to restore)
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4GamePageSP] (Mutators) ()
-ModAuthor: # # # # Gametype ShowPanel()  True
-ModAuthor: # # # # Mutators ShowPanel()  True
-ModAuthor: # # # # Gametype ShowPanel()  False
-ModAuthor: # # # # Game Rules ShowPanel()  True
-ModAuthor: # # # # Mutators ShowPanel()  False
-ModAuthor: # # # # Select Map ShowPanel()  True
-ModAuthor: # # # # Game Rules ShowPanel()  False
-ModAuthor: # # # # Gametype ShowPanel()  True
-ModAuthor: # # # # Select Map ShowPanel()  False
-ModAuthor: # # # # Game Rules ShowPanel()  True
-ModAuthor: # # # # Gametype ShowPanel()  False
-ModAuthor: # # # # Mutators ShowPanel()  True
-ModAuthor: # # # # Game Rules ShowPanel()  False
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.MutatorConfigMenu] () ()
-Warning: Property 'Levels' not found in class 'Class LumpysRPG.MutLumpysRPG'
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [MonsterManager_1_8.MMConfigMenu] () ()
-ModAuthor: # # # # Manager ShowPanel()  True
-ModAuthor: # # # # Monsters ShowPanel()  True
-ModAuthor: # # # # Manager ShowPanel()  False
-Log: Allocating 69552 byte dynamic vertex buffer.
-Log: Allocating 70848 byte dynamic vertex buffer.
-Log: Allocating 71568 byte dynamic vertex buffer.
-Log: Allocating 73152 byte dynamic vertex buffer.
-Log: Allocating 74016 byte dynamic vertex buffer.
-Log: Allocating 76320 byte dynamic vertex buffer.
-Log: Allocating 76464 byte dynamic vertex buffer.
-Log: Allocating 76896 byte dynamic vertex buffer.
-Log: Allocating 77328 byte dynamic vertex buffer.
-Log: Allocating 78768 byte dynamic vertex buffer.
-Log: Allocating 79056 byte dynamic vertex buffer.
-Log: Allocating 82368 byte dynamic vertex buffer.
-ModAuthor: # # # # Monster Cfg ShowPanel()  True
-ModAuthor: # # # # Monsters ShowPanel()  False
-ModAuthor: # # # # Monsters ShowPanel()  True
-ModAuthor: # # # # Monster Cfg ShowPanel()  False
-ModAuthor: # # # # Manager ShowPanel()  True
-ModAuthor: # # # # Monsters ShowPanel()  False
-ModAuthor: # # # # Monsters ShowPanel()  True
-ModAuthor: # # # # Manager ShowPanel()  False
-ModAuthor: # # # # Manager ShowPanel()  True
-ModAuthor: # # # # Monsters ShowPanel()  False
-ModAuthor: # # # # Monsters ShowPanel()  True
-ModAuthor: # # # # Manager ShowPanel()  False
-ModAuthor: # # # # Monster Cfg ShowPanel()  True
-ModAuthor: # # # # Monsters ShowPanel()  False
-ModAuthor: # # # # Random Cfg ShowPanel()  True
-ModAuthor: # # # # Monster Cfg ShowPanel()  False
-ModAuthor: # # # # Monster Cfg ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  False
-ModAuthor: # # # # Random Cfg ShowPanel()  True
-ModAuthor: # # # # Monster Cfg ShowPanel()  False
-ModAuthor: # # # # Waves ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  False
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MMConfigMenu]
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MutatorConfigMenu]
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 2 menus open)
-ModAuthor:    Menu[0]:UT2k4MainMenu
-ModAuthor:    Menu[1]:UT2K4GamePageSP
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4GamePageSP]
-Debug: UT2k4MainMenu.Opened()   Sender:None
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 0 menus open)
-ScriptLog: Attempting to close a non-existing menu page
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: DM-Flux2?BonusVehicles=false?Game=LumpysInvasion.LumpysInvasion?Mutator=AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,MonsterManager_1_8.MutMonsterManager,tK_BaseW.MutTKWeaponsShim?bAutoNumBots=False?NumBots=0?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: (Karma): Level Karma Terminated.
-Log: Collecting garbage
-Log: Purging garbage
-Log: Garbage: objects: 59172->40642; refs: 471250
-Log: Game class is 'LumpysInvasion'
-Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 375.446000...
-Log: (Karma): Autodetecting CPU for SSE
-Log: (Karma): Using SSE Optimizations
-ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,MonsterManager_1_8.MutMonsterManager,tK_BaseW.MutTKWeaponsShim
+ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpyJumping.MutLumpyJumping,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim
 Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:001F) Accessed None 'AccessControl'
 Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:0027) Attempt to assign variable through None
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
@@ -329,373 +123,39 @@ Log: Precaching: DM-Flux2.LevelInfo0
 Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
 Log: Allocating 32768 byte dynamic index buffer.
 Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.081 seconds
-Log: Finished precaching textures in 0.105 seconds
+Log: Finished precaching geometry in 0.070 seconds
+Log: Finished precaching textures in 0.111 seconds
 ScriptLog: START MATCH
-Log: Allocating 69748 byte dynamic vertex buffer.
-Log: Allocating 71288 byte dynamic vertex buffer.
-Log: Allocating 71960 byte dynamic vertex buffer.
-Log: Allocating 72184 byte dynamic vertex buffer.
-Log: Allocating 75796 byte dynamic vertex buffer.
-Log: Allocating 76524 byte dynamic vertex buffer.
-Log: Allocating 77140 byte dynamic vertex buffer.
-Log: Allocating 90692 byte dynamic vertex buffer.
-Log: Allocating 93016 byte dynamic vertex buffer.
-Log: Allocating 93324 byte dynamic vertex buffer.
-Log: Allocating 93912 byte dynamic vertex buffer.
-Log: Allocating 94808 byte dynamic vertex buffer.
-Log: Allocating 95284 byte dynamic vertex buffer.
-Log: Allocating 95536 byte dynamic vertex buffer.
-Log: Allocating 96208 byte dynamic vertex buffer.
-Log: Allocating 100296 byte dynamic vertex buffer.
-Log: Allocating 101584 byte dynamic vertex buffer.
-Log: Allocating 102004 byte dynamic vertex buffer.
-Log: Allocating 102200 byte dynamic vertex buffer.
-Log: Allocating 102592 byte dynamic vertex buffer.
-Log: Allocating 104216 byte dynamic vertex buffer.
-Log: Allocating 104664 byte dynamic vertex buffer.
-Warning: MonsterController DM-Flux2.MonsterController (Function Engine.AIController.MoverFinished:0012) Accessed None 'myMarker'
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
-ModAuthor: # # # # Game ShowPanel()  True
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4QuitPage]
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: Index.ut2?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-Log: Failed; returning to Entry
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: GP=FALSE
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: MatchViewportsToActors: GUI2K4.UT2K4MainMenu
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] (?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255) (MatchingViewport)
-Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
-ModAuthor: Restoring previously open menus (1 menus to restore)
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4GamePageSP] (Mutators) ()
-ModAuthor: # # # # Gametype ShowPanel()  True
-ModAuthor: # # # # Mutators ShowPanel()  True
-ModAuthor: # # # # Gametype ShowPanel()  False
-ModAuthor: # # # # Gametype ShowPanel()  True
-ModAuthor: # # # # Mutators ShowPanel()  False
-ModAuthor: # # # # Mutators ShowPanel()  True
-ModAuthor: # # # # Gametype ShowPanel()  False
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.MutatorConfigMenu] () ()
-Warning: Property 'Levels' not found in class 'Class LumpysRPG.MutLumpysRPG'
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [MonsterManager_1_8.MMConfigMenu] () ()
-ModAuthor: # # # # Manager ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  True
-ModAuthor: # # # # Manager ShowPanel()  False
-ModAuthor: # # # # Waves ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  False
-ModAuthor: # # # # Manager ShowPanel()  True
-ModAuthor: # # # # Waves ShowPanel()  False
-ModAuthor: # # # # Monsters ShowPanel()  True
-ModAuthor: # # # # Manager ShowPanel()  False
-ModAuthor: # # # # Manager ShowPanel()  True
-ModAuthor: # # # # Monsters ShowPanel()  False
-ModAuthor: # # # # Monsters ShowPanel()  True
-ModAuthor: # # # # Manager ShowPanel()  False
-ModAuthor: # # # # Monster Cfg ShowPanel()  True
-ModAuthor: # # # # Monsters ShowPanel()  False
-ModAuthor: # # # # Random Cfg ShowPanel()  True
-ModAuthor: # # # # Monster Cfg ShowPanel()  False
-ModAuthor: # # # # Monsters ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  False
-ModAuthor: # # # # Monster Cfg ShowPanel()  True
-ModAuthor: # # # # Monsters ShowPanel()  False
-ModAuthor: # # # # Random Cfg ShowPanel()  True
-ModAuthor: # # # # Monster Cfg ShowPanel()  False
-ModAuthor: # # # # Monster Cfg ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  False
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MMConfigMenu]
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [MonsterManager_1_8.MMConfigMenu] () ()
-ModAuthor: # # # # Manager ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  True
-ModAuthor: # # # # Manager ShowPanel()  False
-ModAuthor: # # # # Monster Cfg ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  False
-ModAuthor: # # # # Waves ShowPanel()  True
-ModAuthor: # # # # Monster Cfg ShowPanel()  False
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MMConfigMenu]
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MutatorConfigMenu]
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.MutatorConfigMenu] () ()
-Warning: Property 'Levels' not found in class 'Class LumpysRPG.MutLumpysRPG'
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MutatorConfigMenu]
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 2 menus open)
-ModAuthor:    Menu[0]:UT2k4MainMenu
-ModAuthor:    Menu[1]:UT2K4GamePageSP
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4GamePageSP]
-Debug: UT2k4MainMenu.Opened()   Sender:None
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 0 menus open)
-ScriptLog: Attempting to close a non-existing menu page
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: DM-Flux2?BonusVehicles=false?Game=LumpysInvasion.LumpysInvasion?Mutator=AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,MonsterManager_1_8.MutMonsterManager,tK_BaseW.MutTKWeaponsShim?bAutoNumBots=False?NumBots=0?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: (Karma): Level Karma Terminated.
-Log: Collecting garbage
-Log: Purging garbage
-Log: Garbage: objects: 60022->40642; refs: 471241
-Log: Game class is 'LumpysInvasion'
-Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 610.031000...
-Log: (Karma): Autodetecting CPU for SSE
-Log: (Karma): Using SSE Optimizations
-ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,MonsterManager_1_8.MutMonsterManager,tK_BaseW.MutTKWeaponsShim
-Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:001F) Accessed None 'AccessControl'
-Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:0027) Attempt to assign variable through None
-ScriptLog: GameInfo::InitGame : bEnableStatLogging True
-ScriptLog: bAutoNumBots: False
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: Precaching: DM-Flux2.LevelInfo0
-Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
-Log: Allocating 32768 byte dynamic index buffer.
-Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.081 seconds
-Log: Finished precaching textures in 0.105 seconds
-ScriptLog: START MATCH
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Welcome ShowPanel()  True
+Log: Allocating 68400 byte dynamic vertex buffer.
+Log: Allocating 84528 byte dynamic vertex buffer.
+ModAuthor: # # # # Abilities ShowPanel()  True
+ModAuthor: # # # # Welcome ShowPanel()  False
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
 ModAuthor: # # # # Game ShowPanel()  True
 ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: Index.ut2?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-Log: Failed; returning to Entry
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: GP=FALSE
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: MatchViewportsToActors: GUI2K4.UT2K4MainMenu
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] (?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255) (MatchingViewport)
-Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
-ModAuthor: Restoring previously open menus (1 menus to restore)
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4GamePageSP] (Mutators) ()
-ModAuthor: # # # # Gametype ShowPanel()  True
-ModAuthor: # # # # Mutators ShowPanel()  True
-ModAuthor: # # # # Gametype ShowPanel()  False
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.MutatorConfigMenu] () ()
-Warning: Property 'Levels' not found in class 'Class LumpysRPG.MutLumpysRPG'
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [MonsterManager_1_8.MMConfigMenu] () ()
-ModAuthor: # # # # Manager ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  True
-ModAuthor: # # # # Manager ShowPanel()  False
-ModAuthor: # # # # Waves ShowPanel()  True
-ModAuthor: # # # # Random Cfg ShowPanel()  False
-ModAuthor: # # # # Monster Cfg ShowPanel()  True
-ModAuthor: # # # # Waves ShowPanel()  False
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MMConfigMenu]
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MutatorConfigMenu]
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 2 menus open)
-ModAuthor:    Menu[0]:UT2k4MainMenu
-ModAuthor:    Menu[1]:UT2K4GamePageSP
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4GamePageSP]
-Debug: UT2k4MainMenu.Opened()   Sender:None
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 0 menus open)
-ScriptLog: Attempting to close a non-existing menu page
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: DM-Flux2?BonusVehicles=false?Game=LumpysInvasion.LumpysInvasion?Mutator=AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,MonsterManager_1_8.MutMonsterManager,tK_BaseW.MutTKWeaponsShim?bAutoNumBots=False?NumBots=0?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: (Karma): Level Karma Terminated.
-Log: Collecting garbage
-Log: Purging garbage
-Log: Garbage: objects: 58990->40642; refs: 471247
-Log: Game class is 'LumpysInvasion'
-Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 663.212000...
-Log: (Karma): Autodetecting CPU for SSE
-Log: (Karma): Using SSE Optimizations
-ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,MonsterManager_1_8.MutMonsterManager,tK_BaseW.MutTKWeaponsShim
-Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:001F) Accessed None 'AccessControl'
-Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:0027) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.C5Alien': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.Brick': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.C5Brute': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.EliteGimp': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.FlyBag': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.Gasbag': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.C5Grunt': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.C5Mulcher': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.C5OverLord': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-Warning: Failed to load 'C502Invasion': Can't find file for package 'C502Invasion'
-Warning: Failed to load 'Class C502Invasion.Zeeblo': Can't find file for package 'C502Invasion'
-Error: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:0103) Accessed null class context 'MonsterClass'
-Warning: MutMonsterManager DM-Flux2.MutMonsterManager (Function MonsterManager_1_8.MutMonsterManager.PostBeginPlay:010B) Attempt to assign variable through None
-ScriptLog: GameInfo::InitGame : bEnableStatLogging True
-ScriptLog: bAutoNumBots: False
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: Precaching: DM-Flux2.LevelInfo0
-Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
-Log: Allocating 32768 byte dynamic index buffer.
-Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.074 seconds
-Log: Finished precaching textures in 0.108 seconds
-ScriptLog: START MATCH
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Log: Allocating 66892 byte dynamic vertex buffer.
-Log: Allocating 67508 byte dynamic vertex buffer.
-Log: Allocating 68628 byte dynamic vertex buffer.
-Log: Allocating 68964 byte dynamic vertex buffer.
-Log: Allocating 69776 byte dynamic vertex buffer.
-Log: Allocating 70224 byte dynamic vertex buffer.
-Log: Allocating 100604 byte dynamic vertex buffer.
-Log: Allocating 100940 byte dynamic vertex buffer.
-Log: Allocating 101024 byte dynamic vertex buffer.
-Log: Allocating 101136 byte dynamic vertex buffer.
-Log: Allocating 101388 byte dynamic vertex buffer.
-Log: Allocating 101724 byte dynamic vertex buffer.
-Log: Allocating 101780 byte dynamic vertex buffer.
-Log: Allocating 102004 byte dynamic vertex buffer.
-ScriptLog: Last Cred: 232 Stat Cred: 238
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Log: Allocating 102592 byte dynamic vertex buffer.
-ScriptLog: Last Cred: 238 Stat Cred: 250
-ScriptLog: Last Cred: 250 Stat Cred: 260
-ScriptLog: Last Cred: 260 Stat Cred: 280
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-ScriptLog: Last Cred: 280 Stat Cred: 295
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
-Error: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.AddMonster:0055) Accessed null class context 'NewMonsterClass'
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
 ModAuthor: # # # # Game ShowPanel()  True
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: Index.ut2?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-Log: Failed; returning to Entry
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: GP=FALSE
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: MatchViewportsToActors: GUI2K4.UT2K4MainMenu
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] (?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255) (MatchingViewport)
-Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
-ModAuthor: Restoring previously open menus (1 menus to restore)
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4GamePageSP] (Mutators) ()
-ModAuthor: # # # # Gametype ShowPanel()  True
-ModAuthor: # # # # Mutators ShowPanel()  True
-ModAuthor: # # # # Gametype ShowPanel()  False
-ModAuthor: # # # # Gametype ShowPanel()  True
-ModAuthor: # # # # Mutators ShowPanel()  False
-ModAuthor: # # # # Select Map ShowPanel()  True
-ModAuthor: # # # # Gametype ShowPanel()  False
-ModAuthor: # # # # Game Rules ShowPanel()  True
-ModAuthor: # # # # Select Map ShowPanel()  False
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [InvasionProv1_7.InvasionProMainMenu] () ()
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [InvasionProMainMenu]
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [InvasionProv1_7.InvasionProMonsterConfig] () ()
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [InvasionProMonsterConfig]
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [InvasionProv1_7.InvasionProMonsterStatsConfig] () ()
-Error: InvasionProMonsterStatsConfig Package.InvasionProMonsterStatsConfig (Function InvasionProv1_7.InvasionProMonsterStatsConfig.InitializeStats:0110) Accessed array 'ClassParts' out of bounds (1/1)
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [InvasionProMonsterStatsConfig]
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4GamePageSP]
-Debug: UT2k4MainMenu.Opened()   Sender:None
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2k4MainMenu]
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
 Log: appRequestExit(0)
 Localization: No localization: UT2004.General.Exit (int)
@@ -706,11 +166,11 @@ Exit: Windows client shut down
 Log: Waiting for file streaming thread to finish...
 Exit: OpenAL Audio subsystem shut down.
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 63893->0; refs: 471247
+Log: Garbage: objects: 54185->0; refs: 471523
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 666 MByte 528 KByte 344 Bytes from HD took 0.943993 seconds (0.833993 reading, 0.110000 seeking).
-Log: FileManager: 1.492998 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 227 MByte 428 KByte 651 Bytes from HD took 0.354999 seconds (0.319999 reading, 0.035000 seeking).
+Log: FileManager: 0.239000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/02/24 08:32:15
+Uninitialized: Log file closed, 12/23/24 01:42:41

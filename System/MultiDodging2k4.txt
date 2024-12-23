@@ -1,0 +1,63 @@
+Multi Dodging 2k4
+=================
+by Wormbo
+Homepage: http://www.koehler-homepage.de/wormbo/
+
+
+Description
+-----------
+Normally UT2004 only allows you to dodge or walldodge once during a jump and
+also add one double-jump somewhere in the whole move. Also at the end of a jump
+you have to wait a bit before you can dodge again.
+
+Multi Dodging changes these rules so you can:
+- walldodge whenever you are near a wall even if you already (wall)dodged
+- always add a double-jump after a dodge or walldodge
+- dodge right after landing without any delay
+
+Additionally Multi Dodging can gather movement stats like speed and distances
+and display them on the HUD. Configuring key binds for the stats display is
+only possible if Multi Dodging was installed locally, because the required
+metadata cannot be downloaded from servers.
+
+
+Installation
+------------
+Just unzip MultiDodging2k4v4.u, .ucl and .int to your UT2004\System directory
+and you're ready to play.
+
+To enable it on a server, I recommend adding the line
+ServerPackages=MultiDodging2k4v4
+to the [Engine.GameEngine] section of the server's UT2004.ini file.
+
+
+How to use
+----------
+Multi Dodging can be enabled as a mutator (MultiDodging2k4v4.MutMultiDodging)
+via the startup command line, voting configuration or manually via the mutators
+page on webadmin. Note that the mutator is not "white-listed", i.e. the server
+will no longer show up in the browser while the "Standard Servers Only"
+checkbox is enabled.
+
+To keep the server's white-listing status (assuming you don't use any other
+non-standard settings or mutators), you can instead run Multi Dodging as a
+server actor by adding the line
+ServerActors=MultiDodging2k4v4.MultiDodgingRules
+to the [Engine.GameEngine] section of the server's UT2004.ini file. This has
+several drawbacks, though. For example, the entire movement stats feature set
+is inaccessible. Also you can't disable or configure Multi Dodging via the
+webadmin interface. To change the configuration, either add the mutator to make
+the options show up in webadmin, or edit UT2004.ini directly.
+
+Below is the default configuration. Note that bGatherJumpStats has no effects
+unless the mutator is used.
+
+[MultiDodging2k4v4.MutMultiDodging]
+MaxDodgesPerJump=-1
+bAlwaysAllowDodgeDoubleJump=True
+bEnableBoostDodge=False
+bFastDodging=True
+bGatherJumpStats=False
+
+You can use the standard UT2004 keybind configuration to select keys for
+resetting movement stats and for toggling the stats display.

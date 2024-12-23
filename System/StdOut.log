@@ -1,4 +1,4 @@
-Log file open, 12/02/24 08:19:33
+Log file open, 12/23/24 01:41:51
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -32,27 +32,20 @@ Log file open, 12/02/24 08:19:33
 ------------------------StreamlineFX - Release------------------------
 --------------------------UTV2004c - Release--------------------------
 --------------------------UTV2004s - Release--------------------------
+--------------------------tk_BaseM - Release--------------------------
 -----------------------LumpysInvasion - Release-----------------------
-Analyzing...
-Parsing LumpysInvasionGameReplicationInfo
-Parsing LumpysInvasion
-Parsing LumpysInvasionWaveMessage
-Parsing MapListLumpysInvasion
-Parsing LumpysInvasionHUD
-Parsing LumpysInvasionWaveHandler
-Compiling LumpysInvasionGameReplicationInfo
-Compiling LumpysInvasion
-Compiling LumpysInvasionWaveMessage
-Compiling MapListLumpysInvasion
-Compiling LumpysInvasionHUD
-Compiling LumpysInvasionWaveHandler
-Importing Defaults for LumpysInvasionGameReplicationInfo
-Importing Defaults for LumpysInvasion
-Importing Defaults for LumpysInvasionWaveMessage
-Importing Defaults for MapListLumpysInvasion
-Importing Defaults for LumpysInvasionHUD
-Importing Defaults for LumpysInvasionWaveHandler
 -------------------------LumpysRPG - Release--------------------------
+------------------------LumpyJumping - Release------------------------
+Analyzing...
+Parsing MutLumpyJumping
+Parsing LumpyJumpingPawn
+Parsing LumpyJumpingPlayer
+Compiling MutLumpyJumping
+Compiling LumpyJumpingPawn
+Compiling LumpyJumpingPlayer
+Importing Defaults for MutLumpyJumping
+Importing Defaults for LumpyJumpingPawn
+Importing Defaults for LumpyJumpingPlayer
 --------------------------tK_BaseW - Release--------------------------
 -----------------------tk_FHIWeapons - Release------------------------
 ------------------------tk_ZenCoders - Release------------------------
@@ -61,7 +54,6 @@ Importing Defaults for LumpysInvasionWaveHandler
 --------------------------tk_AK47 - Release---------------------------
 -------------------------tk_LilLady - Release-------------------------
 ---------------------tk_HolyHandGrenade - Release---------------------
------------------------lumpysinvasion - Release-----------------------
-Game exported successfully: LumpysInvasion.LumpysInvasion
+Mutator exported successfully: LumpyJumping.MutLumpyJumping
 Success - 0 error(s), 0 warning(s)
-Log file closed, 12/02/24 08:19:35
+Log file closed, 12/23/24 01:41:53

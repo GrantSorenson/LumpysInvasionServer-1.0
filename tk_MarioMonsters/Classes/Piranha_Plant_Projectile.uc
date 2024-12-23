@@ -1,0 +1,31 @@
+class Piranha_Plant_Projectile extends MM_Projectile placeable;
+
+defaultproperties
+{
+     TrailClass=Class'tk_MarioMonsters.Piranha_Plant_ProjectileTrail'
+     ExplosionClass=Class'tk_MarioMonsters.Piranha_Plant_ProjectileExplosion'
+     Speed=900.000000
+     MaxSpeed=1000.000000
+     TossZ=0.000000
+     Damage=30.000000
+     DamageRadius=150.000000
+     MomentumTransfer=5000.000000
+     MyDamageType=Class'tk_MarioMonsters.DamType_Piranha_Plant_Projectile'
+     ImpactSound=Sound'tk_MarioMonsters.Piranha_Plant.PiranhaPlantFireBallHit3'
+     ExplosionDecal=Class'XEffects.RocketMark'
+     LightType=LT_Steady
+     LightHue=4
+     LightSaturation=132
+     LightBrightness=215.000000
+     DrawType=DT_StaticMesh
+     StaticMesh=StaticMesh'AW-2004Particles.Weapons.PlasmaSphere'
+     CullDistance=4000.000000
+     bDynamicLight=True
+     AmbientSound=Sound'GeneralAmbience.firefx11'
+     LifeSpan=6.000000
+     Skins(0)=Texture'tk_MarioMonsters.MarioMonsters.MM_Invis'
+     SoundVolume=200
+     SoundRadius=150.000000
+     CollisionRadius=10.000000
+     CollisionHeight=10.000000
+}

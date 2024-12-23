@@ -98,7 +98,6 @@ class AbilityHermesSandals extends RPGAbility
 
 static function bool PreventDeath(Pawn Killed, Controller Killer, class<DamageType> DamageType, vector HitLocation, int AbilityLevel, bool bAlreadyPrevented)
   {
-    local xPawn P;
 
     //P = xPawn(ViewportOwner.Actor.Pawn);
     default.bEffectStarted = false;

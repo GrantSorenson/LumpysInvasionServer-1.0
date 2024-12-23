@@ -25,7 +25,6 @@ function MyOnDrawItem(Canvas Canvas, int i, float X, float Y, float W, float H, 
     local float CellLeft, CellWidth;
     local GUIStyles DrawStyle;
     local color TempColor;
-    local int Team;//, PlayerStat;
   //  local RPGStatsInv StatsInv;
   //  local PlayerController PC;
 

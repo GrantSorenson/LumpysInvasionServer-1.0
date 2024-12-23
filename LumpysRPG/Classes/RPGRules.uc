@@ -5,6 +5,7 @@ var int PointsPerLevel;
 var float LevelDiffExpGainDiv;
 var float MA_AdjustDamageByVehicleScale; // hack for Monster Assault and EXP by damage
 var bool bAwardedFirstBlood;
+var int CredGain;
 
 function PostBeginPlay()
 {
@@ -131,7 +132,7 @@ function AwardEXPForDamage(Controller InstigatedBy, RPGStatsInv InstigatedStatsI
 function ScoreKill(Controller Killer, Controller Killed)
 {
 	local RPGPlayerDataObject KillerData, KilledData;
-	local int x, LevelDifference;
+	local int x, LevelDifference,chance,creds;
 	local Inventory Inv, NextInv;
 	local RPGStatsInv StatsInv, KillerStatsInv;
 	local vector TossVel, U, V, W;
@@ -190,7 +191,13 @@ function ScoreKill(Controller Killer, Controller Killed)
 			else
 			{
 				ShareExperience(StatsInv, 1.0);
-				GiveCredits(StatsInv, killer.pawn);
+				chance = Rand(3);
+				if (chance == 0)
+				{
+					creds = GiveCredits(StatsInv, killer.pawn);
+					default.CredGain = creds;
+					Killer.Pawn.ReceiveLocalizedMessage(MessageClass, 2, None, None,Class);
+				}
 			}
 		}
 		return;
@@ -266,8 +273,22 @@ function ScoreKill(Controller Killer, Controller Killed)
 	RPGMut.CheckLevelUp(KillerData, Killer.PlayerReplicationInfo);
 }
 
+static function string GetLocalString(optional int Switch, optional PlayerReplicationInfo RelatedPRI_1, optional PlayerReplicationInfo RelatedPRI_2)
+{
+	if (Switch == 2)
+		return "You got "$default.CredGain$" Credits";
+
+		//Instigator.ReceiveLocalizedMessage(MessageClass, 2, None, None, Class)
+//   else if (Switch == 3)
+// 		return "You must first reach the Maximum Level in at least 1 class to purchase points in a different one";
+// 	else if (Switch == 4)
+// 		return "You must first reach the Maximum Level in at least 2 classes to purchase points in a different one";
+
+	return Super.GetLocalString(Switch, RelatedPRI_1, RelatedPRI_2);
+}
+
 //Give Credtis
-function GiveCredits(RPGStatsInv StatsInv, Pawn p)
+function int GiveCredits(RPGStatsInv StatsInv, Pawn p)
 {
 	local int amount;
 	//amount of credits to award the player
@@ -276,7 +297,9 @@ function GiveCredits(RPGStatsInv StatsInv, Pawn p)
 	{
 		StatsInv.DataObject.Credits += amount;
 		StatsInv.Data.Credits = StatsInv.DataObject.Credits;
+		return amount;
 	}
+	return 0;
 }
 
 //Give experience for game objectives
@@ -694,4 +717,6 @@ function bool HandleRestartGame()
 defaultproperties
 {
      MA_AdjustDamageByVehicleScale=1.000000
+	 MessageClass=class'StringMessagePlus'
+	 bReplicateInstigator=True
 }
