@@ -1,0 +1,1 @@
+Mutator=(ClassName=LumpyJumping.MutLumpyJumping,GroupName=Pawn,IconMaterialName=MutatorArt.nosym,FriendlyName=LumpyJumping.MutLumpyJumping.FriendlyName,Description=LumpyJumping.MutLumpyJumping.Description,FriendlyName=LumpyJumping.MutLumpyJumping.FriendlyName,FallbackName="Lumpy Jumping",FallbackDesc="Jumping for Lumpy Invasion and RPG")
