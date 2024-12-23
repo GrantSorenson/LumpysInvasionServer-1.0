@@ -113,7 +113,7 @@ function bool HandlePickupQuery(Pickup item)
 
 function OwnerEvent(name EventName)
 {
-	local int i;
+
 	if (EventName == 'ChangedWeapon' && Instigator != None && Instigator.Weapon != None)
 	{
 		AdjustFireRate(Instigator.Weapon);

@@ -1,4 +1,4 @@
-Log file open, 12/23/24 00:01:10
+Log file open, 12/23/24 00:19:58
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -123,9 +123,6 @@ Parsing ClassWeaponMaster
 Parsing Colors
 Compiling AwarenessInteraction
 Compiling RPGInteraction
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGInteraction.uc(216) : Warning, 'CreditBonkX' : unreferenced local variable
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGInteraction.uc(216) : Warning, 'CreditBonkY' : unreferenced local variable
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGInteraction.uc(217) : Warning, 'CredStock' : unreferenced local variable
 Compiling MutLumpysRPG
 Compiling AdrenalConditionMessage
 Compiling EmptyMessage
@@ -160,7 +157,6 @@ Compiling RW_Rejuvination
 Compiling FriendlyMonsterKillMarker
 Compiling GhostInv
 Compiling RPGStatsInv
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGStatsInv.uc(116) : Warning, 'i' : unreferenced local variable
 Compiling RPGLinkGunPickup
 Compiling RPGWeaponPickup
 Compiling RPGArtifactPickup
@@ -183,21 +179,16 @@ Compiling RPGLinkFire
 Compiling RPGShockProjFire
 Compiling RPGPainterFire
 Compiling RPGTabAbilities
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGTabAbilities.uc(38) : Warning, 'PC' : unreferenced local variable
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGTabAbilities.uc(39) : Warning, 'TempDataObject' : unreferenced local variable
 Compiling RPGTabCharacter
 Compiling RPGTabStats
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGTabStats.uc(14) : Warning, 'PC' : unreferenced local variable
 Compiling RPGTabStore
 Compiling RPGTabWelcome
 Compiling RPGAbilityDescMenu
 Compiling RPGPlayerLevelsMenu
 Compiling RPGLumpyStatMenu
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGLumpyStatMenu.uc(11) : Warning, 'i' : unreferenced local variable
 Compiling RPGResetConfirmPage
 Compiling RPGStatsMenu
 Compiling RPGStoreList
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGStoreList.uc(28) : Warning, 'Team' : unreferenced local variable
 Compiling STY_ResetButton
 Compiling STY_AbilityList
 Compiling AbilityListFont
@@ -205,11 +196,9 @@ Compiling LumpysRPGKeyBinds
 Compiling RPGAbility
 Compiling AbilityAwareness
 Compiling AbilityHermesSandals
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\AbilityHermesSandals.uc(101) : Warning, 'P' : unreferenced local variable
 Compiling AbilityJumpZ
 Compiling AbilitySpeed
 Compiling CA_AdrenalineArtifacts
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\CA_AdrenalineArtifacts.uc(13) : Warning, 'Arti' : unreferenced local variable
 Compiling CA_MedicArtifacts
 Compiling RPGClass
 Compiling ClassAdrenalineMaster
@@ -314,5 +303,5 @@ Importing Defaults for STY_AbilityList
 ---------------------tk_HolyHandGrenade - Release---------------------
 -------------------------lumpysRPG - Release--------------------------
 Mutator exported successfully: LumpysRPG.MutLumpysRPG
-Success - 0 error(s), 11 warning(s)
-Log file closed, 12/23/24 00:01:13
+Success - 0 error(s), 0 warning(s)
+Log file closed, 12/23/24 00:20:02

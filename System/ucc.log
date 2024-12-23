@@ -1,4 +1,4 @@
-Log: Log file open, 12/23/24 00:01:09
+Log: Log file open, 12/23/24 00:19:58
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -394,9 +394,6 @@ Log: Parsing ClassWeaponMaster
 Log: Parsing Colors
 Log: Compiling AwarenessInteraction
 Log: Compiling RPGInteraction
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGInteraction.uc(216) : Warning, 'CreditBonkX' : unreferenced local variable
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGInteraction.uc(216) : Warning, 'CreditBonkY' : unreferenced local variable
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGInteraction.uc(217) : Warning, 'CredStock' : unreferenced local variable
 Log: Compiling MutLumpysRPG
 Log: Compiling AdrenalConditionMessage
 Log: Compiling EmptyMessage
@@ -431,7 +428,6 @@ Log: Compiling RW_Rejuvination
 Log: Compiling FriendlyMonsterKillMarker
 Log: Compiling GhostInv
 Log: Compiling RPGStatsInv
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGStatsInv.uc(116) : Warning, 'i' : unreferenced local variable
 Log: Compiling RPGLinkGunPickup
 Log: Compiling RPGWeaponPickup
 Log: Compiling RPGArtifactPickup
@@ -454,21 +450,16 @@ Log: Compiling RPGLinkFire
 Log: Compiling RPGShockProjFire
 Log: Compiling RPGPainterFire
 Log: Compiling RPGTabAbilities
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGTabAbilities.uc(38) : Warning, 'PC' : unreferenced local variable
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGTabAbilities.uc(39) : Warning, 'TempDataObject' : unreferenced local variable
 Log: Compiling RPGTabCharacter
 Log: Compiling RPGTabStats
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGTabStats.uc(14) : Warning, 'PC' : unreferenced local variable
 Log: Compiling RPGTabStore
 Log: Compiling RPGTabWelcome
 Log: Compiling RPGAbilityDescMenu
 Log: Compiling RPGPlayerLevelsMenu
 Log: Compiling RPGLumpyStatMenu
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGLumpyStatMenu.uc(11) : Warning, 'i' : unreferenced local variable
 Log: Compiling RPGResetConfirmPage
 Log: Compiling RPGStatsMenu
 Log: Compiling RPGStoreList
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGStoreList.uc(28) : Warning, 'Team' : unreferenced local variable
 Log: Compiling STY_ResetButton
 Log: Compiling STY_AbilityList
 Log: Compiling AbilityListFont
@@ -476,11 +467,9 @@ Log: Compiling LumpysRPGKeyBinds
 Log: Compiling RPGAbility
 Log: Compiling AbilityAwareness
 Log: Compiling AbilityHermesSandals
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\AbilityHermesSandals.uc(101) : Warning, 'P' : unreferenced local variable
 Log: Compiling AbilityJumpZ
 Log: Compiling AbilitySpeed
 Log: Compiling CA_AdrenalineArtifacts
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\CA_AdrenalineArtifacts.uc(13) : Warning, 'Arti' : unreferenced local variable
 Log: Compiling CA_MedicArtifacts
 Log: Compiling RPGClass
 Log: Compiling ClassAdrenalineMaster
@@ -575,9 +564,9 @@ Log: Importing Defaults for ClassWeaponMaster
 Log: Importing Defaults for Colors
 Log: Importing Defaults for RPGPlayerDataObject
 Log: Importing Defaults for STY_AbilityList
-Log: Success: Compiled 19908 line(s), 1913 statement(s).
+Log: Success: Compiled 19901 line(s), 1904 statement(s).
 
-Log: Save=44.928417
+Log: Save=43.641460
 Log: Moving 'Save.tmp' to 'LumpysRPG.u'
 Heading: --------------------------tK_BaseW - Release--------------------------
 Heading: -----------------------tk_FHIWeapons - Release------------------------
@@ -599,7 +588,7 @@ Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Mutator exported successfully: LumpysRPG.MutLumpysRPG
-Log: Success - 0 error(s), 11 warning(s)
+Log: Success - 0 error(s), 0 warning(s)
 Exit: Preparing to exit.
 Log: Purging garbage
 Log: Unbound to Core.dll
@@ -612,11 +601,11 @@ Log: Unbound to UWeb.dll
 Log: Unbound to XGame.dll
 Log: Unbound to XInterface.dll
 Log: Unbound to Onslaught.dll
-Log: Garbage: objects: 84131->0; refs: 0
+Log: Garbage: objects: 84120->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 134 MByte 809 KByte 964 Bytes from HD took 0.460999 seconds (0.365999 reading, 0.095000 seeking).
-Log: FileManager: 0.109000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 134 MByte 814 KByte 278 Bytes from HD took 0.479999 seconds (0.391999 reading, 0.088000 seeking).
+Log: FileManager: 0.139000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/23/24 00:01:13
+Uninitialized: Log file closed, 12/23/24 00:20:02

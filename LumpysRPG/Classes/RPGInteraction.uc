@@ -213,8 +213,8 @@ static function bool ShouldDisplayHud(
 function PostRender(Canvas Canvas)
 {
 	local float XL, YL, XLSmall, YLSmall, EXPBarX, EXPBarY;
-	local float CreditTextX, CreditTextY, CreditBonkX, CreditBonkY;
-	local int CredStock;
+	local float CreditTextX, CreditTextY;//, CreditBonkX, CreditBonkY;
+	//local int CredStock;
 	local Color CreditBonkColor;
 
 	CreditBonkColor = GreenColor;

@@ -10,7 +10,6 @@ static simulated function int Cost(RPGPlayerDataObject Data, int CurrentLevel)
 
 static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 {
-  local RPGArtifact Arti;
   local int x;
 
 

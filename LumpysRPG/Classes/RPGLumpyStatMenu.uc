@@ -8,7 +8,6 @@ var(MidGame) automated GUITabControl c_Main;
 function InitComponent(GUIController MyController, GUIComponent MyComponent)
 {
   local rotator PlayerRot;
-  local int i;
 
   Super.InitComponent(MyController, MyComponent);
 

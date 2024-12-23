@@ -35,8 +35,6 @@ function ShowPanel(bool bShow)
 
 function GetOwnedClasses()
 {
-	local PlayerController PC;
-  local RPGPlayerDataObject TempDataObject;
 	local int x;
 
 	OwnedClasses.Remove(0,OwnedClasses.length);

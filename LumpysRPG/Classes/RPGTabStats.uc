@@ -11,7 +11,6 @@ var GUIEditBox WeaponSpeedAmt, HealthBonusAmt, AdrenalineMaxAmt, AttackAmt, Defe
 
 function InitComponent(GUIController MyController, GUIComponent MyOwner)
 {
-  local PlayerController PC;
     super.InitComponent(MyController, MyOwner);
 //Values
     WepSpeedEdit = moEditBox(Controls[0]);
