@@ -1,4 +1,4 @@
-Log file open, 12/23/24 01:41:51
+Log file open, 12/23/24 12:17:29
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -35,17 +35,268 @@ Log file open, 12/23/24 01:41:51
 --------------------------tk_BaseM - Release--------------------------
 -----------------------LumpysInvasion - Release-----------------------
 -------------------------LumpysRPG - Release--------------------------
-------------------------LumpyJumping - Release------------------------
 Analyzing...
-Parsing MutLumpyJumping
-Parsing LumpyJumpingPawn
-Parsing LumpyJumpingPlayer
-Compiling MutLumpyJumping
-Compiling LumpyJumpingPawn
-Compiling LumpyJumpingPlayer
-Importing Defaults for MutLumpyJumping
-Importing Defaults for LumpyJumpingPawn
-Importing Defaults for LumpyJumpingPlayer
+Parsing AwarenessInteraction
+Parsing RPGInteraction
+Parsing MutLumpysRPG
+Parsing AdrenalConditionMessage
+Parsing EmptyMessage
+Parsing GainLevelMessage
+Parsing HealedConditionMessage
+Parsing IdentifyMessage
+Parsing LevelUpHUDMessage
+Parsing RPGNameMessage
+Parsing RPGRules
+Parsing LumpysArtifactManager
+Parsing FlightEffect
+Parsing FriendlyMonsterEffect
+Parsing LevelUpEffect
+Parsing RPGLinkAttachment
+Parsing DamTypeLightningRod
+Parsing FriendlyMonsterController
+Parsing RPGArtifact
+Parsing ArtifactFlight
+Parsing ArtifactInvulnerability
+Parsing ArtifactLightningRod
+Parsing ArtifactMagicWeaponMaker
+Parsing ArtifactMedicWeaponMaker
+Parsing ArtifactSuperMedicWeaponMaker
+Parsing ArtifactSuperMagicWeaponMaker
+Parsing ArtifactTripleDamage
+Parsing RPGLinkGun
+Parsing FakeMonsterWeapon
+Parsing RPGPlayerDataObject
+Parsing RPGStatsInv
+Parsing RPGWeapon
+Parsing RW_Adrenal
+Parsing RW_Healing
+Parsing RW_MedicHealing
+Parsing RW_Rejuvination
+Parsing FriendlyMonsterKillMarker
+Parsing GhostInv
+Parsing RPGLinkGunPickup
+Parsing RPGWeaponPickup
+Parsing RPGArtifactPickup
+Parsing ArtifactFlightPickup
+Parsing ArtifactInvulnerabilityPickup
+Parsing ArtifactLightningRodPickup
+Parsing ArtifactMagicWeaponMakerPickup
+Parsing ArtifactSuperMagicWeaponMakerPickup
+Parsing ArtifactTripleDamagePickup
+Parsing ExperiencePickup
+Parsing RPGWeaponLocker
+Parsing PickupEXPShard
+Parsing HudCDeathmatchHelper
+Parsing RPGShockProjectile
+Parsing RPGPainterBeamEffect
+Parsing AwarenessEnemyList
+Parsing CredBonkTimer
+Parsing VampireMarker
+Parsing RPGLinkFire
+Parsing RPGShockProjFire
+Parsing RPGPainterFire
+Parsing RPGTabAbilities
+Parsing RPGTabCharacter
+Parsing RPGTabStats
+Parsing RPGTabStore
+Parsing RPGTabWelcome
+Parsing RPGAbilityDescMenu
+Parsing RPGPlayerLevelsMenu
+Parsing RPGLumpyStatMenu
+Parsing RPGResetConfirmPage
+Parsing RPGStatsMenu
+Parsing RPGStoreList
+Parsing STY_ResetButton
+Parsing STY_AbilityList
+Parsing AbilityListFont
+Parsing LumpysRPGKeyBinds
+Parsing RPGAbility
+Parsing AbilityAwareness
+Parsing AbilityHermesSandals
+Parsing AbilityJumpZ
+Parsing AbilitySpeed
+Parsing CA_AdrenalineArtifacts
+Parsing CA_MedicArtifacts
+Parsing RPGClass
+Parsing ClassAdrenalineMaster
+Parsing ClassMedicMaster
+Parsing ClassWeaponMaster
+Parsing Colors
+Compiling AwarenessInteraction
+Compiling RPGInteraction
+Compiling MutLumpysRPG
+Compiling AdrenalConditionMessage
+Compiling EmptyMessage
+Compiling GainLevelMessage
+Compiling HealedConditionMessage
+Compiling IdentifyMessage
+Compiling LevelUpHUDMessage
+Compiling RPGNameMessage
+Compiling RPGRules
+Compiling LumpysArtifactManager
+Compiling FlightEffect
+Compiling FriendlyMonsterEffect
+Compiling LevelUpEffect
+Compiling RPGLinkAttachment
+Compiling DamTypeLightningRod
+Compiling FriendlyMonsterController
+Compiling RPGArtifact
+Compiling ArtifactFlight
+Compiling ArtifactInvulnerability
+Compiling ArtifactLightningRod
+Compiling ArtifactMagicWeaponMaker
+Compiling ArtifactMedicWeaponMaker
+Compiling ArtifactSuperMedicWeaponMaker
+Compiling ArtifactSuperMagicWeaponMaker
+Compiling ArtifactTripleDamage
+Compiling RPGLinkGun
+Compiling FakeMonsterWeapon
+Compiling RPGWeapon
+Compiling RW_Adrenal
+Compiling RW_Healing
+Compiling RW_MedicHealing
+Compiling RW_Rejuvination
+Compiling FriendlyMonsterKillMarker
+Compiling GhostInv
+Compiling RPGStatsInv
+Compiling RPGLinkGunPickup
+Compiling RPGWeaponPickup
+Compiling RPGArtifactPickup
+Compiling ArtifactFlightPickup
+Compiling ArtifactInvulnerabilityPickup
+Compiling ArtifactLightningRodPickup
+Compiling ArtifactMagicWeaponMakerPickup
+Compiling ArtifactSuperMagicWeaponMakerPickup
+Compiling ArtifactTripleDamagePickup
+Compiling ExperiencePickup
+Compiling RPGWeaponLocker
+Compiling PickupEXPShard
+Compiling HudCDeathmatchHelper
+Compiling RPGShockProjectile
+Compiling RPGPainterBeamEffect
+Compiling AwarenessEnemyList
+Compiling CredBonkTimer
+Compiling VampireMarker
+Compiling RPGLinkFire
+Compiling RPGShockProjFire
+Compiling RPGPainterFire
+Compiling RPGTabAbilities
+Compiling RPGTabCharacter
+Compiling RPGTabStats
+Compiling RPGTabStore
+Compiling RPGTabWelcome
+Compiling RPGAbilityDescMenu
+Compiling RPGPlayerLevelsMenu
+Compiling RPGLumpyStatMenu
+Compiling RPGResetConfirmPage
+Compiling RPGStatsMenu
+Compiling RPGStoreList
+Compiling STY_ResetButton
+Compiling STY_AbilityList
+Compiling AbilityListFont
+Compiling LumpysRPGKeyBinds
+Compiling RPGAbility
+Compiling AbilityAwareness
+Compiling AbilityHermesSandals
+Compiling AbilityJumpZ
+Compiling AbilitySpeed
+Compiling CA_AdrenalineArtifacts
+Compiling CA_MedicArtifacts
+Compiling RPGClass
+Compiling ClassAdrenalineMaster
+Compiling ClassMedicMaster
+Compiling ClassWeaponMaster
+Compiling Colors
+Compiling RPGPlayerDataObject
+Importing Defaults for AwarenessInteraction
+Importing Defaults for RPGInteraction
+Importing Defaults for MutLumpysRPG
+Importing Defaults for AdrenalConditionMessage
+Importing Defaults for EmptyMessage
+Importing Defaults for GainLevelMessage
+Importing Defaults for HealedConditionMessage
+Importing Defaults for IdentifyMessage
+Importing Defaults for LevelUpHUDMessage
+Importing Defaults for RPGNameMessage
+Importing Defaults for RPGRules
+Importing Defaults for LumpysArtifactManager
+Importing Defaults for FlightEffect
+Importing Defaults for FriendlyMonsterEffect
+Importing Defaults for LevelUpEffect
+Importing Defaults for RPGLinkAttachment
+Importing Defaults for DamTypeLightningRod
+Importing Defaults for FriendlyMonsterController
+Importing Defaults for RPGArtifact
+Importing Defaults for ArtifactFlight
+Importing Defaults for ArtifactInvulnerability
+Importing Defaults for ArtifactLightningRod
+Importing Defaults for ArtifactMagicWeaponMaker
+Importing Defaults for ArtifactMedicWeaponMaker
+Importing Defaults for ArtifactSuperMedicWeaponMaker
+Importing Defaults for ArtifactSuperMagicWeaponMaker
+Importing Defaults for ArtifactTripleDamage
+Importing Defaults for RPGLinkGun
+Importing Defaults for FakeMonsterWeapon
+Importing Defaults for RPGWeapon
+Importing Defaults for RW_Adrenal
+Importing Defaults for RW_Healing
+Importing Defaults for RW_MedicHealing
+Importing Defaults for RW_Rejuvination
+Importing Defaults for FriendlyMonsterKillMarker
+Importing Defaults for GhostInv
+Importing Defaults for RPGStatsInv
+Importing Defaults for RPGLinkGunPickup
+Importing Defaults for RPGWeaponPickup
+Importing Defaults for RPGArtifactPickup
+Importing Defaults for ArtifactFlightPickup
+Importing Defaults for ArtifactInvulnerabilityPickup
+Importing Defaults for ArtifactLightningRodPickup
+Importing Defaults for ArtifactMagicWeaponMakerPickup
+Importing Defaults for ArtifactSuperMagicWeaponMakerPickup
+Importing Defaults for ArtifactTripleDamagePickup
+Importing Defaults for ExperiencePickup
+Importing Defaults for RPGWeaponLocker
+Importing Defaults for PickupEXPShard
+Importing Defaults for HudCDeathmatchHelper
+Importing Defaults for RPGShockProjectile
+Importing Defaults for RPGPainterBeamEffect
+Importing Defaults for AwarenessEnemyList
+Importing Defaults for CredBonkTimer
+Importing Defaults for VampireMarker
+Importing Defaults for RPGLinkFire
+Importing Defaults for RPGShockProjFire
+Importing Defaults for RPGPainterFire
+Importing Defaults for RPGTabAbilities
+Importing Defaults for RPGTabCharacter
+Importing Defaults for RPGTabStats
+Importing Defaults for RPGTabStore
+Importing Defaults for RPGTabWelcome
+Importing Defaults for RPGAbilityDescMenu
+Importing Defaults for RPGPlayerLevelsMenu
+Importing Defaults for RPGLumpyStatMenu
+Importing Defaults for RPGResetConfirmPage
+Importing Defaults for RPGStatsMenu
+Importing Defaults for RPGStoreList
+Importing Defaults for STY_ResetButton
+Importing Defaults for STY_AbilityList
+... deferring
+Importing Defaults for AbilityListFont
+Importing Defaults for LumpysRPGKeyBinds
+Importing Defaults for RPGAbility
+Importing Defaults for AbilityAwareness
+Importing Defaults for AbilityHermesSandals
+Importing Defaults for AbilityJumpZ
+Importing Defaults for AbilitySpeed
+Importing Defaults for CA_AdrenalineArtifacts
+Importing Defaults for CA_MedicArtifacts
+Importing Defaults for RPGClass
+Importing Defaults for ClassAdrenalineMaster
+Importing Defaults for ClassMedicMaster
+Importing Defaults for ClassWeaponMaster
+Importing Defaults for Colors
+Importing Defaults for RPGPlayerDataObject
+Importing Defaults for STY_AbilityList
+------------------------LumpyJumping - Release------------------------
 --------------------------tK_BaseW - Release--------------------------
 -----------------------tk_FHIWeapons - Release------------------------
 ------------------------tk_ZenCoders - Release------------------------
@@ -54,6 +305,6 @@ Importing Defaults for LumpyJumpingPlayer
 --------------------------tk_AK47 - Release---------------------------
 -------------------------tk_LilLady - Release-------------------------
 ---------------------tk_HolyHandGrenade - Release---------------------
-Mutator exported successfully: LumpyJumping.MutLumpyJumping
+Mutator exported successfully: LumpysRPG.MutLumpysRPG
 Success - 0 error(s), 0 warning(s)
-Log file closed, 12/23/24 01:41:53
+Log file closed, 12/23/24 12:17:32

@@ -18,6 +18,7 @@ class AbilityHermesSandals extends RPGAbility
 
   //var config xEmitter LeftTrail, RightTrail;
   var config bool bEffectStarted;
+  var int MultiJumpBoost;
 
   static simulated function int Cost(RPGPlayerDataObject Data, int CurrentLevel)
   {
@@ -81,6 +82,7 @@ class AbilityHermesSandals extends RPGAbility
 
   static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
   {
+    local xPawn x;
     //Modify jump and ground speed
     Log("Speed Modified");
   	Other.JumpZ = Other.default.JumpZ * (1.0 + 0.1 * float(Min(AbilityLevel,5)));
@@ -89,6 +91,13 @@ class AbilityHermesSandals extends RPGAbility
     Other.AirSpeed = Other.default.AirSpeed * (1.0 + 0.05 * float(Min(AbilityLevel,20)));
     Other.LadderSpeed = Other.default.LadderSpeed * (1.0 + 0.05 * float(Min(AbilityLevel,20)));
     Other.AccelRate = Other.default.AccelRate * (1.0 + 0.05 * float(Min(AbilityLevel,20)));
+    //modify jump amount
+    x = xPawn(Other); 
+    if (x != None)
+    {
+      x.MaxMultiJump = 2 + AbilityLevel;
+      x.MultiJumpBoost = default.MultiJumpBoost;
+    }
     // if (!default.bEffectStarted && (AbilityLevel < 16 || AbilityLevel >= 11)
     // {
     //   StartEffect(xPawn(ViewportOwner.Actor.Pawn));
@@ -126,9 +135,10 @@ static function bool PreventDeath(Pawn Killed, Controller Killer, class<DamageTy
 
   defaultproperties
   {
+    MultiJumpBoost=50
     AbilityName="Sandals of Hermes"
   	Description="This ability combines general movement abilities into one that gives the player bonuses to their Jump Height and Movement Speed |Levels 1-10 of this ability augment the players jump height(+10%) and movement speed(+5%) per level. ||NOT IMPLEMENNETED(Hidden):|Levels 11-15 give increasing bonuses to the speed combo, as well as gives the player different colored foot emmitters |Level 16 provides the player with an artifact that allows them to customize their foot trail effect with different color effects or images"
   	StartingCost=1
   	CostAddPerLevel=0
-  	MaxLevel=10
+  	MaxLevel=25
   }

@@ -958,25 +958,25 @@ event NotifyLevelChange()
 
 defaultproperties
 {
-		 RpgDescriptions(0)=(ArtifactClass=Class'LumpysRPG.ArtifactMagicWeaponMaker',Description="Change the modifier of your current weapon. Costs 100 Adrenaline",)
-		 RpgDescriptions(1)=(ArtifactClass=Class'LumpysRPG.ArtifactFlight',Description="Use this and you'll be able to fly around the level while your adrenaline lasts.",)
-		 //RpgDescriptions(2)=(ArtifactClass=Class'LumpysRPG.ArtifactTripleDamage',Description="Triple the damage dealt by your weapons while your adrenaline last.",)
-		 //RpgDescriptions(3)=(ArtifactClass=Class'LumpysRPG.ArtifactLightningRod',Description="Shoots a bolt of lightning at any enemy that comes within your sights, dealing them damage.",)
-		 //RpgDescriptions(4)=(ArtifactClass=Class'LumpysRPG.ArtifactTeleport',Description="Randomly teleports you around the levels for a quick escape.",)
-		 //RpgDescriptions(5)=(ArtifactClass=Class'LumpysRPG.ArtifactMonsterSummon',Description="Summons a friendly monster that will fight on your behalf. Only you can kill your summoned monsters.||Monsters with green halos are yours, monsters with red are teammate summoned monsters.",)
-		 ItemsToShow=3
-		 ScrollSpeed=8.00
-		 bRequiresTick=true
-     bDefaultBindings=True
-     bDefaultArtifactBindings=True
-     EXPBarColor=(B=128,G=255,R=128,A=255)
-     WhiteColor=(B=255,G=255,R=255,A=255)
-		 GreenColor=(B=128,G=255,R=128,A=255)
-     RedTeamTint=(R=100,A=100)
-     BlueTeamTint=(B=102,G=66,R=37,A=150)
-     LevelText="Level:"
-     StatsMenuText="Press L for stats/levelup menu"
-     ArtifactText="U to use, brackets to switch"
-		 CreditText="Credits:"
-     bVisible=True
+	RpgDescriptions(0)=(ArtifactClass=Class'LumpysRPG.ArtifactMagicWeaponMaker',Description="Change the modifier of your current weapon. Costs 100 Adrenaline",)
+	RpgDescriptions(1)=(ArtifactClass=Class'LumpysRPG.ArtifactFlight',Description="Use this and you'll be able to fly around the level while your adrenaline lasts.",)
+	//RpgDescriptions(2)=(ArtifactClass=Class'LumpysRPG.ArtifactTripleDamage',Description="Triple the damage dealt by your weapons while your adrenaline last.",)
+	//RpgDescriptions(3)=(ArtifactClass=Class'LumpysRPG.ArtifactLightningRod',Description="Shoots a bolt of lightning at any enemy that comes within your sights, dealing them damage.",)
+	//RpgDescriptions(4)=(ArtifactClass=Class'LumpysRPG.ArtifactTeleport',Description="Randomly teleports you around the levels for a quick escape.",)
+	//RpgDescriptions(5)=(ArtifactClass=Class'LumpysRPG.ArtifactMonsterSummon',Description="Summons a friendly monster that will fight on your behalf. Only you can kill your summoned monsters.||Monsters with green halos are yours, monsters with red are teammate summoned monsters.",)
+	ItemsToShow=3
+	ScrollSpeed=8.00
+	bRequiresTick=true
+	bDefaultBindings=True
+	bDefaultArtifactBindings=True
+	EXPBarColor=(B=128,G=255,R=128,A=255)
+	WhiteColor=(B=255,G=255,R=255,A=255)
+	GreenColor=(B=128,G=255,R=128,A=255)
+	RedTeamTint=(R=100,A=100)
+	BlueTeamTint=(B=102,G=66,R=37,A=150)
+	LevelText="Level:"
+	StatsMenuText="Press L for stats/levelup menu"
+	ArtifactText="U to use, brackets to switch"
+	CreditText="Credits:"
+	bVisible=True
 }

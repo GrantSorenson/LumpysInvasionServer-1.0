@@ -1403,14 +1403,14 @@ static function string GetDescriptionText(string PropName)
 
 defaultproperties
 {
-  DefaultWeapons(0)="XWeapons.TransLauncher"
-  DefaultWeapons(1)="tk_ZenCoders.MP5Gun"
-  WeaponModifiers(0)=(WeaponClass=Class'LumpysRPG.RW_Healing',Chance=1)
-  WeaponModifiers(1)=(WeaponClass=Class'LumpysRPG.RW_Adrenal',Chance=2)
-  WeaponModifiers(2)=(WeaponClass=Class'LumpysRPG.RW_Rejuvination',Chance=2)
+	DefaultWeapons(0)="XWeapons.TransLauncher"
+	DefaultWeapons(1)="tk_ZenCoders.MP5Gun"
+	WeaponModifiers(0)=(WeaponClass=Class'LumpysRPG.RW_Healing',Chance=1)
+	WeaponModifiers(1)=(WeaponClass=Class'LumpysRPG.RW_Adrenal',Chance=2)
+	WeaponModifiers(2)=(WeaponClass=Class'LumpysRPG.RW_Rejuvination',Chance=2)
 	WeaponModifiers(3)=(WeaponClass=Class'LumpysRPG.RW_MedicHealing',Chance=1)
-  Abilities(0)=Class'LumpysRPG.AbilitySpeed'
-  Abilities(1)=Class'LumpysRPG.AbilityJumpZ'
+	Abilities(0)=Class'LumpysRPG.AbilitySpeed'
+	Abilities(1)=Class'LumpysRPG.AbilityJumpZ'
 	Abilities(2)=Class'LumpysRPG.AbilityHermesSandals'
 	Abilities(3)=Class'LumpysRPG.ClassMedicMaster'
 	Abilities(4)=Class'LumpysRPG.ClassAdrenalineMaster'
