@@ -291,22 +291,24 @@ function PostRender(Canvas Canvas)
 		CredTime = 0;
 	}
 
-	if(bShowBonk)
-	{
-		//Log("Alpha: " @ string(byte((-1.1**(CredTime-50)) + 255)) @ "CredTime: " @ CredTime);
-		CreditBonkColor.A = byte(255 -(1.007**(CredTime-50)));//byte(-1.1**(CredTime-50) + 255);//int((-1.1**(CredTime-50)) + 255);byte(CreditBonkColor.A - 1*CredTime);
-		Canvas.TextSize("+"@CredBonkAmount, CreditBonkX, CreditBonkY);
-		Canvas.Style = 2;
-		Canvas.DrawColor = CreditBonkColor;
-		Canvas.SetPos(EXPBarX + 138.f * Canvas.FontScaleX - CreditBonkX, Canvas.ClipY * 0.75 - YL * 2.60);//EXPBarX + 9.f * Canvas.FontScaleX + 50, Canvas.ClipY * 0.75 - YL * 3.0
-		Canvas.DrawText("+"$(CredBonkAmount));
-		if(CredTime>=820)
-		{
-			bShowBonk = false;
-			CredBonkAmount = 0;
-		}
-		CredTime += 1;
-	}
+	// if(bShowBonk)// just a dream
+	// {
+	// 	//Log("Alpha: " @ string(byte((-1.1**(CredTime-50)) + 255)) @ "CredTime: " @ CredTime);
+	// 	CreditBonkColor.A = byte(255 -(1.007**(CredTime-50)));//byte(-1.1**(CredTime-50) + 255);//int((-1.1**(CredTime-50)) + 255);byte(CreditBonkColor.A - 1*CredTime);
+	// 	Canvas.TextSize("+"@CredBonkAmount, CreditBonkX, CreditBonkY);
+	// 	Canvas.TextSize(CreditText@StatsInv.Data.Credits, CreditTextX, CreditTextY);
+	// 	Canvas.Style = 2;
+	// 	Canvas.DrawColor = CreditBonkColor;
+	// 	Canvas.SetPos(EXPBarX + CreditTextX - CreditBonkX * Canvas.FontScaleX, Canvas.ClipY * 0.75 - YL * 2.60);//EXPBarX + 9.f * Canvas.FontScaleX + 50, Canvas.ClipY * 0.75 - YL * 3.0//138
+	// 	//Log("SetPos: X")
+	// 	Canvas.DrawText("+"$(CredBonkAmount));
+	// 	if(CredTime>=820)
+	// 	{
+	// 		bShowBonk = false;
+	// 		CredBonkAmount = 0;
+	// 	}
+	// 	CredTime += 1;
+	// }
 
 	//Draw credits smaller
 	Canvas.TextSize(CreditText@StatsInv.Data.Credits, CreditTextX, CreditTextY);

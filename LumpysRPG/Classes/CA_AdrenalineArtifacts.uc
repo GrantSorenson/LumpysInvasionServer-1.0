@@ -43,6 +43,11 @@ static function giveArtifact(Pawn other, class<RPGArtifact> ArtifactClass)
 defaultproperties
 {
   Artifacts(0)=Class'LumpysRPG.ArtifactSuperMagicWeaponMaker'
+  Artifacts(1)=Class'LumpysRPG.ArtifactMagicWeaponMaker'
+  Artifacts(2)=Class'LumpysRPG.ArtifactInvulnerability'
+  Artifacts(3)=Class'LumpysRPG.ArtifactTripleDamage'
+  Artifacts(4)=Class'LumpysRPG.ArtifactFlight'
+  Artifacts(5)=Class'LumpysRPG.ArtifactLightningRod'
   AbilityName="Adrenaline Artifacts"
   Description="This ability grants the player Adrenaline Master Artifacts"
   StartingCost=1

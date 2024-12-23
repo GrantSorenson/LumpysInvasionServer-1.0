@@ -1,4 +1,4 @@
-Log: Log file open, 12/22/24 16:16:48
+Log: Log file open, 12/23/24 00:01:15
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -14,14 +14,14 @@ Log: Splash screen filename is '..\Help\UT2004Logo.bmp'
 Localization: No localization: UT2004.General.Start (int)
 Log: Initializing OpenGLDrv...
 Log: Game class is 'GameInfo'
-Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.647000...
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.651000...
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
 Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?SpectatorOnly=1?Sex=M
 Log: Collecting garbage
 Log: Purging garbage
 Log: Garbage: objects: 33900->33897; refs: 350345
 Log: Game class is 'CinematicGame'
-Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 2.011000...
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.984000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
@@ -32,8 +32,7 @@ Localization: No localization: UT2004.General.Product (int)
 Localization: No localization: UT2004.General.Product (int)
 Localization: No localization: UT2004.General.Product (int)
 Log: Opened viewport
-Log: Couldn't bring window to foreground.
-Log: Enter SetRes: 1920x1057 Fullscreen 0
+Log: Enter SetRes: 1920x1080 Fullscreen 1
 Log: Using pixel format 9
 Log: GL_VENDOR     : NVIDIA Corporation
 Log: GL_RENDERER   : NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2
@@ -64,16 +63,14 @@ Log: OpenGL: Level of anisotropy is 1.000000 (max 16.000000).
 Log: OpenGL: Forcibly disabled pixel shaders.
 Log: OpenGL: Forcibly disabled render-to-texture.
 Log: OpenGL: allocated 32 MByte of AGP memory
-Localization: No localization: UT2004.General.Product (int)
-Log: Startup time: 1.779000 seconds
+Log: Startup time: 1.724000 seconds
 Localization: No localization: UT2004.General.Run (int)
 Log: Precaching: NvidiaLogo.LevelInfo0
 Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
 Log: Allocating 32768 byte dynamic index buffer.
 Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.013 seconds
-Log: Finished precaching textures in 0.015 seconds
-Localization: No localization: UT2004.General.Product (int)
+Log: Finished precaching geometry in 0.012 seconds
+Log: Finished precaching textures in 0.014 seconds
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] () ()
 Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
 ModAuthor: Restoring previously open menus (0 menus to restore)
@@ -94,41 +91,6 @@ ModAuthor: # # # # Gametype ShowPanel()  True
 MenuText: No description configured for property 'LWaveConfig'
 ModAuthor: # # # # Select Map ShowPanel()  True
 ModAuthor: # # # # Gametype ShowPanel()  False
-Log: Enter SetRes: 1920x1009 Fullscreen 1
-Log: Using pixel format 9
-Log: GL_VENDOR     : NVIDIA Corporation
-Log: GL_RENDERER   : NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2
-Log: GL_VERSION    : 4.6.0 NVIDIA 566.14
-Log: OpenGL: Device supports: GL
-Log: OpenGL: Device supports: GL_EXT_bgra
-Log: OpenGL: Device supports: GL_ARB_texture_compression
-Log: OpenGL: Device supports: GL_EXT_texture_compression_s3tc
-Log: OpenGL: Device supports: GL_ARB_texture_cube_map
-Log: OpenGL: Device supports: GL_ARB_texture_env_combine
-Log: OpenGL: Device supports: GL_NV_texture_env_combine4
-Log: OpenGL: Device supports: GL_ARB_texture_env_crossbar
-Log: OpenGL: Device supports: GL_EXT_texture_lod_bias
-Log: OpenGL: Device supports: GL_ARB_multitexture
-Log: OpenGL: Device supports: GL_NV_vertex_array_range
-Log: OpenGL: Device supports: GL_NV_vertex_array_range2
-Log: OpenGL: Device supports: GL_ARB_multisample
-Log: OpenGL: Device supports: GL_NV_multisample_filter_hint
-Log: OpenGL: Device supports: GL_EXT_texture_filter_anisotropic
-Log: OpenGL: Device supports: WGL_EXT_swap_control
-Log: OpenGL: Device supports: GL_ARB_vertex_buffer_object
-Log: OpenGL: Device supports: GL_ARB_fragment_program
-Log: OpenGL: Device supports: GL_ARB_vertex_program
-Log: OpenGL: Device supports: GL_EXT_framebuffer_object
-Log: OpenGL: Device supports: GL_ARB_texture_non_power_of_two
-Log: OpenGL: C32 RGB888 Z24 S0
-Log: OpenGL: Level of anisotropy is 1.000000 (max 16.000000).
-Log: OpenGL: Forcibly disabled pixel shaders.
-Log: OpenGL: Forcibly disabled render-to-texture.
-Log: OpenGL: allocated 32 MByte of AGP memory
-Log: Precaching: Entry.LevelInfo0
-Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.003 seconds
-Log: Finished precaching textures in 0.009 seconds
 ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 2 menus open)
 ModAuthor:    Menu[0]:UT2k4MainMenu
 ModAuthor:    Menu[1]:UT2K4GamePageSP
@@ -145,9 +107,9 @@ ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
 Log: Collecting garbage
 Log: Purging garbage
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 43354->40891; refs: 471523
+Log: Garbage: objects: 43354->40889; refs: 471510
 Log: Game class is 'LumpysInvasion'
-Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 11.115000...
+Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 11.018000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim
@@ -161,31 +123,38 @@ Log: Precaching: DM-Flux2.LevelInfo0
 Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
 Log: Allocating 32768 byte dynamic index buffer.
 Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.079 seconds
-Log: Finished precaching textures in 0.121 seconds
+Log: Finished precaching geometry in 0.071 seconds
+Log: Finished precaching textures in 0.110 seconds
 ScriptLog: START MATCH
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
-ModAuthor: # # # # Welcome ShowPanel()  True
-Log: Allocating 81360 byte dynamic vertex buffer.
-ModAuthor: # # # # Abilities ShowPanel()  True
-ModAuthor: # # # # Welcome ShowPanel()  False
-ModAuthor: # # # # Stats ShowPanel()  True
-ModAuthor: # # # # Abilities ShowPanel()  False
-ModAuthor: # # # # Character ShowPanel()  True
-ModAuthor: # # # # Stats ShowPanel()  False
-ScriptLog: AddClassPoint Called
-ScriptLog: Add Class Called
-ScriptLog: Add Class Called : Case 0
-ModAuthor: # # # # Abilities ShowPanel()  True
-LumpysInvasion: Owned Class #0: AM
-ModAuthor: # # # # Character ShowPanel()  False
-ModAuthor: # # # # Stats ShowPanel()  True
-ModAuthor: # # # # Abilities ShowPanel()  False
-ModAuthor: # # # # Abilities ShowPanel()  True
-LumpysInvasion: Owned Class #0: AM
-ModAuthor: # # # # Stats ShowPanel()  False
-LumpysInvasion: Owned Class #0: AM
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
+ScriptLog: Last Cred: 1082 Stat Cred: 1089
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+ScriptLog: Last Cred: 1089 Stat Cred: 1094
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameEarth Dragon
@@ -198,9 +167,24 @@ LumpysInvasion: New Monster NameEarth Dragon
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameDragon
+ScriptLog: Last Cred: 1094 Stat Cred: 1103
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+ScriptLog: Last Cred: 1103 Stat Cred: 1122
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameDragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+ScriptLog: Last Cred: 1122 Stat Cred: 1135
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameEarth Dragon
@@ -208,9 +192,72 @@ ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] ()
 ModAuthor: # # # # Game ShowPanel()  True
 ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
-ModAuthor: # # # # Abilities ShowPanel()  True
-LumpysInvasion: Owned Class #0: AM
+ModAuthor: # # # # Welcome ShowPanel()  True
+Log: Allocating 67536 byte dynamic vertex buffer.
+Log: Allocating 83664 byte dynamic vertex buffer.
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
+ModAuthor: # # # # Store ShowPanel()  True
+ModAuthor: # # # # Welcome ShowPanel()  False
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+AK47: Successfully initialized AK47Weapon
+ScriptLog: Last Cred: 1135 Stat Cred: 1125
 ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+ScriptLog: Last Cred: 1125 Stat Cred: 1126
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
+ScriptLog: Last Cred: 1126 Stat Cred: 1134
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+ScriptLog: Last Cred: 1134 Stat Cred: 1138
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+ScriptLog: Last Cred: 1138 Stat Cred: 1155
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameRazor Fly
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameRazor Fly
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameManta
+Log: Preprocessing:  Vertex stream total vertices: 209 Orig wedges: 209
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameManta
+Log: Preprocessing:  Vertex stream total vertices: 257 Orig wedges: 257
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameKrall
+ScriptLog: Last Cred: 1155 Stat Cred: 1164
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameRazor Fly
+Log: Preprocessing:  Vertex stream total vertices: 408 Orig wedges: 408
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameRazor Fly
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameManta
+LumpysInvasion: M.Health is now: 60 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 60 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NamePupae
+ScriptLog: Last Cred: 1164 Stat Cred: 1176
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameManta
+ScriptLog: Last Cred: 1176 Stat Cred: 1192
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
 ModAuthor: # # # # Game ShowPanel()  True
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
@@ -223,11 +270,11 @@ Exit: Windows client shut down
 Log: Waiting for file streaming thread to finish...
 Exit: OpenAL Audio subsystem shut down.
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 54017->0; refs: 471523
+Log: Garbage: objects: 54190->0; refs: 471510
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 230 MByte 499 KByte 435 Bytes from HD took 0.345000 seconds (0.315000 reading, 0.030000 seeking).
-Log: FileManager: 0.230000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 232 MByte 7 KByte 219 Bytes from HD took 0.336000 seconds (0.300000 reading, 0.036000 seeking).
+Log: FileManager: 0.799000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/22/24 16:17:38
+Uninitialized: Log file closed, 12/23/24 00:03:26

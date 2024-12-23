@@ -1,4 +1,4 @@
-Log file open, 12/22/24 16:16:40
+Log file open, 12/23/24 00:01:10
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -123,6 +123,8 @@ Parsing ClassWeaponMaster
 Parsing Colors
 Compiling AwarenessInteraction
 Compiling RPGInteraction
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGInteraction.uc(216) : Warning, 'CreditBonkX' : unreferenced local variable
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGInteraction.uc(216) : Warning, 'CreditBonkY' : unreferenced local variable
 G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGInteraction.uc(217) : Warning, 'CredStock' : unreferenced local variable
 Compiling MutLumpysRPG
 Compiling AdrenalConditionMessage
@@ -312,5 +314,5 @@ Importing Defaults for STY_AbilityList
 ---------------------tk_HolyHandGrenade - Release---------------------
 -------------------------lumpysRPG - Release--------------------------
 Mutator exported successfully: LumpysRPG.MutLumpysRPG
-Success - 0 error(s), 9 warning(s)
-Log file closed, 12/22/24 16:16:43
+Success - 0 error(s), 11 warning(s)
+Log file closed, 12/23/24 00:01:13
