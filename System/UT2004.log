@@ -1,4 +1,4 @@
-Log: Log file open, 12/23/24 13:10:19
+Log: Log file open, 12/26/24 20:05:34
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -14,14 +14,14 @@ Log: Splash screen filename is '..\Help\UT2004Logo.bmp'
 Localization: No localization: UT2004.General.Start (int)
 Log: Initializing OpenGLDrv...
 Log: Game class is 'GameInfo'
-Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.639000...
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.572000...
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
 Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?SpectatorOnly=1?Sex=M
 Log: Collecting garbage
 Log: Purging garbage
 Log: Garbage: objects: 33900->33897; refs: 350345
 Log: Game class is 'CinematicGame'
-Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.971000...
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.906000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
@@ -63,14 +63,14 @@ Log: OpenGL: Level of anisotropy is 1.000000 (max 16.000000).
 Log: OpenGL: Forcibly disabled pixel shaders.
 Log: OpenGL: Forcibly disabled render-to-texture.
 Log: OpenGL: allocated 32 MByte of AGP memory
-Log: Startup time: 1.723000 seconds
+Log: Startup time: 1.639000 seconds
 Localization: No localization: UT2004.General.Run (int)
 Log: Precaching: NvidiaLogo.LevelInfo0
 Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
 Log: Allocating 32768 byte dynamic index buffer.
 Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.014 seconds
-Log: Finished precaching textures in 0.014 seconds
+Log: Finished precaching geometry in 0.012 seconds
+Log: Finished precaching textures in 0.011 seconds
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] () ()
 Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
 ModAuthor: Restoring previously open menus (0 menus to restore)
@@ -109,7 +109,7 @@ Log: Purging garbage
 Log: (Karma): Level Karma Terminated.
 Log: Garbage: objects: 43354->40891; refs: 471523
 Log: Game class is 'LumpysInvasion'
-Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 6.460000...
+Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 6.557000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpyJumping.MutLumpyJumping,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim
@@ -123,40 +123,72 @@ Log: Precaching: DM-Flux2.LevelInfo0
 Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
 Log: Allocating 32768 byte dynamic index buffer.
 Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.077 seconds
-Log: Finished precaching textures in 0.119 seconds
-ScriptLog: Speed Modified
+Log: Finished precaching geometry in 0.078 seconds
+Log: Finished precaching textures in 0.108 seconds
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
 ScriptLog: START MATCH
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
 ModAuthor: # # # # Welcome ShowPanel()  True
 LumpysInvasion: Owned Class #0: MM
 Log: Allocating 66384 byte dynamic vertex buffer.
-Log: Allocating 82512 byte dynamic vertex buffer.
 ModAuthor: # # # # Abilities ShowPanel()  True
 LumpysInvasion: Owned Class #0: MM
 ModAuthor: # # # # Welcome ShowPanel()  False
-LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameEarth Dragon
-LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameEarth Dragon
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
 LumpysInvasion: Owned Class #0: MM
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
+LumpysRPG: We spawned a medic Drone
+Warning: MedicDrone DM-Flux2.MedicDrone (Function LumpysRPG.MedicDrone.PostBeginPlay:008F) Accessed None 'Trail'
+LumpysInvasion: Owned Class #0: MM
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
+ModAuthor: # # # # Game ShowPanel()  True
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameDragon
-ModAuthor: # # # # Stats ShowPanel()  True
-ModAuthor: # # # # Abilities ShowPanel()  False
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameEarth Dragon
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
 ModAuthor: # # # # Abilities ShowPanel()  True
 LumpysInvasion: Owned Class #0: MM
-ModAuthor: # # # # Stats ShowPanel()  False
 ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
-LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameDragon
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
 ModAuthor: # # # # Game ShowPanel()  True
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
@@ -169,11 +201,11 @@ Exit: Windows client shut down
 Log: Waiting for file streaming thread to finish...
 Exit: OpenAL Audio subsystem shut down.
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 54133->0; refs: 471523
+Log: Garbage: objects: 54415->0; refs: 471523
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 225 MByte 913 KByte 215 Bytes from HD took 0.329000 seconds (0.283000 reading, 0.046000 seeking).
-Log: FileManager: 0.223000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 231 MByte 888 KByte 416 Bytes from HD took 0.292000 seconds (0.269000 reading, 0.023000 seeking).
+Log: FileManager: 0.227000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/23/24 13:10:54
+Uninitialized: Log file closed, 12/26/24 20:06:44

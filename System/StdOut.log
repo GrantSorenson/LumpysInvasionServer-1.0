@@ -1,4 +1,4 @@
-Log file open, 12/23/24 13:10:06
+Log file open, 12/26/24 20:10:24
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -38,6 +38,7 @@ Log file open, 12/23/24 13:10:06
 Analyzing...
 Parsing AwarenessInteraction
 Parsing RPGInteraction
+Parsing DroneReplicationInfo
 Parsing MutLumpysRPG
 Parsing AdrenalConditionMessage
 Parsing EmptyMessage
@@ -48,10 +49,14 @@ Parsing LevelUpHUDMessage
 Parsing RPGNameMessage
 Parsing RPGRules
 Parsing LumpysArtifactManager
+Parsing DroneProjEffect
+Parsing DroneProjEffectBlue
+Parsing DroneProjEffectRed
 Parsing FlightEffect
 Parsing FriendlyMonsterEffect
 Parsing LevelUpEffect
 Parsing RPGLinkAttachment
+Parsing DamTypeDronePlasma
 Parsing DamTypeLightningRod
 Parsing FriendlyMonsterController
 Parsing RPGArtifact
@@ -61,6 +66,7 @@ Parsing ArtifactLightningRod
 Parsing ArtifactMagicWeaponMaker
 Parsing ArtifactMedicWeaponMaker
 Parsing ArtifactSuperMedicWeaponMaker
+Parsing ArtifactMonsterSummon
 Parsing ArtifactSuperMagicWeaponMaker
 Parsing ArtifactTripleDamage
 Parsing RPGLinkGun
@@ -81,6 +87,7 @@ Parsing ArtifactFlightPickup
 Parsing ArtifactInvulnerabilityPickup
 Parsing ArtifactLightningRodPickup
 Parsing ArtifactMagicWeaponMakerPickup
+Parsing ArtifactMonsterSummonPickup
 Parsing ArtifactSuperMagicWeaponMakerPickup
 Parsing ArtifactTripleDamagePickup
 Parsing ExperiencePickup
@@ -88,9 +95,14 @@ Parsing RPGWeaponLocker
 Parsing PickupEXPShard
 Parsing HudCDeathmatchHelper
 Parsing RPGShockProjectile
+Parsing DroneProj
 Parsing RPGPainterBeamEffect
+Parsing ColoredTrail
+Parsing DroneHealBeam
 Parsing AwarenessEnemyList
 Parsing CredBonkTimer
+Parsing LumpyDrone
+Parsing MedicDrone
 Parsing VampireMarker
 Parsing RPGLinkFire
 Parsing RPGShockProjFire
@@ -125,6 +137,7 @@ Parsing ClassWeaponMaster
 Parsing Colors
 Compiling AwarenessInteraction
 Compiling RPGInteraction
+Compiling DroneReplicationInfo
 Compiling MutLumpysRPG
 Compiling AdrenalConditionMessage
 Compiling EmptyMessage
@@ -135,10 +148,14 @@ Compiling LevelUpHUDMessage
 Compiling RPGNameMessage
 Compiling RPGRules
 Compiling LumpysArtifactManager
+Compiling DroneProjEffect
+Compiling DroneProjEffectBlue
+Compiling DroneProjEffectRed
 Compiling FlightEffect
 Compiling FriendlyMonsterEffect
 Compiling LevelUpEffect
 Compiling RPGLinkAttachment
+Compiling DamTypeDronePlasma
 Compiling DamTypeLightningRod
 Compiling FriendlyMonsterController
 Compiling RPGArtifact
@@ -148,6 +165,7 @@ Compiling ArtifactLightningRod
 Compiling ArtifactMagicWeaponMaker
 Compiling ArtifactMedicWeaponMaker
 Compiling ArtifactSuperMedicWeaponMaker
+Compiling ArtifactMonsterSummon
 Compiling ArtifactSuperMagicWeaponMaker
 Compiling ArtifactTripleDamage
 Compiling RPGLinkGun
@@ -167,6 +185,7 @@ Compiling ArtifactFlightPickup
 Compiling ArtifactInvulnerabilityPickup
 Compiling ArtifactLightningRodPickup
 Compiling ArtifactMagicWeaponMakerPickup
+Compiling ArtifactMonsterSummonPickup
 Compiling ArtifactSuperMagicWeaponMakerPickup
 Compiling ArtifactTripleDamagePickup
 Compiling ExperiencePickup
@@ -174,9 +193,14 @@ Compiling RPGWeaponLocker
 Compiling PickupEXPShard
 Compiling HudCDeathmatchHelper
 Compiling RPGShockProjectile
+Compiling DroneProj
 Compiling RPGPainterBeamEffect
+Compiling ColoredTrail
+Compiling DroneHealBeam
 Compiling AwarenessEnemyList
 Compiling CredBonkTimer
+Compiling LumpyDrone
+Compiling MedicDrone
 Compiling VampireMarker
 Compiling RPGLinkFire
 Compiling RPGShockProjFire
@@ -212,6 +236,7 @@ Compiling Colors
 Compiling RPGPlayerDataObject
 Importing Defaults for AwarenessInteraction
 Importing Defaults for RPGInteraction
+Importing Defaults for DroneReplicationInfo
 Importing Defaults for MutLumpysRPG
 Importing Defaults for AdrenalConditionMessage
 Importing Defaults for EmptyMessage
@@ -222,10 +247,14 @@ Importing Defaults for LevelUpHUDMessage
 Importing Defaults for RPGNameMessage
 Importing Defaults for RPGRules
 Importing Defaults for LumpysArtifactManager
+Importing Defaults for DroneProjEffect
+Importing Defaults for DroneProjEffectBlue
+Importing Defaults for DroneProjEffectRed
 Importing Defaults for FlightEffect
 Importing Defaults for FriendlyMonsterEffect
 Importing Defaults for LevelUpEffect
 Importing Defaults for RPGLinkAttachment
+Importing Defaults for DamTypeDronePlasma
 Importing Defaults for DamTypeLightningRod
 Importing Defaults for FriendlyMonsterController
 Importing Defaults for RPGArtifact
@@ -235,6 +264,7 @@ Importing Defaults for ArtifactLightningRod
 Importing Defaults for ArtifactMagicWeaponMaker
 Importing Defaults for ArtifactMedicWeaponMaker
 Importing Defaults for ArtifactSuperMedicWeaponMaker
+Importing Defaults for ArtifactMonsterSummon
 Importing Defaults for ArtifactSuperMagicWeaponMaker
 Importing Defaults for ArtifactTripleDamage
 Importing Defaults for RPGLinkGun
@@ -254,6 +284,7 @@ Importing Defaults for ArtifactFlightPickup
 Importing Defaults for ArtifactInvulnerabilityPickup
 Importing Defaults for ArtifactLightningRodPickup
 Importing Defaults for ArtifactMagicWeaponMakerPickup
+Importing Defaults for ArtifactMonsterSummonPickup
 Importing Defaults for ArtifactSuperMagicWeaponMakerPickup
 Importing Defaults for ArtifactTripleDamagePickup
 Importing Defaults for ExperiencePickup
@@ -261,9 +292,14 @@ Importing Defaults for RPGWeaponLocker
 Importing Defaults for PickupEXPShard
 Importing Defaults for HudCDeathmatchHelper
 Importing Defaults for RPGShockProjectile
+Importing Defaults for DroneProj
 Importing Defaults for RPGPainterBeamEffect
+Importing Defaults for ColoredTrail
+Importing Defaults for DroneHealBeam
 Importing Defaults for AwarenessEnemyList
 Importing Defaults for CredBonkTimer
+Importing Defaults for LumpyDrone
+Importing Defaults for MedicDrone
 Importing Defaults for VampireMarker
 Importing Defaults for RPGLinkFire
 Importing Defaults for RPGShockProjFire
@@ -310,4 +346,4 @@ Importing Defaults for STY_AbilityList
 ---------------------tk_HolyHandGrenade - Release---------------------
 Mutator exported successfully: LumpysRPG.MutLumpysRPG
 Success - 0 error(s), 0 warning(s)
-Log file closed, 12/23/24 13:10:10
+Log file closed, 12/26/24 20:10:27

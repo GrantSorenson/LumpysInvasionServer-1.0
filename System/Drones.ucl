@@ -1,0 +1,1 @@
+Mutator=(ClassName=Drones.MutDrones,GroupName=Drones,IconMaterialName=MutatorArt.nosym,FriendlyName=Drones.MutDrones.FriendlyName,Description=Drones.MutDrones.Description,FriendlyName=Drones.MutDrones.FriendlyName,FallbackName="Drones 1.3",FallbackDesc="Gives each player a drone that heals them and attacks their enemies.")

@@ -20,6 +20,9 @@ var Inventory CurrentItem;
 var Inventory DisplayItem;
 var Inventory NextItem;
 
+//Drones
+var array<LumpyDrone> DroneList;
+var int MaxDrones;
 
 struct OldRPGWeaponInfo
 {
@@ -770,6 +773,7 @@ simulated function Tick(float deltaTime)
 		if (bLevelUp)
 			ClientReInitMenu();
 	}
+			
 }
 
 //High level players can potentially take a lot of damage in one hit, which screws up PlayerController
@@ -1006,6 +1010,7 @@ simulated function ClientUnModifyVehicle(Vehicle V)
 
 defaultproperties
 {
-     bReplicateInstigator=True
-		 MessageClass=class'StringMessagePlus'
+    bReplicateInstigator=True
+	MessageClass=class'StringMessagePlus'
+	bNetNotify=True
 }

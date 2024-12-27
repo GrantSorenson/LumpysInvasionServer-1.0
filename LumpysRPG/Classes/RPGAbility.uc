@@ -9,7 +9,6 @@ var localized string MasterClass;
 var localized bool bClassAbility;//is a class ability
 var localized bool bMasterAbility;
 var int StartingCost, CostAddPerLevel, BotChance, MaxLevel;
-
 /* Called by MutUT2004RPG during its first tick. Return false to be removed from ability list (for example, if the
  * ability doesn't make sense with the current gametype)
  * Also gives the ability a chance to modify the game or the mutator (for example, if the ability depends on an

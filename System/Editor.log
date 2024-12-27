@@ -1,4 +1,4 @@
-Log: Log file open, 12/23/24 10:18:53
+Log: Log file open, 12/26/24 16:50:16
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -10,7 +10,7 @@ Init: Ini:UT2004.ini   UserIni:User.ini
 Init: Build label: Build UT2004_Build_[2005-11-23_16.22]
 Init: Object subsystem initialized
 Log: 	nvldumd.dll/NVIDIA GeForce RTX 2070 SUPER
-Log: Startup time: 3.039000 seconds
+Log: Startup time: 2.089000 seconds
 Cmd: MODE MAPEXT=ut2
 Log: Opened viewport
 Log: Enter SetRes: 386x55 Fullscreen 0
@@ -136,17 +136,17 @@ Cmd: CAMERA UPDATE NAME=MeshViewer MESH="banner" FLAGS=641 REN=19 MISC1=0 MISC2=
 Cmd: CAMERA UPDATE NAME=MeshViewer MESH="banner" FLAGS=641 REN=19 MISC1=0 MISC2=0
 Log: Preprocessing:  Vertex stream total vertices: 319 Orig wedges: 319
 Log: Allocating 16384 byte dynamic index buffer.
-Log: Enter SetRes: 428x336 Fullscreen 0
+Log: Enter SetRes: 748x564 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
 Log: Allocating 16384 byte dynamic index buffer.
-Log: Enter SetRes: 428x356 Fullscreen 0
+Log: Enter SetRes: 748x584 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
 Log: Allocating 16384 byte dynamic index buffer.
-Log: Enter SetRes: 428x336 Fullscreen 0
+Log: Enter SetRes: 748x564 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
@@ -160,7 +160,7 @@ Log: Enter SetRes: 0x0 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
-Log: Enter SetRes: 306x322 Fullscreen 0
+Log: Enter SetRes: 530x550 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
@@ -174,7 +174,7 @@ Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
 Cmd: CAMERA UPDATE FLAGS=545425097 REN=20 NAME=PrefabBrowser
-Log: Enter SetRes: 428x347 Fullscreen 0
+Log: Enter SetRes: 748x575 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
@@ -193,9 +193,9 @@ Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
 Cmd: CAMERA UPDATE NAME=LIPSinc MESH="" FLAGS=16810633 REN=34 MISC1=-1 MISC2=0
 Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=0
-Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=343876352
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=342893312
 Cmd: AUDIO FINDVIEWPORT
-Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=343876352
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=342893312
 Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=21299696
 Log: Opened viewport
 Log: Enter SetRes: 320x400 Fullscreen 0
@@ -206,7 +206,7 @@ Log: Enter SetRes: 320x400 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
-Log: Enter SetRes: 530x276 Fullscreen 0
+Log: Enter SetRes: 802x458 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
@@ -241,24 +241,24 @@ Log: Enter SetRes: 0x0 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
-Log: Enter SetRes: 578x276 Fullscreen 0
+Log: Enter SetRes: 898x504 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
 Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="2K4Chargers" GROUP="ChargerTextures"
-Log: Enter SetRes: 355x149 Fullscreen 0
+Log: Enter SetRes: 572x429 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
-Log: Enter SetRes: 188x149 Fullscreen 0
+Log: Enter SetRes: 305x429 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
-Log: Enter SetRes: 355x149 Fullscreen 0
+Log: Enter SetRes: 572x429 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
-Log: Enter SetRes: 188x149 Fullscreen 0
+Log: Enter SetRes: 305x429 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
@@ -278,62 +278,36 @@ Log: Enter SetRes: 642x433 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
-Cmd: OBJ LOAD FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\LumpysTextures.utx"
-Log: Matched Viewport TerrainHeightmap
-Log: Matched Viewport TerrainLayers
-Log: Matched Viewport TerrainDecoLayers
-Log: Matched Viewport MatineeScenes
-Log: Matched Viewport MatineeActions
-Log: Matched Viewport MatineeSubActions
-Log: Matched Viewport U2Viewport0
-Log: Matched Viewport U2Viewport1
-Log: Matched Viewport U2Viewport2
-Log: Matched Viewport U2Viewport3
-Log: Matched Viewport MeshViewer
-Log: Matched Viewport StaticMeshBrowser
-Log: Matched Viewport TextureBrowser
-Log: Matched Viewport TextureBrowserUsed
-Log: Matched Viewport TextureBrowserMRU
-Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="2K4Chargers" GROUP="ChargerTextures"
-Cmd: CAMERA UPDATE NAME=MeshViewer MESH="banner" FLAGS=641 REN=19 MISC1=0 MISC2=0
-Cmd: CAMERA UPDATE NAME=AnimationViewer MESH="FloorTurretGun" FLAGS=16810633 REN=26 MISC1=0 MISC2=0
-Cmd: CAMERA UPDATE NAME=AnimationViewer MESH="FloorTurretGun" FLAGS=16810633 REN=26 MISC1=0 MISC2=0
-Cmd: CAMERA UPDATE FLAGS=545425097 REN=20 NAME=PrefabBrowser
-Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=343876352
-Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=401657792
 Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="ArtifactIcons"
-Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="MenuTextures"
 Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="ArtifactIcons"
+Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="SpeedTrailTextures"
 Cmd: Fire
-Cmd: POLY SET TEXTURE=358452448
-Log: BeginTrans Poly Set
-Cmd: Fire
-Cmd: POLY SET TEXTURE=358452448
+Cmd: POLY SET TEXTURE=357406112
 Log: BeginTrans Poly Set
 Cmd: AltFire
 Cmd: Fire
-Cmd: POLY SET TEXTURE=358452448
+Cmd: POLY SET TEXTURE=357406336
 Log: BeginTrans Poly Set
-Cmd: TEXTURE IMPORT FILE="C:\Users\Grant S\Documents\tex_SuperMedicWeaponMaker.tga" NAME="tex_SuperMedicWeaponMaker" PACKAGE="LumpysTextures" GROUP="ArtifactIcons" MIPS=1 MASKED=0 Alpha=0 NormalLOD=0
-Log: FactoryCreateBinary: Texture with TextureFactory (0 0 C:\Users\Grant S\Documents\tex_SuperMedicWeaponMaker.tga)
-Log: Imported Texture LumpysTextures.ArtifactIcons.tex_SuperMedicWeaponMaker
-Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="ArtifactIcons"
+Cmd: Fire
+Cmd: POLY SET TEXTURE=357406112
+Log: BeginTrans Poly Set
+Cmd: AltFire
+Cmd: TEXTURE IMPORT FILE="D:\Unreal Stuff\UT2004Exports\Textures\SpeedTrailRedTex.tga" NAME="STRed" PACKAGE="LumpysTextures" GROUP="SpeedTrailTextures" MIPS=1 MASKED=0 Alpha=0 NormalLOD=0
+Log: FactoryCreateBinary: Texture with TextureFactory (0 0 D:\Unreal Stuff\UT2004Exports\Textures\SpeedTrailRedTex.tga)
+Log: Imported Texture LumpysTextures.SpeedTrailTextures.STRed
+Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="SpeedTrailTextures"
 Cmd: CAMERA UPDATE NAME=MeshViewer MESH="banner" FLAGS=641 REN=19 MISC1=0 MISC2=0
 Cmd: CAMERA UPDATE NAME=AnimationViewer MESH="FloorTurretGun" FLAGS=16810633 REN=26 MISC1=0 MISC2=0
 Cmd: CAMERA UPDATE NAME=AnimationViewer MESH="FloorTurretGun" FLAGS=16810633 REN=26 MISC1=0 MISC2=0
 Cmd: CAMERA UPDATE FLAGS=545425097 REN=20 NAME=PrefabBrowser
-Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=343876352
-Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=401657792
-Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="ArtifactIcons"
-Cmd: Fire
-Cmd: POLY SET TEXTURE=404332128
-Log: BeginTrans Poly Set
-Cmd: Fire
-Cmd: POLY SET TEXTURE=358452448
-Log: BeginTrans Poly Set
-Cmd: MAYBEAUTOSAVE
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=342893312
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=400935360
+Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="SpeedTrailTextures"
 Cmd: OBJ SAVEPACKAGE PACKAGE="LumpysTextures" FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\LumpysTextures.utx"
-Log: Save=8.734081
+Log: Save=12.858005
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\LumpysTextures.utx.tmp'
+Cmd: OBJ SAVEPACKAGE PACKAGE="LumpysTextures" FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\LumpysTextures.utx"
+Log: Save=11.663145
 Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\LumpysTextures.utx.tmp'
 Log: Closed viewport
 Log: Closed viewport
@@ -374,14 +348,14 @@ Log: Unbound to Onslaught.dll
 Log: Unbound to WinDrv.dll
 Exit: Windows client shut down
 Log: Unbound to D3DDrv.dll
-Log: Garbage: objects: 84404->0; refs: 0
+Log: Garbage: objects: 84623->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 187 MByte 859 KByte 976 Bytes from HD took 0.620998 seconds (0.513998 reading, 0.107000 seeking).
-Log: FileManager: 0.162000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 191 MByte 927 KByte 63 Bytes from HD took 0.483998 seconds (0.396998 reading, 0.087000 seeking).
+Log: FileManager: 0.147000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Memory Allocation Status
 Uninitialized: Curr Memory  0.044M /  2.934M
-Uninitialized: Peak Memory  186.292M /  188.566M
-Uninitialized: Allocs         684 Current /  735069 Total
-Uninitialized: Log file closed, 12/23/24 10:20:07
+Uninitialized: Peak Memory  190.158M /  192.508M
+Uninitialized: Allocs         684 Current /  716908 Total
+Uninitialized: Log file closed, 12/26/24 16:51:08

@@ -1,6 +1,8 @@
 Class MutLumpysRPG extends Mutator config(LumpyRPG);
 
 #EXEC OBJ LOAD FILE=RBTexturesINV.utx
+#EXEC OBJ LOAD FILE=LumpyMeshes.usx
+
 
 const LUMPYRPG_VERSION = 1.0;
 
@@ -60,6 +62,17 @@ var transient array<RPGPlayerDataObject> OldPlayers; //players who were playing 
 var config array< class<Monster> > ConfigMonsterList; // configurable monster list override for summoning abilities
 var array< class<Monster> > MonsterList; //monsters available in the current game; if ConfigMonsterList is empty, automatically filled
 var array<VampireMarker> VampireMarkers;
+
+//Drone Stuff
+var config int ProjDamage;
+var config int HealPerSec;
+var config int ShotDelay;
+var config int TargetDelay;
+var config bool bPickup;
+var config int spawnProb;
+
+var int MaxDrones;
+var array<LumpyDrone> DroneList;
 
 /*
 UTILITY-GetVersion
@@ -563,8 +576,53 @@ function ModifyPlayer(Pawn Other)
 	Other.Controller.AdrenalineMax = data.AdrenalineMax;
 	for (x = 0; x < data.Abilities.length; x++)
 		data.Abilities[x].static.ModifyPawn(Other, data.AbilityLevels[x]);
+}
 
+function SpawnDrone(vector SpawnLoc, rotator SpawnRot, int DroneClass, optional Pawn Owner)
+{
+	local LumpyDrone drone;
+	local RPGStatsInv StatsInv;
+	local int i,x;
 
+	if (Owner.Controller == None || !Owner.Controller.bIsPlayer)
+		return;
+	StatsInv = RPGStatsInv(Owner.FindInventoryType(class'RPGStatsInv'));
+
+	if (StatsInv.DroneList.Length > 0)
+	{
+		for(i=0;i<StatsInv.DroneList.Length;i++)
+		{
+			StatsInv.DroneList[i].Destroy();
+		}
+	}
+
+	foreach DynamicActors(class'LumpyDrone', drone)
+		drone.Destroy();
+
+	for(x=0;x<StatsInv.MaxDrones;x++)
+	{
+		if(DroneClass == 0)
+		{
+			Log("We spawned a Regular Drone", 'LumpysRPG');
+			drone = Spawn(class'LumpyDrone',Owner,,SpawnLoc,SpawnRot);
+		}
+		else if(DroneClass == 1)
+		{
+			Log("We spawned a medic Drone", 'LumpysRPG');
+			drone = Spawn(class'MedicDrone',Owner,,SpawnLoc,SpawnRot);
+		}
+
+		if (drone != None)
+		{
+			drone.protPawn = Owner;
+			drone.ProjDamage = ProjDamage;
+			drone.HealPerSec = HealPerSec;
+			drone.ShotDelay = ShotDelay;
+			drone.TargetDelay = TargetDelay;
+			drone.bActive = !bPickup;
+			DroneList[DroneList.length] = drone;
+		}
+	}
 }
 
 function int GetNeededXP(int Playerlevel)
@@ -1403,6 +1461,11 @@ static function string GetDescriptionText(string PropName)
 
 defaultproperties
 {
+	ProjDamage=9
+	HealPerSec=10
+	ShotDelay=6
+	TargetDelay=15
+	spawnProb=50
 	DefaultWeapons(0)="XWeapons.TransLauncher"
 	DefaultWeapons(1)="tk_ZenCoders.MP5Gun"
 	WeaponModifiers(0)=(WeaponClass=Class'LumpysRPG.RW_Healing',Chance=1)
@@ -1419,68 +1482,68 @@ defaultproperties
 	Abilities(7)=Class'LumpysRPG.CA_AdrenalineArtifacts'
 	Abilities(8)=Class'LumpysRPG.AbilityAwareness'
 
-  //These berakpoints should be used for XP ability unlock requirements and increase gain by 50x
-  XPBreakPoints(0)=(Level=500,XPRequired=500)
-  XPBreakPoints(1)=(Level=1000,XPRequired=1000)
-  XPBreakPoints(2)=(Level=2500,XPRequired=1500)//At this point the player should be able to solo
-  XPBreakPoints(3)=(Level=5000,XPRequired=2500)
-  XPBreakPoints(4)=(Level=10000,XPRequired=5000)
-  XPBreakPoints(5)=(Level=50000,XPRequired=10000)
-  StatCaps(0)=700
-  StatCaps(1)=-1
-  StatCaps(2)=-1
-  StatCaps(3)=-1
-  StatCaps(4)=-1
-  StatCaps(5)=-1
-  SaveDuringGameInterval=5
-  LevelDiffExpGainDiv=2.000000
-  MaxLevelupEffectStacking=1
-  EXPForWin=50
-  WeaponModifierChance=0.50000
-  StartingLevel=50
-  PointsPerLevel=25
-  NoobBonusXP=2000
-  SuperAmmoClassNames(0)="RedeemerAmmo"
-  SuperAmmoClassNames(1)="BallAmmo"
-  SuperAmmoClassNames(2)="SCannonAmmo"
-  PropsDisplayText(0)="Autosave Interval (seconds)"
-  PropsDisplayText(1)="Starting Level"
-  PropsDisplayText(2)="Stat Points per Level"
-  PropsDisplayText(3)="Divisor to EXP from Level Diff"
-  PropsDisplayText(4)="EXP for Winning"
-  PropsDisplayText(5)="Fake Bot Levels"
-  PropsDisplayText(6)="Reset Player Data Next Game"
-  PropsDisplayText(7)="Magic Weapon Chance"
-  PropsDisplayText(8)="Magical Starting Weapons"
-  PropsDisplayText(9)="No Unidentified Items"
-  PropsDisplayText(10)="Auto Adjust Invasion Monster Level"
-  PropsDisplayText(11)="Monster Adjustment Factor"
-  PropsDisplayText(12)="Max Levelup Effects at Once"
-  PropsDisplayText(13)="Stat Caps"
-  PropsDisplayText(14)="EXP Required for Each Level"
-  PropsDisplayText(15)="Allowed Abilities"
-  PropsDescText(0)="During the game, all data will be saved every this many seconds."
-  PropsDescText(1)="New players start at this Level."
-  PropsDescText(2)="The number of stat points earned from a levelup."
-  PropsDescText(3)="Lower values = more exp when killing someone of higher level."
-  PropsDescText(4)="The EXP gained for winning a match."
-  PropsDescText(5)="If checked, bots' data is not saved and instead they are simply given a level near that of the human player(s)."
-  PropsDescText(6)="If checked, player data will be reset before the next match begins."
-  PropsDescText(7)="Chance of any given weapon having magical properties."
-  PropsDescText(8)="If checked, weapons given to players when they spawn can have magical properties."
-  PropsDescText(9)="If checked, magical weapons will always be identified."
-  PropsDescText(10)="If checked, Invasion monsters' level will be adjusted based on the lowest level player."
-  PropsDescText(11)="Invasion monsters will be adjusted based on this fraction of the weakest player's level."
-  PropsDescText(12)="The maximum number of levelup particle effects that can be spawned on a character at once."
-  PropsDescText(13)="Limit on how high stats can go. Values less than 0 mean no limit. The stats are: 1: Weapon Speed 2: Health Bonus 3: Max Adrenaline 4: Damage Bonus 5: Damage Reduction 6: Max Ammo Bonus"
-  PropsDescText(14)="Change the EXP required for each level. Levels after the last in your list will use the last value in the list."
-  PropsDescText(15)="Change the list of abilities players can choose from."
-  PropsExtras="0;Add Specified Value;1;Add Specified Percent"
-  bAddToServerPackages=True
-  GroupName="RPG"
-  FriendlyName="Lumpys RPG"
-  Description="UT2004RPG Modified by Lumpy with new abilities, artifacts, weapons, monsters, and more...."
-  bAlwaysRelevant=True
-  RemoteRole=ROLE_SimulatedProxy
+	//These berakpoints should be used for XP ability unlock requirements and increase gain by 50x
+	XPBreakPoints(0)=(Level=500,XPRequired=500)
+	XPBreakPoints(1)=(Level=1000,XPRequired=1000)
+	XPBreakPoints(2)=(Level=2500,XPRequired=1500)//At this point the player should be able to solo
+	XPBreakPoints(3)=(Level=5000,XPRequired=2500)
+	XPBreakPoints(4)=(Level=10000,XPRequired=5000)
+	XPBreakPoints(5)=(Level=50000,XPRequired=10000)
+	StatCaps(0)=700
+	StatCaps(1)=-1
+	StatCaps(2)=-1
+	StatCaps(3)=-1
+	StatCaps(4)=-1
+	StatCaps(5)=-1
+	SaveDuringGameInterval=5
+	LevelDiffExpGainDiv=2.000000
+	MaxLevelupEffectStacking=1
+	EXPForWin=50
+	WeaponModifierChance=0.50000
+	StartingLevel=50
+	PointsPerLevel=25
+	NoobBonusXP=2000
+	SuperAmmoClassNames(0)="RedeemerAmmo"
+	SuperAmmoClassNames(1)="BallAmmo"
+	SuperAmmoClassNames(2)="SCannonAmmo"
+	PropsDisplayText(0)="Autosave Interval (seconds)"
+	PropsDisplayText(1)="Starting Level"
+	PropsDisplayText(2)="Stat Points per Level"
+	PropsDisplayText(3)="Divisor to EXP from Level Diff"
+	PropsDisplayText(4)="EXP for Winning"
+	PropsDisplayText(5)="Fake Bot Levels"
+	PropsDisplayText(6)="Reset Player Data Next Game"
+	PropsDisplayText(7)="Magic Weapon Chance"
+	PropsDisplayText(8)="Magical Starting Weapons"
+	PropsDisplayText(9)="No Unidentified Items"
+	PropsDisplayText(10)="Auto Adjust Invasion Monster Level"
+	PropsDisplayText(11)="Monster Adjustment Factor"
+	PropsDisplayText(12)="Max Levelup Effects at Once"
+	PropsDisplayText(13)="Stat Caps"
+	PropsDisplayText(14)="EXP Required for Each Level"
+	PropsDisplayText(15)="Allowed Abilities"
+	PropsDescText(0)="During the game, all data will be saved every this many seconds."
+	PropsDescText(1)="New players start at this Level."
+	PropsDescText(2)="The number of stat points earned from a levelup."
+	PropsDescText(3)="Lower values = more exp when killing someone of higher level."
+	PropsDescText(4)="The EXP gained for winning a match."
+	PropsDescText(5)="If checked, bots' data is not saved and instead they are simply given a level near that of the human player(s)."
+	PropsDescText(6)="If checked, player data will be reset before the next match begins."
+	PropsDescText(7)="Chance of any given weapon having magical properties."
+	PropsDescText(8)="If checked, weapons given to players when they spawn can have magical properties."
+	PropsDescText(9)="If checked, magical weapons will always be identified."
+	PropsDescText(10)="If checked, Invasion monsters' level will be adjusted based on the lowest level player."
+	PropsDescText(11)="Invasion monsters will be adjusted based on this fraction of the weakest player's level."
+	PropsDescText(12)="The maximum number of levelup particle effects that can be spawned on a character at once."
+	PropsDescText(13)="Limit on how high stats can go. Values less than 0 mean no limit. The stats are: 1: Weapon Speed 2: Health Bonus 3: Max Adrenaline 4: Damage Bonus 5: Damage Reduction 6: Max Ammo Bonus"
+	PropsDescText(14)="Change the EXP required for each level. Levels after the last in your list will use the last value in the list."
+	PropsDescText(15)="Change the list of abilities players can choose from."
+	PropsExtras="0;Add Specified Value;1;Add Specified Percent"
+	bAddToServerPackages=True
+	GroupName="RPG"
+	FriendlyName="Lumpys RPG"
+	Description="UT2004RPG Modified by Lumpy with new abilities, artifacts, weapons, monsters, and more...."
+	bAlwaysRelevant=True
+	RemoteRole=ROLE_SimulatedProxy
 
 }

@@ -1,4 +1,4 @@
-Log: Log file open, 12/23/24 13:10:05
+Log: Log file open, 12/26/24 20:10:23
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -94,6 +94,12 @@ Log: Imported: Class LumpysRPG.ArtifactMagicWeaponMakerPickup
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactMedicWeaponMaker.uc)
 Log: Class: ArtifactMedicWeaponMaker extends ArtifactMagicWeaponMaker
 Log: Imported: Class LumpysRPG.ArtifactMedicWeaponMaker
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactMonsterSummon.uc)
+Log: Class: ArtifactMonsterSummon extends RPGArtifact
+Log: Imported: Class LumpysRPG.ArtifactMonsterSummon
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactMonsterSummonPickup.uc)
+Log: Class: ArtifactMonsterSummonPickup extends RPGArtifactPickup
+Log: Imported: Class LumpysRPG.ArtifactMonsterSummonPickup
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactSuperMagicWeaponMaker.uc)
 Log: Class: ArtifactSuperMagicWeaponMaker extends RPGArtifact
 Log: Imported: Class LumpysRPG.ArtifactSuperMagicWeaponMaker
@@ -133,15 +139,39 @@ Log: Imported: Class LumpysRPG.ClassMedicMaster
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ClassWeaponMaster.uc)
 Log: Class: ClassWeaponMaster extends RPGClass
 Log: Imported: Class LumpysRPG.ClassWeaponMaster
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ColoredTrail.uc)
+Log: Class: ColoredTrail extends xEmitter
+Log: Imported: Class LumpysRPG.ColoredTrail
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\Colors.uc)
 Log: Class: Colors extends Object
 Log: Imported: Class LumpysRPG.Colors
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\CredBonkTimer.uc)
 Log: Class: CredBonkTimer extends Actor
 Log: Imported: Class LumpysRPG.CredBonkTimer
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DamTypeDronePlasma.uc)
+Log: Class: DamTypeDronePlasma extends DamageType
+Log: Imported: Class LumpysRPG.DamTypeDronePlasma
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DamTypeLightningRod.uc)
 Log: Class: DamTypeLightningRod extends DamageType
 Log: Imported: Class LumpysRPG.DamTypeLightningRod
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DroneHealBeam.uc)
+Log: Class: DroneHealBeam extends xEmitter
+Log: Imported: Class LumpysRPG.DroneHealBeam
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DroneProj.uc)
+Log: Class: DroneProj extends Projectile
+Log: Imported: Class LumpysRPG.DroneProj
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DroneProjEffect.uc)
+Log: Class: DroneProjEffect extends Emitter
+Log: Imported: Class LumpysRPG.DroneProjEffect
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DroneProjEffectBlue.uc)
+Log: Class: DroneProjEffectBlue extends DroneProjEffect
+Log: Imported: Class LumpysRPG.DroneProjEffectBlue
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DroneProjEffectRed.uc)
+Log: Class: DroneProjEffectRed extends DroneProjEffect
+Log: Imported: Class LumpysRPG.DroneProjEffectRed
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DroneReplicationInfo.uc)
+Log: Class: DroneReplicationInfo extends ReplicationInfo
+Log: Imported: Class LumpysRPG.DroneReplicationInfo
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\EmptyMessage.uc)
 Log: Class: EmptyMessage extends LocalMessage
 Log: Imported: Class LumpysRPG.EmptyMessage
@@ -184,12 +214,18 @@ Log: Imported: Class LumpysRPG.LevelUpEffect
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\LevelUpHUDMessage.uc)
 Log: Class: LevelUpHUDMessage extends LocalMessage
 Log: Imported: Class LumpysRPG.LevelUpHUDMessage
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\LumpyDrone.uc)
+Log: Class: LumpyDrone extends Actor
+Log: Imported: Class LumpysRPG.LumpyDrone
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\LumpysArtifactManager.uc)
 Log: Class: LumpysArtifactManager extends Info
 Log: Imported: Class LumpysRPG.LumpysArtifactManager
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\LumpysRPGKeyBinds.uc)
 Log: Class: LumpysRPGKeyBinds extends GUIUserKeyBinding
 Log: Imported: Class LumpysRPG.LumpysRPGKeyBinds
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\MedicDrone.uc)
+Log: Class: MedicDrone extends LumpyDrone
+Log: Imported: Class LumpysRPG.MedicDrone
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\MutLumpysRPG.uc)
 Log: Class: MutLumpysRPG extends Mutator
 Log: Imported: Class LumpysRPG.MutLumpysRPG
@@ -312,6 +348,7 @@ Log: Class: VampireMarker extends Actor
 Log: Imported: Class LumpysRPG.VampireMarker
 Log: Parsing AwarenessInteraction
 Log: Parsing RPGInteraction
+Log: Parsing DroneReplicationInfo
 Log: Parsing MutLumpysRPG
 Log: Parsing AdrenalConditionMessage
 Log: Parsing EmptyMessage
@@ -322,10 +359,14 @@ Log: Parsing LevelUpHUDMessage
 Log: Parsing RPGNameMessage
 Log: Parsing RPGRules
 Log: Parsing LumpysArtifactManager
+Log: Parsing DroneProjEffect
+Log: Parsing DroneProjEffectBlue
+Log: Parsing DroneProjEffectRed
 Log: Parsing FlightEffect
 Log: Parsing FriendlyMonsterEffect
 Log: Parsing LevelUpEffect
 Log: Parsing RPGLinkAttachment
+Log: Parsing DamTypeDronePlasma
 Log: Parsing DamTypeLightningRod
 Log: Parsing FriendlyMonsterController
 Log: Parsing RPGArtifact
@@ -335,6 +376,7 @@ Log: Parsing ArtifactLightningRod
 Log: Parsing ArtifactMagicWeaponMaker
 Log: Parsing ArtifactMedicWeaponMaker
 Log: Parsing ArtifactSuperMedicWeaponMaker
+Log: Parsing ArtifactMonsterSummon
 Log: Parsing ArtifactSuperMagicWeaponMaker
 Log: Parsing ArtifactTripleDamage
 Log: Parsing RPGLinkGun
@@ -357,6 +399,7 @@ Log: Parsing ArtifactFlightPickup
 Log: Parsing ArtifactInvulnerabilityPickup
 Log: Parsing ArtifactLightningRodPickup
 Log: Parsing ArtifactMagicWeaponMakerPickup
+Log: Parsing ArtifactMonsterSummonPickup
 Log: Parsing ArtifactSuperMagicWeaponMakerPickup
 Log: Parsing ArtifactTripleDamagePickup
 Log: Parsing ExperiencePickup
@@ -364,9 +407,14 @@ Log: Parsing RPGWeaponLocker
 Log: Parsing PickupEXPShard
 Log: Parsing HudCDeathmatchHelper
 Log: Parsing RPGShockProjectile
+Log: Parsing DroneProj
 Log: Parsing RPGPainterBeamEffect
+Log: Parsing ColoredTrail
+Log: Parsing DroneHealBeam
 Log: Parsing AwarenessEnemyList
 Log: Parsing CredBonkTimer
+Log: Parsing LumpyDrone
+Log: Parsing MedicDrone
 Log: Parsing VampireMarker
 Log: Parsing RPGLinkFire
 Log: Parsing RPGShockProjFire
@@ -402,6 +450,7 @@ Log: Parsing ClassWeaponMaster
 Log: Parsing Colors
 Log: Compiling AwarenessInteraction
 Log: Compiling RPGInteraction
+Log: Compiling DroneReplicationInfo
 Log: Compiling MutLumpysRPG
 Log: Compiling AdrenalConditionMessage
 Log: Compiling EmptyMessage
@@ -412,10 +461,14 @@ Log: Compiling LevelUpHUDMessage
 Log: Compiling RPGNameMessage
 Log: Compiling RPGRules
 Log: Compiling LumpysArtifactManager
+Log: Compiling DroneProjEffect
+Log: Compiling DroneProjEffectBlue
+Log: Compiling DroneProjEffectRed
 Log: Compiling FlightEffect
 Log: Compiling FriendlyMonsterEffect
 Log: Compiling LevelUpEffect
 Log: Compiling RPGLinkAttachment
+Log: Compiling DamTypeDronePlasma
 Log: Compiling DamTypeLightningRod
 Log: Compiling FriendlyMonsterController
 Log: Compiling RPGArtifact
@@ -425,6 +478,7 @@ Log: Compiling ArtifactLightningRod
 Log: Compiling ArtifactMagicWeaponMaker
 Log: Compiling ArtifactMedicWeaponMaker
 Log: Compiling ArtifactSuperMedicWeaponMaker
+Log: Compiling ArtifactMonsterSummon
 Log: Compiling ArtifactSuperMagicWeaponMaker
 Log: Compiling ArtifactTripleDamage
 Log: Compiling RPGLinkGun
@@ -444,6 +498,7 @@ Log: Compiling ArtifactFlightPickup
 Log: Compiling ArtifactInvulnerabilityPickup
 Log: Compiling ArtifactLightningRodPickup
 Log: Compiling ArtifactMagicWeaponMakerPickup
+Log: Compiling ArtifactMonsterSummonPickup
 Log: Compiling ArtifactSuperMagicWeaponMakerPickup
 Log: Compiling ArtifactTripleDamagePickup
 Log: Compiling ExperiencePickup
@@ -451,9 +506,14 @@ Log: Compiling RPGWeaponLocker
 Log: Compiling PickupEXPShard
 Log: Compiling HudCDeathmatchHelper
 Log: Compiling RPGShockProjectile
+Log: Compiling DroneProj
 Log: Compiling RPGPainterBeamEffect
+Log: Compiling ColoredTrail
+Log: Compiling DroneHealBeam
 Log: Compiling AwarenessEnemyList
 Log: Compiling CredBonkTimer
+Log: Compiling LumpyDrone
+Log: Compiling MedicDrone
 Log: Compiling VampireMarker
 Log: Compiling RPGLinkFire
 Log: Compiling RPGShockProjFire
@@ -489,6 +549,7 @@ Log: Compiling Colors
 Log: Compiling RPGPlayerDataObject
 Log: Importing Defaults for AwarenessInteraction
 Log: Importing Defaults for RPGInteraction
+Log: Importing Defaults for DroneReplicationInfo
 Log: Importing Defaults for MutLumpysRPG
 Log: Importing Defaults for AdrenalConditionMessage
 Log: Importing Defaults for EmptyMessage
@@ -499,10 +560,14 @@ Log: Importing Defaults for LevelUpHUDMessage
 Log: Importing Defaults for RPGNameMessage
 Log: Importing Defaults for RPGRules
 Log: Importing Defaults for LumpysArtifactManager
+Log: Importing Defaults for DroneProjEffect
+Log: Importing Defaults for DroneProjEffectBlue
+Log: Importing Defaults for DroneProjEffectRed
 Log: Importing Defaults for FlightEffect
 Log: Importing Defaults for FriendlyMonsterEffect
 Log: Importing Defaults for LevelUpEffect
 Log: Importing Defaults for RPGLinkAttachment
+Log: Importing Defaults for DamTypeDronePlasma
 Log: Importing Defaults for DamTypeLightningRod
 Log: Importing Defaults for FriendlyMonsterController
 Log: Importing Defaults for RPGArtifact
@@ -512,6 +577,7 @@ Log: Importing Defaults for ArtifactLightningRod
 Log: Importing Defaults for ArtifactMagicWeaponMaker
 Log: Importing Defaults for ArtifactMedicWeaponMaker
 Log: Importing Defaults for ArtifactSuperMedicWeaponMaker
+Log: Importing Defaults for ArtifactMonsterSummon
 Log: Importing Defaults for ArtifactSuperMagicWeaponMaker
 Log: Importing Defaults for ArtifactTripleDamage
 Log: Importing Defaults for RPGLinkGun
@@ -531,6 +597,7 @@ Log: Importing Defaults for ArtifactFlightPickup
 Log: Importing Defaults for ArtifactInvulnerabilityPickup
 Log: Importing Defaults for ArtifactLightningRodPickup
 Log: Importing Defaults for ArtifactMagicWeaponMakerPickup
+Log: Importing Defaults for ArtifactMonsterSummonPickup
 Log: Importing Defaults for ArtifactSuperMagicWeaponMakerPickup
 Log: Importing Defaults for ArtifactTripleDamagePickup
 Log: Importing Defaults for ExperiencePickup
@@ -538,9 +605,14 @@ Log: Importing Defaults for RPGWeaponLocker
 Log: Importing Defaults for PickupEXPShard
 Log: Importing Defaults for HudCDeathmatchHelper
 Log: Importing Defaults for RPGShockProjectile
+Log: Importing Defaults for DroneProj
 Log: Importing Defaults for RPGPainterBeamEffect
+Log: Importing Defaults for ColoredTrail
+Log: Importing Defaults for DroneHealBeam
 Log: Importing Defaults for AwarenessEnemyList
 Log: Importing Defaults for CredBonkTimer
+Log: Importing Defaults for LumpyDrone
+Log: Importing Defaults for MedicDrone
 Log: Importing Defaults for VampireMarker
 Log: Importing Defaults for RPGLinkFire
 Log: Importing Defaults for RPGShockProjFire
@@ -576,9 +648,9 @@ Log: Importing Defaults for ClassWeaponMaster
 Log: Importing Defaults for Colors
 Log: Importing Defaults for RPGPlayerDataObject
 Log: Importing Defaults for STY_AbilityList
-Log: Success: Compiled 20237 line(s), 1935 statement(s).
+Log: Success: Compiled 21557 line(s), 2091 statement(s).
 
-Log: Save=45.082402
+Log: Save=45.351548
 Log: Moving 'Save.tmp' to 'LumpysRPG.u'
 Heading: ------------------------LumpyJumping - Release------------------------
 Heading: --------------------------tK_BaseW - Release--------------------------
@@ -614,11 +686,11 @@ Log: Unbound to UWeb.dll
 Log: Unbound to XGame.dll
 Log: Unbound to XInterface.dll
 Log: Unbound to Onslaught.dll
-Log: Garbage: objects: 84233->0; refs: 0
+Log: Garbage: objects: 84544->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 134 MByte 982 KByte 908 Bytes from HD took 0.479999 seconds (0.386999 reading, 0.093000 seeking).
-Log: FileManager: 0.090000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 135 MByte 639 KByte 254 Bytes from HD took 0.457999 seconds (0.382999 reading, 0.075000 seeking).
+Log: FileManager: 0.087000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/23/24 13:10:10
+Uninitialized: Log file closed, 12/26/24 20:10:27
