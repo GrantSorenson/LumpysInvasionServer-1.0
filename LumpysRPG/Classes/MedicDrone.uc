@@ -18,8 +18,8 @@ simulated function PostBeginPlay()
 	// if we were created as a pickup then we'd damn well better stay that way
 	if(Level.NetMode != NM_DedicatedServer && !bTrailActive)
 	{
-        Trail.SetSkin(1);
         Trail = Spawn(class'ColoredTrail',self,,Location,Rotation);
+        Trail.SetSkin(1);
 		Trail.SetBase(self);
 		Trail.LifeSpan = 9999;
         bTrailActive = true;

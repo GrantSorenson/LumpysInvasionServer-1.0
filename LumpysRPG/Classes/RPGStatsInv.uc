@@ -23,6 +23,8 @@ var Inventory NextItem;
 //Drones
 var array<LumpyDrone> DroneList;
 var int MaxDrones;
+var int MedicDrones;
+var int RegDrones;
 
 struct OldRPGWeaponInfo
 {
@@ -881,6 +883,7 @@ simulated function ClientSendPlayerLevel(string PlayerString)
 //Reset the player's data. Called by the client from the stats menu, after clicking the obscenely small button and confirming it
 function ServerResetData(PlayerReplicationInfo PRI)
 {
+	local int x;
 	local string OwnerID;
 
 	if (RPGMut != None && !Level.Game.bGameRestarted && DataObject.Level >= RPGMut.StartingLevel)
@@ -915,6 +918,17 @@ function ServerResetData(PlayerReplicationInfo PRI)
 			RPGMut.SaveConfig();
 		}
 		ClientResetData();
+
+		for(x=0;x<DroneList.length;x++)
+		{
+			DroneList[x].Destroyed();
+			DroneList[x].Destroy();
+			DroneList.Remove(x,1);
+		}
+
+		RegDrones = 0;
+		MedicDrones = 0;
+		MaxDrones = 0;
 	}
 }
 
@@ -949,6 +963,20 @@ simulated function ClientReceiveStatCap(int Index, int Cap)
 	{
 		ServerSetVersion(class'MutLumpysRPG'.static.GetVersion());
 	}
+}
+
+function SetMaxDrones(int index)
+{
+	switch(index)
+	{
+		case 0 :
+			MaxDrones=RegDrones;
+			break;
+		case 1:
+			MaxDrones = MedicDrones;
+			break;
+	}
+	//MaxDrones = RegDrones + MedicDrones;
 }
 
 function ServerSetVersion(int Version)

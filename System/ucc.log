@@ -1,4 +1,4 @@
-Log: Log file open, 12/26/24 20:10:23
+Log: Log file open, 12/27/24 22:12:49
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -52,6 +52,9 @@ Log: Analyzing...
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityAwareness.uc)
 Log: Class: AbilityAwareness extends RPGAbility
 Log: Imported: Class LumpysRPG.AbilityAwareness
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityDrones.uc)
+Log: Class: AbilityDrones extends RPGAbility
+Log: Imported: Class LumpysRPG.AbilityDrones
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityHermesSandals.uc)
 Log: Class: AbilityHermesSandals extends RPGAbility
 Log: Imported: Class LumpysRPG.AbilityHermesSandals
@@ -437,6 +440,7 @@ Log: Parsing AbilityListFont
 Log: Parsing LumpysRPGKeyBinds
 Log: Parsing RPGAbility
 Log: Parsing AbilityAwareness
+Log: Parsing AbilityDrones
 Log: Parsing AbilityHermesSandals
 Log: Parsing AbilityJumpZ
 Log: Parsing AbilitySpeed
@@ -535,12 +539,15 @@ Log: Compiling AbilityListFont
 Log: Compiling LumpysRPGKeyBinds
 Log: Compiling RPGAbility
 Log: Compiling AbilityAwareness
+Log: Compiling AbilityDrones
+Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\AbilityDrones.uc(31) : Warning, 'X' : unreferenced local variable
 Log: Compiling AbilityHermesSandals
 Log: Compiling AbilityJumpZ
 Log: Compiling AbilitySpeed
 Log: Compiling CA_AdrenalineArtifacts
 Log: Compiling CA_MedicArtifacts
 Log: Compiling CA_MedicSprites
+Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\CA_MedicSprites.uc(32) : Warning, 'X' : unreferenced local variable
 Log: Compiling RPGClass
 Log: Compiling ClassAdrenalineMaster
 Log: Compiling ClassMedicMaster
@@ -635,6 +642,7 @@ Log: Importing Defaults for AbilityListFont
 Log: Importing Defaults for LumpysRPGKeyBinds
 Log: Importing Defaults for RPGAbility
 Log: Importing Defaults for AbilityAwareness
+Log: Importing Defaults for AbilityDrones
 Log: Importing Defaults for AbilityHermesSandals
 Log: Importing Defaults for AbilityJumpZ
 Log: Importing Defaults for AbilitySpeed
@@ -648,9 +656,9 @@ Log: Importing Defaults for ClassWeaponMaster
 Log: Importing Defaults for Colors
 Log: Importing Defaults for RPGPlayerDataObject
 Log: Importing Defaults for STY_AbilityList
-Log: Success: Compiled 21557 line(s), 2091 statement(s).
+Log: Success: Compiled 21787 line(s), 2105 statement(s).
 
-Log: Save=45.351548
+Log: Save=47.172661
 Log: Moving 'Save.tmp' to 'LumpysRPG.u'
 Heading: ------------------------LumpyJumping - Release------------------------
 Heading: --------------------------tK_BaseW - Release--------------------------
@@ -672,8 +680,9 @@ Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
+Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Mutator exported successfully: LumpysRPG.MutLumpysRPG
-Log: Success - 0 error(s), 0 warning(s)
+Log: Success - 0 error(s), 2 warning(s)
 Exit: Preparing to exit.
 Log: Purging garbage
 Log: Unbound to Core.dll
@@ -686,11 +695,11 @@ Log: Unbound to UWeb.dll
 Log: Unbound to XGame.dll
 Log: Unbound to XInterface.dll
 Log: Unbound to Onslaught.dll
-Log: Garbage: objects: 84544->0; refs: 0
+Log: Garbage: objects: 84564->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 135 MByte 639 KByte 254 Bytes from HD took 0.457999 seconds (0.382999 reading, 0.075000 seeking).
-Log: FileManager: 0.087000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 135 MByte 611 KByte 269 Bytes from HD took 0.482999 seconds (0.379999 reading, 0.103000 seeking).
+Log: FileManager: 0.123000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/26/24 20:10:27
+Uninitialized: Log file closed, 12/27/24 22:12:53

@@ -63,7 +63,6 @@ replication
 
 simulated function PostBeginPlay()
 {
-	Super.PostBeginPlay();
 	// randomize everything so drones behave a little bit differently
 	if(Role==ROLE_Authority)
 	{
@@ -95,6 +94,8 @@ simulated function PostBeginPlay()
 	{
 		SetPhysics(PHYS_Rotating);
 	}
+
+	Super.PostBeginPlay();
 }
 
 simulated function Tick(float dt)
@@ -214,32 +215,31 @@ simulated singular function Touch(Actor Other)
 		// if we still don't have one, make one
 		if(dri == None)
 			dri = Spawn(class'DroneReplicationInfo',Other);
-		if(dri.numDrones<MaxDrones)
-		{
 			// player doesn't have maximum, we can attach to them
 			// if we were a pickup (which, in this case, we better've been), let the spawner know it's free to make another
 			// if(spawner != None)
 			// 	spawner.droneTaken=true;
 			// if there's no trail (which there should be), make one
-			if(Level.NetMode != NM_DedicatedServer && Trail==None)
-			{
-				Trail = Spawn(class'ColoredTrail',self,,Location,Rotation);
-				Trail.SetBase(self);
-				Trail.LifeSpan = 9999;
-			}
-			// set our physics properly
-			SetPhysics(PHYS_Projectile);
-			RotationRate.Yaw=0;
-			// set owner
-			protPawn = Pawn(Other);
-			// let dri know the player has another drone
-			dri.numDrones++;
-			// make active (this doesn't do much but it's probably useful somewhere)
-			bActive=False;
-			// start doing stuff
-			SetTimer(0.1,true);
+		
+		if(Level.NetMode != NM_DedicatedServer && Trail==None)
+		{
+			Trail = Spawn(class'ColoredTrail',self,,Location,Rotation);
+			Trail.SetBase(self);
+			Trail.LifeSpan = 9999;
 		}
+		// set our physics properly
+		SetPhysics(PHYS_Projectile);
+		RotationRate.Yaw=0;
+		// set owner
+		protPawn = Pawn(Other);
+		// let dri know the player has another drone
+		dri.numDrones++;
+		// make active (this doesn't do much but it's probably useful somewhere)
+		bActive=False;
+		// start doing stuff
+		SetTimer(0.1,true);
 	}
+
 	if(Projectile(Other) != None && protPawn != None)
 	{
 		// if it's not owner's, make it go boom - but not if we're a pickup, that's just confusin'

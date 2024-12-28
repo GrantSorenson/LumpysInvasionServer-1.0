@@ -582,7 +582,8 @@ function SpawnDrone(vector SpawnLoc, rotator SpawnRot, int DroneClass, optional 
 {
 	local LumpyDrone drone;
 	local RPGStatsInv StatsInv;
-	local int i,x;
+	//local class<LumpyDrone> MD;
+	local int f,i,x;
 
 	if (Owner.Controller == None || !Owner.Controller.bIsPlayer)
 		return;
@@ -590,39 +591,92 @@ function SpawnDrone(vector SpawnLoc, rotator SpawnRot, int DroneClass, optional 
 
 	if (StatsInv.DroneList.Length > 0)
 	{
-		for(i=0;i<StatsInv.DroneList.Length;i++)
+		for(f=0;f<StatsInv.DroneList.length;f++)
 		{
-			StatsInv.DroneList[i].Destroy();
+
+			if(DroneList.length > 0)
+			{
+				for(i=0;i<DroneList.length;i++)
+				{
+					if((StatsInv.DroneList[f].class == DroneList[i].class) && (StatsInv.DroneList[f] != None && DroneList[i] != None))
+					{
+						DroneList[i].Destroyed();
+						DroneList[i].Destroy();
+						DroneList.Remove(i,1);
+						Log("Drone Entry Accessed: "$DroneList[i]$" i:"$i$"DroneListLengthAfter:"$DroneList.length,'LumpysRPG');
+						StatsInv.DroneList[f].Destroyed();
+						StatsInv.DroneList[f].Destroy();
+						StatsInv.DroneList.Remove(f,1);
+						Log("StatsInv.Drone Entry Accessed: "$StatsInv.DroneList[f]$" f:"$f,'LumpysRPG');
+					}
+				}
+			}
+
 		}
 	}
 
-	foreach DynamicActors(class'LumpyDrone', drone)
-		drone.Destroy();
+		if(DroneClass == 0 || StatsInv.RegDrones > 0)
+		{
+			for(x=0;x<StatsInv.RegDrones;x++)
+			{
+				Log("We spawned a Regular Drone", 'LumpysRPG');
+				drone = Spawn(class'LumpyDrone',Owner,,SpawnLoc,SpawnRot);
 
-	for(x=0;x<StatsInv.MaxDrones;x++)
-	{
-		if(DroneClass == 0)
-		{
-			Log("We spawned a Regular Drone", 'LumpysRPG');
-			drone = Spawn(class'LumpyDrone',Owner,,SpawnLoc,SpawnRot);
+				if (drone != None)
+				{
+					drone.protPawn = Owner;
+					drone.ProjDamage = ProjDamage;
+					drone.HealPerSec = HealPerSec;
+					drone.ShotDelay = ShotDelay;
+					drone.TargetDelay = TargetDelay;
+					drone.bActive = !bPickup;
+					StatsInv.DroneList.Insert(StatsInv.DroneList.length, 1);
+					StatsInv.DroneList[StatsInv.DroneList.length] = drone;
+					DroneList.Insert(DroneList.length,1);
+					DroneList[DroneList.length] = drone;
+				}
+			}
 		}
-		else if(DroneClass == 1)
+		if(DroneClass == 1 || StatsInv.MedicDrones > 0)
 		{
-			Log("We spawned a medic Drone", 'LumpysRPG');
-			drone = Spawn(class'MedicDrone',Owner,,SpawnLoc,SpawnRot);
-		}
+			for(x=0;x<StatsInv.MedicDrones;x++)
+			{
+				Log("We spawned a Regular Drone", 'LumpysRPG');
+				drone = Spawn(class'MedicDrone',Owner,,SpawnLoc,SpawnRot);
 
-		if (drone != None)
-		{
-			drone.protPawn = Owner;
-			drone.ProjDamage = ProjDamage;
-			drone.HealPerSec = HealPerSec;
-			drone.ShotDelay = ShotDelay;
-			drone.TargetDelay = TargetDelay;
-			drone.bActive = !bPickup;
-			DroneList[DroneList.length] = drone;
+				if (drone != None)
+					{
+					drone.protPawn = Owner;
+					drone.ProjDamage = ProjDamage;
+					drone.HealPerSec = HealPerSec;
+					drone.ShotDelay = ShotDelay;
+					drone.TargetDelay = TargetDelay;
+					drone.bActive = !bPickup;
+					StatsInv.DroneList.Insert(StatsInv.DroneList.length, 1);
+					StatsInv.DroneList[StatsInv.DroneList.length] = drone;
+					DroneList.Insert(DroneList.length,1);
+					DroneList[DroneList.length] = drone;
+				}
+			}
 		}
-	}
+	// foreach DynamicActors(MD, drone)
+	// 	drone.Destroy();
+
+	// for(x=0;x<StatsInv.MaxDrones;x++)
+	// {
+	// 	if(DroneClass == 0)
+	// 	{
+	// 		Log("We spawned a Regular Drone", 'LumpysRPG');
+	// 		drone = Spawn(class'LumpyDrone',Owner,,SpawnLoc,SpawnRot);
+	// 	}
+	// 	else if(DroneClass == 1)
+	// 	{
+	// 		Log("We spawned a medic Drone", 'LumpysRPG');
+	// 		drone = Spawn(class'MedicDrone',Owner,,SpawnLoc,SpawnRot);
+	// 	}
+
+
+	// }
 }
 
 function int GetNeededXP(int Playerlevel)
@@ -1481,6 +1535,7 @@ defaultproperties
 	Abilities(6)=Class'LumpysRPG.CA_MedicArtifacts'
 	Abilities(7)=Class'LumpysRPG.CA_AdrenalineArtifacts'
 	Abilities(8)=Class'LumpysRPG.AbilityAwareness'
+	Abilities(9)=Class'LumpysRPG.AbilityDrones'
 
 	//These berakpoints should be used for XP ability unlock requirements and increase gain by 50x
 	XPBreakPoints(0)=(Level=500,XPRequired=500)

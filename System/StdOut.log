@@ -1,4 +1,4 @@
-Log file open, 12/26/24 20:10:24
+Log file open, 12/27/24 22:12:50
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -124,6 +124,7 @@ Parsing AbilityListFont
 Parsing LumpysRPGKeyBinds
 Parsing RPGAbility
 Parsing AbilityAwareness
+Parsing AbilityDrones
 Parsing AbilityHermesSandals
 Parsing AbilityJumpZ
 Parsing AbilitySpeed
@@ -222,12 +223,15 @@ Compiling AbilityListFont
 Compiling LumpysRPGKeyBinds
 Compiling RPGAbility
 Compiling AbilityAwareness
+Compiling AbilityDrones
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\AbilityDrones.uc(31) : Warning, 'X' : unreferenced local variable
 Compiling AbilityHermesSandals
 Compiling AbilityJumpZ
 Compiling AbilitySpeed
 Compiling CA_AdrenalineArtifacts
 Compiling CA_MedicArtifacts
 Compiling CA_MedicSprites
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\CA_MedicSprites.uc(32) : Warning, 'X' : unreferenced local variable
 Compiling RPGClass
 Compiling ClassAdrenalineMaster
 Compiling ClassMedicMaster
@@ -322,6 +326,7 @@ Importing Defaults for AbilityListFont
 Importing Defaults for LumpysRPGKeyBinds
 Importing Defaults for RPGAbility
 Importing Defaults for AbilityAwareness
+Importing Defaults for AbilityDrones
 Importing Defaults for AbilityHermesSandals
 Importing Defaults for AbilityJumpZ
 Importing Defaults for AbilitySpeed
@@ -345,5 +350,5 @@ Importing Defaults for STY_AbilityList
 -------------------------tk_LilLady - Release-------------------------
 ---------------------tk_HolyHandGrenade - Release---------------------
 Mutator exported successfully: LumpysRPG.MutLumpysRPG
-Success - 0 error(s), 0 warning(s)
-Log file closed, 12/26/24 20:10:27
+Success - 0 error(s), 2 warning(s)
+Log file closed, 12/27/24 22:12:53

@@ -12,13 +12,15 @@ static function AddDrones(Pawn Other, int AbilityLevel)
     local Inventory Inv;
 
     if (Other.Role != ROLE_Authority)
-    return;
+      return;
 
     Inv = Other.FindInventoryType(class'RPGStatsInv');
 
     if (RPGStatsInv(Inv) != None)
     {
-        RPGStatsInv(Inv).MaxDrones = AbilityLevel;
+        RPGStatsInv(Inv).MedicDrones = AbilityLevel;
+        Log("AbilityLevel: "$AbilityLevel,'LumpysRPG');
+        RPGStatsInv(Inv).SetMaxDrones(1);
         RPGStatsInv(Inv).RPGMut.SpawnDrone(Other.Location + vect(0, -32, 64), Other.Rotation,1,Other);
         
     }
@@ -31,8 +33,7 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 
     Super.ModifyPawn(Other,AbilityLevel);
 
-    for(x = 0; x < AbilityLevel; x++)
-        AddDrones(Other,AbilityLevel);
+    AddDrones(Other,AbilityLevel);
 
 }
 
