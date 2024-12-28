@@ -1,4 +1,4 @@
-Log: Log file open, 12/27/24 22:20:24
+Log: Log file open, 12/28/24 09:28:22
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -14,14 +14,14 @@ Log: Splash screen filename is '..\Help\UT2004Logo.bmp'
 Localization: No localization: UT2004.General.Start (int)
 Log: Initializing OpenGLDrv...
 Log: Game class is 'GameInfo'
-Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.564000...
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.563000...
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
 Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?SpectatorOnly=1?Sex=M
 Log: Collecting garbage
 Log: Purging garbage
 Log: Garbage: objects: 33900->33897; refs: 350345
 Log: Game class is 'CinematicGame'
-Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.888000...
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.890000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
@@ -63,7 +63,7 @@ Log: OpenGL: Level of anisotropy is 1.000000 (max 16.000000).
 Log: OpenGL: Forcibly disabled pixel shaders.
 Log: OpenGL: Forcibly disabled render-to-texture.
 Log: OpenGL: allocated 32 MByte of AGP memory
-Log: Startup time: 1.600000 seconds
+Log: Startup time: 1.643000 seconds
 Localization: No localization: UT2004.General.Run (int)
 Log: Precaching: NvidiaLogo.LevelInfo0
 Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
@@ -109,7 +109,7 @@ Log: Purging garbage
 Log: (Karma): Level Karma Terminated.
 Log: Garbage: objects: 43354->40891; refs: 471523
 Log: Game class is 'LumpysInvasion'
-Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 7.073000...
+Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 6.392000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpyJumping.MutLumpyJumping,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim
@@ -123,47 +123,66 @@ Log: Precaching: DM-Flux2.LevelInfo0
 Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
 Log: Allocating 32768 byte dynamic index buffer.
 Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.074 seconds
-Log: Finished precaching textures in 0.112 seconds
+Log: Finished precaching geometry in 0.084 seconds
+Log: Finished precaching textures in 0.118 seconds
 ScriptLog: START MATCH
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
 ModAuthor: # # # # Welcome ShowPanel()  True
 Log: Allocating 66384 byte dynamic vertex buffer.
-Log: Allocating 82512 byte dynamic vertex buffer.
-ModAuthor: # # # # Character ShowPanel()  True
-ModAuthor: # # # # Welcome ShowPanel()  False
-LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameDragon
 ModAuthor: # # # # Abilities ShowPanel()  True
-ModAuthor: # # # # Character ShowPanel()  False
-LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameDragon
-ModAuthor: # # # # Stats ShowPanel()  True
-ModAuthor: # # # # Abilities ShowPanel()  False
+ModAuthor: # # # # Welcome ShowPanel()  False
+LumpysRPG: We spawned a Regular Drone
 ModAuthor: # # # # Character ShowPanel()  True
-ModAuthor: # # # # Stats ShowPanel()  False
-LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameDragon
+ModAuthor: # # # # Abilities ShowPanel()  False
 ScriptLog: AddClassPoint Called
 ScriptLog: Add Class Called
 ScriptLog: Add Class Called : Case 0
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Character ShowPanel()  True
 ModAuthor: # # # # Abilities ShowPanel()  True
 LumpysInvasion: Owned Class #0: MM
 ModAuthor: # # # # Character ShowPanel()  False
+LumpysRPG: AbilityLevel: 1
+Warning: MutLumpysRPG DM-Flux2.MutLumpysRPG (Function LumpysRPG.MutLumpysRPG.SpawnDrone:00C6) Accessed None 'DroneList'
+Warning: MutLumpysRPG DM-Flux2.MutLumpysRPG (Function LumpysRPG.MutLumpysRPG.SpawnDrone:00DA) Accessed None 'DroneList'
+Warning: MutLumpysRPG DM-Flux2.MutLumpysRPG (Function LumpysRPG.MutLumpysRPG.SpawnDrone:00C6) Accessed None 'DroneList'
+Warning: MutLumpysRPG DM-Flux2.MutLumpysRPG (Function LumpysRPG.MutLumpysRPG.SpawnDrone:00DA) Accessed None 'DroneList'
+Error: MutLumpysRPG DM-Flux2.MutLumpysRPG (Function LumpysRPG.MutLumpysRPG.SpawnDrone:016F) Accessed array 'DroneList' out of bounds (1/1)
+LumpysRPG: Drone Entry Accessed: None i:1DroneListLengthAfter:1
+Warning: MutLumpysRPG DM-Flux2.MutLumpysRPG (Function LumpysRPG.MutLumpysRPG.SpawnDrone:01BA) Accessed None 'DroneList'
+Warning: MutLumpysRPG DM-Flux2.MutLumpysRPG (Function LumpysRPG.MutLumpysRPG.SpawnDrone:01D8) Accessed None 'DroneList'
+Error: MutLumpysRPG DM-Flux2.MutLumpysRPG (Function LumpysRPG.MutLumpysRPG.SpawnDrone:022E) Accessed array 'DroneList' out of bounds (1/1)
+LumpysRPG: StatsInv.Drone Entry Accessed: None f:1
+LumpysRPG: We spawned a Regular Drone
+LumpysRPG: We spawned a Regular Drone
+LumpysInvasion: Owned Class #0: MM
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameDragon
+LumpysInvasion: New Monster NameEarth Dragon
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameDragon
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameEarth Dragon
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
-Log: Closing by request
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameDragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameEarth Dragon
+LumpysInvasion: Drone Killed
+LumpysInvasion: Drone Killed
+LumpysInvasion: Drone Killed
+LumpysInvasion: Drone Killed
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
+ModAuthor: # # # # Game ShowPanel()  True
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
 Log: appRequestExit(0)
 Localization: No localization: UT2004.General.Exit (int)
 Exit: Preparing to exit.
@@ -173,11 +192,11 @@ Exit: Windows client shut down
 Log: Waiting for file streaming thread to finish...
 Exit: OpenAL Audio subsystem shut down.
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 53865->0; refs: 471523
+Log: Garbage: objects: 54490->0; refs: 471523
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 227 MByte 747 KByte 518 Bytes from HD took 0.354000 seconds (0.308000 reading, 0.046000 seeking).
-Log: FileManager: 0.210000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 232 MByte 92 KByte 543 Bytes from HD took 0.339000 seconds (0.296000 reading, 0.043000 seeking).
+Log: FileManager: 0.231000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/27/24 22:21:03
+Uninitialized: Log file closed, 12/28/24 09:29:18

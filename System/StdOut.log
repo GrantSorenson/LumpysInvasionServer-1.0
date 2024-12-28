@@ -1,4 +1,4 @@
-Log file open, 12/27/24 22:20:18
+Log file open, 12/28/24 09:32:51
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -78,6 +78,7 @@ Parsing RW_Adrenal
 Parsing RW_Healing
 Parsing RW_MedicHealing
 Parsing RW_Rejuvination
+Parsing AmmoRegenInv
 Parsing FriendlyMonsterKillMarker
 Parsing GhostInv
 Parsing RPGLinkGunPickup
@@ -123,6 +124,7 @@ Parsing STY_AbilityList
 Parsing AbilityListFont
 Parsing LumpysRPGKeyBinds
 Parsing RPGAbility
+Parsing AbilityAmmoRegen
 Parsing AbilityAwareness
 Parsing AbilityDrones
 Parsing AbilityHermesSandals
@@ -176,6 +178,7 @@ Compiling RW_Adrenal
 Compiling RW_Healing
 Compiling RW_MedicHealing
 Compiling RW_Rejuvination
+Compiling AmmoRegenInv
 Compiling FriendlyMonsterKillMarker
 Compiling GhostInv
 Compiling RPGStatsInv
@@ -222,6 +225,7 @@ Compiling STY_AbilityList
 Compiling AbilityListFont
 Compiling LumpysRPGKeyBinds
 Compiling RPGAbility
+Compiling AbilityAmmoRegen
 Compiling AbilityAwareness
 Compiling AbilityDrones
 G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\AbilityDrones.uc(31) : Warning, 'X' : unreferenced local variable
@@ -278,6 +282,7 @@ Importing Defaults for RW_Adrenal
 Importing Defaults for RW_Healing
 Importing Defaults for RW_MedicHealing
 Importing Defaults for RW_Rejuvination
+Importing Defaults for AmmoRegenInv
 Importing Defaults for FriendlyMonsterKillMarker
 Importing Defaults for GhostInv
 Importing Defaults for RPGStatsInv
@@ -325,6 +330,7 @@ Importing Defaults for STY_AbilityList
 Importing Defaults for AbilityListFont
 Importing Defaults for LumpysRPGKeyBinds
 Importing Defaults for RPGAbility
+Importing Defaults for AbilityAmmoRegen
 Importing Defaults for AbilityAwareness
 Importing Defaults for AbilityDrones
 Importing Defaults for AbilityHermesSandals
@@ -351,4 +357,4 @@ Importing Defaults for STY_AbilityList
 ---------------------tk_HolyHandGrenade - Release---------------------
 Mutator exported successfully: LumpysRPG.MutLumpysRPG
 Success - 0 error(s), 2 warning(s)
-Log file closed, 12/27/24 22:20:21
+Log file closed, 12/28/24 09:32:54

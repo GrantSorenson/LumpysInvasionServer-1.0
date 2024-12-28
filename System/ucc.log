@@ -1,4 +1,4 @@
-Log: Log file open, 12/27/24 22:20:17
+Log: Log file open, 12/28/24 09:32:50
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -49,6 +49,9 @@ Heading: -------------------------LumpysRPG - Release--------------------------
 Warning: Failed to load 'LumpysRPG.u': Can't find file 'LumpysRPG.u'
 Warning: Failed loading package: Can't find file 'LumpysRPG.u'
 Log: Analyzing...
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityAmmoRegen.uc)
+Log: Class: AbilityAmmoRegen extends RPGAbility
+Log: Imported: Class LumpysRPG.AbilityAmmoRegen
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityAwareness.uc)
 Log: Class: AbilityAwareness extends RPGAbility
 Log: Imported: Class LumpysRPG.AbilityAwareness
@@ -70,6 +73,9 @@ Log: Imported: Class LumpysRPG.AbilitySpeed
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AdrenalConditionMessage.uc)
 Log: Class: AdrenalConditionMessage extends LocalMessage
 Log: Imported: Class LumpysRPG.AdrenalConditionMessage
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AmmoRegenInv.uc)
+Log: Class: AmmoRegenInv extends Inventory
+Log: Imported: Class LumpysRPG.AmmoRegenInv
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactFlight.uc)
 Log: Class: ArtifactFlight extends RPGArtifact
 Log: Imported: Class LumpysRPG.ArtifactFlight
@@ -393,6 +399,7 @@ Log: Parsing RW_Adrenal
 Log: Parsing RW_Healing
 Log: Parsing RW_MedicHealing
 Log: Parsing RW_Rejuvination
+Log: Parsing AmmoRegenInv
 Log: Parsing FriendlyMonsterKillMarker
 Log: Parsing GhostInv
 Log: Parsing RPGLinkGunPickup
@@ -439,6 +446,7 @@ Log: Parsing STY_AbilityList
 Log: Parsing AbilityListFont
 Log: Parsing LumpysRPGKeyBinds
 Log: Parsing RPGAbility
+Log: Parsing AbilityAmmoRegen
 Log: Parsing AbilityAwareness
 Log: Parsing AbilityDrones
 Log: Parsing AbilityHermesSandals
@@ -492,6 +500,7 @@ Log: Compiling RW_Adrenal
 Log: Compiling RW_Healing
 Log: Compiling RW_MedicHealing
 Log: Compiling RW_Rejuvination
+Log: Compiling AmmoRegenInv
 Log: Compiling FriendlyMonsterKillMarker
 Log: Compiling GhostInv
 Log: Compiling RPGStatsInv
@@ -538,6 +547,7 @@ Log: Compiling STY_AbilityList
 Log: Compiling AbilityListFont
 Log: Compiling LumpysRPGKeyBinds
 Log: Compiling RPGAbility
+Log: Compiling AbilityAmmoRegen
 Log: Compiling AbilityAwareness
 Log: Compiling AbilityDrones
 Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\AbilityDrones.uc(31) : Warning, 'X' : unreferenced local variable
@@ -594,6 +604,7 @@ Log: Importing Defaults for RW_Adrenal
 Log: Importing Defaults for RW_Healing
 Log: Importing Defaults for RW_MedicHealing
 Log: Importing Defaults for RW_Rejuvination
+Log: Importing Defaults for AmmoRegenInv
 Log: Importing Defaults for FriendlyMonsterKillMarker
 Log: Importing Defaults for GhostInv
 Log: Importing Defaults for RPGStatsInv
@@ -641,6 +652,7 @@ Log: ... deferring
 Log: Importing Defaults for AbilityListFont
 Log: Importing Defaults for LumpysRPGKeyBinds
 Log: Importing Defaults for RPGAbility
+Log: Importing Defaults for AbilityAmmoRegen
 Log: Importing Defaults for AbilityAwareness
 Log: Importing Defaults for AbilityDrones
 Log: Importing Defaults for AbilityHermesSandals
@@ -656,9 +668,9 @@ Log: Importing Defaults for ClassWeaponMaster
 Log: Importing Defaults for Colors
 Log: Importing Defaults for RPGPlayerDataObject
 Log: Importing Defaults for STY_AbilityList
-Log: Success: Compiled 21771 line(s), 2105 statement(s).
+Log: Success: Compiled 21900 line(s), 2122 statement(s).
 
-Log: Save=46.685195
+Log: Save=46.919802
 Log: Moving 'Save.tmp' to 'LumpysRPG.u'
 Heading: ------------------------LumpyJumping - Release------------------------
 Heading: --------------------------tK_BaseW - Release--------------------------
@@ -669,6 +681,7 @@ Heading: ------------------------tk_MagicWand - Release------------------------
 Heading: --------------------------tk_AK47 - Release---------------------------
 Heading: -------------------------tk_LilLady - Release-------------------------
 Heading: ---------------------tk_HolyHandGrenade - Release---------------------
+Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
@@ -695,11 +708,11 @@ Log: Unbound to UWeb.dll
 Log: Unbound to XGame.dll
 Log: Unbound to XInterface.dll
 Log: Unbound to Onslaught.dll
-Log: Garbage: objects: 84564->0; refs: 0
+Log: Garbage: objects: 84584->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 135 MByte 604 KByte 445 Bytes from HD took 0.482999 seconds (0.385999 reading, 0.097000 seeking).
-Log: FileManager: 0.128000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 135 MByte 642 KByte 1006 Bytes from HD took 0.513998 seconds (0.425998 reading, 0.088000 seeking).
+Log: FileManager: 0.095000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/27/24 22:20:21
+Uninitialized: Log file closed, 12/28/24 09:32:54

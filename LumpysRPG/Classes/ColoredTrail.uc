@@ -2,6 +2,7 @@ class ColoredTrail extends xEmitter;
 
 //var Color Color;
 var() array<Material> TrailSkins;
+var() config Color Red;
 
 #exec obj load file="LumpysTextures.utx"
 
@@ -22,6 +23,10 @@ var() array<Material> TrailSkins;
 function SetSkin(int skinNum)
 {
 	Skins[0]=TrailSkins[skinNum];
+	Skins[1]=TrailSkins[skinNum];
+	UpdatePrecacheMaterials();
+	//mColorRange[0]=Red;
+	//mColorRange[1]=Red;
 }
 
 defaultproperties
@@ -31,6 +36,7 @@ defaultproperties
 	TrailSkins(2)=Texture'LumpysTextures.SpeedTrailTextures.STRed'
 	mParticleType=PT_Stream
 	mStartParticles=0
+	Red=(R=255,B=0,G=0,A=255)
 	mLifeRange(0)=0.650000
 	mLifeRange(1)=0.650000
 	mRegenRange(0)=10.000000
