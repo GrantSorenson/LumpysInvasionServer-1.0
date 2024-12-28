@@ -1,4 +1,4 @@
-Log: Log file open, 12/27/24 22:12:49
+Log: Log file open, 12/27/24 22:20:17
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -656,9 +656,9 @@ Log: Importing Defaults for ClassWeaponMaster
 Log: Importing Defaults for Colors
 Log: Importing Defaults for RPGPlayerDataObject
 Log: Importing Defaults for STY_AbilityList
-Log: Success: Compiled 21787 line(s), 2105 statement(s).
+Log: Success: Compiled 21771 line(s), 2105 statement(s).
 
-Log: Save=47.172661
+Log: Save=46.685195
 Log: Moving 'Save.tmp' to 'LumpysRPG.u'
 Heading: ------------------------LumpyJumping - Release------------------------
 Heading: --------------------------tK_BaseW - Release--------------------------
@@ -698,8 +698,8 @@ Log: Unbound to Onslaught.dll
 Log: Garbage: objects: 84564->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 135 MByte 611 KByte 269 Bytes from HD took 0.482999 seconds (0.379999 reading, 0.103000 seeking).
-Log: FileManager: 0.123000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 135 MByte 604 KByte 445 Bytes from HD took 0.482999 seconds (0.385999 reading, 0.097000 seeking).
+Log: FileManager: 0.128000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/27/24 22:12:53
+Uninitialized: Log file closed, 12/27/24 22:20:21
