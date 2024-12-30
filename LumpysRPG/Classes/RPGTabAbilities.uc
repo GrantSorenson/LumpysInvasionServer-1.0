@@ -133,14 +133,27 @@ function RefreshAbilityBox()
 function bool UpdateAbilityButtons(GUIComponent Sender)
 {
 	local int Cost;
+  local int AbilityLevel;
 
 	Cost = int(Abilities.List.GetExtra());
+
 	if (Cost <= 0 || Cost > StatsInv.Data.PointsAvailable)
-		Controls[1].MenuStateChange(MSAT_Disabled);
+	{
+    Controls[1].MenuStateChange(MSAT_Disabled);
+  }
 	else
-{
-		Controls[1].MenuStateChange(MSAT_Blurry);
-}
+  {
+	  Controls[1].MenuStateChange(MSAT_Blurry);
+  }
+
+  if (Cost > 0)
+  {
+    Controls[3].MenuStateChange(MSAT_Blurry);
+  }else
+  {
+    Controls[3].MenuStateChange(MSAT_Disabled);
+  }
+
 	ShowAbilityInfo();
 
 	return true;
@@ -153,6 +166,15 @@ function bool BuyAbility(GUIComponent Sender)
   RefreshAbilityBox();
 
 	return true;
+}
+
+function bool RefundAbility(GUIComponent Sender)
+{
+  Controls[3].MenuStateChange(MSAT_Disabled);
+  StatsInv.ServerRefundAbility(class<RPGAbility>(Abilities.List.GetObject()));
+  RefreshAbilityBox();
+
+  return true;
 }
 
 function AddGenAbilities(RPGPlayerDataObject Data, array<AbilityInfo> GenAbilities)
@@ -273,10 +295,10 @@ Controls(0)=GUIListBox'LumpysRPG.RPGTabAbilities.AbilityList'
 
 Begin Object Class=GUIButton Name=AbilityBuyButton
     Caption="Buy"
-    WinWidth=0.100000
+		WinWidth=0.100000
 		WinHeight=0.100000
-		WinLeft=0.523457
-		WinTop=0.148884
+		WinLeft=0.513865
+		WinTop=0.088830
     OnClick=RPGTabAbilities.BuyAbility
     OnKeyEvent=AbilityBuyButton.InternalOnKeyEvent
 End Object
@@ -297,4 +319,15 @@ Begin Object Class=GUIScrollTextBox Name=DescInfo
    bNeverFocus=True
 End Object
 Controls(2)=GUIScrollTextBox'LumpysRPG.RPGTabAbilities.DescInfo'
+
+Begin Object Class=GUIButton Name=AbilityRefundButton
+    Caption="Refund"
+		WinWidth=0.100000
+		WinHeight=0.100000
+		WinLeft=0.515235
+		WinTop=0.208938
+    OnClick=RPGTabAbilities.RefundAbility
+    OnKeyEvent=AbilityRefundButton.InternalOnKeyEvent
+End Object
+Controls(3)=GUIButton'LumpysRPG.RPGTabAbilities.AbilityRefundButton'
 }

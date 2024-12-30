@@ -1,4 +1,4 @@
-Log file open, 12/28/24 09:32:51
+Log file open, 12/29/24 18:25:13
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -58,6 +58,7 @@ Parsing LevelUpEffect
 Parsing RPGLinkAttachment
 Parsing DamTypeDronePlasma
 Parsing DamTypeLightningRod
+Parsing DamTypeRetaliation
 Parsing FriendlyMonsterController
 Parsing RPGArtifact
 Parsing ArtifactFlight
@@ -127,9 +128,12 @@ Parsing RPGAbility
 Parsing AbilityAmmoRegen
 Parsing AbilityAwareness
 Parsing AbilityDrones
+Parsing AbilityVampire
+Parsing AbilityGeneralVampire
 Parsing AbilityHermesSandals
 Parsing AbilityJumpZ
 Parsing AbilitySpeed
+Parsing AbilitySpeedSwitcher
 Parsing CA_AdrenalineArtifacts
 Parsing CA_MedicArtifacts
 Parsing CA_MedicSprites
@@ -160,6 +164,7 @@ Compiling LevelUpEffect
 Compiling RPGLinkAttachment
 Compiling DamTypeDronePlasma
 Compiling DamTypeLightningRod
+Compiling DamTypeRetaliation
 Compiling FriendlyMonsterController
 Compiling RPGArtifact
 Compiling ArtifactFlight
@@ -182,6 +187,8 @@ Compiling AmmoRegenInv
 Compiling FriendlyMonsterKillMarker
 Compiling GhostInv
 Compiling RPGStatsInv
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGStatsInv.uc(1042) : Warning, 'C' : unreferenced local variable
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGStatsInv.uc(708) : Warning, 'i' : unreferenced local variable
 Compiling RPGLinkGunPickup
 Compiling RPGWeaponPickup
 Compiling RPGArtifactPickup
@@ -210,6 +217,7 @@ Compiling RPGLinkFire
 Compiling RPGShockProjFire
 Compiling RPGPainterFire
 Compiling RPGTabAbilities
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGTabAbilities.uc(136) : Warning, 'AbilityLevel' : unreferenced local variable
 Compiling RPGTabCharacter
 Compiling RPGTabStats
 Compiling RPGTabStore
@@ -229,9 +237,12 @@ Compiling AbilityAmmoRegen
 Compiling AbilityAwareness
 Compiling AbilityDrones
 G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\AbilityDrones.uc(31) : Warning, 'X' : unreferenced local variable
+Compiling AbilityVampire
+Compiling AbilityGeneralVampire
 Compiling AbilityHermesSandals
 Compiling AbilityJumpZ
 Compiling AbilitySpeed
+Compiling AbilitySpeedSwitcher
 Compiling CA_AdrenalineArtifacts
 Compiling CA_MedicArtifacts
 Compiling CA_MedicSprites
@@ -264,6 +275,7 @@ Importing Defaults for LevelUpEffect
 Importing Defaults for RPGLinkAttachment
 Importing Defaults for DamTypeDronePlasma
 Importing Defaults for DamTypeLightningRod
+Importing Defaults for DamTypeRetaliation
 Importing Defaults for FriendlyMonsterController
 Importing Defaults for RPGArtifact
 Importing Defaults for ArtifactFlight
@@ -333,9 +345,12 @@ Importing Defaults for RPGAbility
 Importing Defaults for AbilityAmmoRegen
 Importing Defaults for AbilityAwareness
 Importing Defaults for AbilityDrones
+Importing Defaults for AbilityVampire
+Importing Defaults for AbilityGeneralVampire
 Importing Defaults for AbilityHermesSandals
 Importing Defaults for AbilityJumpZ
 Importing Defaults for AbilitySpeed
+Importing Defaults for AbilitySpeedSwitcher
 Importing Defaults for CA_AdrenalineArtifacts
 Importing Defaults for CA_MedicArtifacts
 Importing Defaults for CA_MedicSprites
@@ -356,5 +371,5 @@ Importing Defaults for STY_AbilityList
 -------------------------tk_LilLady - Release-------------------------
 ---------------------tk_HolyHandGrenade - Release---------------------
 Mutator exported successfully: LumpysRPG.MutLumpysRPG
-Success - 0 error(s), 2 warning(s)
-Log file closed, 12/28/24 09:32:54
+Success - 0 error(s), 5 warning(s)
+Log file closed, 12/29/24 18:25:16

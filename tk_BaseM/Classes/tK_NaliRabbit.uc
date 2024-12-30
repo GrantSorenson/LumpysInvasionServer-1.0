@@ -20,6 +20,26 @@ simulated function Tick(float DeltaTime)
     }
 }
 
+event PostBeginPlay()
+{
+    local int x;
+
+    Super.PostBeginPlay();
+    SetTimer(1, true);
+
+    x = Rand(2);
+    if(bool(x))
+    {
+        Skins[0]=Texture'LumpysMonsterTextures.MonsterTextures.JRabbitGreen';
+        Skins[1]=Texture'LumpysMonsterTextures.MonsterTextures.JRabbitGreen';
+    }
+    else
+    {
+        Skins[0]=Texture'LumpysMonsterTextures.MonsterTextures.JRabbitBlue';
+        Skins[1]=Texture'LumpysMonsterTextures.MonsterTextures.JRabbitBlue';
+    }
+}
+
 simulated function AnimEnd(int Channel)
 {
     local name Anim;

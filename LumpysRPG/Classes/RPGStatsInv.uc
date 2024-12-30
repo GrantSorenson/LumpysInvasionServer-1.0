@@ -56,9 +56,9 @@ replication
 	reliable if (bNetDirty && Role == ROLE_Authority)
 		Data;
 	reliable if (Role < ROLE_Authority)
-		ServerAddPointTo, ServerAddAbility, ServerAddClass, ServerRequestPlayerLevels, ServerResetData, ServerSetVersion;
+		ServerAddPointTo, ServerAddAbility, ServerAddClass, ServerRefundAbility, ServerRequestPlayerLevels, ServerResetData, ServerSetVersion;
 	reliable if (Role == ROLE_Authority)
-		ClientUpdateStatMenu, ClientAddAbility, ClientAddClass, ClientAdjustFireRate, ClientSendPlayerLevel, ClientReInitMenu,
+		ClientUpdateStatMenu, ClientAddAbility, ClientAddClass, ClientRefundAbility, ClientAdjustFireRate, ClientSendPlayerLevel, ClientReInitMenu,
 		ClientResetData, ClientReceiveAbilityInfo, ClientReceiveAllowedAbility, ClientReceiveStatCap,
 		ClientModifyVehicle, ClientUnModifyVehicle;
 	unreliable if (Role == ROLE_Authority)
@@ -703,6 +703,91 @@ simulated function ClientAddAbility(class<RPGAbility> Ability, int Cost)
 		StatsMenu.InitFor(self);
 }
 
+function ServerRefundAbility(class<RPGAbility> Ability)
+{
+	local int x,i, Index, RefundAmount;
+
+	if (GameRestarting())
+	{
+		return;
+	}
+
+	for (x = 0; x < DataObject.Abilities.length; x++)
+	{
+		if (DataObject.Abilities[x] == Ability)
+		{
+			Index = x;
+			break;
+		}
+	}
+
+	for(x=1;x<=DataObject.AbilityLevels[index];x++)
+	{
+		RefundAmount += Ability.default.CostAddPerLevel*x;
+	}
+	//Return Ability effects
+
+	if (Instigator != None)
+	{
+		Ability.static.UnModifyPawn(Instigator, DataObject.AbilityLevels[Index]);
+		// if (Instigator.Weapon != None)
+		// 	Ability.static.ModifyWeapon(Instigator.Weapon, DataObject.AbilityLevels[Index]);
+		// if (Instigator.Controller != None && Vehicle(Instigator.Controller.Pawn) != None)
+		// 	ModifyVehicle(Vehicle(Instigator.Controller.Pawn));
+	}
+	
+	DataObject.Abilities.Remove(index,1);
+	//DataObject.Abilities[Index] = Ability;
+	DataObject.AbilityLevels.Remove(index,1);
+	//DataObject.AbilityLevels[Index]++;
+	DataObject.PointsAvailable += RefundAmount;
+	Data.Abilities.Remove(Index,1);
+	//Data.Abilities[Index] = Ability;
+	Data.AbilityLevels.Remove(Index,1);
+	//Data.AbilityLevels[Index]++;
+	Data.PointsAvailable += RefundAmount;
+	//Data.PointsAvailable -= Cost;
+
+	//Send to client
+	ClientRefundAbility(Ability, RefundAmount);
+}
+
+simulated function ClientRefundAbility(class<RPGAbility> Ability, int RefundAmount)
+{
+	local int x, Index;
+
+	if (Level.NetMode == NM_Client) //already did this on listen/standalone servers
+	{
+		for (x = 0; x < Data.Abilities.length; x++)
+		{
+			if (Data.Abilities[x] == Ability)
+			{
+				Index = x;
+				break;
+			}
+		}
+
+	//Refund ability immediately
+	 	if (Instigator != None)
+	 	{
+	 		Ability.static.UnModifyPawn(Instigator, Data.AbilityLevels[Index]);
+	// 		if (Instigator.Weapon != None)
+	// 			Ability.static.ModifyWeapon(Instigator.Weapon, Data.AbilityLevels[Index]);
+	// 		if (Instigator.Controller != None && Vehicle(Instigator.Controller.Pawn) != None)
+	// 			ModifyVehicle(Vehicle(Instigator.Controller.Pawn));
+	 	}
+
+		Data.Abilities.Remove(Index,1);
+		//Data.Abilities[Index] = Ability;
+		Data.AbilityLevels.Remove(Index,1);
+		//Data.AbilityLevels[Index]++;
+		Data.PointsAvailable += RefundAmount;
+		//Data.PointsAvailable -= Cost;
+
+
+	 }
+}
+
 simulated function Tick(float deltaTime)
 {
 	local bool bLevelUp;
@@ -886,6 +971,7 @@ function ServerResetData(PlayerReplicationInfo PRI)
 	local int x;
 	local string OwnerID;
 
+
 	if (RPGMut != None && !Level.Game.bGameRestarted && DataObject.Level >= RPGMut.StartingLevel)
 	{
 		OwnerID = DataObject.OwnerID;
@@ -917,7 +1003,7 @@ function ServerResetData(PlayerReplicationInfo PRI)
 			RPGMut.HighestLevelPlayerLevel = 0;
 			RPGMut.SaveConfig();
 		}
-		ClientResetData();
+		
 
 		for(x=0;x<DroneList.length;x++)
 		{
@@ -926,9 +1012,83 @@ function ServerResetData(PlayerReplicationInfo PRI)
 			DroneList.Remove(x,1);
 		}
 
-		RegDrones = 0;
-		MedicDrones = 0;
-		MaxDrones = 0;
+	RegDrones = 0;
+	MedicDrones = 0;
+	MaxDrones = 0;
+
+	ClientResetData();
+	}
+}
+
+function GiveDefaultWeapons()
+{
+	local int i;
+
+	if(Owner != None)
+	{
+		for(i=0;i<RPGMut.DefaultWeapons.Length;i++)
+		{
+			if(RPGMut.DefaultWeapons[i] != "")
+			{
+				Owner.Instigator.GiveWeapon(RPGMut.DefaultWeapons[i]);
+			}
+		}
+	}
+}
+
+function ClearOwnerWeapons()
+{
+	local int x;
+	local Controller C;
+	local Inventory Inv;
+
+	for(Inv = Owner.Inventory; Inv != None; Inv = Inv.Inventory)
+	{
+		if(Weapon(Inv) != None || RPGWeapon(Inv) != None)
+		{
+			Owner.Instigator.DeleteInventory(Inv);
+		}
+	}
+
+	Owner.Instigator.DeleteInventory(Owner.Instigator.Weapon);
+
+	for (x = 0; x < OldRPGWeapons.Length; x++)
+		if (OldRPGWeapons[x].Weapon != None)
+			OldRPGWeapons[x].Weapon.RemoveReference();
+	OldRPGWeapons.length = 0;
+
+	//Log("Weapons Cleard",'LumpysRPG');
+
+}
+
+function ResetWeaponSwapSpeed()
+{
+	local RPGWeapon RW;
+	local Inventory Inv;
+	local Weapon wep;
+
+	for(Inv = Owner.Inventory; Inv != None; Inv=Inv.Inventory)
+	{
+		wep = Weapon(Inv);
+		if (wep != None)
+		{
+			RW = RPGWeapon(wep);
+			if (RW != None)
+			{
+				RW.ModifiedWeapon.BringUpTime = RW.ModifiedWeapon.default.BringUpTime;
+				RW.ModifiedWeapon.PutDownTime = RW.ModifiedWeapon.default.PutDownTime;
+				RW.ModifiedWeapon.MinReloadPct = RW.ModifiedWeapon.default.MinReloadPct;
+				RW.ModifiedWeapon.PutDownAnimRate = RW.ModifiedWeapon.default.PutDownAnimRate;
+				RW.ModifiedWeapon.SelectAnimRate = RW.ModifiedWeapon.default.SelectAnimRate;
+			}
+			else
+			{   wep.BringUpTime = wep.default.BringUpTime;
+				wep.PutDownTime = wep.default.PutDownTime;
+				wep.MinReloadPct = wep.default.MinReloadPct;
+				wep.PutDownAnimRate = wep.default.PutDownAnimRate;
+				wep.SelectAnimRate = wep.default.SelectAnimRate;
+			}
+		}
 	}
 }
 
@@ -939,6 +1099,8 @@ simulated function ClientResetData()
 	Data.ClassAbilities.length = 0;
 	Data.AbilityLevels.length = 0;
 	Data.ClassLevels.length = 0;
+	ClearOwnerWeapons();
+	GiveDefaultWeapons();
 }
 
 simulated function ClientReceiveAbilityInfo(int Index, class<RPGAbility> Ability, int Level)

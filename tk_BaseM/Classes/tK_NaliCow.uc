@@ -1,5 +1,7 @@
 class tK_NaliCow extends tK_Monster;
 
+#EXEC OBJ LOAD FILE="LumpysMonsterTextures.utx"
+
 var sound FootStep[2];
 var name DeathAnim[3];
 var name HitAnim[2];
@@ -7,8 +9,23 @@ const TargetRadius = 1200;
 
 event PostBeginPlay()
 {
+    local int x;
+
     Super.PostBeginPlay();
     SetTimer(1, true);
+
+    x = Rand(2);
+    if(bool(x))
+    {
+        //Skins[0]=Texture'LumpysMonsterTextures.MonsterTextures.JCowPurple';
+        //Skins[1]=Texture'LumpysMonsterTextures.MonsterTextures.JCowPurple;
+
+    }
+    else
+    {
+        //Skins[0]=Texture'LumpysMonsterTextures.MonsterTextures.JCowBlue';
+        //Skins[1]=Texture'LumpysMonsterTextures.MonsterTextures.JCowBlue';
+    }
 }
 
 simulated function Timer()

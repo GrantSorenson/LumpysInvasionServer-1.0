@@ -9,7 +9,7 @@ var localized string MasterClass;
 var localized bool bClassAbility;//is a class ability
 var localized bool bMasterAbility;
 var int StartingCost, CostAddPerLevel, BotChance, MaxLevel;
-/* Called by MutUT2004RPG during its first tick. Return false to be removed from ability list (for example, if the
+/* Called by MutLumpysRPG during its first tick. Return false to be removed from ability list (for example, if the
  * ability doesn't make sense with the current gametype)
  * Also gives the ability a chance to modify the game or the mutator (for example, if the ability depends on an
  * additional mutator, you could add it here)
@@ -41,16 +41,21 @@ static function int BotBuyChance(Bot B, RPGPlayerDataObject Data, int CurrentLev
 		return 0;
 }
 
-/* Modify the player's pawn. Called by MutUT2004RPG.ModifyPlayer() on the server side, and by
+/* Modify the player's pawn. Called by MutLumpysRPG.ModifyPlayer() on the server side, and by
  * RPGStatsInv.Tick() on the client side on the first tick after everything has replicated
  */
 static simulated function ModifyPawn(Pawn Other, int AbilityLevel);
+
+/* UnModify the player's pawn. Called by MutLumpysRPG.ModifyPlayer() on the server side when a player has refunded an ability.
+ * The Changes made to the player must be returned.
+ */
+static simulated function UnModifyPawn(Pawn Other, int AbilityLevel);
 
 /* Modify the owning player's current weapon. Called by RPGStatsInv whenever the player's weapon changes.
  */
 static simulated function ModifyWeapon(Weapon Weapon, int AbilityLevel);
 
-/* Modify the owning player's current vehicle. Called by MutUT2004RPG.DriverEnteredVehicle() serverside
+/* Modify the owning player's current vehicle. Called by MutLumpysRPG.DriverEnteredVehicle() serverside
  * and RPGStatsInv.ClientEnteredVehicle() clientside.
  */
 static simulated function ModifyVehicle(Vehicle V, int AbilityLevel);

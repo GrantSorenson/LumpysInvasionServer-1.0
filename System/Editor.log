@@ -1,4 +1,4 @@
-Log: Log file open, 12/26/24 16:50:16
+Log: Log file open, 12/28/24 20:14:40
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -10,7 +10,7 @@ Init: Ini:UT2004.ini   UserIni:User.ini
 Init: Build label: Build UT2004_Build_[2005-11-23_16.22]
 Init: Object subsystem initialized
 Log: 	nvldumd.dll/NVIDIA GeForce RTX 2070 SUPER
-Log: Startup time: 2.089000 seconds
+Log: Startup time: 2.393000 seconds
 Cmd: MODE MAPEXT=ut2
 Log: Opened viewport
 Log: Enter SetRes: 386x55 Fullscreen 0
@@ -193,9 +193,11 @@ Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
 Cmd: CAMERA UPDATE NAME=LIPSinc MESH="" FLAGS=16810633 REN=34 MISC1=-1 MISC2=0
 Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=0
-Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=342893312
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=334570240
 Cmd: AUDIO FINDVIEWPORT
-Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=342893312
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=334570240
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=21299696
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=334570240
 Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=21299696
 Log: Opened viewport
 Log: Enter SetRes: 320x400 Fullscreen 0
@@ -278,37 +280,453 @@ Log: Enter SetRes: 642x433 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 75(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
-Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="ArtifactIcons"
-Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="ArtifactIcons"
-Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="SpeedTrailTextures"
-Cmd: Fire
-Cmd: POLY SET TEXTURE=357406112
-Log: BeginTrans Poly Set
-Cmd: AltFire
-Cmd: Fire
-Cmd: POLY SET TEXTURE=357406336
-Log: BeginTrans Poly Set
-Cmd: Fire
-Cmd: POLY SET TEXTURE=357406112
-Log: BeginTrans Poly Set
-Cmd: AltFire
-Cmd: TEXTURE IMPORT FILE="D:\Unreal Stuff\UT2004Exports\Textures\SpeedTrailRedTex.tga" NAME="STRed" PACKAGE="LumpysTextures" GROUP="SpeedTrailTextures" MIPS=1 MASKED=0 Alpha=0 NormalLOD=0
-Log: FactoryCreateBinary: Texture with TextureFactory (0 0 D:\Unreal Stuff\UT2004Exports\Textures\SpeedTrailRedTex.tga)
-Log: Imported Texture LumpysTextures.SpeedTrailTextures.STRed
-Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="SpeedTrailTextures"
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=334570240
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=21299696
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=334570240
+Cmd: SETCURRENTCLASS CLASS="Emitter"
+Log: CurrentClass=Emitter
+Cmd: SETCURRENTCLASS CLASS="BulldogDust"
+Log: CurrentClass=BulldogDust
+Cmd: MAP LOAD FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Maps\ParticleExamples.ut2"
+Log: New File, Existing Package (Package myLevel, Package ParticleExamples)
+Cmd: CAMERA UPDATE FLAGS=545425097 REN=20 NAME=PrefabBrowser
+Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="2K4Chargers" GROUP="ChargerTextures"
 Cmd: CAMERA UPDATE NAME=MeshViewer MESH="banner" FLAGS=641 REN=19 MISC1=0 MISC2=0
 Cmd: CAMERA UPDATE NAME=AnimationViewer MESH="FloorTurretGun" FLAGS=16810633 REN=26 MISC1=0 MISC2=0
 Cmd: CAMERA UPDATE NAME=AnimationViewer MESH="FloorTurretGun" FLAGS=16810633 REN=26 MISC1=0 MISC2=0
 Cmd: CAMERA UPDATE FLAGS=545425097 REN=20 NAME=PrefabBrowser
-Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=342893312
-Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=400935360
-Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="LumpysTextures" GROUP="SpeedTrailTextures"
-Cmd: OBJ SAVEPACKAGE PACKAGE="LumpysTextures" FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\LumpysTextures.utx"
-Log: Save=12.858005
-Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\LumpysTextures.utx.tmp'
-Cmd: OBJ SAVEPACKAGE PACKAGE="LumpysTextures" FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\LumpysTextures.utx"
-Log: Save=11.663145
-Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\Textures\LumpysTextures.utx.tmp'
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=334570240
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=392546560
+Log: Collecting garbage
+Log: Purging garbage
+Log: Garbage: objects: 84866->84784; refs: 1089735
+Log: Allocating 16384 byte dynamic index buffer.
+Cmd: CAMERA UPDATE FLAGS=545425097 REN=20 NAME=PrefabBrowser
+Cmd: CAMERA UPDATE FLAGS=1073742464 MISC2=0 REN=17 NAME=TextureBrowser PACKAGE="2K4Chargers" GROUP="ChargerTextures"
+Cmd: CAMERA UPDATE NAME=MeshViewer MESH="banner" FLAGS=641 REN=19 MISC1=0 MISC2=0
+Cmd: CAMERA UPDATE NAME=AnimationViewer MESH="FloorTurretGun" FLAGS=16810633 REN=26 MISC1=0 MISC2=0
+Cmd: CAMERA UPDATE NAME=AnimationViewer MESH="FloorTurretGun" FLAGS=16810633 REN=26 MISC1=0 MISC2=0
+Cmd: CAMERA UPDATE FLAGS=545425097 REN=20 NAME=PrefabBrowser
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=334570240
+Cmd: CAMERA UPDATE NAME=LIPSinc MESH="CeilingTurretBase" FLAGS=16810633 REN=34 MISC1=-1 MISC2=392546560
+Log: BeginTrans Select None
+Cmd: TERRAIN SOFTDESELECT
+Cmd: TERRAIN DESELECT
+Cmd: MAYBEAUTOSAVE
+Log: Enter SetRes: 896x503 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 746x563 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 529x549 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 800x457 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 746x574 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 603x303 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 453x363 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 324x349 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 551x297 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 453x374 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 516x253 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 366x313 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 263x299 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 477x257 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Enter SetRes: 366x324 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Allocating 16384 byte dynamic index buffer.
+Cmd: AltFire
+Cmd: AUDIO FINDVIEWPORT
+Cmd: AltFire
+Cmd: AltFire
+Log: BeginTrans clicking on actors
+Cmd: Fire
+Cmd: AltFire
+Cmd: Fire
+Cmd: Fire
+Cmd: Fire
+Cmd: Fire
+Cmd: Fire
+Cmd: Fire
+Cmd: AltFire
+Cmd: Fire
+Cmd: Fire
+Cmd: AltFire
+Cmd: Fire
+Cmd: Fire
+Cmd: Fire
+Cmd: AltFire
+Cmd: MAYBEAUTOSAVE
+Cmd: AltFire
+Cmd: Fire
+Cmd: AltFire
+Cmd: Fire
+Log: BeginTrans clicking on actors
+Cmd: TERRAIN SOFTDESELECT
+Cmd: TERRAIN DESELECT
+Cmd: Fire
+Log: BeginTrans clicking on actors
+Cmd: TERRAIN SOFTDESELECT
+Cmd: TERRAIN DESELECT
+Cmd: Fire
+Cmd: AltFire
+Cmd: Fire
+Cmd: AltFire
+Log: BeginTrans clicking on actors
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: SETCURRENTCLASS CLASS="RedeemerExplosion"
+Log: CurrentClass=RedeemerExplosion
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto8.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto8.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=12.232789
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto8.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: Fire
+Cmd: AltFire
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: SETCURRENTCLASS CLASS="ONSRedEnergyEffect"
+Log: CurrentClass=ONSRedEnergyEffect
+Cmd: SETCURRENTCLASS CLASS="ONSRedPlasmaFireEffect"
+Log: CurrentClass=ONSRedPlasmaFireEffect
+Cmd: SETCURRENTCLASS CLASS="ONSRedPlasmaSmallFireEffect"
+Log: CurrentClass=ONSRedPlasmaSmallFireEffect
+Cmd: MAYBEAUTOSAVE
+Cmd: SETCURRENTCLASS CLASS="ONSSkyMineEffect"
+Log: CurrentClass=ONSSkyMineEffect
+Cmd: SETCURRENTCLASS CLASS="ONSSmallVehicleExplosionEffect"
+Log: CurrentClass=ONSSmallVehicleExplosionEffect
+Cmd: SETCURRENTCLASS CLASS="ONSPurplePlasmaSmallFireEffect"
+Log: CurrentClass=ONSPurplePlasmaSmallFireEffect
+Cmd: SETCURRENTCLASS CLASS="ONSGrenadeBeaconRed"
+Log: CurrentClass=ONSGrenadeBeaconRed
+Cmd: SETCURRENTCLASS CLASS="ONSGrenadeBeaconBlue"
+Log: CurrentClass=ONSGrenadeBeaconBlue
+Cmd: SETCURRENTCLASS CLASS="ONSGreenPlasmaSmallFireEffect"
+Log: CurrentClass=ONSGreenPlasmaSmallFireEffect
+Cmd: SETCURRENTCLASS CLASS="ONSGreenPlasmaFireEffect"
+Log: CurrentClass=ONSGreenPlasmaFireEffect
+Cmd: SETCURRENTCLASS CLASS="ONSFreeRoamingEnergyEffect"
+Log: CurrentClass=ONSFreeRoamingEnergyEffect
+Cmd: SETCURRENTCLASS CLASS="ONSBluePlasmaSmallFireEffect"
+Log: CurrentClass=ONSBluePlasmaSmallFireEffect
+Cmd: SETCURRENTCLASS CLASS="ONSBluePlasmaFireEffect"
+Log: CurrentClass=ONSBluePlasmaFireEffect
+Cmd: SETCURRENTCLASS CLASS="ONSBlueEnergyEffect"
+Log: CurrentClass=ONSBlueEnergyEffect
+Cmd: SETCURRENTCLASS CLASS="ONSTurretBeamEffectBlue"
+Log: CurrentClass=ONSTurretBeamEffectBlue
+Cmd: SETCURRENTCLASS CLASS="ONSPlasmaHitBlue"
+Log: CurrentClass=ONSPlasmaHitBlue
+Cmd: SETCURRENTCLASS CLASS="ONSPlasmaHitGreen"
+Log: CurrentClass=ONSPlasmaHitGreen
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto9.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto9.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=11.721298
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto9.ut2'
+Cmd: SETCURRENTCLASS CLASS="RailgunExplosion"
+Log: CurrentClass=RailgunExplosion
+Cmd: MAYBEAUTOSAVE
+Cmd: SETCURRENTCLASS CLASS="LinkMuzFlashBeam1st"
+Log: CurrentClass=LinkMuzFlashBeam1st
+Cmd: SETCURRENTCLASS CLASS="LinkMuzFlashBeam3rd"
+Log: CurrentClass=LinkMuzFlashBeam3rd
+Cmd: SETCURRENTCLASS CLASS="LinkMuzFlashProj3rd"
+Log: CurrentClass=LinkMuzFlashProj3rd
+Cmd: SETCURRENTCLASS CLASS="LinkProjEffect"
+Log: CurrentClass=LinkProjEffect
+Cmd: SETCURRENTCLASS CLASS="LinkMuzFlashProj3rd"
+Log: CurrentClass=LinkMuzFlashProj3rd
+Cmd: SETCURRENTCLASS CLASS="GrenadeTrailINC"
+Log: CurrentClass=GrenadeTrailINC
+Cmd: SETCURRENTCLASS CLASS="GrenadeTrailPPG"
+Log: CurrentClass=GrenadeTrailPPG
+Cmd: SETCURRENTCLASS CLASS="GrenadeSmokeTrail"
+Log: CurrentClass=GrenadeSmokeTrail
+Cmd: SETCURRENTCLASS CLASS="ForceRingA"
+Log: CurrentClass=ForceRingA
+Cmd: SETCURRENTCLASS CLASS="FlareHitFlameBlueBig"
+Log: CurrentClass=FlareHitFlameBlueBig
+Cmd: Fire
+Log: BeginTrans clicking on actors
+Cmd: TERRAIN SOFTDESELECT
+Cmd: TERRAIN DESELECT
+Cmd: AltFire
+Log: BeginTrans clicking on actors
+Cmd: Fire
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto0.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto0.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=15.626990
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto0.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto1.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto1.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=11.972882
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto1.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: AltFire
+Cmd: Fire
+Log: BeginTrans clicking on actors
+Cmd: TERRAIN SOFTDESELECT
+Cmd: TERRAIN DESELECT
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto2.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto2.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=11.876466
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto2.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto3.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto3.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=11.803409
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto3.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto4.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto4.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=14.858502
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto4.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto5.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto5.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=12.534525
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto5.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto6.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto6.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=24.571120
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto6.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto7.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto7.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=12.472723
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto7.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto8.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto8.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=12.509846
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto8.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto9.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto9.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=11.491692
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto9.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto0.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto0.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=11.990729
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto0.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto1.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto1.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=11.457117
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto1.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto2.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto2.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=11.797229
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto2.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto3.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto3.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=13.091329
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto3.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto4.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto4.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=12.238818
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto4.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto5.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto5.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=11.437265
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto5.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto6.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto6.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=12.502679
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto6.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto7.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto7.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=12.642771
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto7.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto8.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto8.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=11.487515
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto8.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto9.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto9.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=11.619463
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto9.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto0.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto0.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=12.194238
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto0.ut2'
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Enter SetRes: 1198x433 Fullscreen 0
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 75(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Allocating 16384 byte dynamic index buffer.
+Cmd: MAYBEAUTOSAVE
+Cmd: MAYBEAUTOSAVE
+Log: Autosaving 'MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto1.ut2"'
+Cmd: MAP SAVE AUTOSAVE=1 FILE="G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\\..\Maps\Auto1.ut2"
+Log: Removed duplicate actor indices: 0 duplicates found.
+Log: Save=12.152623
+Log: Moving 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Save.tmp' to 'G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\..\Maps\Auto1.ut2'
 Log: Closed viewport
 Log: Closed viewport
 Log: Closed viewport
@@ -348,14 +766,14 @@ Log: Unbound to Onslaught.dll
 Log: Unbound to WinDrv.dll
 Exit: Windows client shut down
 Log: Unbound to D3DDrv.dll
-Log: Garbage: objects: 84623->0; refs: 0
+Log: Garbage: objects: 84783->0; refs: 1089735
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 191 MByte 927 KByte 63 Bytes from HD took 0.483998 seconds (0.396998 reading, 0.087000 seeking).
-Log: FileManager: 0.147000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 191 MByte 832 KByte 973 Bytes from HD took 0.540998 seconds (0.448998 reading, 0.092000 seeking).
+Log: FileManager: 0.201000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Memory Allocation Status
-Uninitialized: Curr Memory  0.044M /  2.934M
-Uninitialized: Peak Memory  190.158M /  192.508M
-Uninitialized: Allocs         684 Current /  716908 Total
-Uninitialized: Log file closed, 12/26/24 16:51:08
+Uninitialized: Curr Memory  0.045M /  3.059M
+Uninitialized: Peak Memory  191.005M /  193.211M
+Uninitialized: Allocs         807 Current /  9137272 Total
+Uninitialized: Log file closed, 12/28/24 22:14:57

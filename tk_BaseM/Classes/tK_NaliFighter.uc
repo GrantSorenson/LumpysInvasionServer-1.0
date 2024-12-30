@@ -92,6 +92,7 @@ simulated function ProcessHitFX()
 
 defaultproperties
 {
+     WeaponClassName(0)="XWeapons.ShieldGun"
      bNoThrowWeapon=True
      FireRateScale=3.000000
      HitSound(0)=Sound'tK_BaseM.Nali.injur1n'
