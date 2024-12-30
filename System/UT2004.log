@@ -1,4 +1,4 @@
-Log: Log file open, 12/30/24 01:06:56
+Log: Log file open, 12/30/24 01:47:37
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -14,14 +14,14 @@ Log: Splash screen filename is '..\Help\UT2004Logo.bmp'
 Localization: No localization: UT2004.General.Start (int)
 Log: Initializing OpenGLDrv...
 Log: Game class is 'GameInfo'
-Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.549000...
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.599000...
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
 Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?SpectatorOnly=1?Sex=M
 Log: Collecting garbage
 Log: Purging garbage
 Log: Garbage: objects: 33900->33897; refs: 350345
 Log: Game class is 'CinematicGame'
-Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.873000...
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.919000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
@@ -63,13 +63,13 @@ Log: OpenGL: Level of anisotropy is 1.000000 (max 16.000000).
 Log: OpenGL: Forcibly disabled pixel shaders.
 Log: OpenGL: Forcibly disabled render-to-texture.
 Log: OpenGL: allocated 32 MByte of AGP memory
-Log: Startup time: 1.621000 seconds
+Log: Startup time: 1.654000 seconds
 Localization: No localization: UT2004.General.Run (int)
 Log: Precaching: NvidiaLogo.LevelInfo0
 Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
 Log: Allocating 32768 byte dynamic index buffer.
 Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.011 seconds
+Log: Finished precaching geometry in 0.013 seconds
 Log: Finished precaching textures in 0.014 seconds
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] () ()
 Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
@@ -109,7 +109,7 @@ Log: Purging garbage
 Log: (Karma): Level Karma Terminated.
 Log: Garbage: objects: 43356->40893; refs: 471538
 Log: Game class is 'LumpysInvasion'
-Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 6.222000...
+Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 7.549000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpyJumping.MutLumpyJumping,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim
@@ -123,14 +123,26 @@ Log: Precaching: DM-Flux2.LevelInfo0
 Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
 Log: Allocating 32768 byte dynamic index buffer.
 Log: Allocating 65536 byte dynamic vertex buffer.
-Log: Finished precaching geometry in 0.084 seconds
-Log: Finished precaching textures in 0.120 seconds
-ScriptLog: Lumps had 3205 total stat points at Level 50, should be 1225, PointsAvailable changed by -1980 to compensate
+Log: Finished precaching geometry in 0.097 seconds
+Log: Finished precaching textures in 0.123 seconds
 ScriptLog: START MATCH
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Welcome ShowPanel()  True
+Log: Allocating 66384 byte dynamic vertex buffer.
+Log: Allocating 82512 byte dynamic vertex buffer.
+ModAuthor: # # # # Abilities ShowPanel()  True
+ModAuthor: # # # # Welcome ShowPanel()  False
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
 LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameNali Cow
 Log: Preprocessing:  Vertex stream total vertices: 260 Orig wedges: 260
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow
 LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameNali
@@ -138,102 +150,89 @@ Log: Preprocessing:  Vertex stream total vertices: 433 Orig wedges: 433
 LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameNaliFighter
+LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNaliFighter
+LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNaliFighter
 LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameNali Rabbit
-LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali
-LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali
-LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNaliFighter
-LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNaliFighter
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali Cow
 Log: Preprocessing:  Vertex stream total vertices: 69 Orig wedges: 69
+LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNaliFighter
+Log: PlayAnim: Sequence 'Jump' not found for mesh 'Nali2'
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow
+LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Rabbit
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow
+LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Rabbit
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali
+ScriptLog: Last Cred: 90 Stat Cred: 95
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow
+LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Rabbit
+ScriptLog: Last Cred: 95 Stat Cred: 110
 LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameNali
 LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameNali Rabbit
-LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNaliFighter
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali Cow
-LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 60 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali Rabbit
-Log: Preprocessing:  Vertex stream total vertices: 185 Orig wedges: 185
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali Cow
+ScriptLog: Last Cred: 110 Stat Cred: 114
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali
 LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameNali Cow
 LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameNaliFighter
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 60 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali Rabbit
 LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameNaliFighter
 LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
 LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
 LumpysInvasion: New Monster NameNali Cow
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali Cow
-LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 70 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNaliFighter
-LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali Rabbit
-LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali Rabbit
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali Cow
-LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali Rabbit
-ScriptLog: Last Cred: 4 Stat Cred: 5
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
-LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100.00
-LumpysInvasion: New Monster NameNali Cow
-ScriptLog: Last Cred: 5 Stat Cred: 23
-ScriptLog: Last Cred: 23 Stat Cred: 27
-ScriptLog: Last Cred: 27 Stat Cred: 39
-ScriptLog: Last Cred: 39 Stat Cred: 52
-Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.ScoreKill:016A) Accessed None 'Killer'
-Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.ScoreKill:0172) Accessed None
-Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.ScoreKill:017A) Accessed None
-Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.ScoreKill:018F) Accessed None 'Killer'
-Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.ScoreKill:0197) Accessed None
-Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.ScoreKill:019F) Accessed None
-Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function SkaarjPack.Invasion.ScoreKill:01A7) Attempt to assign variable through None
+ScriptLog: Last Cred: 114 Stat Cred: 124
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
-ModAuthor: # # # # Welcome ShowPanel()  True
-Warning: RPGTabCharacter Package.RPGTabCharacter (Function LumpysRPG.RPGTabCharacter.FillCharacterDetails:0039) Accessed None 'Pawn'
-Warning: RPGTabCharacter Package.RPGTabCharacter (Function LumpysRPG.RPGTabCharacter.FillCharacterDetails:0041) Accessed None
-Log: Allocating 66384 byte dynamic vertex buffer.
 ModAuthor: # # # # Abilities ShowPanel()  True
-ModAuthor: # # # # Welcome ShowPanel()  False
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Abilities ShowPanel()  True
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Abilities ShowPanel()  True
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Abilities ShowPanel()  True
 ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
 ModAuthor: # # # # Game ShowPanel()  True
@@ -247,11 +246,11 @@ Exit: Windows client shut down
 Log: Waiting for file streaming thread to finish...
 Exit: OpenAL Audio subsystem shut down.
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 54722->0; refs: 471538
+Log: Garbage: objects: 54827->0; refs: 471538
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 225 MByte 995 KByte 1005 Bytes from HD took 0.345000 seconds (0.311000 reading, 0.034000 seeking).
-Log: FileManager: 0.307000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 225 MByte 962 KByte 434 Bytes from HD took 0.336000 seconds (0.297000 reading, 0.039000 seeking).
+Log: FileManager: 0.269000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/30/24 01:09:04
+Uninitialized: Log file closed, 12/30/24 01:49:23

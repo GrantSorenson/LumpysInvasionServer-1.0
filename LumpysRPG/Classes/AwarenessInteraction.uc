@@ -58,27 +58,18 @@ function PreRender(Canvas Canvas)
  		Canvas.Style = 1;
  		HealthScale = Enemy.Health / Enemy.HealthMax;
 
-		if (AbilityLevel == 3)
+		//Draw Enemy Name for level 1
+		if(AbilityLevel >= 1)
 		{
-			Canvas.FontScaleX *= 1.20;
-			Canvas.FontScaleY *= 1.20;
-			if (HealthScale < 0.25)
-				Canvas.DrawColor = class'HUD'.default.RedColor;
-			else if (HealthScale < 0.50)
-				Canvas.DrawColor = class'HUD'.default.GoldColor;
-			else
-				Canvas.DrawColor = class'HUD'.default.GreenColor;
-
-			Canvas.DrawText(Enemy.Health$"/"$Enemy.HealthMax);
 			if(tk_Monster(Enemy) != None)
 			{
 				Canvas.DrawColor = class'Colors'.default.White;
-				Canvas.SetPos(BarLoc.X, BarLoc.Y+20);
-				Canvas.DrawText(tk_Monster(Enemy).MonsterName);
 				Canvas.SetPos(BarLoc.X, BarLoc.Y);
+				Canvas.DrawText(tk_Monster(Enemy).MonsterName);
+				
 			}
 		}
- 		else if (AbilityLevel > 1)
+		if(AbilityLevel == 2)
 		{
 	 		if (HealthScale > 0.5)
  			{
@@ -94,17 +85,9 @@ function PreRender(Canvas Canvas)
 		 		Canvas.DrawColor.B = 0;
 		 		Canvas.DrawColor.A = 255;
 	 		}
-			Canvas.DrawTile(HealthBarMaterial, BarUSize*XScale*HealthScale, BarVSize*YScale, 0, 0, BarUSize, BarVSize);
-			if (Enemy.ShieldStrength > 0 && xPawn(Enemy) != None)
-			{
-				Canvas.DrawColor = class'HUD'.default.GoldColor;
-				YScale /= 2;
-				Canvas.SetPos(BarLoc.X, BarLoc.Y - BarVSize * (YScale + 0.05));
-				Canvas.DrawTile(HealthBarMaterial, BarUSize*XScale*Enemy.ShieldStrength/xPawn(Enemy).ShieldStrengthMax, BarVSize*YScale, 0, 0, BarUSize, BarVSize);
-			}
-		}
-		else
-		{
+			Canvas.SetPos(BarLoc.X, BarLoc.Y+10);
+			Canvas.DrawTile(HealthBarMaterial, BarUSize*XScale*HealthScale, (BarVSize*YScale), 0, 0, BarUSize, BarVSize);
+
 			if (HealthScale < 0.25)
 				Canvas.DrawColor = class'HUD'.default.RedColor;
 			else if (HealthScale < 0.50)
@@ -113,8 +96,58 @@ function PreRender(Canvas Canvas)
 				Canvas.DrawColor = class'HUD'.default.GreenColor;
 			Canvas.DrawTile(HealthBarMaterial, BarUSize*XScale, BarVSize*YScale, 0, 0, BarUSize, BarVSize);
 		}
-	}
+		if (AbilityLevel == 3)
+		{
+			// Canvas.FontScaleX *= 1.20;
+			// Canvas.FontScaleY *= 1.20;
+			Canvas.SetPos(BarLoc.X, BarLoc.Y+10);
+			if (HealthScale < 0.25)
+				Canvas.DrawColor = class'HUD'.default.RedColor;
+			else if (HealthScale < 0.50)
+				Canvas.DrawColor = class'HUD'.default.GoldColor;
+			else
+				Canvas.DrawColor = class'HUD'.default.GreenColor;
+
+			Canvas.DrawText(Enemy.Health$"/"$Enemy.HealthMax);
+		}
+ 	// 	else if (AbilityLevel > 1)
+	// 	{
+	//  		if (HealthScale > 0.5)
+ 	// 		{
+	//  			Canvas.DrawColor.R = Clamp(255 * (1.f - (Enemy.HealthMax - (Enemy.HealthMax - Enemy.Health) * 2)/Enemy.HealthMax), 0, 255);
+	//  			Canvas.DrawColor.G = 255;
+	// 	 		Canvas.DrawColor.B = 0;
+	// 	 		Canvas.DrawColor.A = 255;
+	//  		}
+	// 	 	else
+	// 	 	{
+	//  			Canvas.DrawColor.R = 255;
+	//  			Canvas.DrawColor.G = Clamp(255 * (2.f * HealthScale), 0, 255);
+	// 	 		Canvas.DrawColor.B = 0;
+	// 	 		Canvas.DrawColor.A = 255;
+	//  		}
+	// 		Canvas.DrawTile(HealthBarMaterial, BarUSize*XScale*HealthScale, BarVSize*YScale, 0, 0, BarUSize, BarVSize);
+	// 		if (Enemy.ShieldStrength > 0 && xPawn(Enemy) != None)
+	// 		{
+	// 			Canvas.DrawColor = class'HUD'.default.GoldColor;
+	// 			YScale /= 2;
+	// 			Canvas.SetPos(BarLoc.X, BarLoc.Y - BarVSize * (YScale + 0.05));
+	// 			Canvas.DrawTile(HealthBarMaterial, BarUSize*XScale*Enemy.ShieldStrength/xPawn(Enemy).ShieldStrengthMax, BarVSize*YScale, 0, 0, BarUSize, BarVSize);
+	// 		}
+	// 	}
+	// 	else
+	// 	{
+	// 		if (HealthScale < 0.25)
+	// 			Canvas.DrawColor = class'HUD'.default.RedColor;
+	// 		else if (HealthScale < 0.50)
+	// 			Canvas.DrawColor = class'HUD'.default.GoldColor;
+	// 		else
+	// 			Canvas.DrawColor = class'HUD'.default.GreenColor;
+	// 		Canvas.DrawTile(HealthBarMaterial, BarUSize*XScale, BarVSize*YScale, 0, 0, BarUSize, BarVSize);
+	// 	}
+	// }
 }
+}//remove
 
 event NotifyLevelChange()
 {
