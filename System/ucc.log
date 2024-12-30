@@ -1,4 +1,4 @@
-Log: Log file open, 12/29/24 18:25:12
+Log: Log file open, 12/30/24 01:06:51
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -478,6 +478,7 @@ Log: Parsing ClassWeaponMaster
 Log: Parsing Colors
 Log: Compiling AwarenessInteraction
 Log: Compiling RPGInteraction
+Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysRPG\Classes\RPGInteraction.uc(68) : Warning, 'HealthScale' : unreferenced local variable
 Log: Compiling DroneReplicationInfo
 Log: Compiling MutLumpysRPG
 Log: Compiling AdrenalConditionMessage
@@ -695,9 +696,9 @@ Log: Importing Defaults for ClassWeaponMaster
 Log: Importing Defaults for Colors
 Log: Importing Defaults for RPGPlayerDataObject
 Log: Importing Defaults for STY_AbilityList
-Log: Success: Compiled 22471 line(s), 2173 statement(s).
+Log: Success: Compiled 22583 line(s), 2185 statement(s).
 
-Log: Save=48.099454
+Log: Save=47.511748
 Log: Moving 'Save.tmp' to 'LumpysRPG.u'
 Heading: ------------------------LumpyJumping - Release------------------------
 Heading: --------------------------tK_BaseW - Release--------------------------
@@ -725,7 +726,7 @@ Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
 Log: Mutator exported successfully: LumpysRPG.MutLumpysRPG
-Log: Success - 0 error(s), 5 warning(s)
+Log: Success - 0 error(s), 6 warning(s)
 Exit: Preparing to exit.
 Log: Purging garbage
 Log: Unbound to Core.dll
@@ -738,11 +739,11 @@ Log: Unbound to UWeb.dll
 Log: Unbound to XGame.dll
 Log: Unbound to XInterface.dll
 Log: Unbound to Onslaught.dll
-Log: Garbage: objects: 84670->0; refs: 0
+Log: Garbage: objects: 84692->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 135 MByte 672 KByte 353 Bytes from HD took 0.452999 seconds (0.379999 reading, 0.073000 seeking).
-Log: FileManager: 0.114000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 135 MByte 667 KByte 276 Bytes from HD took 0.468999 seconds (0.375999 reading, 0.093000 seeking).
+Log: FileManager: 0.104000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/29/24 18:25:16
+Uninitialized: Log file closed, 12/30/24 01:06:55

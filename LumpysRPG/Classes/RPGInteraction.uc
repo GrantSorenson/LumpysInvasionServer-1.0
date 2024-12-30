@@ -32,6 +32,9 @@ struct DescriptionMap {
 };
 var config array<DescriptionMap> RpgDescriptions;
 
+var AwarenessEnemyList EnemyList;
+var float BarUSize, BarVSize;
+
 event Initialized()
 {
 	local EInputKey key;
@@ -55,6 +58,57 @@ event Initialized()
 	}
 
 	TextFont = Font(DynamicLoadObject("UT2003Fonts.jFontSmall", class'Font'));
+
+	EnemyList = ViewportOwner.Actor.Spawn(class'AwarenessEnemyList');
+}
+
+function PreRender(Canvas Canvas)
+{
+	local int i;
+	local float Dist, XScale, YScale, HealthScale, ScreenX;
+	local vector BarLoc, CameraLocation, X, Y, Z;
+	local rotator CameraRotation;
+	local Pawn Enemy;
+
+	for (i = 0; i < EnemyList.Enemies.length; i++)
+	{
+		Enemy = EnemyList.Enemies[i];
+		if (Enemy == None || Enemy.Health <= 0 || (xPawn(Enemy) != None && xPawn(Enemy).bInvis))
+			continue;
+		Canvas.GetCameraLocation(CameraLocation, CameraRotation);
+		if (Normal(Enemy.Location - CameraLocation) dot vector(CameraRotation) < 0)
+			continue;
+		ScreenX = Canvas.WorldToScreen(Enemy.Location).X;
+		if (ScreenX < 0 || ScreenX > Canvas.ClipX)
+			continue;
+ 		Dist = VSize(Enemy.Location - CameraLocation);
+ 		if (Dist > ViewportOwner.Actor.TeamBeaconMaxDist * FClamp(0.04 * Enemy.CollisionRadius, 1.0, 3.0))
+ 			continue;
+		if (!Enemy.FastTrace(Enemy.Location + Enemy.CollisionHeight * vect(0,0,1), ViewportOwner.Actor.Pawn.Location + ViewportOwner.Actor.Pawn.EyeHeight * vect(0,0,1)))
+			continue;
+
+		GetAxes(rotator(Enemy.Location - CameraLocation), X, Y, Z);
+		if (Enemy.IsA('Monster'))
+		{
+			BarLoc = Canvas.WorldToScreen(Enemy.Location + (Enemy.CollisionHeight * 1.25 + BarVSize / 2) * vect(0,0,1) - Enemy.CollisionRadius * Y);
+		}
+		else
+		{
+			BarLoc = Canvas.WorldToScreen(Enemy.Location + (Enemy.CollisionHeight + BarVSize / 2) * vect(0,0,1) - Enemy.CollisionRadius * Y);
+		}
+		XScale = (Canvas.WorldToScreen(Enemy.Location + (Enemy.CollisionHeight + BarVSize / 2) * vect(0,0,1) + Enemy.CollisionRadius * Y).X - BarLoc.X) / BarUSize;
+		YScale = FMin(0.15 * XScale, 0.50);
+
+			if(tk_Monster(Enemy) != None)
+			{
+				Canvas.DrawColor = class'Colors'.default.White;
+				Canvas.SetPos(BarLoc.X, BarLoc.Y);
+				Canvas.DrawText(tk_Monster(Enemy).MonsterName);
+				Canvas.SetPos(BarLoc.X, BarLoc.Y);
+			}
+		}
+		if (ViewportOwner.Actor.Pawn == None || ViewportOwner.Actor.Pawn.Health <= 0)
+		return;
 }
 
 //Detect pressing of a key bound to one of our aliases

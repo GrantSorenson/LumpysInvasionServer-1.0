@@ -3,10 +3,10 @@ class AbilityAwareness extends RPGAbility
 
 static simulated function int Cost(RPGPlayerDataObject Data, int CurrentLevel)
 {
-	if ( Data.WeaponSpeed < 5 || Data.HealthBonus < 5 || Data.AdrenalineMax < 105
-	     || Data.Attack < 5 || Data.Defense < 5 || Data.AmmoMax < 5)
-		return 0;
-	else
+	// if ( Data.WeaponSpeed < 5 || Data.HealthBonus < 5 || Data.AdrenalineMax < 105
+	//      || Data.Attack < 5 || Data.Defense < 5 || Data.AmmoMax < 5)
+	// 	return 0;
+	// else
 		return Super.Cost(Data, CurrentLevel);
 }
 
@@ -37,7 +37,7 @@ static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 defaultproperties
 {
 	AbilityName="Awareness"
-	Description="Informs you of your enemies' health with a display over their heads. At level 1 you get a colored indicator (green, yellow, or red). At level 2 you get a colored health bar and a shield bar. You need to have at least 5 points in every stat to purchase this ability. (Max Level: 2)"
+	Description="Ability Name: Awareness|Max Level: 3|Starting Cost: 20|Cost Add Per Level: 5|Requirements: None||Informs you of your enemies' health with a display over their heads.|At level 1 you get a colored indicator (green, yellow, or red).|At level 2 you get a colored health bar and a shield bar.|At Level 3, you get a number above the enemies head."
 	StartingCost=20
 	CostAddPerLevel=5
 	MaxLevel=3
