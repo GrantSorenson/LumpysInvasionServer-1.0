@@ -133,7 +133,6 @@ function RefreshAbilityBox()
 function bool UpdateAbilityButtons(GUIComponent Sender)
 {
 	local int Cost;
-  local int AbilityLevel;
 
 	Cost = int(Abilities.List.GetExtra());
 

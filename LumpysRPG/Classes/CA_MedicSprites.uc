@@ -29,8 +29,6 @@ static function AddDrones(Pawn Other, int AbilityLevel)
 static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
 {
 
-    local int x;
-
     Super.ModifyPawn(Other,AbilityLevel);
 
     AddDrones(Other,AbilityLevel);

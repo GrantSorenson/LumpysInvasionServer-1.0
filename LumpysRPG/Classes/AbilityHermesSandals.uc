@@ -104,6 +104,19 @@ class AbilityHermesSandals extends RPGAbility
     // }
   }
 
+  static simulated function UnModifyPawn(Pawn Other, int AbilityLevel)
+  {
+    local xPawn x;
+
+    x = xPawn(Other); 
+    if (x != None)
+    {
+      x.MaxMultiJump = 2;
+      x.MultiJumpBoost = default.MultiJumpBoost;
+      Other.JumpZ = Other.default.JumpZ;
+
+    }
+  }
 
 static function bool PreventDeath(Pawn Killed, Controller Killer, class<DamageType> DamageType, vector HitLocation, int AbilityLevel, bool bAlreadyPrevented)
   {
@@ -137,7 +150,7 @@ static function bool PreventDeath(Pawn Killed, Controller Killer, class<DamageTy
   {
     MultiJumpBoost=50
     AbilityName="Sandals of Hermes"
-  	Description="Ability Name: Hermes Sandles|Max Level: This ability combines general movement abilities into one that gives the player bonuses to their Jump Height and Movement Speed |Levels 1-10 of this ability augment the players jump height(+10%) and movement speed(+5%) per level. ||NOT IMPLEMENNETED(Hidden):|Levels 11-15 give increasing bonuses to the speed combo, as well as gives the player different colored foot emmitters |Level 16 provides the player with an artifact that allows them to customize their foot trail effect with different color effects or images"
+  	Description="Ability Name: Hermes Sandles|Max Level: 25|Starting Cost: 25|Cost Add Per Level: 25|Requirements: None|This ability combines general movement abilities into one that gives the player bonuses to their Jump Height and Movement Speed |Levels 1-10 of this ability augment the players jump height by +10%/50% and movement speed by +5%/100% per level. You will also gain an extra jump per level.||NOT IMPLEMENNETED(Hidden):|Levels 11-15 give increasing bonuses to the speed combo, as well as gives the player different colored foot emmitters |Level 16 provides the player with an artifact that allows them to customize their foot trail effect with different color effects or images"
   	StartingCost=1
   	CostAddPerLevel=0
   	MaxLevel=25

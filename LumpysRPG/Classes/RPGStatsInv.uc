@@ -705,7 +705,7 @@ simulated function ClientAddAbility(class<RPGAbility> Ability, int Cost)
 
 function ServerRefundAbility(class<RPGAbility> Ability)
 {
-	local int x,i, Index, RefundAmount;
+	local int x, Index, RefundAmount;
 
 	if (GameRestarting())
 	{
@@ -1039,7 +1039,6 @@ function GiveDefaultWeapons()
 function ClearOwnerWeapons()
 {
 	local int x;
-	local Controller C;
 	local Inventory Inv;
 
 	for(Inv = Owner.Inventory; Inv != None; Inv = Inv.Inventory)

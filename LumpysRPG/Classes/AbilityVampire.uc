@@ -3,9 +3,7 @@ class AbilityVampire extends RPGAbility
 
 static simulated function int Cost(RPGPlayerDataObject Data, int CurrentLevel)
 {
-    if (Data.Attack < 50)
-        return 0;
-    else if (CurrentLevel == 5 && Data.Attack < 200)
+    if (Data.Attack < 50*CurrentLevel)
         return 0;
     else
         return Super.Cost(Data, CurrentLevel);

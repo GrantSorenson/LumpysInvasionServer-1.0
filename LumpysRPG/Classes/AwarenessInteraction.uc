@@ -87,14 +87,6 @@ function PreRender(Canvas Canvas)
 	 		}
 			Canvas.SetPos(BarLoc.X, BarLoc.Y+10);
 			Canvas.DrawTile(HealthBarMaterial, BarUSize*XScale*HealthScale, (BarVSize*YScale), 0, 0, BarUSize, BarVSize);
-
-			if (HealthScale < 0.25)
-				Canvas.DrawColor = class'HUD'.default.RedColor;
-			else if (HealthScale < 0.50)
-				Canvas.DrawColor = class'HUD'.default.GoldColor;
-			else
-				Canvas.DrawColor = class'HUD'.default.GreenColor;
-			Canvas.DrawTile(HealthBarMaterial, BarUSize*XScale, BarVSize*YScale, 0, 0, BarUSize, BarVSize);
 		}
 		if (AbilityLevel == 3)
 		{
