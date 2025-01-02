@@ -92,6 +92,15 @@ function RosterEntry GetPlacedRoster()
     return none;
 }
 
+function SetSkins(string newTex)
+{
+    local Material M;
+
+    M = Texture(DynamicLoadObject(newTex,class'Texture'));
+
+    Skins[0] = M;
+}
+
 simulated function SpawnGiblet(class<Gib> GibClass, Vector Location, Rotator Rotation, float GibPerterbation)
 {
     local Gib Giblet;

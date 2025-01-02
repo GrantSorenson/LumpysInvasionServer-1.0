@@ -1,6 +1,8 @@
 class LumpysInvasion extends Invasion
   config(LumpysInvasion);
 
+#exec obj load file="LumpysMonsterTextures.utx"
+
 var() int MonsterPlayerMulti;
 var() LumpysInvasionWaveHandler WaveHandler;
 var() const localized string LumpysInvasionGroup; //new in game menu group
@@ -37,6 +39,7 @@ struct WaveMonsterInfo
 {
 	var() class<tk_Monster> WaveMonsterClass[30];
 	var() string WaveMonsterName[30];
+	var() string WaveMonsterSkin[30];
 };
 var() WaveMonsterInfo WaveMonsterClasses;
 
@@ -245,6 +248,10 @@ function SetupWave()
 			{
 				CurrentMonsterClass = class<tk_Monster>(DynamicLoadObject(class'IPMonsterTable'.default.MonsterTable[h].MonsterClassName, class'Class',true));
 				WaveMonsterClasses.WaveMonsterName[WaveNumClasses] = class'IPMonsterTable'.default.MonsterTable[h].MonsterName;
+				//if(class'IPMonsterTable'.default.MonsterTable[h].CurrentSkin != None)
+				//{
+					WaveMonsterClasses.WaveMonsterSkin[WaveNumClasses] = class'IPMonsterTable'.default.MonsterTable[h].CurrentSkin;
+				//}
 			}
 		}
 
@@ -444,6 +451,7 @@ function AddMonster()
     local class<tk_Monster> NewMonsterClass; //current monster to spawn
     local Inventory Inv;
 	local int index;
+	local Material M;
 	//if(!bBossWave)
 	//{
 
@@ -458,8 +466,15 @@ function AddMonster()
 				log("Cannot find valid Navigation Point to spawn Monster",'InvasionPro');
 				return;
 			}
+			//NewMonster = Spawn(NewMonsterClass,,,StartSpot.Location+(NewMonsterClass.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation);
+			//if(WaveMonsterClasses.WaveMonsterSkin[index] != "")
+				// NewMonsterClass.default.Skins[0] = M;
+				// NewMonsterClass.default.Skins[1] = M;
+				NewMonster = Spawn(NewMonsterClass,,,StartSpot.Location+(NewMonsterClass.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation);
+				Log(WaveMonsterClasses.WaveMonsterSkin[index],'LumpysRPG');
 
-			NewMonster = Spawn(NewMonsterClass,,,StartSpot.Location+(NewMonsterClass.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation);
+				// NewMonster.Skins[0] = M;
+				// NewMonster.Skins[1] = M;
 		}
 
 		if ( NewMonster ==  None )
@@ -475,6 +490,11 @@ function AddMonster()
 			WaveMonsters++;
 			NewMonster.MonsterName = WaveMonsterClasses.WaveMonsterName[index];
 			UpdateNewMonsterClass(NewMonster);
+			//M = Texture(DynamicLoadObject(WaveMonsterClasses.WaveMonsterSkin[index],class'Texture'));
+			//NewMonster.default.Skins[0] = M;
+			//NewMonster.default.Skins[1] = M;
+			//NewMonster.UpdatePrecacheMaterials();
+
 			//UpdateMonsterTypeStats(NewMonster.Class, 1, 0, 0);
 			//LumpysInvasionMutator(BaseMutator).ModifyMonster(NewMonster,false,false);
             
@@ -490,6 +510,7 @@ function AddMonster()
 		}
 
         NumHostileMonsters();
+		NewMonster.UpdatePrecacheMaterials();
 }
 
 function UpdateNewMonsterClass(tk_Monster MonsterClass)

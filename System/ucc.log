@@ -1,4 +1,4 @@
-Log: Log file open, 12/31/24 01:52:28
+Log: Log file open, 12/31/24 23:14:06
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -45,673 +45,173 @@ Heading: --------------------------UTV2004c - Release--------------------------
 Heading: --------------------------UTV2004s - Release--------------------------
 Heading: --------------------------tk_BaseM - Release--------------------------
 Heading: -----------------------LumpysInvasion - Release-----------------------
-Heading: -------------------------LumpysRPG - Release--------------------------
-Warning: Failed to load 'LumpysRPG.u': Can't find file 'LumpysRPG.u'
-Warning: Failed loading package: Can't find file 'LumpysRPG.u'
+Warning: Failed to load 'LumpysInvasion.u': Can't find file 'LumpysInvasion.u'
+Warning: Failed loading package: Can't find file 'LumpysInvasion.u'
 Log: Analyzing...
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityAmmoRegen.uc)
-Log: Class: AbilityAmmoRegen extends RPGAbility
-Log: Imported: Class LumpysRPG.AbilityAmmoRegen
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityAwareness.uc)
-Log: Class: AbilityAwareness extends RPGAbility
-Log: Imported: Class LumpysRPG.AbilityAwareness
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityDrones.uc)
-Log: Class: AbilityDrones extends RPGAbility
-Log: Imported: Class LumpysRPG.AbilityDrones
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityFeatherFall.uc)
-Log: Class: AbilityFeatherFall extends RPGAbility
-Log: Imported: Class LumpysRPG.AbilityFeatherFall
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityGeneralVampire.uc)
-Log: Class: AbilityGeneralVampire extends AbilityVampire
-Log: Imported: Class LumpysRPG.AbilityGeneralVampire
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityHermesSandals.uc)
-Log: Class: AbilityHermesSandals extends RPGAbility
-Log: Imported: Class LumpysRPG.AbilityHermesSandals
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityInertialDampener.uc)
-Log: Class: AbilityInertialDampener extends RPGAbility
-Log: Imported: Class LumpysRPG.AbilityInertialDampener
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityJumpZ.uc)
-Log: Class: AbilityJumpZ extends RPGAbility
-Log: Imported: Class LumpysRPG.AbilityJumpZ
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityListFont.uc)
-Log: Class: AbilityListFont extends GUIFont
-Log: Imported: Class LumpysRPG.AbilityListFont
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityShieldUpgrade.uc)
-Log: Class: AbilityShieldUpgrade extends RPGAbility
-Log: Imported: Class LumpysRPG.AbilityShieldUpgrade
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilitySpeed.uc)
-Log: Class: AbilitySpeed extends RPGAbility
-Log: Imported: Class LumpysRPG.AbilitySpeed
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilitySpeedSwitcher.uc)
-Log: Class: AbilitySpeedSwitcher extends RPGAbility
-Log: Imported: Class LumpysRPG.AbilitySpeedSwitcher
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AbilityVampire.uc)
-Log: Class: AbilityVampire extends RPGAbility
-Log: Imported: Class LumpysRPG.AbilityVampire
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AdrenalConditionMessage.uc)
-Log: Class: AdrenalConditionMessage extends LocalMessage
-Log: Imported: Class LumpysRPG.AdrenalConditionMessage
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AmmoRegenInv.uc)
-Log: Class: AmmoRegenInv extends Inventory
-Log: Imported: Class LumpysRPG.AmmoRegenInv
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactFlight.uc)
-Log: Class: ArtifactFlight extends RPGArtifact
-Log: Imported: Class LumpysRPG.ArtifactFlight
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactFlightPickup.uc)
-Log: Class: ArtifactFlightPickup extends RPGArtifactPickup
-Log: Imported: Class LumpysRPG.ArtifactFlightPickup
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactInvulnerability.uc)
-Log: Class: ArtifactInvulnerability extends RPGArtifact
-Log: Imported: Class LumpysRPG.ArtifactInvulnerability
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactInvulnerabilityPickup.uc)
-Log: Class: ArtifactInvulnerabilityPickup extends RPGArtifactPickup
-Log: Imported: Class LumpysRPG.ArtifactInvulnerabilityPickup
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactLightningRod.uc)
-Log: Class: ArtifactLightningRod extends RPGArtifact
-Log: Imported: Class LumpysRPG.ArtifactLightningRod
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactLightningRodPickup.uc)
-Log: Class: ArtifactLightningRodPickup extends RPGArtifactPickup
-Log: Imported: Class LumpysRPG.ArtifactLightningRodPickup
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactMagicWeaponMaker.uc)
-Log: Class: ArtifactMagicWeaponMaker extends RPGArtifact
-Log: Imported: Class LumpysRPG.ArtifactMagicWeaponMaker
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactMagicWeaponMakerPickup.uc)
-Log: Class: ArtifactMagicWeaponMakerPickup extends RPGArtifactPickup
-Log: Imported: Class LumpysRPG.ArtifactMagicWeaponMakerPickup
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactMedicWeaponMaker.uc)
-Log: Class: ArtifactMedicWeaponMaker extends ArtifactMagicWeaponMaker
-Log: Imported: Class LumpysRPG.ArtifactMedicWeaponMaker
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactMonsterSummon.uc)
-Log: Class: ArtifactMonsterSummon extends RPGArtifact
-Log: Imported: Class LumpysRPG.ArtifactMonsterSummon
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactMonsterSummonPickup.uc)
-Log: Class: ArtifactMonsterSummonPickup extends RPGArtifactPickup
-Log: Imported: Class LumpysRPG.ArtifactMonsterSummonPickup
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactSuperMagicWeaponMaker.uc)
-Log: Class: ArtifactSuperMagicWeaponMaker extends RPGArtifact
-Log: Imported: Class LumpysRPG.ArtifactSuperMagicWeaponMaker
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactSuperMagicWeaponMakerPickup.uc)
-Log: Class: ArtifactSuperMagicWeaponMakerPickup extends RPGArtifactPickup
-Log: Imported: Class LumpysRPG.ArtifactSuperMagicWeaponMakerPickup
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactSuperMedicWeaponMaker.uc)
-Log: Class: ArtifactSuperMedicWeaponMaker extends ArtifactMedicWeaponMaker
-Log: Imported: Class LumpysRPG.ArtifactSuperMedicWeaponMaker
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactTripleDamage.uc)
-Log: Class: ArtifactTripleDamage extends RPGArtifact
-Log: Imported: Class LumpysRPG.ArtifactTripleDamage
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ArtifactTripleDamagePickup.uc)
-Log: Class: ArtifactTripleDamagePickup extends RPGArtifactPickup
-Log: Imported: Class LumpysRPG.ArtifactTripleDamagePickup
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AwarenessEnemyList.uc)
-Log: Class: AwarenessEnemyList extends Actor
-Log: Imported: Class LumpysRPG.AwarenessEnemyList
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\AwarenessInteraction.uc)
-Log: Class: AwarenessInteraction extends Interaction
-Log: Imported: Class LumpysRPG.AwarenessInteraction
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\CA_AdrenalineArtifacts.uc)
-Log: Class: CA_AdrenalineArtifacts extends RPGAbility
-Log: Imported: Class LumpysRPG.CA_AdrenalineArtifacts
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\CA_MedicArtifacts.uc)
-Log: Class: CA_MedicArtifacts extends RPGAbility
-Log: Imported: Class LumpysRPG.CA_MedicArtifacts
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\CA_MedicSprites.uc)
-Log: Class: CA_MedicSprites extends RPGAbility
-Log: Imported: Class LumpysRPG.CA_MedicSprites
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ClassAdrenalineMaster.uc)
-Log: Class: ClassAdrenalineMaster extends RPGClass
-Log: Imported: Class LumpysRPG.ClassAdrenalineMaster
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ClassMedicMaster.uc)
-Log: Class: ClassMedicMaster extends RPGClass
-Log: Imported: Class LumpysRPG.ClassMedicMaster
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ClassWeaponMaster.uc)
-Log: Class: ClassWeaponMaster extends RPGClass
-Log: Imported: Class LumpysRPG.ClassWeaponMaster
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ColoredTrail.uc)
-Log: Class: ColoredTrail extends xEmitter
-Log: Imported: Class LumpysRPG.ColoredTrail
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\Colors.uc)
-Log: Class: Colors extends Object
-Log: Imported: Class LumpysRPG.Colors
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\CredBonkTimer.uc)
-Log: Class: CredBonkTimer extends Actor
-Log: Imported: Class LumpysRPG.CredBonkTimer
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DamTypeDronePlasma.uc)
-Log: Class: DamTypeDronePlasma extends DamageType
-Log: Imported: Class LumpysRPG.DamTypeDronePlasma
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DamTypeLightningRod.uc)
-Log: Class: DamTypeLightningRod extends DamageType
-Log: Imported: Class LumpysRPG.DamTypeLightningRod
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DamTypeRetaliation.uc)
-Log: Class: DamTypeRetaliation extends DamageType
-Log: Imported: Class LumpysRPG.DamTypeRetaliation
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DroneHealBeam.uc)
-Log: Class: DroneHealBeam extends xEmitter
-Log: Imported: Class LumpysRPG.DroneHealBeam
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DroneProj.uc)
-Log: Class: DroneProj extends Projectile
-Log: Imported: Class LumpysRPG.DroneProj
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DroneProjEffect.uc)
-Log: Class: DroneProjEffect extends Emitter
-Log: Imported: Class LumpysRPG.DroneProjEffect
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DroneProjEffectBlue.uc)
-Log: Class: DroneProjEffectBlue extends DroneProjEffect
-Log: Imported: Class LumpysRPG.DroneProjEffectBlue
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DroneProjEffectRed.uc)
-Log: Class: DroneProjEffectRed extends DroneProjEffect
-Log: Imported: Class LumpysRPG.DroneProjEffectRed
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DroneReplicationInfo.uc)
-Log: Class: DroneReplicationInfo extends ReplicationInfo
-Log: Imported: Class LumpysRPG.DroneReplicationInfo
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\EmptyMessage.uc)
-Log: Class: EmptyMessage extends LocalMessage
-Log: Imported: Class LumpysRPG.EmptyMessage
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\ExperiencePickup.uc)
-Log: Class: ExperiencePickup extends TournamentPickUp
-Log: Imported: Class LumpysRPG.ExperiencePickup
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\FakeMonsterWeapon.uc)
-Log: Class: FakeMonsterWeapon extends Weapon
-Log: Imported: Class LumpysRPG.FakeMonsterWeapon
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\FlightEffect.uc)
-Log: Class: FlightEffect extends Emitter
-Log: Imported: Class LumpysRPG.FlightEffect
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\FriendlyMonsterController.uc)
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\FriendlyMonsterController.uc)
 Log: Class: FriendlyMonsterController extends MonsterController
-Log: Imported: Class LumpysRPG.FriendlyMonsterController
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\FriendlyMonsterEffect.uc)
-Log: Class: FriendlyMonsterEffect extends Emitter
-Log: Imported: Class LumpysRPG.FriendlyMonsterEffect
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\FriendlyMonsterKillMarker.uc)
-Log: Class: FriendlyMonsterKillMarker extends Inventory
-Log: Imported: Class LumpysRPG.FriendlyMonsterKillMarker
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\GainLevelMessage.uc)
-Log: Class: GainLevelMessage extends LocalMessage
-Log: Imported: Class LumpysRPG.GainLevelMessage
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\GhostInv.uc)
-Log: Class: GhostInv extends Inventory
-Log: Imported: Class LumpysRPG.GhostInv
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\HealedConditionMessage.uc)
-Log: Class: HealedConditionMessage extends LocalMessage
-Log: Imported: Class LumpysRPG.HealedConditionMessage
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\HudCDeathmatchHelper.uc)
-Log: Class: HudCDeathmatchHelper extends HudCDeathmatch
-Log: Imported: Class LumpysRPG.HudCDeathmatchHelper
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\IdentifyMessage.uc)
-Log: Class: IdentifyMessage extends LocalMessage
-Log: Imported: Class LumpysRPG.IdentifyMessage
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\LevelUpEffect.uc)
-Log: Class: LevelUpEffect extends Emitter
-Log: Imported: Class LumpysRPG.LevelUpEffect
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\LevelUpHUDMessage.uc)
-Log: Class: LevelUpHUDMessage extends LocalMessage
-Log: Imported: Class LumpysRPG.LevelUpHUDMessage
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\LumpyDrone.uc)
-Log: Class: LumpyDrone extends Actor
-Log: Imported: Class LumpysRPG.LumpyDrone
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\LumpysArtifactManager.uc)
-Log: Class: LumpysArtifactManager extends Info
-Log: Imported: Class LumpysRPG.LumpysArtifactManager
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\LumpysRPGKeyBinds.uc)
-Log: Class: LumpysRPGKeyBinds extends GUIUserKeyBinding
-Log: Imported: Class LumpysRPG.LumpysRPGKeyBinds
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\MedicDrone.uc)
-Log: Class: MedicDrone extends LumpyDrone
-Log: Imported: Class LumpysRPG.MedicDrone
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\MutLumpysRPG.uc)
-Log: Class: MutLumpysRPG extends Mutator
-Log: Imported: Class LumpysRPG.MutLumpysRPG
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\PickupEXPShard.uc)
-Log: Class: PickupEXPShard extends Pickup
-Log: Imported: Class LumpysRPG.PickupEXPShard
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGAbility.uc)
-Log: Class: RPGAbility extends Object
-Log: Imported: Class LumpysRPG.RPGAbility
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGAbilityDescMenu.uc)
-Log: Class: RPGAbilityDescMenu extends LargeWindow
-Log: Imported: Class LumpysRPG.RPGAbilityDescMenu
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGArtifact.uc)
-Log: Class: RPGArtifact extends Powerups
-Log: Imported: Class LumpysRPG.RPGArtifact
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGArtifactPickup.uc)
-Log: Class: RPGArtifactPickup extends TournamentPickup
-Log: Imported: Class LumpysRPG.RPGArtifactPickup
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGClass.uc)
-Log: Class: RPGClass extends RPGAbility
-Log: Imported: Class LumpysRPG.RPGClass
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGInteraction.uc)
-Log: Class: RPGInteraction extends Interaction
-Log: Imported: Class LumpysRPG.RPGInteraction
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGLinkAttachment.uc)
-Log: Class: RPGLinkAttachment extends LinkAttachment
-Log: Imported: Class LumpysRPG.RPGLinkAttachment
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGLinkFire.uc)
-Log: Class: RPGLinkFire extends LinkFire
-Log: Imported: Class LumpysRPG.RPGLinkFire
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGLinkGun.uc)
-Log: Class: RPGLinkGun extends LinkGun
-Log: Imported: Class LumpysRPG.RPGLinkGun
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGLinkGunPickup.uc)
-Log: Class: RPGLinkGunPickup extends LinkGunPickup
-Log: Imported: Class LumpysRPG.RPGLinkGunPickup
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGLumpyStatMenu.uc)
-Log: Class: RPGLumpyStatMenu extends FloatingWindow
-Log: Imported: Class LumpysRPG.RPGLumpyStatMenu
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGNameMessage.uc)
-Log: Class: RPGNameMessage extends LocalMessage
-Log: Imported: Class LumpysRPG.RPGNameMessage
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGPainterBeamEffect.uc)
-Log: Class: RPGPainterBeamEffect extends PainterBeamEffect
-Log: Imported: Class LumpysRPG.RPGPainterBeamEffect
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGPainterFire.uc)
-Log: Class: RPGPainterFire extends PainterFire
-Log: Imported: Class LumpysRPG.RPGPainterFire
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGPlayerDataObject.uc)
-Log: Class: RPGPlayerDataObject extends Object
-Log: Imported: Class LumpysRPG.RPGPlayerDataObject
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGPlayerLevelsMenu.uc)
-Log: Class: RPGPlayerLevelsMenu extends LargeWindow
-Log: Imported: Class LumpysRPG.RPGPlayerLevelsMenu
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGResetConfirmPage.uc)
-Log: Class: RPGResetConfirmPage extends GUIPage
-Log: Imported: Class LumpysRPG.RPGResetConfirmPage
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGRules.uc)
-Log: Class: RPGRules extends GameRules
-Log: Imported: Class LumpysRPG.RPGRules
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGShockProjectile.uc)
-Log: Class: RPGShockProjectile extends ShockProjectile
-Log: Imported: Class LumpysRPG.RPGShockProjectile
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGShockProjFire.uc)
-Log: Class: RPGShockProjFire extends ShockProjFire
-Log: Imported: Class LumpysRPG.RPGShockProjFire
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGStatsInv.uc)
-Log: Class: RPGStatsInv extends Inventory
-Log: Imported: Class LumpysRPG.RPGStatsInv
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGStatsMenu.uc)
-Log: Class: RPGStatsMenu extends GUIPage
-Log: Imported: Class LumpysRPG.RPGStatsMenu
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGStoreList.uc)
-Log: Class: RPGStoreList extends GUIMultiColumnList
-Log: Imported: Class LumpysRPG.RPGStoreList
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGTabAbilities.uc)
-Log: Class: RPGTabAbilities extends MidGamePanel
-Log: Imported: Class LumpysRPG.RPGTabAbilities
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGTabCharacter.uc)
-Log: Class: RPGTabCharacter extends MidGamePanel
-Log: Imported: Class LumpysRPG.RPGTabCharacter
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGTabStats.uc)
-Log: Class: RPGTabStats extends MidGamePanel
-Log: Imported: Class LumpysRPG.RPGTabStats
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGTabStore.uc)
-Log: Class: RPGTabStore extends MidGamePanel
-Log: Imported: Class LumpysRPG.RPGTabStore
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGTabWelcome.uc)
-Log: Class: RPGTabWelcome extends MidGamePanel
-Log: Imported: Class LumpysRPG.RPGTabWelcome
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGWeapon.uc)
-Log: Class: RPGWeapon extends Weapon
-Log: Imported: Class LumpysRPG.RPGWeapon
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGWeaponLocker.uc)
-Log: Class: RPGWeaponLocker extends WeaponLocker
-Log: Imported: Class LumpysRPG.RPGWeaponLocker
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RPGWeaponPickup.uc)
-Log: Class: RPGWeaponPickup extends UTWeaponPickup
-Log: Imported: Class LumpysRPG.RPGWeaponPickup
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RW_Adrenal.uc)
-Log: Class: RW_Adrenal extends RPGWeapon
-Log: Imported: Class LumpysRPG.RW_Adrenal
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RW_Healing.uc)
-Log: Class: RW_Healing extends RPGWeapon
-Log: Imported: Class LumpysRPG.RW_Healing
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RW_MedicHealing.uc)
-Log: Class: RW_MedicHealing extends RPGWeapon
-Log: Imported: Class LumpysRPG.RW_MedicHealing
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\RW_Rejuvination.uc)
-Log: Class: RW_Rejuvination extends RPGWeapon
-Log: Imported: Class LumpysRPG.RW_Rejuvination
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\STY_AbilityList.uc)
-Log: Class: STY_AbilityList extends GUI2Styles
-Log: Imported: Class LumpysRPG.STY_AbilityList
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\STY_ResetButton.uc)
-Log: Class: STY_ResetButton extends STY2RoundButton
-Log: Imported: Class LumpysRPG.STY_ResetButton
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\VampireMarker.uc)
-Log: Class: VampireMarker extends Actor
-Log: Imported: Class LumpysRPG.VampireMarker
-Log: Parsing AwarenessInteraction
-Log: Parsing RPGInteraction
-Log: Parsing DroneReplicationInfo
-Log: Parsing MutLumpysRPG
-Log: Parsing AdrenalConditionMessage
-Log: Parsing EmptyMessage
-Log: Parsing GainLevelMessage
-Log: Parsing HealedConditionMessage
-Log: Parsing IdentifyMessage
-Log: Parsing LevelUpHUDMessage
-Log: Parsing RPGNameMessage
-Log: Parsing RPGRules
-Log: Parsing LumpysArtifactManager
-Log: Parsing DroneProjEffect
-Log: Parsing DroneProjEffectBlue
-Log: Parsing DroneProjEffectRed
-Log: Parsing FlightEffect
-Log: Parsing FriendlyMonsterEffect
-Log: Parsing LevelUpEffect
-Log: Parsing RPGLinkAttachment
-Log: Parsing DamTypeDronePlasma
-Log: Parsing DamTypeLightningRod
-Log: Parsing DamTypeRetaliation
+Log: Imported: Class LumpysInvasion.FriendlyMonsterController
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPAnimationManager.uc)
+Log: Class: IPAnimationManager extends Object
+Log: Imported: Class LumpysInvasion.IPAnimationManager
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPCollisionTestActor.uc)
+Log: Class: IPCollisionTestActor extends Actor
+Log: Imported: Class LumpysInvasion.IPCollisionTestActor
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPConfigs.uc)
+Log: Class: IPConfigs extends Object
+Log: Imported: Class LumpysInvasion.IPConfigs
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPCopyPaste.uc)
+Log: Class: IPCopyPaste extends Object
+Log: Imported: Class LumpysInvasion.IPCopyPaste
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPCylinderActor.uc)
+Log: Class: IPCylinderActor extends Actor
+Log: Imported: Class LumpysInvasion.IPCylinderActor
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPCylinderFinalBlend.uc)
+Log: Class: IPCylinderFinalBlend extends FinalBlend
+Log: Imported: Class LumpysInvasion.IPCylinderFinalBlend
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPCylinderShader.uc)
+Log: Class: IPCylinderShader extends Shader
+Log: Imported: Class LumpysInvasion.IPCylinderShader
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPDefaultWaves.uc)
+Log: Class: IPDefaultWaves extends Object
+Log: Imported: Class LumpysInvasion.IPDefaultWaves
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPMonsterConfig.uc)
+Log: Class: IPMonsterConfig extends GUICustomPropertyPage
+Log: Imported: Class LumpysInvasion.IPMonsterConfig
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPMonsterIDInv.uc)
+Log: Class: IPMonsterIDInv extends Inventory
+Log: Imported: Class LumpysInvasion.IPMonsterIDInv
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPMonsterReplicationInfo.uc)
+Log: Class: IPMonsterReplicationInfo extends ReplicationInfo
+Log: Imported: Class LumpysInvasion.IPMonsterReplicationInfo
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPMonsterTable.uc)
+Log: Class: IPMonsterTable extends Object
+Log: Imported: Class LumpysInvasion.IPMonsterTable
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPPetAnchor.uc)
+Log: Class: IPPetAnchor extends Actor
+Log: Imported: Class LumpysInvasion.IPPetAnchor
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPProxyReplicationInfo.uc)
+Log: Class: IPProxyReplicationInfo extends PlayerReplicationInfo
+Log: Imported: Class LumpysInvasion.IPProxyReplicationInfo
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPSpinnyMonster.uc)
+Log: Class: IPSpinnyMonster extends Actor
+Log: Imported: Class LumpysInvasion.IPSpinnyMonster
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPWaveConfig.uc)
+Log: Class: IPWaveConfig extends GUICustomPropertyPage
+Log: Imported: Class LumpysInvasion.IPWaveConfig
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasion.uc)
+Log: Class: LumpysInvasion extends Invasion
+Log: Imported: Class LumpysInvasion.LumpysInvasion
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionFakeFriendlyMonsterReplicationInfo.uc)
+Log: Class: LumpysInvasionFakeFriendlyMonsterReplicationInfo extends PlayerReplicationInfo
+Log: Imported: Class LumpysInvasion.LumpysInvasionFakeFriendlyMonsterReplicationInfo
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionFriendlyMonsterReplicationInfo.uc)
+Log: Class: LumpysInvasionFriendlyMonsterReplicationInfo extends PlayerReplicationInfo
+Log: Imported: Class LumpysInvasion.LumpysInvasionFriendlyMonsterReplicationInfo
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionGameReplicationInfo.uc)
+Log: Class: LumpysInvasionGameReplicationInfo extends InvasionGameReplicationInfo
+Log: Imported: Class LumpysInvasion.LumpysInvasionGameReplicationInfo
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionHUD.uc)
+Log: Class: LumpysInvasionHUD extends HUDInvasion
+Log: Imported: Class LumpysInvasion.LumpysInvasionHUD
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionMutator.uc)
+Log: Class: LumpysInvasionMutator extends DMMutator
+Log: Imported: Class LumpysInvasion.LumpysInvasionMutator
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionWaveHandler.uc)
+Log: Class: LumpysInvasionWaveHandler extends Actor
+Log: Imported: Class LumpysInvasion.LumpysInvasionWaveHandler
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionWaveMessage.uc)
+Log: Class: LumpysInvasionWaveMessage extends CriticalEventPlus
+Log: Imported: Class LumpysInvasion.LumpysInvasionWaveMessage
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\MapListLumpysInvasion.uc)
+Log: Class: MapListLumpysInvasion extends MapList
+Log: Imported: Class LumpysInvasion.MapListLumpysInvasion
+Log: Parsing LumpysInvasionGameReplicationInfo
+Log: Parsing IPProxyReplicationInfo
+Log: Parsing LumpysInvasionFakeFriendlyMonsterReplicationInfo
+Log: Parsing LumpysInvasionFriendlyMonsterReplicationInfo
+Log: Parsing IPMonsterReplicationInfo
+Log: Parsing LumpysInvasionMutator
+Log: Parsing LumpysInvasion
+Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\LumpysInvasion.uc(21) : Warning, 'WaveMonsterClass' obscures 'WaveMonsterClass' defined in base class 'Invasion'.
+Log: Parsing LumpysInvasionWaveMessage
+Log: Parsing MapListLumpysInvasion
 Log: Parsing FriendlyMonsterController
-Log: Parsing RPGArtifact
-Log: Parsing ArtifactFlight
-Log: Parsing ArtifactInvulnerability
-Log: Parsing ArtifactLightningRod
-Log: Parsing ArtifactMagicWeaponMaker
-Log: Parsing ArtifactMedicWeaponMaker
-Log: Parsing ArtifactSuperMedicWeaponMaker
-Log: Parsing ArtifactMonsterSummon
-Log: Parsing ArtifactSuperMagicWeaponMaker
-Log: Parsing ArtifactTripleDamage
-Log: Parsing RPGLinkGun
-Log: Parsing FakeMonsterWeapon
-Log:    Deferred parsing RPGWeapon.....parsing dependent class RPGStatsInv
-Log:    Deferred parsing RPGStatsInv.....parsing dependent class RPGPlayerDataObject
-Log: Parsing RPGPlayerDataObject
-Log: Parsing RPGStatsInv
-Log: Parsing RPGWeapon
-Log: Parsing RW_Adrenal
-Log: Parsing RW_Healing
-Log: Parsing RW_MedicHealing
-Log: Parsing RW_Rejuvination
-Log: Parsing AmmoRegenInv
-Log: Parsing FriendlyMonsterKillMarker
-Log: Parsing GhostInv
-Log: Parsing RPGLinkGunPickup
-Log: Parsing RPGWeaponPickup
-Log: Parsing RPGArtifactPickup
-Log: Parsing ArtifactFlightPickup
-Log: Parsing ArtifactInvulnerabilityPickup
-Log: Parsing ArtifactLightningRodPickup
-Log: Parsing ArtifactMagicWeaponMakerPickup
-Log: Parsing ArtifactMonsterSummonPickup
-Log: Parsing ArtifactSuperMagicWeaponMakerPickup
-Log: Parsing ArtifactTripleDamagePickup
-Log: Parsing ExperiencePickup
-Log: Parsing RPGWeaponLocker
-Log: Parsing PickupEXPShard
-Log: Parsing HudCDeathmatchHelper
-Log: Parsing RPGShockProjectile
-Log: Parsing DroneProj
-Log: Parsing RPGPainterBeamEffect
-Log: Parsing ColoredTrail
-Log: Parsing DroneHealBeam
-Log: Parsing AwarenessEnemyList
-Log: Parsing CredBonkTimer
-Log: Parsing LumpyDrone
-Log: Parsing MedicDrone
-Log: Parsing VampireMarker
-Log: Parsing RPGLinkFire
-Log: Parsing RPGShockProjFire
-Log: Parsing RPGPainterFire
-Log: Parsing RPGTabAbilities
-Log: Parsing RPGTabCharacter
-Log: Parsing RPGTabStats
-Log: Parsing RPGTabStore
-Log: Parsing RPGTabWelcome
-Log: Parsing RPGAbilityDescMenu
-Log: Parsing RPGPlayerLevelsMenu
-Log: Parsing RPGLumpyStatMenu
-Log: Parsing RPGResetConfirmPage
-Log:    Deferred parsing RPGStatsMenu.....parsing dependent class RPGStatsInv
-Log: Parsing RPGStatsMenu
-Log: Parsing RPGStoreList
-Log: Parsing STY_ResetButton
-Log: Parsing STY_AbilityList
-Log: Parsing AbilityListFont
-Log: Parsing LumpysRPGKeyBinds
-Log: Parsing RPGAbility
-Log: Parsing AbilityAmmoRegen
-Log: Parsing AbilityAwareness
-Log: Parsing AbilityDrones
-Log: Parsing AbilityFeatherFall
-Log: Parsing AbilityVampire
-Log: Parsing AbilityGeneralVampire
-Log: Parsing AbilityHermesSandals
-Log: Parsing AbilityInertialDampener
-Log: Parsing AbilityJumpZ
-Log: Parsing AbilityShieldUpgrade
-Log: Parsing AbilitySpeed
-Log: Parsing AbilitySpeedSwitcher
-Log: Parsing CA_AdrenalineArtifacts
-Log: Parsing CA_MedicArtifacts
-Log: Parsing CA_MedicSprites
-Log: Parsing RPGClass
-Log: Parsing ClassAdrenalineMaster
-Log: Parsing ClassMedicMaster
-Log: Parsing ClassWeaponMaster
-Log: Parsing Colors
-Log: Compiling AwarenessInteraction
-Log: Compiling RPGInteraction
-Log: Compiling DroneReplicationInfo
-Log: Compiling MutLumpysRPG
-Log: Compiling AdrenalConditionMessage
-Log: Compiling EmptyMessage
-Log: Compiling GainLevelMessage
-Log: Compiling HealedConditionMessage
-Log: Compiling IdentifyMessage
-Log: Compiling LevelUpHUDMessage
-Log: Compiling RPGNameMessage
-Log: Compiling RPGRules
-Log: Compiling LumpysArtifactManager
-Log: Compiling DroneProjEffect
-Log: Compiling DroneProjEffectBlue
-Log: Compiling DroneProjEffectRed
-Log: Compiling FlightEffect
-Log: Compiling FriendlyMonsterEffect
-Log: Compiling LevelUpEffect
-Log: Compiling RPGLinkAttachment
-Log: Compiling DamTypeDronePlasma
-Log: Compiling DamTypeLightningRod
-Log: Compiling DamTypeRetaliation
+Log: Parsing IPMonsterIDInv
+Log: Parsing LumpysInvasionHUD
+Log: Parsing IPCollisionTestActor
+Log: Parsing IPCylinderActor
+Log: Parsing IPPetAnchor
+Log: Parsing IPSpinnyMonster
+Log: Parsing LumpysInvasionWaveHandler
+Log: Parsing IPCylinderShader
+Log: Parsing IPCylinderFinalBlend
+Log: Parsing IPMonsterConfig
+Log: Parsing IPWaveConfig
+Log: Parsing IPAnimationManager
+Log: Parsing IPConfigs
+Log: Parsing IPCopyPaste
+Log: Parsing IPDefaultWaves
+Log: Parsing IPMonsterTable
+Log: Compiling LumpysInvasionGameReplicationInfo
+Log: Compiling IPProxyReplicationInfo
+Log: Compiling LumpysInvasionFakeFriendlyMonsterReplicationInfo
+Log: Compiling LumpysInvasionFriendlyMonsterReplicationInfo
+Log: Compiling IPMonsterReplicationInfo
+Log: Compiling LumpysInvasionMutator
+Log: Compiling LumpysInvasion
+Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\LumpysInvasion.uc(454) : Warning, 'M' : unreferenced local variable
+Log: Compiling LumpysInvasionWaveMessage
+Log: Compiling MapListLumpysInvasion
 Log: Compiling FriendlyMonsterController
-Log: Compiling RPGArtifact
-Log: Compiling ArtifactFlight
-Log: Compiling ArtifactInvulnerability
-Log: Compiling ArtifactLightningRod
-Log: Compiling ArtifactMagicWeaponMaker
-Log: Compiling ArtifactMedicWeaponMaker
-Log: Compiling ArtifactSuperMedicWeaponMaker
-Log: Compiling ArtifactMonsterSummon
-Log: Compiling ArtifactSuperMagicWeaponMaker
-Log: Compiling ArtifactTripleDamage
-Log: Compiling RPGLinkGun
-Log: Compiling FakeMonsterWeapon
-Log: Compiling RPGWeapon
-Log: Compiling RW_Adrenal
-Log: Compiling RW_Healing
-Log: Compiling RW_MedicHealing
-Log: Compiling RW_Rejuvination
-Log: Compiling AmmoRegenInv
-Log: Compiling FriendlyMonsterKillMarker
-Log: Compiling GhostInv
-Log: Compiling RPGStatsInv
-Log: Compiling RPGLinkGunPickup
-Log: Compiling RPGWeaponPickup
-Log: Compiling RPGArtifactPickup
-Log: Compiling ArtifactFlightPickup
-Log: Compiling ArtifactInvulnerabilityPickup
-Log: Compiling ArtifactLightningRodPickup
-Log: Compiling ArtifactMagicWeaponMakerPickup
-Log: Compiling ArtifactMonsterSummonPickup
-Log: Compiling ArtifactSuperMagicWeaponMakerPickup
-Log: Compiling ArtifactTripleDamagePickup
-Log: Compiling ExperiencePickup
-Log: Compiling RPGWeaponLocker
-Log: Compiling PickupEXPShard
-Log: Compiling HudCDeathmatchHelper
-Log: Compiling RPGShockProjectile
-Log: Compiling DroneProj
-Log: Compiling RPGPainterBeamEffect
-Log: Compiling ColoredTrail
-Log: Compiling DroneHealBeam
-Log: Compiling AwarenessEnemyList
-Log: Compiling CredBonkTimer
-Log: Compiling LumpyDrone
-Log: Compiling MedicDrone
-Log: Compiling VampireMarker
-Log: Compiling RPGLinkFire
-Log: Compiling RPGShockProjFire
-Log: Compiling RPGPainterFire
-Log: Compiling RPGTabAbilities
-Log: Compiling RPGTabCharacter
-Log: Compiling RPGTabStats
-Log: Compiling RPGTabStore
-Log: Compiling RPGTabWelcome
-Log: Compiling RPGAbilityDescMenu
-Log: Compiling RPGPlayerLevelsMenu
-Log: Compiling RPGLumpyStatMenu
-Log: Compiling RPGResetConfirmPage
-Log: Compiling RPGStatsMenu
-Log: Compiling RPGStoreList
-Log: Compiling STY_ResetButton
-Log: Compiling STY_AbilityList
-Log: Compiling AbilityListFont
-Log: Compiling LumpysRPGKeyBinds
-Log: Compiling RPGAbility
-Log: Compiling AbilityAmmoRegen
-Log: Compiling AbilityAwareness
-Log: Compiling AbilityDrones
-Log: Compiling AbilityFeatherFall
-Log: Compiling AbilityVampire
-Log: Compiling AbilityGeneralVampire
-Log: Compiling AbilityHermesSandals
-Log: Compiling AbilityInertialDampener
-Log: Compiling AbilityJumpZ
-Log: Compiling AbilityShieldUpgrade
-Log: Compiling AbilitySpeed
-Log: Compiling AbilitySpeedSwitcher
-Log: Compiling CA_AdrenalineArtifacts
-Log: Compiling CA_MedicArtifacts
-Log: Compiling CA_MedicSprites
-Log: Compiling RPGClass
-Log: Compiling ClassAdrenalineMaster
-Log: Compiling ClassMedicMaster
-Log: Compiling ClassWeaponMaster
-Log: Compiling Colors
-Log: Compiling RPGPlayerDataObject
-Log: Importing Defaults for AwarenessInteraction
-Log: Importing Defaults for RPGInteraction
-Log: Importing Defaults for DroneReplicationInfo
-Log: Importing Defaults for MutLumpysRPG
-Log: Importing Defaults for AdrenalConditionMessage
-Log: Importing Defaults for EmptyMessage
-Log: Importing Defaults for GainLevelMessage
-Log: Importing Defaults for HealedConditionMessage
-Log: Importing Defaults for IdentifyMessage
-Log: Importing Defaults for LevelUpHUDMessage
-Log: Importing Defaults for RPGNameMessage
-Log: Importing Defaults for RPGRules
-Log: Importing Defaults for LumpysArtifactManager
-Log: Importing Defaults for DroneProjEffect
-Log: Importing Defaults for DroneProjEffectBlue
-Log: Importing Defaults for DroneProjEffectRed
-Log: Importing Defaults for FlightEffect
-Log: Importing Defaults for FriendlyMonsterEffect
-Log: Importing Defaults for LevelUpEffect
-Log: Importing Defaults for RPGLinkAttachment
-Log: Importing Defaults for DamTypeDronePlasma
-Log: Importing Defaults for DamTypeLightningRod
-Log: Importing Defaults for DamTypeRetaliation
+Log: Compiling IPMonsterIDInv
+Log: Compiling LumpysInvasionHUD
+Log: Compiling IPCollisionTestActor
+Log: Compiling IPCylinderActor
+Log: Compiling IPPetAnchor
+Log: Compiling IPSpinnyMonster
+Log: Compiling LumpysInvasionWaveHandler
+Log: Compiling IPCylinderShader
+Log: Compiling IPCylinderFinalBlend
+Log: Compiling IPMonsterConfig
+Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\IPMonsterConfig.uc(107) : Warning, 'X' : unreferenced local variable
+Log: Compiling IPWaveConfig
+Log: Compiling IPAnimationManager
+Log: Compiling IPConfigs
+Log: Compiling IPCopyPaste
+Log: Compiling IPDefaultWaves
+Log: Compiling IPMonsterTable
+Log: Importing Defaults for LumpysInvasionGameReplicationInfo
+Log: Importing Defaults for IPProxyReplicationInfo
+Log: Importing Defaults for LumpysInvasionFakeFriendlyMonsterReplicationInfo
+Log: Importing Defaults for LumpysInvasionFriendlyMonsterReplicationInfo
+Log: Importing Defaults for IPMonsterReplicationInfo
+Log: Importing Defaults for LumpysInvasionMutator
+Log: Importing Defaults for LumpysInvasion
+Log: Importing Defaults for LumpysInvasionWaveMessage
+Log: Importing Defaults for MapListLumpysInvasion
 Log: Importing Defaults for FriendlyMonsterController
-Log: Importing Defaults for RPGArtifact
-Log: Importing Defaults for ArtifactFlight
-Log: Importing Defaults for ArtifactInvulnerability
-Log: Importing Defaults for ArtifactLightningRod
-Log: Importing Defaults for ArtifactMagicWeaponMaker
-Log: Importing Defaults for ArtifactMedicWeaponMaker
-Log: Importing Defaults for ArtifactSuperMedicWeaponMaker
-Log: Importing Defaults for ArtifactMonsterSummon
-Log: Importing Defaults for ArtifactSuperMagicWeaponMaker
-Log: Importing Defaults for ArtifactTripleDamage
-Log: Importing Defaults for RPGLinkGun
-Log: Importing Defaults for FakeMonsterWeapon
-Log: Importing Defaults for RPGWeapon
-Log: Importing Defaults for RW_Adrenal
-Log: Importing Defaults for RW_Healing
-Log: Importing Defaults for RW_MedicHealing
-Log: Importing Defaults for RW_Rejuvination
-Log: Importing Defaults for AmmoRegenInv
-Log: Importing Defaults for FriendlyMonsterKillMarker
-Log: Importing Defaults for GhostInv
-Log: Importing Defaults for RPGStatsInv
-Log: Importing Defaults for RPGLinkGunPickup
-Log: Importing Defaults for RPGWeaponPickup
-Log: Importing Defaults for RPGArtifactPickup
-Log: Importing Defaults for ArtifactFlightPickup
-Log: Importing Defaults for ArtifactInvulnerabilityPickup
-Log: Importing Defaults for ArtifactLightningRodPickup
-Log: Importing Defaults for ArtifactMagicWeaponMakerPickup
-Log: Importing Defaults for ArtifactMonsterSummonPickup
-Log: Importing Defaults for ArtifactSuperMagicWeaponMakerPickup
-Log: Importing Defaults for ArtifactTripleDamagePickup
-Log: Importing Defaults for ExperiencePickup
-Log: Importing Defaults for RPGWeaponLocker
-Log: Importing Defaults for PickupEXPShard
-Log: Importing Defaults for HudCDeathmatchHelper
-Log: Importing Defaults for RPGShockProjectile
-Log: Importing Defaults for DroneProj
-Log: Importing Defaults for RPGPainterBeamEffect
-Log: Importing Defaults for ColoredTrail
-Log: Importing Defaults for DroneHealBeam
-Log: Importing Defaults for AwarenessEnemyList
-Log: Importing Defaults for CredBonkTimer
-Log: Importing Defaults for LumpyDrone
-Log: Importing Defaults for MedicDrone
-Log: Importing Defaults for VampireMarker
-Log: Importing Defaults for RPGLinkFire
-Log: Importing Defaults for RPGShockProjFire
-Log: Importing Defaults for RPGPainterFire
-Log: Importing Defaults for RPGTabAbilities
-Log: Importing Defaults for RPGTabCharacter
-Log: Importing Defaults for RPGTabStats
-Log: Importing Defaults for RPGTabStore
-Log: Importing Defaults for RPGTabWelcome
-Log: Importing Defaults for RPGAbilityDescMenu
-Log: Importing Defaults for RPGPlayerLevelsMenu
-Log: Importing Defaults for RPGLumpyStatMenu
-Log: Importing Defaults for RPGResetConfirmPage
-Log: Importing Defaults for RPGStatsMenu
-Log: Importing Defaults for RPGStoreList
-Log: Importing Defaults for STY_ResetButton
-Log: Importing Defaults for STY_AbilityList
-Log: ... deferring
-Log: Importing Defaults for AbilityListFont
-Log: Importing Defaults for LumpysRPGKeyBinds
-Log: Importing Defaults for RPGAbility
-Log: Importing Defaults for AbilityAmmoRegen
-Log: Importing Defaults for AbilityAwareness
-Log: Importing Defaults for AbilityDrones
-Log: Importing Defaults for AbilityFeatherFall
-Log: Importing Defaults for AbilityVampire
-Log: Importing Defaults for AbilityGeneralVampire
-Log: Importing Defaults for AbilityHermesSandals
-Log: Importing Defaults for AbilityInertialDampener
-Log: Importing Defaults for AbilityJumpZ
-Log: Importing Defaults for AbilityShieldUpgrade
-Log: Importing Defaults for AbilitySpeed
-Log: Importing Defaults for AbilitySpeedSwitcher
-Log: Importing Defaults for CA_AdrenalineArtifacts
-Log: Importing Defaults for CA_MedicArtifacts
-Log: Importing Defaults for CA_MedicSprites
-Log: Importing Defaults for RPGClass
-Log: Importing Defaults for ClassAdrenalineMaster
-Log: Importing Defaults for ClassMedicMaster
-Log: Importing Defaults for ClassWeaponMaster
-Log: Importing Defaults for Colors
-Log: Importing Defaults for RPGPlayerDataObject
-Log: Importing Defaults for STY_AbilityList
-Log: Success: Compiled 22641 line(s), 2193 statement(s).
+Log: Importing Defaults for IPMonsterIDInv
+Log: Importing Defaults for LumpysInvasionHUD
+Log: Importing Defaults for IPCollisionTestActor
+Log: Importing Defaults for IPCylinderActor
+Log: Importing Defaults for IPPetAnchor
+Log: Importing Defaults for IPSpinnyMonster
+Log: Importing Defaults for LumpysInvasionWaveHandler
+Log: Importing Defaults for IPCylinderShader
+Log: Importing Defaults for IPCylinderFinalBlend
+Log: Importing Defaults for IPMonsterConfig
+Log: Importing Defaults for IPWaveConfig
+Log: Importing Defaults for IPAnimationManager
+Log: Importing Defaults for IPConfigs
+Log: Importing Defaults for IPCopyPaste
+Log: Importing Defaults for IPDefaultWaves
+Log: Importing Defaults for IPMonsterTable
+Log: Success: Compiled 9135 line(s), 835 statement(s).
 
-Log: Save=47.058275
-Log: Moving 'Save.tmp' to 'LumpysRPG.u'
+Log: Save=25.808845
+Log: Moving 'Save.tmp' to 'LumpysInvasion.u'
+Heading: -------------------------LumpysRPG - Release--------------------------
 Heading: ------------------------LumpyJumping - Release------------------------
 Heading: --------------------------tK_BaseW - Release--------------------------
 Heading: -----------------------tk_FHIWeapons - Release------------------------
@@ -721,27 +221,8 @@ Heading: ------------------------tk_MagicWand - Release------------------------
 Heading: --------------------------tk_AK47 - Release---------------------------
 Heading: -------------------------tk_LilLady - Release-------------------------
 Heading: ---------------------tk_HolyHandGrenade - Release---------------------
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Bad UStrProperty destruction: StrProperty LumpysRPG.RPGAbility.AbilityName
-Log: Mutator exported successfully: LumpysRPG.MutLumpysRPG
-Log: Success - 0 error(s), 0 warning(s)
+Log: Game exported successfully: LumpysInvasion.LumpysInvasion
+Log: Success - 0 error(s), 3 warning(s)
 Exit: Preparing to exit.
 Log: Purging garbage
 Log: Unbound to Core.dll
@@ -754,11 +235,11 @@ Log: Unbound to UWeb.dll
 Log: Unbound to XGame.dll
 Log: Unbound to XInterface.dll
 Log: Unbound to Onslaught.dll
-Log: Garbage: objects: 84705->0; refs: 0
+Log: Garbage: objects: 84338->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 135 MByte 679 KByte 539 Bytes from HD took 0.486999 seconds (0.392999 reading, 0.094000 seeking).
-Log: FileManager: 0.111000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 134 MByte 921 KByte 698 Bytes from HD took 0.507998 seconds (0.412998 reading, 0.095000 seeking).
+Log: FileManager: 0.092000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/31/24 01:52:32
+Uninitialized: Log file closed, 12/31/24 23:14:09

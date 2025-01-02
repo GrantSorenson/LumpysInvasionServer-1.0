@@ -89,6 +89,7 @@ var() Automated GUIButton b_Copy; //copy drawscale,collision height + radius, pr
 var() Automated GUIButton b_SaveUnique;
 
 var() Automated moComboBox currentMonster;
+var() Automated moEditBox currentMonsterSkin;
 var() Automated moComboBox currentAnimList;
 
 var() Automated GUIGFXButton b_UArrow;
@@ -103,7 +104,7 @@ var() Automated GUIGFXButton b_Pause;
 function InitComponent(GUIController MyController, GUIComponent MyOwner)
 {
 	local rotator R;
-	local int i;
+	local int i,x;
 
 	Super.InitComponent(MyController, MyOwner);
 
@@ -212,11 +213,13 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 	currentAnimList.MyLabel.FontScale = FNS_Small;
 	currentAnimList.MyComboBox.Edit.FontScale = FNS_Small;
 
-	//update available monsters
+	//update available monsters and skins
 	for(i=0;i<class'IPMonsterTable'.default.MonsterTable.Length;i++)
 	{
 		currentMonster.AddItem(class'IPMonsterTable'.default.MonsterTable[i].MonsterName);
 	}
+
+
 
 	//update current monster and set edit mode
 	bEditMode = false;
@@ -320,6 +323,7 @@ function UpdateMonster()
 		currentbRandomHealth.SetComponentValue(class'IPMonsterTable'.default.MonsterTable[ActiveMonster].bRandomHealth);
 		currentbRandomSpeed.SetComponentValue(class'IPMonsterTable'.default.MonsterTable[ActiveMonster].bRandomSpeed);
 		currentbRandomSize.SetComponentValue(class'IPMonsterTable'.default.MonsterTable[ActiveMonster].bRandomSize);
+		currentMonsterSkin.SetText(string(M.default.Skins[0]));
 	}
 
 	if(M  != None)
@@ -328,7 +332,7 @@ function UpdateMonster()
 		if(M.default.bUseCylinderCollision == false)
 		{
 			b_EditMode.DisableMe();
-						b_EditMode.EnableMe();
+			b_EditMode.EnableMe();
 
 		}
 		else
@@ -422,6 +426,7 @@ function ClearAllData()
 	currentbSetup.SetComponentValue(True);
 	currentModelFOV.SetComponentValue(0,true);
 	currentModelRotation.SetComponentValue(0,true);
+	currentMonsterSkin.SetText("");
 
 	currentAnimList.DisableMe();
 	currentModelRotation.DisableMe();
@@ -452,6 +457,7 @@ function ClearAllData()
 	currentbRandomSize.DisableMe();
 	currentbSetup.DisableMe();
 	currentModelFOV.DisableMe();
+	currentMonsterSkin.DisableMe();
 
 	b_OK.DisableMe();
 	b_EditMode.DisableMe();
@@ -855,10 +861,6 @@ function InternalOnChange(GUIComponent Sender)
 		PlayNewAnim();
 	}
 
-	if(Sender == newMonsterName)
-	{
-		
-	}
 }
 
 function name StringToName(string str)
@@ -902,6 +904,7 @@ function SetAvailableConfigs()
 	currentbSetup.EnableMe();
 	currentModelFOV.EnableMe();
 	currentModelRotation.EnableMe();
+	currentMonsterSkin.EnableMe();
 	b_Random.EnableMe();
 	b_defaults.EnableMe();
 	b_EditMode.EnableMe();
@@ -958,6 +961,8 @@ function bool SetDefaultMonster(GUIComponent Sender)
 	currentbRandomHealth.SetComponentValue(False);
 	currentbRandomSpeed.SetComponentValue(False);
 	currentbRandomSize.SetComponentValue(False);
+	currentMonsterSkin.SetText(string(M.default.Skins[0]));
+
 
 	return true;
 }
@@ -977,6 +982,7 @@ function bool SaveMonster(GUIComponent Sender)
 	class'IPMonsterTable'.default.MonsterTable[ActiveMonster].bRandomHealth = currentbRandomHealth.IsChecked();
 	class'IPMonsterTable'.default.MonsterTable[ActiveMonster].bRandomSpeed = currentbRandomSpeed.IsChecked();
 	class'IPMonsterTable'.default.MonsterTable[ActiveMonster].bRandomSize = currentbRandomSize.IsChecked();
+	class'IPMonsterTable'.default.MonsterTable[ActiveMonster].CurrentSkin = currentMonsterSkin.GetText();
 
 	if(bEditMode || !class'IPMonsterTable'.default.MonsterTable[ActiveMonster].bSetup)
 	{
@@ -1074,6 +1080,8 @@ function bool SaveUniqueMonster(GUIComponent Sender)
 	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].bRandomHealth = currentbRandomHealth.IsChecked();
 	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].bRandomSpeed = currentbRandomSpeed.IsChecked();
 	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].bRandomSize = currentbRandomSize.IsChecked();
+	class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].CurrentSkin = currentMonsterSkin.GetText();
+
 
 	if(bEditMode || !class'IPMonsterTable'.default.MonsterTable[class'IPMonsterTable'.default.MonsterTable.length-1].bSetup)
 	{
@@ -1476,6 +1484,17 @@ defaultproperties
         Caption="Monster"
     end object
     currentMonster=moComboBox'IPMonsterConfig.cMonster'
+
+	begin object name=cMonsterSkin class=moEditBox
+		WinWidth=0.30000
+		WinHeight=0.030000
+		WinLeft=0.323259
+		WinTop=0.595040
+        Caption="Monster Skin"
+		OnChange=IPMonsterConfig.InternalOnChange
+    end object
+    currentMonsterSkin=moEditBox'IPMonsterConfig.cMonsterSkin'
+
 
     begin object name=c_animlist class=moComboBox
         WinWidth=0.161036
