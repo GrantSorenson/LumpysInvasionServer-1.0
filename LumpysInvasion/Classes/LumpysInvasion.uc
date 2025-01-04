@@ -34,6 +34,17 @@ var() config string CustomGameTypePrefix;
 var() config bool bWaveTimeLimit;
 var() config bool bWaveMonsterLimit;
 var() int WaveNameDuration;
+var() array<string> WaveBossID;
+var() float BossTimeLimit;
+var() int OverTimeDamage;
+
+var() bool bBossWave; //is this a boss wave that is in progress
+var() bool bBossActive; //true when boss has spawned
+var() bool bFallback;	//attempting to spawn fallback boss
+var() float FallBackTimer;
+var() bool bIgnoreFallback; //if one boss has spawned, dont fallback if others fail
+var() bool bInfiniteBossTime;
+var() float LastBossSpawnTime;
 
 struct WaveMonsterInfo
 {
@@ -131,26 +142,6 @@ function Actor GetMonsterTarget()
 	}
 }
 
-function ForceNextWave()
-{
-	local Monster M;
-
-	foreach DynamicActors(class'Monster', M)
-	{
-		if(M != None && M.Health > 0 && M.Controller != None)
-		{
-			if(!M.Controller.IsA('PetController') && !M.Controller.IsA('FriendlyMonsterController') )
-			{
-				M.KilledBy( M );
-			}
-		}
-	}
-
-	bWaveInProgress = false;
-	WaveCountDown = 15;
-	WaveNum++;
-}
-
 function UpdatePlayerGRI()
 {
 	local Controller C;
@@ -218,6 +209,471 @@ event PreBeginPlay()
     GameReplicationInfo.bNoTeamChanges = true;
 }
 
+function bool MonsterIsBoss(Pawn P)
+{
+	local Inventory Inv;
+
+	if(P != None)
+	{
+		Inv = P.FindInventoryType(class'IPMonsterIDInv');
+		if(IPMonsterIDInv(Inv) != None && IPMonsterIDInv(Inv).bBoss)
+		{
+			return true;
+		}
+	}
+
+	return false;
+}
+
+function float GetBossDamage(Monster M)
+{
+	local int i;
+	local float DamageScale;
+	local string MonsterName;
+
+	MonsterName = "None";
+	DamageScale = 1;
+
+	for(i=0;i<class'IPMonsterTable'.default.MonsterTable.Length;i++ )
+	{
+		if( class'IPMonsterTable'.default.MonsterTable[i].MonsterClassName == string(M.Class) )
+		{
+			MonsterName = class'IPMonsterTable'.default.MonsterTable[i].MonsterName;
+			break;
+		}
+	}
+
+	if(MonsterName != "None")
+	{
+		for(i=0;i<class'IPConfigs'.default.Bosses.Length;i++ )
+		{
+			if( class'IPConfigs'.default.Bosses[i].BossMonsterName == MonsterName )
+			{
+				DamageScale = class'IPConfigs'.default.Bosses[i].BossDamageMultiplier;
+				break;
+			}
+		}
+	}
+
+	return DamageScale;
+}
+
+function bool PreventDeath(Pawn Killed, Controller Killer, class<DamageType> damageType, vector HitLocation)
+{
+	local PlayerReplicationInfo PRI;
+
+    if ( GameRulesModifiers != None && GameRulesModifiers.PreventDeath(Killed,Killer, damageType,HitLocation))
+    {
+		return true;
+	}
+
+	if(Monster(Killed) != None)
+	{
+		if(MonsterIsBoss(Monster(Killed)))
+		{
+			PRI = GetBossReplicationInfo(Monster(Killed));
+			if(PRI != None)
+			{
+				Level.Game.BroadcastLocalizedMessage(class'IPBossMessage', 1,PRI,,Killed);
+			}
+		}
+
+		if(Killed.PlayerReplicationInfo != None)
+		{
+			if(LumpysInvasionFriendlyMonsterReplicationInfo(Killed.PlayerReplicationInfo) != None)
+			{
+				if(!LumpysInvasionFriendlyMonsterReplicationInfo(Killed.PlayerReplicationInfo).bMinion)
+				{
+					Level.Game.BroadcastLocalizedMessage(class'IPMessage', 1,LumpysInvasionFriendlyMonsterReplicationInfo(Killed.PlayerReplicationInfo).PRI,,Killed);
+				}
+			}
+			else
+			{
+				Level.Game.BroadcastLocalizedMessage(class'IPMessage', 1,Monster(Killed).PlayerReplicationInfo,,Killed);
+			}
+		}
+
+	}
+
+    return false;
+}
+
+function BossKilled()
+{
+	bBossActive = false;
+	NumKilledMonsters++;
+	CheckEndBossWave();
+}
+
+function CheckEndBossWave()
+{
+	local Monster M;
+	local bool bFoundBoss;
+
+	bFoundBoss = false;
+
+	if(WaveBossID.Length <= 0) //all bosses have spawned
+	{
+		foreach DynamicActors(class'Monster', M)
+		{
+			if(M != None && M.Health > 0)
+			{
+				if(MonsterIsBoss(M))
+				{
+					//a boss is still in play
+					 bFoundBoss = true;
+					 bBossActive = true;
+				}
+			}
+		}
+	}
+	else
+	{
+		//boss waiting to spawn
+		bFoundBoss = true;
+	}
+
+	if(!bFoundBoss)
+	{
+		bBossActive = false;
+		LumpysInvasionGameReplicationInfo(GameReplicationInfo).bBossEncounter = false;
+		bWaveInProgress = false;
+		bBossWave = false;
+		bInfiniteBossTime = false;
+		WaveCountDown = 15;
+		WaveNum++;
+	}
+}
+
+function NewWave()
+{
+	//update new wave info, moved to here so invasioncommands etc.. also reset this info from SetupWave
+	bBossWave = false;
+	bBossActive = false;
+	bInfiniteBossTime = false;
+	LumpysInvasionGameReplicationInfo(GameReplicationInfo).bBossEncounter = false;
+}
+
+function OverTime()
+{
+	local Controller C;
+
+	if(OverTimeDamage <= 0)
+	{
+		return;
+	}
+
+	for ( C = Level.ControllerList; C != None; C = C.NextController )
+	{
+		if(C != None && C.Pawn != None && C.Pawn.Health > 0 && (FriendlyMonsterController(C) != None || PlayerController(C) != None))
+		{
+			if(C.bGodMode && Level.Netmode != NM_Standalone)
+			{
+				C.bGodMode = false;
+			}
+
+			C.Pawn.TakeDamage(OverTimeDamage, C.Pawn, C.Pawn.Location, Vect(0,0,0), class'IPBossDamType');
+		}
+	}
+}
+
+function bool ShouldEndBossWave()
+{
+	return false;
+}
+
+function ForceNextWave()
+{
+	local Monster M;
+
+	foreach DynamicActors(class'Monster', M)
+	{
+		if(M != None && M.Health > 0 && M.Controller != None)
+		{
+			if(!M.Controller.IsA('PetController') && !M.Controller.IsA('FriendlyMonsterController') )
+			{
+				M.KilledBy( M );
+			}
+		}
+	}
+
+	NewWave();
+	bWaveInProgress = false;
+	WaveCountDown = 15;
+	WaveNum++;
+}
+
+function bool ShouldSummonBoss()
+{
+	local Monster M;
+
+	foreach DynamicActors(class'Monster', M)
+	{
+		if(M != None && M.Health > 0)
+		{
+			if(MonsterIsBoss(M))
+			{
+				return false;
+			}
+		}
+	}
+
+	return true;
+}
+
+function SetUpBosses()
+{
+	WaveBossID.Remove(0,WaveBossID.Length);
+	if(class'IPConfigs'.default.Waves[WaveNum].BossID != "")
+	{
+		if(InStr(class'IPConfigs'.default.Waves[WaveNum].BossID, ",") != -1)
+		{
+			Split(class'IPConfigs'.default.Waves[WaveNum].BossID, ",", WaveBossID);
+		}
+		else
+		{
+			WaveBossID.Insert(0,1);
+			WaveBossID[0] = class'IPConfigs'.default.Waves[WaveNum].BossID;
+		}
+	}
+}
+
+function SpawnBoss(int TempBossID)
+{
+	local class <Monster> BossClass;
+	local int FallbackBossID;
+	local int BossNum;
+	local int i;
+	local NavigationPoint StartSpot; //spawn location
+	local Monster NewMonster; //the newly spawned monster
+    local Controller C;
+    local Sound WarnSound;
+    local Inventory Inv;
+    local IPBossReplicationInfo BRI;
+    local string BossNameLeft, BossNameRight, BossName;
+
+	//get the bosses Id
+	FallbackBossID = class'IPConfigs'.default.Waves[WaveNum].FallbackBossID;
+
+	if(!bFallback)
+	{
+		BossClass = GetBossClass(TempBossID, BossNum);
+	}
+	else
+	{
+		BossClass = GetBossClass(FallbackBossID, BossNum);
+	}
+
+	//spawn boss
+	if(BossClass != None)
+	{
+	    StartSpot = FindPlayerStart(None,0, string(BossClass));
+		//if can't find a playerstart then stop.
+		if ( StartSpot == None )
+		{
+			log("Cannot find valid Navigation Point to spawn Boss",'InvasionPro');
+			return;
+		}
+
+		NewMonster = Spawn(BossClass,,,StartSpot.Location+(BossClass.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation);
+		if ( NewMonster != None )
+		{
+			//a boss has spawned, whether fallback or not, so no need to fallback again
+			bIgnoreFallback = true;
+			//boss spawned remove from wave boss ids
+			if(bFallback)
+			{
+				for(i=0;i<WaveBossID.Length;i++)
+				{
+					WaveBossID.Remove(i, 1);
+				}
+			}
+			else
+			{
+				for(i=0;i<WaveBossID.Length;i++)
+				{
+					if(String(TempBossID) ~= WaveBossID[i])
+					{
+						WaveBossID.Remove(i, 1);
+						break;
+					}
+				}
+			}
+
+			BRI = Spawn(class'IPBossReplicationInfo',NewMonster);
+			if(BRI != None)
+			{
+				BRI.MyMonster = NewMonster;
+				BRI.PlayerName = class'IPConfigs'.default.Bosses[BossNum].BossName;
+			}
+
+			if(class'IPConfigs'.default.Bosses[BossNum].WarningSound != "" && class'IPConfigs'.default.Bosses[BossNum].WarningSound != "None")
+			{
+				for(C=Level.ControllerList; C!=None; C=C.NextController )
+				{
+					if ((C != None && C.PlayerReplicationInfo != None) && (C.IsA('PlayerController') || !C.PlayerReplicationInfo.bBot))
+					{
+						WarnSound = Sound(DynamicLoadObject(class'IPConfigs'.default.Bosses[BossNum].WarningSound,class'Sound',True));
+						if(WarnSound != None)
+						{
+							PlayerController(C).ClientReliablePlaySound(WarnSound);
+						}
+					}
+				}
+			}
+
+			LastBossSpawnTime = Level.TimeSeconds;
+			//InvasionProMutator(BaseMutator).ModifyMonster(NewMonster,false,true);
+			bBossActive = true;
+			if(class'IPConfigs'.default.Bosses[BossNum].BossHealth <= 0)
+			{
+				NewMonster.Health = NewMonster.default.Health;
+			}
+			else
+			{
+				NewMonster.Health = class'IPConfigs'.default.Bosses[BossNum].BossHealth;
+			}
+
+			LumpysInvasionGameReplicationInfo(GameReplicationInfo).bBossEncounter = true;
+			NewMonster.GroundSpeed = class'IPConfigs'.default.Bosses[BossNum].BossGroundSpeed;
+			NewMonster.AirSpeed = class'IPConfigs'.default.Bosses[BossNum].BossAirSpeed;
+			NewMonster.WaterSpeed = class'IPConfigs'.default.Bosses[BossNum].BossWaterSpeed;
+			NewMonster.JumpZ =  class'IPConfigs'.default.Bosses[BossNum].BossJumpZ;
+			NewMonster.HealthMax = NewMonster.Health;
+			NewMonster.GibCountCalf *= class'IPConfigs'.default.Bosses[BossNum].BossGibMultiplier;
+			NewMonster.GibCountForearm *= class'IPConfigs'.default.Bosses[BossNum].BossGibMultiplier;
+			NewMonster.GibCountHead *= class'IPConfigs'.default.Bosses[BossNum].BossGibMultiplier;
+			NewMonster.GibCountTorso *= class'IPConfigs'.default.Bosses[BossNum].BossGibMultiplier;
+			NewMonster.GibCountUpperArm *= class'IPConfigs'.default.Bosses[BossNum].BossGibMultiplier;
+			NewMonster.ScoringValue = class'IPConfigs'.default.Bosses[BossNum].BossScoreAward;
+			NewMonster.SetLocation( NewMonster.Location + vect(0,0,1) * ( NewMonster.CollisionHeight * class'IPConfigs'.default.Bosses[BossNum].NewDrawScale) );
+
+			if(class'IPConfigs'.default.Bosses[BossNum].NewDrawScale <= 0)
+			{
+				NewMonster.SetDrawScale(NewMonster.default.DrawScale);
+			}
+			else
+			{
+				NewMonster.SetDrawScale(class'IPConfigs'.default.Bosses[BossNum].NewDrawScale);
+			}
+
+			if(class'IPConfigs'.default.Bosses[BossNum].NewCollisionRadius <= 0 || class'IPConfigs'.default.Bosses[BossNum].NewCollisionHeight <= 0)
+			{
+				NewMonster.SetCollisionSize(NewMonster.default.CollisionRadius,NewMonster.default.CollisionHeight);
+			}
+			else
+			{
+				NewMonster.SetCollisionSize(class'IPConfigs'.default.Bosses[BossNum].NewCollisionRadius,class'IPConfigs'.default.Bosses[BossNum].NewCollisionHeight);
+			}
+
+			NewMonster.Prepivot = class'IPConfigs'.default.Bosses[BossNum].NewPrepivot;
+			Inv = NewMonster.FindInventoryType(class'IPMonsterIDInv');
+			if(IPMonsterIDInv(Inv) != None)
+			{
+				BossName = class'IPConfigs'.default.Bosses[BossNum].BossName;
+				if(BossName ~= "")
+				{
+					Divide(String(NewMonster.Class),".",BossNameLeft,BossNameRight);
+					BossName = "Boss ("$BossNameRight$")";
+				}
+
+				IPMonsterIDInv(Inv).MonsterName = BossName;
+				IPMonsterIDInv(Inv).bSummoned = false;
+				IPMonsterIDInv(Inv).bBoss = true;
+				IPMonsterIDInv(Inv).bFriendly = false;
+			}
+		}
+		else
+		{
+			if(!bFallback)
+			{
+				log("Wave "@WaveNum+1@"Boss failed to spawn: maybe too large."@" Boss ID "@TempBossID,'InvasionPro');
+			}
+			else
+			{
+				log("Wave "@WaveNum+1@" Fallback boss failed to spawn, check the monsters name and id settings are correct and match the wave boss ids.",'InvasionPro');
+			}
+		}
+	}
+	else
+	{
+		log("Wave Num "@WaveNum+1@" No boss found with ID"@TempBossID$", maybe the BossMonsterName or BossID is wrong?",'InvasionPro');
+		//remove from wave boss ids
+		for(i=0;i<WaveBossID.Length;i++)
+		{
+			if(String(TempBossID) ~= WaveBossID[i])
+			{
+				WaveBossID.Remove(i, 1);
+			}
+		}
+	}
+}
+
+function class<Monster> GetBossClass(int ID, out int BossNum)
+{
+	local int i;
+	local string TempBossName; //short boss name that will be made into a full class name in order to load
+	local class <Monster> BossClass;
+
+	BossClass = None;
+	TempBossName = "None"; //set name to none incase config was none
+	//match the id by searching the list of bosses
+	for(i=0;i<class'IPConfigs'.default.Bosses.Length;i++)
+	{
+		//if the bossid matches any of the ones in the list
+		if(ID == class'IPConfigs'.default.Bosses[i].BossID)// && !class'IPConfigs'.default.Bosses[i].bSpawned)
+		{
+			//get the temp boss name
+			TempBossName = class'IPConfigs'.default.Bosses[i].BossMonsterName;
+			BossNum = i;
+			break;
+		}
+	}
+
+	//if a boss was found
+	if(TempBossName != "None")
+	{
+		//search monster list for matching monster
+		for(i=0;i<class'IPMonsterTable'.default.MonsterTable.Length;i++)
+		{
+			//if boss name matchess
+			if(TempBossName ~= class'IPMonsterTable'.default.MonsterTable[i].MonsterName)
+			{
+				//set the boss class!
+				BossClass = class<Monster>(DynamicLoadObject(class'IPMonsterTable'.default.MonsterTable[i].MonsterClassName, class'Class',true));
+				break;
+			}
+		}
+	}
+
+	return BossClass;
+}
+
+function DestroyBossReplicationInfo()
+{
+	local IPBossReplicationInfo BRI;
+
+	foreach DynamicActors(class'IPBossReplicationInfo',BRI)
+	{
+		BRI.Destroy();
+	}
+}
+
+function IPBossReplicationInfo GetBossReplicationInfo(Monster M)
+{
+	local IPBossReplicationInfo BRI;
+
+	foreach DynamicActors(class'IPBossReplicationInfo',BRI)
+	{
+		if(BRI.MyMonster == M)
+		{
+			return BRI;
+		}
+	}
+
+	return None;
+}
+
 function SetupWave()
 {
     local int i,h;
@@ -227,6 +683,9 @@ function SetupWave()
     WaveMonsters = 0;
     WaveNumClasses = 0;
     NumKilledMonsters = 0;
+	bIgnoreFallback = false;
+
+	NewWave();
 
     //Max Monsters and WaveMaxMonster setup
     MaxMonsters = class'IPConfigs'.default.Waves[WaveNum].MaxMonsters;
@@ -234,6 +693,7 @@ function SetupWave()
 
     WaveEndTime = Level.TimeSeconds + class'IPConfigs'.default.Waves[WaveNum].WaveDuration;
     AdjustedDifficulty = GameDifficulty + class'IPConfigs'.default.Waves[WaveNum].WaveDifficulty;
+	bFallback = false;
 
     	//set up monster list
 	for(i=0;i<30;i++)
@@ -248,10 +708,6 @@ function SetupWave()
 			{
 				CurrentMonsterClass = class<tk_Monster>(DynamicLoadObject(class'IPMonsterTable'.default.MonsterTable[h].MonsterClassName, class'Class',true));
 				WaveMonsterClasses.WaveMonsterName[WaveNumClasses] = class'IPMonsterTable'.default.MonsterTable[h].MonsterName;
-				//if(class'IPMonsterTable'.default.MonsterTable[h].CurrentSkin != None)
-				//{
-					WaveMonsterClasses.WaveMonsterSkin[WaveNumClasses] = class'IPMonsterTable'.default.MonsterTable[h].CurrentSkin;
-				//}
 			}
 		}
 
@@ -282,15 +738,15 @@ function SetupWave()
 	}
 
 	//set up current boss information
-	// if(class'InvasionProConfigs'.default.Waves[WaveNum].bBossWave)//is this a boss wave
-	// {
-	// 	BossTimeLimit = class'InvasionProConfigs'.default.Waves[WaveNum].BossTimeLimit;
-	// 	bInfiniteBossTime = (BossTimeLimit <= 0);
-	// 	LumpysInvasionGameReplicationInfo(GameReplicationInfo).bInfiniteBossTime = bInfiniteBossTime;
-	// 	OverTimeDamage = class'InvasionProConfigs'.default.Waves[WaveNum].BossOverTimeDamage;
-	// 	bBossWave = true;
-	// 	SetUpBosses();
-	// }
+	if(class'IPConfigs'.default.Waves[WaveNum].bBossWave)//is this a boss wave
+	{
+		BossTimeLimit = class'IPConfigs'.default.Waves[WaveNum].BossTimeLimit;
+		bInfiniteBossTime = (BossTimeLimit <= 0);
+		LumpysInvasionGameReplicationInfo(GameReplicationInfo).bInfiniteBossTime = bInfiniteBossTime;
+		OverTimeDamage = class'IPConfigs'.default.Waves[WaveNum].BossOverTimeDamage;
+		bBossWave = true;
+		SetUpBosses();
+	}
 }
 
 State MatchInProgress
@@ -303,25 +759,70 @@ State MatchInProgress
         Super(xTeamGame).Timer();
         UpdateGRI();
 
+		if(bBossActive)
+		{
+			if(!bInfiniteBossTime)
+			{
+				if(BossTimeLimit <= 0)
+				{
+					LumpysInvasionGameReplicationInfo(GameReplicationInfo).bOverTime = true;
+					OverTime();
+				}
+				else
+				{
+					BossTimeLimit -= 1;
+					LumpysInvasionGameReplicationInfo(GameReplicationInfo).BossTimeLimit = BossTimeLimit;
+					LumpysInvasionGameReplicationInfo(GameReplicationInfo).bOverTime = false;
+				}
+			}
+		}
+
         if ( bWaveInProgress )
         {
-            if(!ShouldAdvanceWave())
-            {
-                if(ShouldSpawnAnotherMonster() && Level.TimeSeconds > NextMonsterTime)
-                {
-                    AddMonster();
-                    UpdateMonsterTimer();
-                }
-            }
-            else
-            {
-                if(NumHostileMonsters() <= 0)
-                {
-                    bWaveInProgress = false;
-                    WaveCountDown = 15;
-                    WaveNum++;
-                }
-            }
+			if(!bBossWave)
+			{           
+				if(!ShouldAdvanceWave())
+				{
+					if(ShouldSpawnAnotherMonster() && Level.TimeSeconds > NextMonsterTime)
+					{
+						AddMonster();
+						UpdateMonsterTimer();
+					}
+				}
+				else
+				{
+					if(NumHostileMonsters() <= 0)
+					{
+						bWaveInProgress = false;
+						WaveCountDown = 15;
+						WaveNum++;
+					}
+				}
+			}
+			else
+			{
+				if(!bBossActive)
+				{
+					FallbackTimer += 1.0;
+					if(!bIgnoreFallback && FallBackTimer > 10.0)
+					{
+						bFallback = true;
+					}
+
+					if(FallBackTimer>20.0)
+					{
+						ForceNextWave();
+						FallBackTimer = 0.0;
+						return;
+					}
+				}
+				else
+				{
+					FallBackTimer = 0.0;
+				}
+
+				AddMonster();
+			}
         }
         else if ( NumMonsters <= 0 )
         {
@@ -393,10 +894,10 @@ State MatchInProgress
 
 function bool ShouldAdvanceWave()
 {
-	// if(bBossWave)
-	// {
-	// 	return ShouldEndBossWave();
-	// }
+	if(bBossWave)
+	{
+		return ShouldEndBossWave();
+	}
 
 	if(bWaveTimeLimit && Level.TimeSeconds > WaveEndTime)
 	{
@@ -444,17 +945,19 @@ function UpdateMonsterTimer()
 	}
 }
 
+
+
 function AddMonster()
 {
     local NavigationPoint StartSpot; //spawn location
     local tk_Monster NewMonster; //the newly spawned monster
     local class<tk_Monster> NewMonsterClass; //current monster to spawn
     local Inventory Inv;
-	local int index;
+	local int index,i;
 	local Material M;
-	//if(!bBossWave)
-	//{
 
+	if(!bBossWave)
+	{
 		index = Rand(WaveNumClasses);
 		NewMonsterClass = WaveMonsterClasses.WaveMonsterClass[index];
 		if(NewMonsterClass != None)
@@ -466,15 +969,8 @@ function AddMonster()
 				log("Cannot find valid Navigation Point to spawn Monster",'InvasionPro');
 				return;
 			}
-			//NewMonster = Spawn(NewMonsterClass,,,StartSpot.Location+(NewMonsterClass.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation);
-			//if(WaveMonsterClasses.WaveMonsterSkin[index] != "")
-				// NewMonsterClass.default.Skins[0] = M;
-				// NewMonsterClass.default.Skins[1] = M;
-				NewMonster = Spawn(NewMonsterClass,,,StartSpot.Location+(NewMonsterClass.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation);
-				Log(WaveMonsterClasses.WaveMonsterSkin[index],'LumpysRPG');
 
-				// NewMonster.Skins[0] = M;
-				// NewMonster.Skins[1] = M;
+				NewMonster = Spawn(NewMonsterClass,,,StartSpot.Location+(NewMonsterClass.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation);
 		}
 
 		if ( NewMonster ==  None )
@@ -508,9 +1004,54 @@ function AddMonster()
 			//UpdateNewMonsterClass(NewMonster);
 			Log("New Monster Name"$NewMonster.MonsterName,'LumpysInvasion');
 		}
+	}//
+	else
+	{
+		if(class'IPConfigs'.default.Waves[WaveNum].bBossesSpawnTogether)
+		{
+			for(i=0;i<WaveBossID.Length;i++)
+			{
+				SpawnBoss(int(WaveBossID[i]));
+			}
 
-        NumHostileMonsters();
-		NewMonster.UpdatePrecacheMaterials();
+			if(WaveBossID.Length <= 0)
+			{
+				if(!bIgnoreFallback)
+				{
+					FallbackTimer = 0;
+					bFallback = true;
+					SpawnBoss(0);
+				}
+				else
+				{
+					CheckEndBossWave();
+				}
+			}
+		}
+		else if(ShouldSummonBoss())
+		{
+			//else if no boss active then time to summon another (if any left)
+			if(WaveBossID.Length > 0)
+			{
+				SpawnBoss(int(WaveBossID[0]));
+			}
+			else
+			{
+
+				if(!bIgnoreFallback)
+				{
+					FallbackTimer = 0;
+					bFallback = true;
+					SpawnBoss(0);
+				}
+				else
+				{
+					CheckEndBossWave();
+				}
+			}
+		}
+	}
+    NumHostileMonsters();
 }
 
 function UpdateNewMonsterClass(tk_Monster MonsterClass)
@@ -995,7 +1536,7 @@ defaultproperties
     LumpysInvasionGroup="Lumpys Invasion"
     MonsterConfigMenu="LumpysInvasion.IPMonsterConfig"
     LumpyWaveConfigMenu="LumpysInvasion.IPWaveConfig"
-    BossConfigMenu=""
+    BossConfigMenu="LumpysInvasion.IPWaveConfig"
     MonsterPlayerMulti = 100
     MonsterSpawnDistance=10000
     bWaveTimeLimit=True

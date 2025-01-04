@@ -1,4 +1,4 @@
-Log file open, 12/31/24 23:14:07
+Log file open, 01/03/25 23:07:44
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -36,6 +36,7 @@ Log file open, 12/31/24 23:14:07
 -----------------------LumpysInvasion - Release-----------------------
 Analyzing...
 Parsing LumpysInvasionGameReplicationInfo
+Parsing IPBossReplicationInfo
 Parsing IPProxyReplicationInfo
 Parsing LumpysInvasionFakeFriendlyMonsterReplicationInfo
 Parsing LumpysInvasionFriendlyMonsterReplicationInfo
@@ -43,8 +44,11 @@ Parsing IPMonsterReplicationInfo
 Parsing LumpysInvasionMutator
 Parsing LumpysInvasion
 G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\LumpysInvasion.uc(21) : Warning, 'WaveMonsterClass' obscures 'WaveMonsterClass' defined in base class 'Invasion'.
+Parsing IPMessage
+Parsing IPBossMessage
 Parsing LumpysInvasionWaveMessage
 Parsing MapListLumpysInvasion
+Parsing IPBossDamType
 Parsing FriendlyMonsterController
 Parsing IPMonsterIDInv
 Parsing LumpysInvasionHUD
@@ -55,6 +59,7 @@ Parsing IPSpinnyMonster
 Parsing LumpysInvasionWaveHandler
 Parsing IPCylinderShader
 Parsing IPCylinderFinalBlend
+Parsing IPBossConfig
 Parsing IPMonsterConfig
 Parsing IPWaveConfig
 Parsing IPAnimationManager
@@ -63,15 +68,19 @@ Parsing IPCopyPaste
 Parsing IPDefaultWaves
 Parsing IPMonsterTable
 Compiling LumpysInvasionGameReplicationInfo
+Compiling IPBossReplicationInfo
 Compiling IPProxyReplicationInfo
 Compiling LumpysInvasionFakeFriendlyMonsterReplicationInfo
 Compiling LumpysInvasionFriendlyMonsterReplicationInfo
 Compiling IPMonsterReplicationInfo
 Compiling LumpysInvasionMutator
 Compiling LumpysInvasion
-G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\LumpysInvasion.uc(454) : Warning, 'M' : unreferenced local variable
+G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\LumpysInvasion.uc(957) : Warning, 'M' : unreferenced local variable
+Compiling IPMessage
+Compiling IPBossMessage
 Compiling LumpysInvasionWaveMessage
 Compiling MapListLumpysInvasion
+Compiling IPBossDamType
 Compiling FriendlyMonsterController
 Compiling IPMonsterIDInv
 Compiling LumpysInvasionHUD
@@ -82,6 +91,7 @@ Compiling IPSpinnyMonster
 Compiling LumpysInvasionWaveHandler
 Compiling IPCylinderShader
 Compiling IPCylinderFinalBlend
+Compiling IPBossConfig
 Compiling IPMonsterConfig
 G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\IPMonsterConfig.uc(107) : Warning, 'X' : unreferenced local variable
 Compiling IPWaveConfig
@@ -91,14 +101,18 @@ Compiling IPCopyPaste
 Compiling IPDefaultWaves
 Compiling IPMonsterTable
 Importing Defaults for LumpysInvasionGameReplicationInfo
+Importing Defaults for IPBossReplicationInfo
 Importing Defaults for IPProxyReplicationInfo
 Importing Defaults for LumpysInvasionFakeFriendlyMonsterReplicationInfo
 Importing Defaults for LumpysInvasionFriendlyMonsterReplicationInfo
 Importing Defaults for IPMonsterReplicationInfo
 Importing Defaults for LumpysInvasionMutator
 Importing Defaults for LumpysInvasion
+Importing Defaults for IPMessage
+Importing Defaults for IPBossMessage
 Importing Defaults for LumpysInvasionWaveMessage
 Importing Defaults for MapListLumpysInvasion
+Importing Defaults for IPBossDamType
 Importing Defaults for FriendlyMonsterController
 Importing Defaults for IPMonsterIDInv
 Importing Defaults for LumpysInvasionHUD
@@ -109,6 +123,7 @@ Importing Defaults for IPSpinnyMonster
 Importing Defaults for LumpysInvasionWaveHandler
 Importing Defaults for IPCylinderShader
 Importing Defaults for IPCylinderFinalBlend
+Importing Defaults for IPBossConfig
 Importing Defaults for IPMonsterConfig
 Importing Defaults for IPWaveConfig
 Importing Defaults for IPAnimationManager
@@ -128,4 +143,4 @@ Importing Defaults for IPMonsterTable
 ---------------------tk_HolyHandGrenade - Release---------------------
 Game exported successfully: LumpysInvasion.LumpysInvasion
 Success - 0 error(s), 3 warning(s)
-Log file closed, 12/31/24 23:14:09
+Log file closed, 01/03/25 23:07:47
