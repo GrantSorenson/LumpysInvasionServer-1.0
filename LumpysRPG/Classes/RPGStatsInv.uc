@@ -1005,12 +1005,13 @@ function ServerResetData(PlayerReplicationInfo PRI)
 		}
 		
 
-		for(x=0;x<DroneList.length;x++)
+		// Destroy backwards — Destroyed() self-removes from DroneList, so forward iteration would skip entries.
+		for (x = DroneList.length - 1; x >= 0; x--)
 		{
-			DroneList[x].Destroyed();
-			DroneList[x].Destroy();
-			DroneList.Remove(x,1);
+			if (DroneList[x] != None)
+				DroneList[x].Destroy();
 		}
+		DroneList.length = 0;
 
 	RegDrones = 0;
 	MedicDrones = 0;
@@ -1126,18 +1127,9 @@ simulated function ClientReceiveStatCap(int Index, int Cap)
 	}
 }
 
-function SetMaxDrones(int index)
+function SetMaxDrones()
 {
-	switch(index)
-	{
-		case 0 :
-			MaxDrones=RegDrones;
-			break;
-		case 1:
-			MaxDrones = MedicDrones;
-			break;
-	}
-	//MaxDrones = RegDrones + MedicDrones;
+	MaxDrones = RegDrones + MedicDrones;
 }
 
 function ServerSetVersion(int Version)

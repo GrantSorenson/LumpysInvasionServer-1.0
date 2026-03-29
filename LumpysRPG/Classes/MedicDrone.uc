@@ -4,40 +4,18 @@ class MedicDrone extends LumpyDrone;
 
 simulated function PostBeginPlay()
 {
-
-	// randomize everything so drones behave a little bit differently
-	if(Role==ROLE_Authority)
+	if (Level.NetMode != NM_DedicatedServer && !bTrailActive)
 	{
-		curOsc = FRand()*3.14159;
-		shootCounter = FRand()*ShotDelay;
-		targetCounter = FRand()*TargetDelay;
-		orbitHeight = FRand()*95 - 40;
-	}
-
-	bActive = true;
-	// if we were created as a pickup then we'd damn well better stay that way
-	if(Level.NetMode != NM_DedicatedServer && !bTrailActive)
-	{
-        Trail = Spawn(class'ColoredTrail',self,,Location,Rotation);
-        Trail.SetSkin(1);
+		Trail = Spawn(class'ColoredTrail', self,, Location, Rotation);
+		Trail.SetSkin(1); // blue trail
 		Trail.SetBase(self);
 		Trail.LifeSpan = 9999;
-        bTrailActive = true;
+		bTrailActive = true;
 	}
 
-
-	if(bActive)
-	{
-		Velocity = vector(Rotation)*Speed;
-		SetTimer(0.1,true);
-	}
-	else
-	{
-		SetPhysics(PHYS_Rotating);
-	}
-
+	// Timer must be started client-side here — InitDrone is server-only.
+	// Super.PostBeginPlay() would start it again via LumpyDrone, so call it last.
 	Super.PostBeginPlay();
-
 }
 
 simulated function Timer()
@@ -83,6 +61,19 @@ simulated function Timer()
 	}
 }
 
+
+// LumpyDrone.Tick() was emptied to remove healing from combat drones.
+// MedicDrone needs it back specifically to keep the heal beam pointed at the player.
+// healBeam.SetBase(self) tracks the beam's tail to the drone, but the beam's head
+// (mSpawnVecA) and rotation toward the player must be updated every frame here.
+simulated function Tick(float dt)
+{
+	if (healBeam != None && protPawn != None)
+	{
+		healBeam.mSpawnVecA = protPawn.Location;
+		healBeam.SetRotation(rotator(protPawn.Location + vect(0,0,48) - Location));
+	}
+}
 
 defaultproperties
 {

@@ -72,7 +72,6 @@ var config bool bPickup;
 var config int spawnProb;
 
 var int MaxDrones;
-var array<LumpyDrone> DroneList;
 
 /*
 UTILITY-GetVersion
@@ -578,108 +577,61 @@ function ModifyPlayer(Pawn Other)
 		data.Abilities[x].static.ModifyPawn(Other, data.AbilityLevels[x]);
 }
 
-function SpawnDrone(vector SpawnLoc, rotator SpawnRot, int DroneClass, optional Pawn DroneOwner)
+// DroneType: class to spawn — class'LumpyDrone' or class'MedicDrone'
+// Count:     number to spawn (pass StatsInv.RegDrones or MedicDrones from the caller)
+// DroneType: class to spawn — class'LumpyDrone' or class'MedicDrone'
+// Count:     number to spawn (pass StatsInv.RegDrones or MedicDrones from the caller)
+//            Pass 0 to destroy existing drones of this type without spawning new ones (refund).
+function SpawnDrone(class<LumpyDrone> DroneType, int Count, Pawn DroneOwner)
 {
 	local LumpyDrone drone;
 	local RPGStatsInv StatsInv;
-	//local class<LumpyDrone> MD;
-	local int f,i,x;
+	local float angle;
+	local vector orbitPos;
+	local int x;
 
-
-	if (DroneOwner.Controller == None || !DroneOwner.Controller.bIsPlayer)
+	if (DroneOwner == None || DroneOwner.Controller == None || !DroneOwner.Controller.bIsPlayer)
 		return;
 
 	StatsInv = RPGStatsInv(DroneOwner.FindInventoryType(class'RPGStatsInv'));
+	if (StatsInv == None)
+		return;
 
-	if (StatsInv.DroneList.Length > 0)
+	// Destroy existing drones of this type and prune stale None entries.
+	// Iterate backwards so removals don't corrupt the index.
+	for (x = StatsInv.DroneList.length - 1; x >= 0; x--)
 	{
-		for(f=0;f<StatsInv.DroneList.length;f++)
+		if (StatsInv.DroneList[x] == None)
 		{
-
-			if(DroneList.length > 0)
-			{
-				for(i=0;i<DroneList.length;i++)
-				{
-					if((StatsInv.DroneList[f].class == DroneList[i].class) && (StatsInv.DroneList[f] != None && DroneList[i] != None))
-					{
-						DroneList[i].Destroyed();
-						DroneList[i].Destroy();
-						DroneList.Remove(i,1);
-						Log("Drone Entry Accessed: "$DroneList[i]$" i:"$i$"DroneListLengthAfter:"$DroneList.length,'LumpysRPG');
-						StatsInv.DroneList[f].Destroyed();
-						StatsInv.DroneList[f].Destroy();
-						StatsInv.DroneList.Remove(f,1);
-						Log("StatsInv.Drone Entry Accessed: "$StatsInv.DroneList[f]$" f:"$f,'LumpysRPG');
-					}
-				}
-			}
-
+			StatsInv.DroneList.Remove(x, 1);
+		}
+		else if (StatsInv.DroneList[x].class == DroneType)
+		{
+			StatsInv.DroneList[x].Destroy(); // LumpyDrone.Destroyed() self-removes from the list
 		}
 	}
 
-		if(DroneClass == 0 || StatsInv.RegDrones > 0)
+	// Calculate the orbit position for each drone and pass it directly to Spawn()
+	// so the drone is never inside or adjacent to the player on creation.
+	for (x = 0; x < Count; x++)
+	{
+		angle    = (6.2832 * float(x)) / float(Max(Count, 1));
+		orbitPos = DroneOwner.Location + vect(0,0,64)
+		         + vect(1,0,0) * DroneType.default.OrbitDist * Cos(angle)
+		         + vect(0,1,0) * DroneType.default.OrbitDist * Sin(angle);
+
+		drone = Spawn(DroneType, DroneOwner,, orbitPos, DroneOwner.Rotation);
+		if (drone != None)
 		{
-			for(x=0;x<StatsInv.RegDrones;x++)
-			{
-				Log("We spawned a Regular Drone", 'LumpysRPG');
-				drone = Spawn(class'LumpyDrone',Owner,,SpawnLoc,SpawnRot);
-
-				if (drone != None)
-				{
-					drone.InitDrone(Owner);
-					drone.protPawn = DroneOwner;
-					drone.ProjDamage = ProjDamage;
-					drone.HealPerSec = HealPerSec;
-					drone.ShotDelay = ShotDelay;
-					drone.TargetDelay = TargetDelay;
-					drone.bActive = !bPickup;
-					StatsInv.DroneList.Insert(StatsInv.DroneList.length, 1);
-					StatsInv.DroneList[StatsInv.DroneList.length] = drone;
-					DroneList.Insert(DroneList.length,1);
-					DroneList[DroneList.length] = drone;
-				}
-			}
+			drone.InitDrone(DroneOwner, x, Count);
+			drone.ProjDamage = ProjDamage;
+			drone.HealPerSec = HealPerSec;
+			drone.ShotDelay = ShotDelay;
+			drone.TargetDelay = TargetDelay;
+			StatsInv.DroneList[StatsInv.DroneList.length] = drone;
+			Log("SpawnDrone: spawned "$DroneType$" ("$x$"/"$Count$") for "$DroneOwner.PlayerReplicationInfo.PlayerName, 'LumpysRPG');
 		}
-		if(DroneClass == 1 || StatsInv.MedicDrones > 0)
-		{
-			for(x=0;x<StatsInv.MedicDrones;x++)
-			{
-				Log("We spawned a Regular Drone", 'LumpysRPG');
-				drone = Spawn(class'MedicDrone',Owner,,SpawnLoc,SpawnRot);
-
-				if (drone != None)
-					{
-					drone.protPawn = DroneOwner;
-					drone.ProjDamage = ProjDamage;
-					drone.HealPerSec = HealPerSec;
-					drone.ShotDelay = ShotDelay;
-					drone.TargetDelay = TargetDelay;
-					drone.bActive = !bPickup;
-					StatsInv.DroneList.Insert(StatsInv.DroneList.length, 1);
-					StatsInv.DroneList[StatsInv.DroneList.length] = drone;
-					DroneList.Insert(DroneList.length,1);
-					DroneList[DroneList.length] = drone;
-				}
-			}
-		}
-	// foreach DynamicActors(MD, drone)
-	// 	drone.Destroy();
-
-	// for(x=0;x<StatsInv.MaxDrones;x++)
-	// {
-	// 	if(DroneClass == 0)
-	// 	{
-	// 		Log("We spawned a Regular Drone", 'LumpysRPG');
-	// 		drone = Spawn(class'LumpyDrone',Owner,,SpawnLoc,SpawnRot);
-	// 	}
-	// 	else if(DroneClass == 1)
-	// 	{
-	// 		Log("We spawned a medic Drone", 'LumpysRPG');
-	// 		drone = Spawn(class'MedicDrone',Owner,,SpawnLoc,SpawnRot);
-	// 	}
-
-
-	// }
+	}
 }
 
 function int GetNeededXP(int Playerlevel)

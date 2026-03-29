@@ -63,49 +63,28 @@ replication
 
 simulated function PostBeginPlay()
 {
-	// randomize everything so drones behave a little bit differently
-	if(Role==ROLE_Authority)
+	if (Level.NetMode != NM_DedicatedServer && !bTrailActive)
 	{
-		curOsc = FRand()*3.14159;
-		shootCounter = FRand()*ShotDelay;
-		targetCounter = FRand()*TargetDelay;
-		orbitHeight = FRand()*95 - 40;
-		LastResetCheckTime = Level.TimeSeconds;
-	}
-
-	bActive = true;
-	// if we were created as a pickup then we'd damn well better stay that way
-	if(Level.NetMode != NM_DedicatedServer && !bTrailActive)
-	{
-		Trail = Spawn(class'ColoredTrail',self,,Location,Rotation);
+		Trail = Spawn(class'ColoredTrail', self,, Location, Rotation);
 		Trail.SetSkin(0);
 		Trail.SetBase(self);
 		Trail.LifeSpan = 9999;
 		bTrailActive = true;
 	}
-
-
-	if(bActive)
-	{
-		Velocity = vector(Rotation)*Speed;
-		SetTimer(0.1,true);
-	}
-	else
-	{
-		SetPhysics(PHYS_Rotating);
-	}
+	bActive = true;
+	// Give the drone an immediate non-zero velocity so it moves on both server and client
+	// from the first frame. InitDrone (server-only) will overwrite this with the correct
+	// orbit-tangent velocity, and Timer() corrects it continuously after that.
+	// Without this, clients start with Velocity=(0,0,0) and appear frozen until the
+	// server's velocity replication arrives.
+	Velocity = vector(Rotation) * Speed;
+	SetTimer(0.1, true);
 
 	Super.PostBeginPlay();
 }
 
 simulated function Tick(float dt)
 {
-	// if there's a healing beam, update it every tick (timer would have noticeable lag)
-	if(healBeam != None && protPawn != None)
-	{
-		healBeam.mSpawnVecA = protPawn.Location;
-		healBeam.SetRotation(rotator(protPawn.Location+vect(0,0,48)-Location));
-	}
 }
 
 simulated function Timer()
@@ -128,27 +107,6 @@ simulated function Timer()
 		dist = VSize(toProt);
 		Velocity = 0.1 * Velocity + 0.3 * ((Normal(toProt) cross vect(0,0,1)) * CircleSpeed) + 0.2 * cos(curOsc) * vect(0,0,1) * OscHeight + 0.4 * Normal(toProt) * Speed * (dist - OrbitDist)/OrbitDist;
 		SetRotation(rotator(Velocity)+rotator(vect(1,0,0))+rotator(vect(0,1,0)));
-		
-		//Healing
-		healCounter++;
-		if(dist < HealDist)
-		{
-			if(healBeam == None && protPawn.Health < protPawn.HealthMax && protPawn.Health>0 && targetPawn == None && Level.NetMode != NM_DedicatedServer)
-			{
-				healBeam = Spawn(class'DroneHealBeam',self,,Location,rotator(protPawn.Location-Location));
-				healBeam.SetBase(self);
-			}
-		}
-		if((dist > HealDist + 16 || protPawn.Health >= protPawn.HealthMax) && healBeam != None)
-		{
-			healBeam.Destroy();
-		}
-		if(healCounter==2)
-		{
-			if(dist < HealDist && protPawn.Health>0 && targetPawn == None && Role==ROLE_Authority)
-				protPawn.GiveHealth(HealPerSec/5,protPawn.HealthMax);
-			healCounter=0;
-		}
 		
 		//Server-side stuff
 		if(Role==ROLE_Authority)
@@ -186,9 +144,6 @@ simulated function Timer()
 						dp.Instigator = protPawn;
 						dp.Damage = ProjDamage;
 						PlaySound(Sound'WeaponSounds.LinkGun.BLinkedFire');
-						// we don't heal while we're shooting
-						if(healBeam!=None)
-							healBeam.Destroy();
 					}
 				}
 				shootCounter=0;
@@ -207,67 +162,45 @@ simulated function HitWall(vector HitNormal, actor Wall)
 
 simulated singular function Touch(Actor Other)
 {
-	if(Other != None && xPawn(Other) != None && bActive && Other == protPawn)
-	{
-		// if we don't already have the dri, get an existing one;
-		if(dri == None)
-			dri = getDroneInfo(Pawn(Other).PlayerReplicationInfo);
-		// if we still don't have one, make one
-		if(dri == None)
-			dri = Spawn(class'DroneReplicationInfo',Other);
-			// player doesn't have maximum, we can attach to them
-			// if we were a pickup (which, in this case, we better've been), let the spawner know it's free to make another
-			// if(spawner != None)
-			// 	spawner.droneTaken=true;
-			// if there's no trail (which there should be), make one
-		
-		if(Level.NetMode != NM_DedicatedServer && Trail==None)
-		{
-			Trail = Spawn(class'ColoredTrail',self,,Location,Rotation);
-			Trail.SetBase(self);
-			Trail.LifeSpan = 9999;
-		}
-		// set our physics properly
-		SetPhysics(PHYS_Projectile);
-		RotationRate.Yaw=0;
-		// set owner
-		protPawn = Pawn(Other);
-		// let dri know the player has another drone
-		dri.numDrones++;
-		// make active (this doesn't do much but it's probably useful somewhere)
-		bActive=False;
-		// start doing stuff
-		SetTimer(0.1,true);
-	}
-
-	if(Projectile(Other) != None && protPawn != None)
-	{
-		// if it's not owner's, make it go boom - but not if we're a pickup, that's just confusin'
-		if(Other.Instigator != protPawn)
-			Projectile(Other).Explode(Other.Location,-Other.Velocity);
-			Log("Drone Killed",'LumpysInvasion');
-	}
+	// Deflect enemy projectiles that hit the drone.
+	if (Projectile(Other) != None && protPawn != None && Other.Instigator != protPawn)
+		Projectile(Other).Explode(Other.Location, -Other.Velocity);
 }
 
-simulated function initDrone(Actor Other)
+// Single init path for all drone types. Always call this after spawning a drone.
+// SpawnDrone already placed the drone at the correct orbit position via Spawn(),
+// so this function only needs to set velocity, phases, and start the timer.
+function InitDrone(Pawn DroneOwner, int DroneIndex, int TotalDrones)
 {
-		if(dri == None)
-			dri = getDroneInfo(Pawn(Other).PlayerReplicationInfo);
-		// if we still don't have one, make one
-		if(dri == None)
-			dri = Spawn(class'DroneReplicationInfo',Other);
+	local float angle;
 
-					// set our physics properly
-		SetPhysics(PHYS_Projectile);
-		RotationRate.Yaw=0;
-		// set owner
-		protPawn = Pawn(Other);
-		// let dri know the player has another drone
-		dri.numDrones++;
-		// make active (this doesn't do much but it's probably useful somewhere)
-		bActive=False;
-		// start doing stuff
-		SetTimer(0.1,true);
+	protPawn = DroneOwner;
+
+	// Each drone's orbit angle — same value used to calculate its spawn position in SpawnDrone.
+	angle = (6.2832 * float(DroneIndex)) / float(Max(TotalDrones, 1));
+
+	// Initial velocity tangent to the orbit circle at this angle.
+	Velocity = (vect(0,1,0) * Cos(angle) - vect(1,0,0) * Sin(angle)) * Speed;
+
+	// Phase oscillation and randomise per-drone values here (not in PostBeginPlay).
+	curOsc          = angle;
+	orbitHeight     = FRand() * 95 - 40;
+	shootCounter    = FRand() * ShotDelay;
+	targetCounter   = FRand() * TargetDelay;
+	LastResetCheckTime = Level.TimeSeconds;
+
+	// Explicitly activate physics integration — required even though defaultproperties
+	// sets Physics=6. Without this runtime call, UE2 doesn't apply Velocity→position.
+	// Also stop the fixed-spin so velocity-based SetRotation() in Timer() can work.
+	SetPhysics(PHYS_Projectile);
+	RotationRate.Yaw = 0;
+
+	dri = getDroneInfo(DroneOwner.PlayerReplicationInfo);
+	if (dri == None)
+		dri = Spawn(class'DroneReplicationInfo', DroneOwner);
+
+	dri.numDrones++;
+	bActive = True;
 }
 
 simulated function DroneReplicationInfo getDroneInfo(PlayerReplicationInfo PlayRepInf)
@@ -285,13 +218,37 @@ simulated function DroneReplicationInfo getDroneInfo(PlayerReplicationInfo PlayR
 
 simulated function Destroyed()
 {
-	if(Trail != None)
+	local RPGStatsInv StatsInv;
+	local int x;
+
+	if (Trail != None)
 		Trail.Destroy();
-		bTrailActive = false;
-	if(healBeam != None)
+	bTrailActive = false;
+
+	if (healBeam != None)
 		healBeam.Destroy();
-	if(dri != None)
-		dri.Destroy();
+
+	// Decrement drone count. Only destroy the DRI when this was the last drone.
+	if (dri != None)
+	{
+		dri.numDrones--;
+		if (dri.numDrones <= 0)
+			dri.Destroy();
+	}
+
+	// Remove self from the owner's drone list (covers kills by monsters, expiry, etc.)
+	if (protPawn != None)
+	{
+		StatsInv = RPGStatsInv(protPawn.FindInventoryType(class'RPGStatsInv'));
+		if (StatsInv != None)
+		{
+			for (x = StatsInv.DroneList.length - 1; x >= 0; x--)
+			{
+				if (StatsInv.DroneList[x] == self || StatsInv.DroneList[x] == None)
+					StatsInv.DroneList.Remove(x, 1);
+			}
+		}
+	}
 }
 
 //called every once in a while to check whether this Drone is stuck and should be reset ~pd

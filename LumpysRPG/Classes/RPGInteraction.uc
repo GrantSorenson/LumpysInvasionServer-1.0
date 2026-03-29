@@ -367,6 +367,7 @@ function DrawInventory(Canvas Canvas, Float YL) {
 	local int   halfToShow;
 
 	local Inventory   firstInventory;
+	local Inventory   barFocusItem;
 	local RPGStatsInv RPGStatsInv;
 
 	if ((ItemsToShow % 2) == 0) {
@@ -394,7 +395,21 @@ function DrawInventory(Canvas Canvas, Float YL) {
 	Canvas.FontScaleX *= 1.33333;
 	Canvas.FontScaleY *= 1.33333;
 
-	if (RPGArtifact(ViewportOwner.Actor.Pawn.SelectedItem) != None) {
+	// Show the artifact bar whenever the player has any artifact, not only when one
+	// is actively selected. barFocusItem is what gets displayed as the "current" item.
+	barFocusItem = ViewportOwner.Actor.Pawn.SelectedItem;
+	if (RPGArtifact(barFocusItem) == None) {
+		barFocusItem = ViewportOwner.Actor.Pawn.Inventory;
+		while (barFocusItem != None && RPGArtifact(barFocusItem) == None)
+			barFocusItem = barFocusItem.Inventory;
+	}
+
+	if (RPGArtifact(barFocusItem) != None) {
+		// Seed DisplayItem so the scroll list centres correctly before the player
+		// has ever pressed [ or ] to manually cycle artifacts.
+		if (RPGStatsInv.DisplayItem == None || !IsInInventory(RPGStatsInv.DisplayItem))
+			RPGStatsInv.DisplayItem = barFocusItem;
+
 		iBoxLeft = -YL;
 		iBoxTop  = Canvas.ClipY * 0.75 - YL * 4;
 
@@ -410,7 +425,7 @@ function DrawInventory(Canvas Canvas, Float YL) {
 		//Draw Artifact HUD info
 		Canvas.Drawcolor = class'Colors'.default.White;
 		Canvas.SetPos(0, Canvas.ClipY * 0.75 - YL * 5.0);
-		Canvas.DrawText(ViewportOwner.Actor.Pawn.SelectedItem.ItemName);
+		Canvas.DrawText(barFocusItem.ItemName);
 
 		Canvas.Style = 5;
  		Canvas.DrawColor = class'Colors'.default.Black;
@@ -495,7 +510,7 @@ function DrawInventory(Canvas Canvas, Float YL) {
 		Canvas.SetPos(iBoxLeft, iBoxTop);
 		Canvas.DrawTileStretched(Material'InterfaceContent.BorderBoxA', iBoxWidth, iBoxHeight);
 
-		DrawItemDescription(Canvas, YL, ViewportOwner.Actor.Pawn.SelectedItem);
+		DrawItemDescription(Canvas, YL, barFocusItem);
 	}
 }
 ////////////////////////////////////////////////////////////////
@@ -806,6 +821,7 @@ function Tick(
 	float fDeltaTime
 ) {
 	local int         powerupCount;
+	local Inventory   scan;
 	local RPGStatsInv RPGStatsInv;
 
 	if (
@@ -894,13 +910,29 @@ function Tick(
 	 	}
 	//
 		if (Distance != 0) {
-			if (Distance > (powerupCount / 2)) {
-				// Scroll right
+			if (Distance * 2 > powerupCount) {
+				// Backward path is shorter — scroll right
 				Distance  = Distance - powerupCount;
 				Direction = 1;
-			} else {
-				// Scroll left
+			} else if (Distance * 2 < powerupCount) {
+				// Forward path is shorter — scroll left
 				Direction = -1;
+			} else {
+				// Exact tie: both paths are equal length (even item count at halfway).
+				// Use raw inventory order to match the key the player pressed:
+				// if the target is reachable from current without wrapping → forward (left);
+				// if it requires wrapping (target is "before" current) → backward (right).
+				Direction = 1;
+				for (scan = RPGStatsInv.DisplayItem; scan != None; scan = scan.Inventory) {
+					if (scan == ViewportOwner.Actor.Pawn.SelectedItem) {
+						Direction = -1;
+						break;
+					}
+				}
+				// Mirror what the > case does: make Distance negative so
+				// Distance += Direction converges to 0 each step.
+				if (Direction == 1)
+					Distance = Distance - powerupCount;
 			}
 		}
 

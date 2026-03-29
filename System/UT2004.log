@@ -1,4 +1,4 @@
-Log: Log file open, 03/28/26 22:24:11
+Log: Log file open, 03/29/26 14:03:56
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -13,14 +13,14 @@ Log: Splash screen filename is '..\Help\UT2004Logo.bmp'
 Localization: No localization: UT2004.General.Start (int)
 Log: 	atidx9loader32.dll/AMD Radeon RX 9060 XT
 Log: Game class is 'GameInfo'
-Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.552000...
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.404000...
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
 Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?SpectatorOnly=1?Sex=M
 Log: Collecting garbage
 Log: Purging garbage
 Log: Garbage: objects: 27913->27913; refs: 283940
 Log: Game class is 'CinematicGame'
-Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 2.000000...
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.835000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
@@ -36,13 +36,13 @@ Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 77(32-bit)
 Log: Creating device
 Log: xD3DHelper::Init (QuadEmulation)
-Log: Startup time: 1.937000 seconds
+Log: Startup time: 1.628000 seconds
 Localization: No localization: UT2004.General.Run (int)
 Log: Precaching: NvidiaLogo.LevelInfo0
 Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
 Log: Allocating 16384 byte dynamic index buffer.
 Log: Finished precaching geometry in 0.013 seconds
-Log: Finished precaching textures in 0.038 seconds
+Log: Finished precaching textures in 0.013 seconds
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] () ()
 Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
 ModAuthor: Restoring previously open menus (0 menus to restore)
@@ -63,26 +63,295 @@ ModAuthor: # # # # Gametype ShowPanel()  True
 MenuText: No description configured for property 'LWaveConfig'
 ModAuthor: # # # # Select Map ShowPanel()  True
 ModAuthor: # # # # Gametype ShowPanel()  False
+ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 2 menus open)
+ModAuthor:    Menu[0]:UT2k4MainMenu
+ModAuthor:    Menu[1]:UT2K4GamePageSP
 ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4GamePageSP]
 Debug: UT2k4MainMenu.Opened()   Sender:None
-Log: Time=451.686311 ms
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4ServerBrowser] () ()
-ModAuthor: # # # # News ShowPanel()  True
-IRC: 2 Servers 0 Channels
-Log: Defaulting to false
-ScriptLog: UT2k4Browser_ServerListPageFavorites Spawned new ServerQueryClient 'Entry.ServerQueryClient'
-Log: Defaulting to false
-Log: Resolving utmaster.openspy.net...
-Log: Resolved utmaster.openspy.net -> 134.122.16.249
-Log: Connection established.
-ModAuthor: # # # # Internet ShowPanel()  True
-Log: Resolving utmaster.openspy.net...
-Log: Resolved utmaster.openspy.net -> 134.122.16.249
-Log: Connection established.
-ModAuthor: # # # # News ShowPanel()  False
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2k4ServerBrowser]
-Debug: UT2k4MainMenu.Opened()   Sender:None
-Log: Time=823.519972 ms
+ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 0 menus open)
+ScriptLog: Attempting to close a non-existing menu page
+Log: URL: Adding default option Name=Lumps
+Log: URL: Adding default option Class=Engine.Pawn
+Log: URL: Adding default option Character=Kragoth
+Log: URL: Adding default option team=255
+Log: Browse: DM-Flux2?BonusVehicles=false?Game=LumpysInvasion.LumpysInvasion?Mutator=AdminPlus_v14.MutAdminPlus,LumpyJumping.MutLumpyJumping,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim?bAutoNumBots=False?NumBots=0?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
+ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
+Log: Collecting garbage
+Log: Purging garbage
+Log: (Karma): Level Karma Terminated.
+Log: Garbage: objects: 39955->37482; refs: 434917
+Log: Game class is 'LumpysInvasion'
+Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 8.232000...
+Log: (Karma): Autodetecting CPU for SSE
+Log: (Karma): Using SSE Optimizations
+ScriptLog: Mutators AdminPlus_v14.MutAdminPlus,LumpyJumping.MutLumpyJumping,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim
+Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:001F) Accessed None 'AccessControl'
+Warning: MutAdminPlus DM-Flux2.MutAdminPlus (Function AdminPlus_v14.MutAdminPlus.PreBeginPlay:0027) Attempt to assign variable through None
+ScriptLog: GameInfo::InitGame : bEnableStatLogging True
+ScriptLog: bAutoNumBots: False
+Log: SR: Loaded grammar file ../Speech\TDM.xml
+Log: Spawning new actor for Viewport WindowsViewport
+ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
+Log: Precaching: DM-Flux2.LevelInfo0
+Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
+Log: Allocating 16384 byte dynamic index buffer.
+Log: Finished precaching geometry in 0.090 seconds
+Log: Finished precaching textures in 0.130 seconds
+LumpysRPG: CA_MedicSprites: MedicDrones=2
+LumpysRPG: SpawnDrone: spawned LumpysRPG.MedicDrone (0/2) for Lumps
+LumpysRPG: SpawnDrone: spawned LumpysRPG.MedicDrone (1/2) for Lumps
+LumpysRPG: SpawnDrone: spawned LumpysRPG.LumpyDrone (0/1) for Lumps
+ScriptLog: START MATCH
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow Purple
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali
+Log: Preprocessing:  Vertex stream total vertices: 433 Orig wedges: 433
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow
+Log: Preprocessing:  Vertex stream total vertices: 260 Orig wedges: 260
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow Purple
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 60 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Welcome ShowPanel()  True
+LumpysInvasion: Owned Class #0: MM
+LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 200
+LumpysInvasion: M.Health is now: 200 M.HealthMax is now: 200.00
+LumpysInvasion: New Monster NameNali Rabbit
+ModAuthor: # # # # Abilities ShowPanel()  True
+LumpysInvasion: Owned Class #0: MM
+ModAuthor: # # # # Welcome ShowPanel()  False
+ModAuthor: # # # # Character ShowPanel()  True
+ModAuthor: # # # # Abilities ShowPanel()  False
+ModAuthor: # # # # Abilities ShowPanel()  True
+LumpysInvasion: Owned Class #0: MM
+ModAuthor: # # # # Character ShowPanel()  False
+LumpysInvasion: M.Health is now: 5 M.HealthMax is now: 200
+LumpysInvasion: M.Health is now: 200 M.HealthMax is now: 200.00
+LumpysInvasion: New Monster NameNali Rabbit
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow Purple
+LumpysInvasion: M.Health is now: 50 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali
+ModAuthor: # # # # Character ShowPanel()  True
+ModAuthor: # # # # Abilities ShowPanel()  False
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 60 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 60 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function LumpysInvasion.LumpysInvasion.GetCollisionPlayerStart:0391) Accessed None 'CollisionTestActor'
+Log: PlayAnim: Sequence 'TakeHit' not found for mesh 'Rabbit'
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 60 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow Purple
+ScriptLog: Client Data Reset
+Warning: LumpyJumpingPawn DM-Flux2.LumpyJumpingPawn (Function Engine.Pawn.DeleteInventory:006B) Accessed None 'Item'
+Warning: LumpyJumpingPawn DM-Flux2.LumpyJumpingPawn (Function Engine.Pawn.DeleteInventory:007A) Accessed None 'Item'
+Warning: LumpyJumpingPawn DM-Flux2.LumpyJumpingPawn (Function Engine.Pawn.DeleteInventory:0082) Attempt to assign variable through None
+Warning: LumpyJumpingPawn DM-Flux2.LumpyJumpingPawn (Function Engine.Pawn.DeleteInventory:00AC) Accessed None 'Item'
+Warning: LumpyJumpingPawn DM-Flux2.LumpyJumpingPawn (Function Engine.Pawn.DeleteInventory:00B4) Attempt to assign variable through None
+Warning: LumpyJumpingPawn DM-Flux2.LumpyJumpingPawn (Function Engine.Pawn.DeleteInventory:0119) Accessed None 'Item'
+ScriptLog: Last Cred: 8291 Stat Cred: 0
+Log: PlayAnim: Sequence 'TakeHit' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 0
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+ModAuthor: # # # # Stats ShowPanel()  True
+ModAuthor: # # # # Character ShowPanel()  False
+Log: PlayAnim: Sequence 'TakeHit' not found for mesh 'Rabbit'
+ModAuthor: # # # # Abilities ShowPanel()  True
+LumpysInvasion: Owned Class #0: AM
+ModAuthor: # # # # Stats ShowPanel()  False
+Log: PlayAnim: Sequence 'TakeHit' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'BigHit' not found for mesh 'Rabbit'
+LumpysInvasion: Owned Class #0: AM
+Log: PlayAnim: Sequence 'TakeHit' not found for mesh 'Rabbit'
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+Log: PlayAnim: Sequence 'TakeHit' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function LumpysInvasion.LumpysInvasion.GetCollisionPlayerStart:0391) Accessed None 'CollisionTestActor'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+LumpysInvasion: M.Health is now: 80 M.HealthMax is now: 100
+LumpysInvasion: M.Health is now: 100 M.HealthMax is now: 100.00
+LumpysInvasion: New Monster NameNali Cow
+Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function LumpysInvasion.LumpysInvasion.GetCollisionPlayerStart:0391) Accessed None 'CollisionTestActor'
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
+ModAuthor: # # # # Game ShowPanel()  True
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Abilities ShowPanel()  True
+LumpysInvasion: Owned Class #0: AM
+ModAuthor: # # # # Character ShowPanel()  True
+ModAuthor: # # # # Abilities ShowPanel()  False
+ScriptLog: Client Data Reset
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 0
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ModAuthor: # # # # Abilities ShowPanel()  True
+LumpysInvasion: Owned Class #0: MM
+ModAuthor: # # # # Character ShowPanel()  False
+LumpysInvasion: Owned Class #0: MM
+LumpysInvasion: Owned Class #0: MM
+LumpysInvasion: Owned Class #0: MM
+Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function LumpysInvasion.LumpysInvasion.GetCollisionPlayerStart:0391) Accessed None 'CollisionTestActor'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit' not found for mesh 'Rabbit'
+Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function LumpysInvasion.LumpysInvasion.GetCollisionPlayerStart:0391) Accessed None 'CollisionTestActor'
+LumpysRPG: CA_MedicSprites: MedicDrones=1
+LumpysRPG: SpawnDrone: spawned LumpysRPG.MedicDrone (0/1) for Lumps
+LumpysInvasion: Owned Class #0: MM
+ModAuthor: # # # # Character ShowPanel()  True
+ModAuthor: # # # # Abilities ShowPanel()  False
+ScriptLog: Client Data Reset
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 0
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+ScriptLog: AddClassPoint Called
+ScriptLog: Add Class Called
+ScriptLog: Add Class Called : Case 1
+Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function LumpysInvasion.LumpysInvasion.GetCollisionPlayerStart:0391) Accessed None 'CollisionTestActor'
+ModAuthor: # # # # Abilities ShowPanel()  True
+LumpysInvasion: Owned Class #0: MM
+ModAuthor: # # # # Character ShowPanel()  False
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function LumpysInvasion.LumpysInvasion.GetCollisionPlayerStart:0391) Accessed None 'CollisionTestActor'
+Warning: LumpysInvasion DM-Flux2.LumpysInvasion (Function LumpysInvasion.LumpysInvasion.GetCollisionPlayerStart:0391) Accessed None 'CollisionTestActor'
+LumpysInvasion: Owned Class #0: MM
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+Log: PlayAnim: Sequence 'TakeHit2' not found for mesh 'Rabbit'
+LumpysRPG: CA_MedicSprites: MedicDrones=1
+LumpysRPG: SpawnDrone: spawned LumpysRPG.MedicDrone (0/1) for Lumps
+LumpysInvasion: Owned Class #0: MM
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
+ModAuthor: # # # # Game ShowPanel()  True
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
 Log: appRequestExit(0)
 Localization: No localization: UT2004.General.Exit (int)
@@ -102,18 +371,18 @@ Log: Unbound to Fire.dll
 Log: Unbound to XInterface.dll
 Log: Unbound to UWeb.dll
 Log: Unbound to Onslaught.dll
-Log: (Karma): Level Karma Terminated.
 Log: Unbound to ALAudio.dll
 Log: Waiting for file streaming thread to finish...
 Exit: OpenAL Audio subsystem shut down.
-Log: Garbage: objects: 39182->0; refs: 283940
+Log: (Karma): Level Karma Terminated.
+Log: Garbage: objects: 53039->0; refs: 434917
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 82 MByte 900 KByte 231 Bytes from HD took 0.460999 seconds (0.418999 reading, 0.042000 seeking).
-Log: FileManager: 0.173000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 218 MByte 569 KByte 184 Bytes from HD took 0.426999 seconds (0.359999 reading, 0.067000 seeking).
+Log: FileManager: 0.318000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Memory Allocation Status
-Uninitialized: Curr Memory  0.220M /  4.121M
-Uninitialized: Peak Memory  79.746M /  81.652M
-Uninitialized: Allocs        1002 Current /  3449837 Total
-Uninitialized: Log file closed, 03/28/26 22:24:26
+Uninitialized: Curr Memory  0.227M /  4.496M
+Uninitialized: Peak Memory  117.629M /  120.000M
+Uninitialized: Allocs        1005 Current /  12428701 Total
+Uninitialized: Log file closed, 03/29/26 14:06:01
