@@ -207,7 +207,7 @@ simulated function HitWall(vector HitNormal, actor Wall)
 
 simulated singular function Touch(Actor Other)
 {
-	if(Other != None && xPawn(Other) != None && bActive)
+	if(Other != None && xPawn(Other) != None && bActive && Other == protPawn)
 	{
 		// if we don't already have the dri, get an existing one;
 		if(dri == None)
@@ -249,9 +249,25 @@ simulated singular function Touch(Actor Other)
 	}
 }
 
-simulated function ProcessTouch(Actor Other, Vector HitLocation)
+simulated function initDrone(Actor Other)
 {
+		if(dri == None)
+			dri = getDroneInfo(Pawn(Other).PlayerReplicationInfo);
+		// if we still don't have one, make one
+		if(dri == None)
+			dri = Spawn(class'DroneReplicationInfo',Other);
 
+					// set our physics properly
+		SetPhysics(PHYS_Projectile);
+		RotationRate.Yaw=0;
+		// set owner
+		protPawn = Pawn(Other);
+		// let dri know the player has another drone
+		dri.numDrones++;
+		// make active (this doesn't do much but it's probably useful somewhere)
+		bActive=False;
+		// start doing stuff
+		SetTimer(0.1,true);
 }
 
 simulated function DroneReplicationInfo getDroneInfo(PlayerReplicationInfo PlayRepInf)

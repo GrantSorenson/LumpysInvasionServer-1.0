@@ -15,5 +15,5 @@ defaultproperties
      Maps(9)="DM-Deck17"
      Maps(10)="DM-Antalus"
      Maps(11)="DM-Asbestos"
-     MapNum=11
+     MapNum=12
 }

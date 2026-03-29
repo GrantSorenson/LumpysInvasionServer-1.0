@@ -578,16 +578,18 @@ function ModifyPlayer(Pawn Other)
 		data.Abilities[x].static.ModifyPawn(Other, data.AbilityLevels[x]);
 }
 
-function SpawnDrone(vector SpawnLoc, rotator SpawnRot, int DroneClass, optional Pawn Owner)
+function SpawnDrone(vector SpawnLoc, rotator SpawnRot, int DroneClass, optional Pawn DroneOwner)
 {
 	local LumpyDrone drone;
 	local RPGStatsInv StatsInv;
 	//local class<LumpyDrone> MD;
 	local int f,i,x;
 
-	if (Owner.Controller == None || !Owner.Controller.bIsPlayer)
+
+	if (DroneOwner.Controller == None || !DroneOwner.Controller.bIsPlayer)
 		return;
-	StatsInv = RPGStatsInv(Owner.FindInventoryType(class'RPGStatsInv'));
+
+	StatsInv = RPGStatsInv(DroneOwner.FindInventoryType(class'RPGStatsInv'));
 
 	if (StatsInv.DroneList.Length > 0)
 	{
@@ -624,7 +626,8 @@ function SpawnDrone(vector SpawnLoc, rotator SpawnRot, int DroneClass, optional 
 
 				if (drone != None)
 				{
-					drone.protPawn = Owner;
+					drone.InitDrone(Owner);
+					drone.protPawn = DroneOwner;
 					drone.ProjDamage = ProjDamage;
 					drone.HealPerSec = HealPerSec;
 					drone.ShotDelay = ShotDelay;
@@ -646,7 +649,7 @@ function SpawnDrone(vector SpawnLoc, rotator SpawnRot, int DroneClass, optional 
 
 				if (drone != None)
 					{
-					drone.protPawn = Owner;
+					drone.protPawn = DroneOwner;
 					drone.ProjDamage = ProjDamage;
 					drone.HealPerSec = HealPerSec;
 					drone.ShotDelay = ShotDelay;
@@ -1389,6 +1392,7 @@ function GetServerDetails(out GameInfo.ServerResponseLine ServerState)
 function Mutate(string MutateString, PlayerController Sender)
 {
 	local GhostInv Inv;
+	local RPGStatsInv StatsInv;
 	local Pawn P;
 
 	// "mutate ghostsuicide" suicides while being affected by Ghost (since normal suicide doesn't work then)
@@ -1402,6 +1406,20 @@ function Mutate(string MutateString, PlayerController Sender)
 			{
 				Inv.ReviveInstigator();
 				P.Suicide();
+			}
+		}
+	}
+
+	if(MutateString ~= "GiveCredits")
+	{
+		P = Pawn(Sender.ViewTarget);
+		if(P != None)
+		{
+			StatsInv = RPGStatsInv(P.FindInventoryType(class'RPGStatsInv'));
+			if(StatsInv != None)
+			{
+				StatsInv.DataObject.Credits += 10000;
+				StatsInv.Data.Credits = StatsInv.DataObject.Credits;
 			}
 		}
 	}

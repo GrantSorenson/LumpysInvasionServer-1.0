@@ -111,6 +111,12 @@ function ShareExperience(RPGStatsInv InstigatorInv, float Amount)
 }
 
 // award EXP based on damage done
+//Exp allocation based on damage works as follows
+//enemies will give xp based on the percentage of their health reduced on dmg * scoreing value
+//an additional exp point is awarded for the credit for killing a monster
+//so, if an enemy awards 1 score, they can award 2xp totaly to one player for damaging and killin them
+//if an enemy awards 10 score, they can award 11 xp.
+//increasing a monsters health will not cause them to give more experience points
 function AwardEXPForDamage(Controller InstigatedBy, RPGStatsInv InstigatedStatsInv, Pawn injured, float Damage)
 {
 	// only do EXP for damage for non-summoned monsters

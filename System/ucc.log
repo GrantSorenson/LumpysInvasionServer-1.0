@@ -1,12 +1,12 @@
-Log: Log file open, 01/03/25 23:07:44
+Log: Log file open, 03/28/26 18:23:08
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
 Init: Compiled: Nov 23 2005 16:23:34
-Init: Command line: ini=ut2004.ini
+Init: Command line: 
 Init: Character set: Unicode
-Init: Base directory: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\System\
-Init: Ini:ut2004.ini   UserIni:User.ini
+Init: Base directory: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\system\
+Init: Ini:UT2004.ini   UserIni:User.ini
 Init: Build label:  Build UT2004_Build_[2005-11-23_16.22]
 Init: Object subsystem initialized
 Log: Executing Class Editor.MakeCommandlet
@@ -45,202 +45,6 @@ Heading: --------------------------UTV2004c - Release--------------------------
 Heading: --------------------------UTV2004s - Release--------------------------
 Heading: --------------------------tk_BaseM - Release--------------------------
 Heading: -----------------------LumpysInvasion - Release-----------------------
-Warning: Failed to load 'LumpysInvasion.u': Can't find file 'LumpysInvasion.u'
-Warning: Failed loading package: Can't find file 'LumpysInvasion.u'
-Log: Analyzing...
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\FriendlyMonsterController.uc)
-Log: Class: FriendlyMonsterController extends MonsterController
-Log: Imported: Class LumpysInvasion.FriendlyMonsterController
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPAnimationManager.uc)
-Log: Class: IPAnimationManager extends Object
-Log: Imported: Class LumpysInvasion.IPAnimationManager
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPBossConfig.uc)
-Log: Class: IPBossConfig extends GUICustomPropertyPage
-Log: Imported: Class LumpysInvasion.IPBossConfig
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPBossDamType.uc)
-Log: Class: IPBossDamType extends Gibbed
-Log: Imported: Class LumpysInvasion.IPBossDamType
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPBossMessage.uc)
-Log: Class: IPBossMessage extends IPMessage
-Log: Imported: Class LumpysInvasion.IPBossMessage
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPBossReplicationInfo.uc)
-Log: Class: IPBossReplicationInfo extends PlayerReplicationInfo
-Log: Imported: Class LumpysInvasion.IPBossReplicationInfo
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPCollisionTestActor.uc)
-Log: Class: IPCollisionTestActor extends Actor
-Log: Imported: Class LumpysInvasion.IPCollisionTestActor
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPConfigs.uc)
-Log: Class: IPConfigs extends Object
-Log: Imported: Class LumpysInvasion.IPConfigs
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPCopyPaste.uc)
-Log: Class: IPCopyPaste extends Object
-Log: Imported: Class LumpysInvasion.IPCopyPaste
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPCylinderActor.uc)
-Log: Class: IPCylinderActor extends Actor
-Log: Imported: Class LumpysInvasion.IPCylinderActor
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPCylinderFinalBlend.uc)
-Log: Class: IPCylinderFinalBlend extends FinalBlend
-Log: Imported: Class LumpysInvasion.IPCylinderFinalBlend
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPCylinderShader.uc)
-Log: Class: IPCylinderShader extends Shader
-Log: Imported: Class LumpysInvasion.IPCylinderShader
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPDefaultWaves.uc)
-Log: Class: IPDefaultWaves extends Object
-Log: Imported: Class LumpysInvasion.IPDefaultWaves
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPMessage.uc)
-Log: Class: IPMessage extends CriticalEventPlus
-Log: Imported: Class LumpysInvasion.IPMessage
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPMonsterConfig.uc)
-Log: Class: IPMonsterConfig extends GUICustomPropertyPage
-Log: Imported: Class LumpysInvasion.IPMonsterConfig
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPMonsterIDInv.uc)
-Log: Class: IPMonsterIDInv extends Inventory
-Log: Imported: Class LumpysInvasion.IPMonsterIDInv
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPMonsterReplicationInfo.uc)
-Log: Class: IPMonsterReplicationInfo extends ReplicationInfo
-Log: Imported: Class LumpysInvasion.IPMonsterReplicationInfo
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPMonsterTable.uc)
-Log: Class: IPMonsterTable extends Object
-Log: Imported: Class LumpysInvasion.IPMonsterTable
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPPetAnchor.uc)
-Log: Class: IPPetAnchor extends Actor
-Log: Imported: Class LumpysInvasion.IPPetAnchor
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPProxyReplicationInfo.uc)
-Log: Class: IPProxyReplicationInfo extends PlayerReplicationInfo
-Log: Imported: Class LumpysInvasion.IPProxyReplicationInfo
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPSpinnyMonster.uc)
-Log: Class: IPSpinnyMonster extends Actor
-Log: Imported: Class LumpysInvasion.IPSpinnyMonster
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\IPWaveConfig.uc)
-Log: Class: IPWaveConfig extends GUICustomPropertyPage
-Log: Imported: Class LumpysInvasion.IPWaveConfig
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasion.uc)
-Log: Class: LumpysInvasion extends Invasion
-Log: Imported: Class LumpysInvasion.LumpysInvasion
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionFakeFriendlyMonsterReplicationInfo.uc)
-Log: Class: LumpysInvasionFakeFriendlyMonsterReplicationInfo extends PlayerReplicationInfo
-Log: Imported: Class LumpysInvasion.LumpysInvasionFakeFriendlyMonsterReplicationInfo
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionFriendlyMonsterReplicationInfo.uc)
-Log: Class: LumpysInvasionFriendlyMonsterReplicationInfo extends PlayerReplicationInfo
-Log: Imported: Class LumpysInvasion.LumpysInvasionFriendlyMonsterReplicationInfo
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionGameReplicationInfo.uc)
-Log: Class: LumpysInvasionGameReplicationInfo extends InvasionGameReplicationInfo
-Log: Imported: Class LumpysInvasion.LumpysInvasionGameReplicationInfo
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionHUD.uc)
-Log: Class: LumpysInvasionHUD extends HUDInvasion
-Log: Imported: Class LumpysInvasion.LumpysInvasionHUD
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionMutator.uc)
-Log: Class: LumpysInvasionMutator extends DMMutator
-Log: Imported: Class LumpysInvasion.LumpysInvasionMutator
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionWaveHandler.uc)
-Log: Class: LumpysInvasionWaveHandler extends Actor
-Log: Imported: Class LumpysInvasion.LumpysInvasionWaveHandler
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\LumpysInvasionWaveMessage.uc)
-Log: Class: LumpysInvasionWaveMessage extends CriticalEventPlus
-Log: Imported: Class LumpysInvasion.LumpysInvasionWaveMessage
-Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysInvasion\Classes\MapListLumpysInvasion.uc)
-Log: Class: MapListLumpysInvasion extends MapList
-Log: Imported: Class LumpysInvasion.MapListLumpysInvasion
-Log: Parsing LumpysInvasionGameReplicationInfo
-Log: Parsing IPBossReplicationInfo
-Log: Parsing IPProxyReplicationInfo
-Log: Parsing LumpysInvasionFakeFriendlyMonsterReplicationInfo
-Log: Parsing LumpysInvasionFriendlyMonsterReplicationInfo
-Log: Parsing IPMonsterReplicationInfo
-Log: Parsing LumpysInvasionMutator
-Log: Parsing LumpysInvasion
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\LumpysInvasion.uc(21) : Warning, 'WaveMonsterClass' obscures 'WaveMonsterClass' defined in base class 'Invasion'.
-Log: Parsing IPMessage
-Log: Parsing IPBossMessage
-Log: Parsing LumpysInvasionWaveMessage
-Log: Parsing MapListLumpysInvasion
-Log: Parsing IPBossDamType
-Log: Parsing FriendlyMonsterController
-Log: Parsing IPMonsterIDInv
-Log: Parsing LumpysInvasionHUD
-Log: Parsing IPCollisionTestActor
-Log: Parsing IPCylinderActor
-Log: Parsing IPPetAnchor
-Log: Parsing IPSpinnyMonster
-Log: Parsing LumpysInvasionWaveHandler
-Log: Parsing IPCylinderShader
-Log: Parsing IPCylinderFinalBlend
-Log: Parsing IPBossConfig
-Log: Parsing IPMonsterConfig
-Log: Parsing IPWaveConfig
-Log: Parsing IPAnimationManager
-Log: Parsing IPConfigs
-Log: Parsing IPCopyPaste
-Log: Parsing IPDefaultWaves
-Log: Parsing IPMonsterTable
-Log: Compiling LumpysInvasionGameReplicationInfo
-Log: Compiling IPBossReplicationInfo
-Log: Compiling IPProxyReplicationInfo
-Log: Compiling LumpysInvasionFakeFriendlyMonsterReplicationInfo
-Log: Compiling LumpysInvasionFriendlyMonsterReplicationInfo
-Log: Compiling IPMonsterReplicationInfo
-Log: Compiling LumpysInvasionMutator
-Log: Compiling LumpysInvasion
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\LumpysInvasion.uc(957) : Warning, 'M' : unreferenced local variable
-Log: Compiling IPMessage
-Log: Compiling IPBossMessage
-Log: Compiling LumpysInvasionWaveMessage
-Log: Compiling MapListLumpysInvasion
-Log: Compiling IPBossDamType
-Log: Compiling FriendlyMonsterController
-Log: Compiling IPMonsterIDInv
-Log: Compiling LumpysInvasionHUD
-Log: Compiling IPCollisionTestActor
-Log: Compiling IPCylinderActor
-Log: Compiling IPPetAnchor
-Log: Compiling IPSpinnyMonster
-Log: Compiling LumpysInvasionWaveHandler
-Log: Compiling IPCylinderShader
-Log: Compiling IPCylinderFinalBlend
-Log: Compiling IPBossConfig
-Log: Compiling IPMonsterConfig
-Warning: G:\LumpysInvasionServer\UT2004\LumpysInvasionServer-1.0\LumpysInvasion\Classes\IPMonsterConfig.uc(107) : Warning, 'X' : unreferenced local variable
-Log: Compiling IPWaveConfig
-Log: Compiling IPAnimationManager
-Log: Compiling IPConfigs
-Log: Compiling IPCopyPaste
-Log: Compiling IPDefaultWaves
-Log: Compiling IPMonsterTable
-Log: Importing Defaults for LumpysInvasionGameReplicationInfo
-Log: Importing Defaults for IPBossReplicationInfo
-Log: Importing Defaults for IPProxyReplicationInfo
-Log: Importing Defaults for LumpysInvasionFakeFriendlyMonsterReplicationInfo
-Log: Importing Defaults for LumpysInvasionFriendlyMonsterReplicationInfo
-Log: Importing Defaults for IPMonsterReplicationInfo
-Log: Importing Defaults for LumpysInvasionMutator
-Log: Importing Defaults for LumpysInvasion
-Log: Importing Defaults for IPMessage
-Log: Importing Defaults for IPBossMessage
-Log: Importing Defaults for LumpysInvasionWaveMessage
-Log: Importing Defaults for MapListLumpysInvasion
-Log: Importing Defaults for IPBossDamType
-Log: Importing Defaults for FriendlyMonsterController
-Log: Importing Defaults for IPMonsterIDInv
-Log: Importing Defaults for LumpysInvasionHUD
-Log: Importing Defaults for IPCollisionTestActor
-Log: Importing Defaults for IPCylinderActor
-Log: Importing Defaults for IPPetAnchor
-Log: Importing Defaults for IPSpinnyMonster
-Log: Importing Defaults for LumpysInvasionWaveHandler
-Log: Importing Defaults for IPCylinderShader
-Log: Importing Defaults for IPCylinderFinalBlend
-Log: Importing Defaults for IPBossConfig
-Log: Importing Defaults for IPMonsterConfig
-Log: Importing Defaults for IPWaveConfig
-Log: Importing Defaults for IPAnimationManager
-Log: Importing Defaults for IPConfigs
-Log: Importing Defaults for IPCopyPaste
-Log: Importing Defaults for IPDefaultWaves
-Log: Importing Defaults for IPMonsterTable
-Log: Success: Compiled 11313 line(s), 1030 statement(s).
-
-Log: Save=43.031867
-Log: Moving 'Save.tmp' to 'LumpysInvasion.u'
 Heading: -------------------------LumpysRPG - Release--------------------------
 Heading: ------------------------LumpyJumping - Release------------------------
 Heading: --------------------------tK_BaseW - Release--------------------------
@@ -251,9 +55,7 @@ Heading: ------------------------tk_MagicWand - Release------------------------
 Heading: --------------------------tk_AK47 - Release---------------------------
 Heading: -------------------------tk_LilLady - Release-------------------------
 Heading: ---------------------tk_HolyHandGrenade - Release---------------------
-Log: Bad UStrProperty destruction: StrProperty LumpysInvasion.IPMessage.OutMessage
-Log: Game exported successfully: LumpysInvasion.LumpysInvasion
-Log: Success - 0 error(s), 3 warning(s)
+Log: Success - 0 error(s), 0 warning(s)
 Exit: Preparing to exit.
 Log: Purging garbage
 Log: Unbound to Core.dll
@@ -266,11 +68,11 @@ Log: Unbound to UWeb.dll
 Log: Unbound to XGame.dll
 Log: Unbound to XInterface.dll
 Log: Unbound to Onslaught.dll
-Log: Garbage: objects: 84581->0; refs: 0
+Log: Garbage: objects: 84476->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 135 MByte 279 KByte 400 Bytes from HD took 0.484998 seconds (0.399998 reading, 0.085000 seeking).
-Log: FileManager: 0.078000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 134 MByte 600 KByte 628 Bytes from HD took 0.557998 seconds (0.459998 reading, 0.098000 seeking).
+Log: FileManager: 0.062000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 01/03/25 23:07:47
+Uninitialized: Log file closed, 03/28/26 18:23:11

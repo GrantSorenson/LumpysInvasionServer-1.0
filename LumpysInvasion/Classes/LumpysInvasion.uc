@@ -973,23 +973,16 @@ function AddMonster()
 				NewMonster = Spawn(NewMonsterClass,,,StartSpot.Location+(NewMonsterClass.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation);
 		}
 
-		if ( NewMonster ==  None )
-		{
-			StartSpot = FindPlayerStart(None,0, string(FallBackMonster));
-			//else spawn the fall back using an average monsters size specifications
-			NewMonster = tK_Monster(Spawn(FallBackMonster,,,StartSpot.Location+(FallBackMonster.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation));
-		}
-
 		if ( NewMonster != None )
 		{
 			//TotalSpawned++;
 			WaveMonsters++;
 			NewMonster.MonsterName = WaveMonsterClasses.WaveMonsterName[index];
 			UpdateNewMonsterClass(NewMonster);
-			//M = Texture(DynamicLoadObject(WaveMonsterClasses.WaveMonsterSkin[index],class'Texture'));
-			//NewMonster.default.Skins[0] = M;
-			//NewMonster.default.Skins[1] = M;
-			//NewMonster.UpdatePrecacheMaterials();
+			M = Texture(DynamicLoadObject(WaveMonsterClasses.WaveMonsterSkin[index],class'Texture'));
+			NewMonster.default.Skins[0] = M;
+			NewMonster.default.Skins[1] = M;
+			NewMonster.UpdatePrecacheMaterials();
 
 			//UpdateMonsterTypeStats(NewMonster.Class, 1, 0, 0);
 			//LumpysInvasionMutator(BaseMutator).ModifyMonster(NewMonster,false,false);
@@ -1003,6 +996,12 @@ function AddMonster()
 			}
 			//UpdateNewMonsterClass(NewMonster);
 			Log("New Monster Name"$NewMonster.MonsterName,'LumpysInvasion');
+		}
+		else if ( NewMonster ==  None )
+		{
+			StartSpot = FindPlayerStart(None,0, string(FallBackMonster));
+			//else spawn the fall back using an average monsters size specifications
+			NewMonster = tK_Monster(Spawn(FallBackMonster,,,StartSpot.Location+(FallBackMonster.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation));
 		}
 	}//
 	else
@@ -1076,7 +1075,7 @@ function UpdateNewMonsterClass(tk_Monster MonsterClass)
             }
             else
             {
-                MonsterClass.Health = class'IPMonsterTable'.default.MonsterTable[i].NewHealth;
+                MonsterClass.Health = class'IPMonsterTable'.default.MonsterTable[i].NewMaxHealth;
                 MonsterClass.HealthMax = class'IPMonsterTable'.default.MonsterTable[i].NewMaxHealth;
                 Log("M.Health is now: "$MonsterClass.Health$" M.HealthMax is now: "$MonsterClass.HealthMax,'LumpysInvasion');
             }
@@ -1132,7 +1131,7 @@ function UpdateNewMonsterClass(tk_Monster MonsterClass)
             */
 
             MonsterClass.ScoringValue = class'IPMonsterTable'.default.MonsterTable[i].NewScoreAward;
-            //MonsterClass.MonsterName = class'IPMonsterTable'.default.MonsterTable[i].MonsterName;
+			//MonsterClass.MonsterName = class'IPMonsterTable'.default.MonsterTable[i].MonsterName;
             
         }
     }
