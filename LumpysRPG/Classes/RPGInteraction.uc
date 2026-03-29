@@ -36,10 +36,15 @@ event Initialized()
 {
 	local EInputKey key;
 	local string tmp;
+	local Mutator M;
 
 	if (ViewportOwner.Actor.Level.NetMode != NM_Client)
-		foreach ViewportOwner.Actor.DynamicActors(class'MutLumpysRPG', RPGMut)
-			break;
+		for (M = ViewportOwner.Actor.Level.Game.BaseMutator; M != None; M = M.NextMutator)
+		{
+			RPGMut = MutLumpysRPG(M);
+			if (RPGMut != None)
+				break;
+		}
 
 	//detect if user made custom binds for our aliases
 	for (key = IK_None; key < IK_OEMClear; key = EInputKey(key + 1))
@@ -568,14 +573,7 @@ function Inventory FindNextNthItem(
 			}
 		}
 
-		if (
-			(inv.IsA('PowerUps') == true) &&
-			(PowerUps(inv).bActivatable == true)
-		) {
-			bIsPowerup = true;
-		} else {
-			bIsPowerup = false;
-		}
+		bIsPowerUp = PowerUps(inv) != None && PowerUps(inv).bActivatable;
 
 		if (bIsPowerUp == true) {
 			--index;

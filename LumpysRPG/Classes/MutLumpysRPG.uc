@@ -89,11 +89,13 @@ static final function MutLumpysRPG GetRPGMutator(GameInfo G)
   local Mutator M;
   local MutLumpysRPG RPGMut;
 
-  for (M = G.BaseMutator; M != None && RPGMut != None; M=M.NextMutator)
+  for (M = G.BaseMutator; M != None; M = M.NextMutator)
   {
     RPGMut = MutLumpysRPG(M);
+    if (RPGMut != None)
+      return RPGMut;
   }
-  return RPGMut;
+  return None;
 }
 
 //returns true if the specified ammo belongs to a weapon that we consider a superweapon
@@ -1028,19 +1030,20 @@ function BotLevelUp(Bot B, RPGPlayerDataObject Data)
 	}
 }
 
-function CheckLevelUp(RPGPlayerDataObject data, PlayerReplicationInfo MessagePRI)
+// bDeferSave: when true, skips both SaveConfig() calls so the caller can
+// schedule them for a later frame, avoiding a disk-write hitch mid-gameplay.
+function CheckLevelUp(RPGPlayerDataObject data, PlayerReplicationInfo MessagePRI, optional bool bDeferSave)
 {
 	local LevelUpEffect Effect;
 	local int Count;
 
 	while (data.Experience >= data.NeededExp && Count < 10000)
 	{
-
 		Count++;
 		data.Level++;
 		data.PointsAvailable += PointsPerLevel;
 		data.Experience -= data.NeededExp;
-    data.NeededExp = GetNeededXP(data.Level);
+		data.NeededExp = GetNeededXP(data.Level);
 
 		if (data.Level % 1000 == 0)
 		{
@@ -1061,15 +1064,18 @@ function CheckLevelUp(RPGPlayerDataObject data, PlayerReplicationInfo MessagePRI
 		{
 			HighestLevelPlayerName = string(data.Name);
 			HighestLevelPlayerLevel = data.Level;
-			SaveConfig();
+			if (!bDeferSave)
+				SaveConfig();
 		}
 	}
 
 	if (Count > 0 && Count < 3 && MessagePRI != None)
 		Level.Game.BroadCastLocalized(self, class'GainLevelMessage', data.Level, MessagePRI);
 
-  // Save the Players data on levelup so we dont miss anything due to invasion funkiness
-  data.SaveConfig();
+	// Save player data so progress isn't lost on crash or wave end.
+	// Skipped here when bDeferSave=true — caller is responsible for the save.
+	if (!bDeferSave)
+		data.SaveConfig();
 }
 
 function class<RPGWeapon> GetRandomWeaponModifier(class<Weapon> WeaponType, Pawn Other)

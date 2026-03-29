@@ -90,7 +90,7 @@ simulated function Tick(float dt)
 simulated function Timer()
 {
 	local Pawn cTarget;
-	local vector toProt;
+	local vector toProt, normToProt, toTarget, toCurrent;
 	local int protTeam;
 	local float dist;
 	local DroneProj dp;
@@ -103,9 +103,13 @@ simulated function Timer()
 
 		//Movement
 		curOsc += OscInc;
-		toProt = (protPawn.Location+vect(0,0,1)*orbitHeight) - Location;
-		dist = VSize(toProt);
-		Velocity = 0.1 * Velocity + 0.3 * ((Normal(toProt) cross vect(0,0,1)) * CircleSpeed) + 0.2 * cos(curOsc) * vect(0,0,1) * OscHeight + 0.4 * Normal(toProt) * Speed * (dist - OrbitDist)/OrbitDist;
+		toProt     = (protPawn.Location + vect(0,0,1) * orbitHeight) - Location;
+		dist       = VSize(toProt);
+		normToProt = Normal(toProt);
+		Velocity   = 0.1 * Velocity
+		           + 0.3 * ((normToProt cross vect(0,0,1)) * CircleSpeed)
+		           + 0.2 * cos(curOsc) * vect(0,0,1) * OscHeight
+		           + 0.4 * normToProt * Speed * (dist - OrbitDist) / OrbitDist;
 		SetRotation(rotator(Velocity)+rotator(vect(1,0,0))+rotator(vect(0,1,0)));
 		
 		//Server-side stuff
@@ -122,8 +126,14 @@ simulated function Timer()
 					{
 						if(targetPawn==None)
 							targetPawn=cTarget;
-						else if(VSize(targetPawn.Location-protPawn.Location)>VSize(cTarget.Location-protPawn.Location))
-							targetPawn=cTarget;
+						else
+						{
+							// Dot product gives squared distance — same comparison without sqrt
+							toTarget  = targetPawn.Location - protPawn.Location;
+							toCurrent = cTarget.Location    - protPawn.Location;
+							if ((toTarget Dot toTarget) > (toCurrent Dot toCurrent))
+								targetPawn = cTarget;
+						}
 					}
 				}
 				

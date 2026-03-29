@@ -2,6 +2,7 @@ class ExperiencePickup extends TournamentPickUp;
 
 var() int Levels;//The amount of levels we want this pickup to grant
 var MutLumpysRPG RPGMut;
+var RPGPlayerDataObject PendingDataObject; // held for deferred SaveConfig after level-up
 
 function PostBeginPlay()
 {
@@ -22,6 +23,16 @@ event float BotDesireability(Pawn Bot)
 	return MaxDesireability;
 }
 
+// Fires 0.5s after a pickup to write player data to disk outside the pickup frame.
+function Timer()
+{
+	if (PendingDataObject != None)
+	{
+		PendingDataObject.SaveConfig();
+		PendingDataObject = None;
+	}
+}
+
 static function string GetLocalString(optional int Switch, optional PlayerReplicationInfo RelatedPRI_1, optional PlayerReplicationInfo RelatedPRI_2)
 {
 	return Default.PickupMessage$Default.Levels@"Levels!";
@@ -31,10 +42,10 @@ auto state Pickup
 {
 	function Touch(Actor Other)
 	{
-	        local Pawn P;
-	        local RPGStatsInv StatsInv;
-					local int i;
-					local Mutator m;
+		local Pawn P;
+		local RPGStatsInv StatsInv;
+		local Mutator m;
+		local int i, levelsLeft, totalXP, simulLevel;
 
 		if (ValidTouch(Other))
 		{
@@ -43,30 +54,48 @@ auto state Pickup
 			if (StatsInv == None)
 				return;
 
-			if (Other.Level != None && Other.Level.Game != None)
+			for (m = Other.Level.Game.BaseMutator; m != None; m = m.NextMutator)
 			{
-					for (m = Other.Level.Game.BaseMutator; m != None; m = m.NextMutator)
-					if (MutLumpysRPG(m) != None)
-					{
-							RPGMut = MutLumpysRPG(m);
-							break;
-					}
+				RPGMut = MutLumpysRPG(m);
+				if (RPGMut != None)
+					break;
+			}
+			if (RPGMut == None)
+				return;
+
+			// Compute the exact XP needed for Levels level-ups from the player's
+			// current position, then add it all at once and call CheckLevelUp once.
+			// The old approach called CheckLevelUp (and SaveConfig) up to 20 times
+			// in a single frame — once inside AddExperienceFraction and once
+			// explicitly per loop iteration — causing a visible lag spike.
+			levelsLeft  = Levels;
+			simulLevel  = StatsInv.DataObject.Level;
+
+			// If the player is mid-level, account for the partial level first.
+			if (StatsInv.DataObject.Experience > 0)
+			{
+				totalXP    += StatsInv.DataObject.NeededExp - StatsInv.DataObject.Experience;
+				simulLevel++;
+				levelsLeft--;
 			}
 
-			for(i=0;i<Levels;i++)
-			{
-				if(StatsInv.Data.Experience != 0)//Control level so we get 0/x experience till level up.
-				{
-					StatsInv.DataObject.AddExperienceFraction((StatsInv.DataObject.NeededExp-StatsInv.DataObject.Experience),RPGMut,P.PlayerReplicationInfo);
-					RPGMut.CheckLevelUp(StatsInv.DataObject, P.PlayerReplicationInfo);
-					continue;
-				}
-				StatsInv.DataObject.AddExperienceFraction(StatsInv.Data.NeededExp,RPGMut,P.PlayerReplicationInfo);
-				RPGMut.CheckLevelUp(StatsInv.DataObject, P.PlayerReplicationInfo);
-			}
+			// Look up the XP requirement for each subsequent level and sum them.
+			// GetNeededXP is a config array lookup — negligible cost.
+			for (i = 0; i < levelsLeft; i++)
+				totalXP += RPGMut.GetNeededXP(simulLevel + i);
+
+			StatsInv.DataObject.Experience += totalXP;
+
+			// bDeferSave=true skips both SaveConfig() calls inside CheckLevelUp,
+			// moving the disk write out of this frame entirely.
+			RPGMut.CheckLevelUp(StatsInv.DataObject, P.PlayerReplicationInfo, true);
+
+			// Schedule the save 0.5s from now — well outside the pickup frame.
+			PendingDataObject = StatsInv.DataObject;
+			SetTimer(0.5, false);
+
 			AnnouncePickup(P);
 			SetRespawn();
-
 		}
 	}
 }
