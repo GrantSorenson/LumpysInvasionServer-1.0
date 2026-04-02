@@ -1127,9 +1127,17 @@ simulated function ClientReceiveStatCap(int Index, int Cap)
 	}
 }
 
-function SetMaxDrones()
+function SetMaxDrones(int index)
 {
-	MaxDrones = RegDrones + MedicDrones;
+	switch(index)
+	{
+		case 0:
+			MaxDrones = RegDrones;
+			break;
+		case 1:
+			MaxDrones = MedicDrones;
+			break;
+	}
 }
 
 function ServerSetVersion(int Version)

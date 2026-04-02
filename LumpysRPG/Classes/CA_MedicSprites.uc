@@ -20,7 +20,7 @@ static function AddDrones(Pawn Other, int AbilityLevel)
 
     StatsInv.MedicDrones = AbilityLevel;
     Log("CA_MedicSprites: MedicDrones="$AbilityLevel, 'LumpysRPG');
-    StatsInv.SetMaxDrones();
+    StatsInv.SetMaxDrones(1);
     StatsInv.RPGMut.SpawnDrone(class'MedicDrone', AbilityLevel, Other);
 }
 
@@ -42,7 +42,7 @@ static simulated function UnModifyPawn(Pawn Other, int AbilityLevel)
         return;
 
     StatsInv.MedicDrones = 0;
-    StatsInv.SetMaxDrones();
+    StatsInv.SetMaxDrones(1);
     // Count=0 destroys existing MedicDrones without spawning any new ones.
     // Regular LumpyDrones owned by AbilityDrones are unaffected.
     StatsInv.RPGMut.SpawnDrone(class'MedicDrone', 0, Other);

@@ -1620,7 +1620,7 @@ defaultproperties
     GameName="Lumpys Invasion"
     Description="Along side the other players, you must hold out as long as possible against the waves of attacking monsters."
     ScreenShotName="UT2004Thumbnails.InvasionShots"
-    Acronym="LINV"
+    Acronym="INV"
     GIPropsDisplayText(0)="Monster Skill"
     GIPropDescText(0)="Set the skill of the invading monsters."
 }

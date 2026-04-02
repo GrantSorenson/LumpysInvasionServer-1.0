@@ -9,18 +9,19 @@ static simulated function int Cost(RPGPlayerDataObject Data, int CurrentLevel)
 
 static function AddDrones(Pawn Other, int AbilityLevel)
 {
-    local RPGStatsInv StatsInv;
+    local Inventory Inv;
 
     if (Other.Role != ROLE_Authority)
         return;
 
-    StatsInv = RPGStatsInv(Other.FindInventoryType(class'RPGStatsInv'));
-    if (StatsInv == None)
-        return;
+    Inv = Other.FindInventoryType(class'RPGStatsInv');
 
-    StatsInv.RegDrones = AbilityLevel;
-    StatsInv.SetMaxDrones();
-    StatsInv.RPGMut.SpawnDrone(class'LumpyDrone', AbilityLevel, Other);
+    if (RPGStatsInv(Inv) != None)
+    {
+        RPGStatsInv(Inv).RegDrones = AbilityLevel;
+        RPGStatsInv(Inv).SetMaxDrones(0);
+        RPGStatsInv(Inv).RPGMut.SpawnDrone(class'LumpyDrone', AbilityLevel, Other);
+    }
 }
 
 static simulated function ModifyPawn(Pawn Other, int AbilityLevel)
@@ -41,9 +42,7 @@ static simulated function UnModifyPawn(Pawn Other, int AbilityLevel)
         return;
 
     StatsInv.RegDrones = 0;
-    StatsInv.SetMaxDrones();
-    // Count=0 destroys existing LumpyDrones without spawning any new ones.
-    // MedicDrones owned by CA_MedicSprites are unaffected.
+    StatsInv.SetMaxDrones(0);
     StatsInv.RPGMut.SpawnDrone(class'LumpyDrone', 0, Other);
 }
 

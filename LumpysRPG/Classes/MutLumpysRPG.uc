@@ -588,8 +588,6 @@ function SpawnDrone(class<LumpyDrone> DroneType, int Count, Pawn DroneOwner)
 {
 	local LumpyDrone drone;
 	local RPGStatsInv StatsInv;
-	local float angle;
-	local vector orbitPos;
 	local int x;
 
 	if (DroneOwner == None || DroneOwner.Controller == None || !DroneOwner.Controller.bIsPlayer)
@@ -600,38 +598,29 @@ function SpawnDrone(class<LumpyDrone> DroneType, int Count, Pawn DroneOwner)
 		return;
 
 	// Destroy existing drones of this type and prune stale None entries.
-	// Iterate backwards so removals don't corrupt the index.
 	for (x = StatsInv.DroneList.length - 1; x >= 0; x--)
 	{
 		if (StatsInv.DroneList[x] == None)
-		{
 			StatsInv.DroneList.Remove(x, 1);
-		}
 		else if (StatsInv.DroneList[x].class == DroneType)
 		{
-			StatsInv.DroneList[x].Destroy(); // LumpyDrone.Destroyed() self-removes from the list
+			StatsInv.DroneList[x].Destroy();
+			StatsInv.DroneList.Remove(x, 1);
 		}
 	}
 
-	// Calculate the orbit position for each drone and pass it directly to Spawn()
-	// so the drone is never inside or adjacent to the player on creation.
 	for (x = 0; x < Count; x++)
 	{
-		angle    = (6.2832 * float(x)) / float(Max(Count, 1));
-		orbitPos = DroneOwner.Location + vect(0,0,64)
-		         + vect(1,0,0) * DroneType.default.OrbitDist * Cos(angle)
-		         + vect(0,1,0) * DroneType.default.OrbitDist * Sin(angle);
-
-		drone = Spawn(DroneType, DroneOwner,, orbitPos, DroneOwner.Rotation);
+		drone = Spawn(DroneType, DroneOwner,, DroneOwner.Location + vect(0,-32,64), DroneOwner.Rotation);
 		if (drone != None)
 		{
-			drone.InitDrone(DroneOwner, x, Count);
+			drone.protPawn = DroneOwner;
 			drone.ProjDamage = ProjDamage;
 			drone.HealPerSec = HealPerSec;
 			drone.ShotDelay = ShotDelay;
 			drone.TargetDelay = TargetDelay;
+			drone.bActive = !bPickup;
 			StatsInv.DroneList[StatsInv.DroneList.length] = drone;
-			Log("SpawnDrone: spawned "$DroneType$" ("$x$"/"$Count$") for "$DroneOwner.PlayerReplicationInfo.PlayerName, 'LumpysRPG');
 		}
 	}
 }
