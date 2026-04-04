@@ -777,6 +777,18 @@ State MatchInProgress
 			}
 		}
 
+		// End the game if all players are dead/out of lives.
+		if(bWaveInProgress)
+		{
+			log("AllPlayersOut check: result="$AllPlayersOut(),'LumpysInvasion');
+			if(AllPlayersOut())
+			{
+				log("AllPlayersOut: calling EndGame",'LumpysInvasion');
+				EndGame(None,"TimeLimit");
+				return;
+			}
+		}
+
         if ( bWaveInProgress )
         {
 			if(!bBossWave)
@@ -793,6 +805,11 @@ State MatchInProgress
 				{
 					if(NumHostileMonsters() <= 0)
 					{
+						if(WaveNum >= FinalWave)
+						{
+							EndGame(None,"TimeLimit");
+							return;
+						}
 						bWaveInProgress = false;
 						WaveCountDown = 15;
 						WaveNum++;
@@ -890,6 +907,24 @@ State MatchInProgress
         WaveNum = InitialWave;
         LumpysInvasionGameReplicationInfo(GameReplicationInfo).WaveNumber = WaveNum;
     }
+}
+
+// Returns true if no human players are alive (have a living pawn).
+// Used to end the game when everyone dies mid-wave.
+function bool AllPlayersOut()
+{
+	local Controller C;
+
+	for(C = Level.ControllerList; C != None; C = C.NextController)
+	{
+		if(PlayerController(C) == None || C.PlayerReplicationInfo == None)
+			continue;
+		if(C.PlayerReplicationInfo.bOnlySpectator)
+			continue;
+		if(C.Pawn != None && C.Pawn.Health > 0)
+			return false;
+	}
+	return true;
 }
 
 function bool ShouldAdvanceWave()

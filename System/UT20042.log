@@ -1,4 +1,4 @@
-Log: Log file open, 03/28/26 22:11:29
+Log: Log file open, 04/02/26 17:52:18
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -12,31 +12,32 @@ Init: Object subsystem initialized
 Log: Splash screen filename is '..\Help\UT20042Logo.bmp'
 Log: 	atidx9loader32.dll/AMD Radeon RX 9060 XT
 Log: Game class is 'GameInfo'
-Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.381000...
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 2.297000...
 ScriptLog: GameInfo::InitGame : bEnableStatLogging False
 Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?SpectatorOnly=1?Sex=M
 Log: Collecting garbage
 Log: Purging garbage
-Log: Garbage: objects: 27938->27938; refs: 284040
+Log: Garbage: objects: 27913->27913; refs: 283940
 Log: Game class is 'CinematicGame'
-Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.827000...
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 3.382000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: GameInfo::InitGame : bEnableStatLogging False
 Log: ALAudio: Using DirectSound to record audio.
 ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
 Log: Opened viewport
-Log: Enter SetRes: 1680x1050 Fullscreen 1
+Log: Couldn't bring window to foreground.
+Log: Enter SetRes: 1920x1200 Fullscreen 0
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 77(32-bit)
 Log: Creating device
 Log: xD3DHelper::Init (QuadEmulation)
-Log: Startup time: 2.206000 seconds
+Log: Startup time: 3.870000 seconds
 Log: Precaching: NvidiaLogo.LevelInfo0
 Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
 Log: Allocating 16384 byte dynamic index buffer.
-Log: Finished precaching geometry in 0.098 seconds
-Log: Finished precaching textures in 0.105 seconds
+Log: Finished precaching geometry in 0.188 seconds
+Log: Finished precaching textures in 0.153 seconds
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] () ()
 Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
 ModAuthor: Restoring previously open menus (0 menus to restore)
@@ -52,49 +53,15 @@ Log: GP=FALSE
 Log: Spawning new actor for Viewport WindowsViewport
 ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
 Log: Static mesh batches: 0 vertex bytes, 0 index bytes
-Log: FIREWALL: Freed XP.SP2 Firewall Object
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4ServerBrowser] () ()
-ModAuthor: # # # # News ShowPanel()  True
-IRC: 2 Servers 0 Channels
-Log: Defaulting to false
-ScriptLog: UT2k4Browser_ServerListPageFavorites Spawned new ServerQueryClient 'Entry.ServerQueryClient'
-Log: Defaulting to false
-Log: Resolving ut2004master1.epicgames.com...
-Log: Failed to resolve 'ut2004master1.epicgames.com'
-ModAuthor: # # # # Chat ShowPanel()  True
-ModAuthor: # # # # System ShowPanel()  True
-ModAuthor: # # # # News ShowPanel()  False
-ModAuthor: # # # # Favorites ShowPanel()  True
-ModAuthor: # # # # Chat ShowPanel()  False
-ModAuthor: # # # # System ShowPanel()  False
-ModAuthor: # # # # News ShowPanel()  True
-ModAuthor: # # # # Favorites ShowPanel()  False
-ModAuthor: # # # # Internet ShowPanel()  True
-Log: Resolving ut2004master1.epicgames.com...
-Log: Failed to resolve 'ut2004master1.epicgames.com'
-ModAuthor: # # # # News ShowPanel()  False
-Log: Resolving ut2004master1.epicgames.com...
-Log: Failed to resolve 'ut2004master1.epicgames.com'
-Log: Resolving ut2004master1.epicgames.com...
-Log: Failed to resolve 'ut2004master1.epicgames.com'
-Log: Resolving ut2004master2.epicgames.com...
-Log: Failed to resolve 'ut2004master2.epicgames.com'
-Log: Resolving ut2004master2.epicgames.com...
-Log: Failed to resolve 'ut2004master2.epicgames.com'
-Log: Resolving ut2004master1.epicgames.com...
-Log: Failed to resolve 'ut2004master1.epicgames.com'
-Log: Resolving ut2004master2.epicgames.com...
-Log: Failed to resolve 'ut2004master2.epicgames.com'
-Log: Resolving ut2004master2.epicgames.com...
-Log: Failed to resolve 'ut2004master2.epicgames.com'
-Log: Resolving ut2004master1.epicgames.com...
-Log: Failed to resolve 'ut2004master1.epicgames.com'
-Log: Resolving ut2004master1.epicgames.com...
-Log: Failed to resolve 'ut2004master1.epicgames.com'
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2k4ServerBrowser]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2k4.UT2K4SettingsPage] () ()
+ModAuthor: # # # # Display ShowPanel()  True
+Warning: Failed to load 'NULL': Can't resolve package name
+Warning: Failed to load 'Mesh None.': Can't resolve package name
+ScriptLog: Could not load mesh:  For player: 
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4SettingsPage]
 Debug: UT2k4MainMenu.Opened()   Sender:None
-Log: Time=374.119007 ms
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
+Log: Time=434.277964 ms
+Log: Closing by request
 Log: appRequestExit(0)
 Exit: Preparing to exit.
 Log: Purging garbage
@@ -116,14 +83,14 @@ Log: (Karma): Level Karma Terminated.
 Log: Unbound to ALAudio.dll
 Log: Waiting for file streaming thread to finish...
 Exit: OpenAL Audio subsystem shut down.
-Log: Garbage: objects: 32557->0; refs: 284040
+Log: Garbage: objects: 32028->0; refs: 283940
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 65 MByte 377 KByte 230 Bytes from HD took 0.181000 seconds (0.143000 reading, 0.038000 seeking).
-Log: FileManager: 0.096000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 66 MByte 356 KByte 575 Bytes from HD took 0.479999 seconds (0.445999 reading, 0.034000 seeking).
+Log: FileManager: 1.806001 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Memory Allocation Status
 Uninitialized: Curr Memory  0.199M /  3.246M
-Uninitialized: Peak Memory  66.088M /  67.852M
-Uninitialized: Allocs         673 Current /  14605716 Total
-Uninitialized: Log file closed, 03/28/26 22:11:54
+Uninitialized: Peak Memory  66.057M /  67.789M
+Uninitialized: Allocs         669 Current /  1363016 Total
+Uninitialized: Log file closed, 04/02/26 17:52:29

@@ -52,7 +52,8 @@
       "Bash(curl -s \"https://unreal.shaungoeppinger.com/uncodex-ut2004/gameplay/gameplay-list.html\")",
       "Bash(curl -s \"https://unreal.shaungoeppinger.com/uncodex-ut2004/Source_xgame/xpawn.html\")",
       "Bash(curl -s \"https://unreal.shaungoeppinger.com/uncodex-ut2004/Source_xgame/udamagetimer.html\")",
-      "Bash(curl -s \"https://unreal.shaungoeppinger.com/uncodex-ut2004/Source_unrealgame/translocatorbeacon.html\")"
+      "Bash(curl -s \"https://unreal.shaungoeppinger.com/uncodex-ut2004/Source_unrealgame/translocatorbeacon.html\")",
+      "Bash(ssh root@172.232.9.14 \"docker ps && docker logs --since 2m ut2004 2>&1 | tail -20\")"
     ]
   }
 }

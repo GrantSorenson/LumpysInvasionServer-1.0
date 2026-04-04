@@ -88,7 +88,7 @@ simulated function Tick(float dt)
 
     if (protPawn == None)
         protPawn = Pawn(Owner);
-    if (protPawn == None)
+    if (protPawn == None || protPawn.Health <= 0)
         return;
 
     // Smoothly chase the player — OrbitCenter lags behind protPawn.Location.
