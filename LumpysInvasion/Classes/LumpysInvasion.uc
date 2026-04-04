@@ -38,6 +38,7 @@ var() array<string> WaveBossID;
 var() float BossTimeLimit;
 var() int OverTimeDamage;
 
+var bool bCheckEndGameDone; // guards CheckEndGame against re-entry (prevents EndTime being reset each tick)
 var() bool bBossWave; //is this a boss wave that is in progress
 var() bool bBossActive; //true when boss has spawned
 var() bool bFallback;	//attempting to spawn fallback boss
@@ -749,12 +750,36 @@ function SetupWave()
 	}
 }
 
+function bool CheckEndGame(PlayerReplicationInfo Winner, string Reason)
+{
+	local bool bResult;
+	// Guard against repeated direct calls (e.g. from xVoting each tick).
+	// Without this, EndTime gets reset every tick and MatchOver.Timer() can
+	// never reach it to call RestartGame(), so the map never transitions.
+	if(bCheckEndGameDone)
+		return true;
+	log("[LI] CheckEndGame called -- Reason="$Reason$" WaveNum="$WaveNum$" FinalWave="$FinalWave$" EndTimeDelay="$EndTimeDelay,'LumpysInvasion');
+	bResult = Super.CheckEndGame(Winner, Reason);
+	if(bResult)
+		bCheckEndGameDone = true;
+	log("[LI] CheckEndGame result="$bResult$" EndTime="$EndTime$" Level.TimeSeconds="$Level.TimeSeconds,'LumpysInvasion');
+	return bResult;
+}
+
+function RestartGame()
+{
+	log("[LI] RestartGame called -- bGameRestarted="$bGameRestarted$" Level.TimeSeconds="$Level.TimeSeconds,'LumpysInvasion');
+	Super.RestartGame();
+}
+
 State MatchInProgress
 {
     function Timer()
     {
         local Controller C;
 
+        if(bGameEnded)
+            return;
 
         Super(xTeamGame).Timer();
         UpdateGRI();
@@ -780,10 +805,9 @@ State MatchInProgress
 		// End the game if all players are dead/out of lives.
 		if(bWaveInProgress)
 		{
-			log("AllPlayersOut check: result="$AllPlayersOut(),'LumpysInvasion');
-			if(AllPlayersOut())
+				if(AllPlayersOut())
 			{
-				log("AllPlayersOut: calling EndGame",'LumpysInvasion');
+				log("[LI] AllPlayersOut=true on Wave "$WaveNum$" — calling EndGame",'LumpysInvasion');
 				EndGame(None,"TimeLimit");
 				return;
 			}
@@ -792,7 +816,7 @@ State MatchInProgress
         if ( bWaveInProgress )
         {
 			if(!bBossWave)
-			{           
+			{
 				if(!ShouldAdvanceWave())
 				{
 					if(ShouldSpawnAnotherMonster() && Level.TimeSeconds > NextMonsterTime)
@@ -807,9 +831,11 @@ State MatchInProgress
 					{
 						if(WaveNum >= FinalWave)
 						{
+							log("[LI] FinalWave "$WaveNum$" cleared — calling EndGame",'LumpysInvasion');
 							EndGame(None,"TimeLimit");
 							return;
 						}
+						log("[LI] Wave "$WaveNum$" cleared — advancing to Wave "$(WaveNum+1),'LumpysInvasion');
 						bWaveInProgress = false;
 						WaveCountDown = 15;
 						WaveNum++;
@@ -828,6 +854,7 @@ State MatchInProgress
 
 					if(FallBackTimer>20.0)
 					{
+						log("[LI] BossWave "$WaveNum$" FallbackTimer expired — forcing next wave",'LumpysInvasion');
 						ForceNextWave();
 						FallBackTimer = 0.0;
 						return;
@@ -845,6 +872,7 @@ State MatchInProgress
         {
             if ( WaveNum == FinalWave )
             {
+				log("[LI] FinalWave "$WaveNum$" (between-wave path) — calling EndGame",'LumpysInvasion');
                 EndGame(None,"TimeLimit");
                 return;
             }
@@ -893,6 +921,7 @@ State MatchInProgress
                 bWaveInProgress = true;
                 NotifyNextWave();
                 SetupWave();
+                log("[LI] Wave "$WaveNum$" started — MaxMonsters="$MaxMonsters$" WaveMaxMonsters="$WaveMaxMonsters$" NumWaveClasses="$WaveNumClasses,'LumpysInvasion');
                 for ( C = Level.ControllerList; C != None; C = C.NextController )
                     if ( PlayerController(C) != None )
                         PlayerController(C).LastPlaySpeech = 0;
@@ -906,14 +935,16 @@ State MatchInProgress
         Super.BeginState();
         WaveNum = InitialWave;
         LumpysInvasionGameReplicationInfo(GameReplicationInfo).WaveNumber = WaveNum;
+        log("[LI] MatchInProgress BeginState — InitialWave="$WaveNum$" FinalWave="$FinalWave,'LumpysInvasion');
     }
 }
 
-// Returns true if no human players are alive (have a living pawn).
+// Returns true if at least one human player exists AND all of them are dead/out of lives.
 // Used to end the game when everyone dies mid-wave.
 function bool AllPlayersOut()
 {
 	local Controller C;
+	local bool bFoundPlayer;
 
 	for(C = Level.ControllerList; C != None; C = C.NextController)
 	{
@@ -921,10 +952,16 @@ function bool AllPlayersOut()
 			continue;
 		if(C.PlayerReplicationInfo.bOnlySpectator)
 			continue;
+		bFoundPlayer = true;
 		if(C.Pawn != None && C.Pawn.Health > 0)
+		{
 			return false;
+		}
 	}
-	return true;
+	// Only trigger if players actually exist — avoids firing on empty server
+	if(!bFoundPlayer)
+		log("[LI] AllPlayersOut: no human players found (empty server?)",'LumpysInvasion');
+	return bFoundPlayer;
 }
 
 function bool ShouldAdvanceWave()
@@ -1014,9 +1051,15 @@ function AddMonster()
 			WaveMonsters++;
 			NewMonster.MonsterName = WaveMonsterClasses.WaveMonsterName[index];
 			UpdateNewMonsterClass(NewMonster);
-			M = Texture(DynamicLoadObject(WaveMonsterClasses.WaveMonsterSkin[index],class'Texture'));
-			NewMonster.default.Skins[0] = M;
-			NewMonster.default.Skins[1] = M;
+			if(WaveMonsterClasses.WaveMonsterSkin[index] != "" && WaveMonsterClasses.WaveMonsterSkin[index] != "None")
+			{
+				M = Texture(DynamicLoadObject(WaveMonsterClasses.WaveMonsterSkin[index],class'Texture'));
+				if(M != None)
+				{
+					NewMonster.default.Skins[0] = M;
+					NewMonster.default.Skins[1] = M;
+				}
+			}
 			NewMonster.UpdatePrecacheMaterials();
 
 			//UpdateMonsterTypeStats(NewMonster.Class, 1, 0, 0);
@@ -1030,7 +1073,7 @@ function AddMonster()
 				IPMonsterIDInv(Inv).bFriendly = false;
 			}
 			//UpdateNewMonsterClass(NewMonster);
-			Log("New Monster Name"$NewMonster.MonsterName,'LumpysInvasion');
+			//Log("New Monster Name"$NewMonster.MonsterName,'LumpysInvasion');
 		}
 		else if ( NewMonster ==  None )
 		{
@@ -1112,7 +1155,7 @@ function UpdateNewMonsterClass(tk_Monster MonsterClass)
             {
                 MonsterClass.Health = class'IPMonsterTable'.default.MonsterTable[i].NewMaxHealth;
                 MonsterClass.HealthMax = class'IPMonsterTable'.default.MonsterTable[i].NewMaxHealth;
-                Log("M.Health is now: "$MonsterClass.Health$" M.HealthMax is now: "$MonsterClass.HealthMax,'LumpysInvasion');
+                //Log("M.Health is now: "$MonsterClass.Health$" M.HealthMax is now: "$MonsterClass.HealthMax,'LumpysInvasion');
             }
 
             if( class'IPMonsterTable'.default.MonsterTable[i].bRandomSpeed )
@@ -1406,7 +1449,8 @@ function NavigationPoint GetCollisionPlayerStart(Controller Player, byte inTeam,
 		}
 	}
 
-	CollisionTestActor.SetCollision(false,false,false);
+	if(CollisionTestActor != None)
+		CollisionTestActor.SetCollision(false,false,false);
 
 	if(MonsterSpawnLocs.Length > 0)
 	{

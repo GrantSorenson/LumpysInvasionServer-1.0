@@ -53,7 +53,28 @@
       "Bash(curl -s \"https://unreal.shaungoeppinger.com/uncodex-ut2004/Source_xgame/xpawn.html\")",
       "Bash(curl -s \"https://unreal.shaungoeppinger.com/uncodex-ut2004/Source_xgame/udamagetimer.html\")",
       "Bash(curl -s \"https://unreal.shaungoeppinger.com/uncodex-ut2004/Source_unrealgame/translocatorbeacon.html\")",
-      "Bash(ssh root@172.232.9.14 \"docker ps && docker logs --since 2m ut2004 2>&1 | tail -20\")"
+      "Bash(ssh root@172.232.9.14 \"docker ps && docker logs --since 2m ut2004 2>&1 | tail -20\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 cat /root/.ut2004/System/ucc.log\")",
+      "Bash(ssh root@172.232.9.14 \"md5sum /root/dedicatedserver3369.3-bonuspack/System/LumpysInvasion.u\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 grep -rn ''\\\\[IPConfigs\\\\]'' /root/.ut2004/ /ut2004/System/*.ini 2>/dev/null | head -5\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 find /ut2004 /root/.ut2004 -name ''LumpysInvasion.ini'' 2>/dev/null\")",
+      "Bash(ssh root@172.232.9.14 \"grep -n ''MaxMonsters\\\\|Waves\\\\[0\\\\]\\\\|Waves\\\\[1\\\\]'' /ut2004/System/LumpysInvasion.ini | head -20\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 grep -n ''MaxMonsters\\\\|Waves\\\\[0\\\\]'' /ut2004/System/LumpysInvasion.ini | head -20\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 grep -E ''\\\\[LI\\\\]|New Player|START MATCH'' /root/.ut2004/System/ucc.log\")",
+      "Read(//c/Windows/System32/OpenSSH//**)",
+      "Read(//c/Windows/**)",
+      "Read(//usr/bin/**)",
+      "Bash(command -v ssh)",
+      "Bash(cygpath -w /usr/bin/ssh)",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 grep -E ''\\\\[LI\\\\]'' /root/.ut2004/System/ucc.log\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 tail -10 /root/.ut2004/System/ucc.log\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 grep -E ''\\\\[LI\\\\]|AllPlayers|EndGame|ServerTravel'' /root/.ut2004/System/ucc.log\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 tail -5 /root/.ut2004/System/ucc.log\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 tail -15 /root/.ut2004/System/ucc.log\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 grep -E ''\\\\[LI\\\\]|New Player|START MATCH|AllPlayers|EndGame|ServerTravel'' /root/.ut2004/System/ucc.log\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 grep ''CollisionTestActor\\\\|Accessed None'' /root/.ut2004/System/ucc.log | head -5\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 tail -30 /root/.ut2004/System/ucc.log\")",
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 wc -l /root/.ut2004/System/ucc.log\")"
     ]
   }
 }

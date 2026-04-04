@@ -1,4 +1,4 @@
-Log: Log file open, 04/02/26 23:24:34
+Log: Log file open, 04/04/26 10:34:53
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -13,14 +13,14 @@ Log: Splash screen filename is '..\Help\UT2004Logo.bmp'
 Localization: No localization: UT2004.General.Start (int)
 Log: 	atidx9loader32.dll/AMD Radeon RX 9060 XT
 Log: Game class is 'GameInfo'
-Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.432000...
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.469000...
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
 Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?SpectatorOnly=1?Sex=M
 Log: Collecting garbage
 Log: Purging garbage
 Log: Garbage: objects: 27913->27913; refs: 283940
 Log: Game class is 'CinematicGame'
-Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.872000...
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.931000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
@@ -36,12 +36,12 @@ Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 77(32-bit)
 Log: Creating device
 Log: xD3DHelper::Init (QuadEmulation)
-Log: Startup time: 1.538000 seconds
+Log: Startup time: 1.713000 seconds
 Localization: No localization: UT2004.General.Run (int)
 Log: Precaching: NvidiaLogo.LevelInfo0
 Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
 Log: Allocating 16384 byte dynamic index buffer.
-Log: Finished precaching geometry in 0.015 seconds
+Log: Finished precaching geometry in 0.011 seconds
 Log: Finished precaching textures in 0.013 seconds
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] () ()
 Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
@@ -89,40 +89,40 @@ Log: NetMode now NM_Client
 Log: Collecting garbage
 Log: Purging garbage
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 39981->39453; refs: 482912
-Log: Bringing Level DM-Flux2.myLevel up for play (90) appSeconds: 8.971000...
+Log: Garbage: objects: 39989->39461; refs: 483001
+Log: Bringing Level DM-Flux2.myLevel up for play (90) appSeconds: 8.170000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 Log: Spawning new actor for Viewport WindowsViewport
 ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
 Log: Collecting garbage
 Log: Purging garbage
-Log: Garbage: objects: 39846->39846; refs: 486028
+Log: Garbage: objects: 39854->39854; refs: 486117
 Log: xPlayer setplayer WindowsViewport
 Log: Precaching: DM-Flux2.LevelInfo0
 Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
 Log: Allocating 16384 byte dynamic index buffer.
-Log: Finished precaching geometry in 0.089 seconds
-Log: Finished precaching textures in 0.096 seconds
+Log: Finished precaching geometry in 0.086 seconds
+Log: Finished precaching textures in 0.106 seconds
 Warning: RPGStatsInv DM-Flux2.RPGStatsInv (Function LumpysRPG.RPGStatsInv.ClientAdjustMaxAmmo:0043) Accessed None 'Instigator'
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Welcome ShowPanel()  True
+ModAuthor: # # # # Abilities ShowPanel()  True
+ModAuthor: # # # # Welcome ShowPanel()  False
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+Log: Preprocessing:  Vertex stream total vertices: 433 Orig wedges: 433
 Log: Viewport WindowsViewport: WM_DisplayChange
 Log: Enter SetRes: 1920x1080 Fullscreen 1
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 77(32-bit)
 Log: xD3DHelper::Init (QuadEmulation)
 Log: Allocating 16384 byte dynamic index buffer.
-Log: Preprocessing:  Vertex stream total vertices: 433 Orig wedges: 433
 Log: Precaching: DM-Flux2.LevelInfo0
-Log: Finished precaching geometry in 0.058 seconds
-Log: Finished precaching textures in 0.189 seconds
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [xVoting.MapVotingPage] () ()
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MapVotingPage]
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
-ModAuthor: # # # # Game ShowPanel()  True
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [xVoting.MapVotingPage] () ()
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MapVotingPage]
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
+Log: Preprocessing:  Vertex stream total vertices: 69 Orig wedges: 69
+Log: Finished precaching geometry in 0.100 seconds
+Log: Finished precaching textures in 0.209 seconds
 Log: Viewport WindowsViewport: WM_DisplayChange
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [xVoting.MapVotingPage] () ()
 Log: Enter SetRes: 1920x1080 Fullscreen 1
 Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 77(32-bit)
@@ -130,9 +130,119 @@ Log: xD3DHelper::Init (QuadEmulation)
 Log: Allocating 16384 byte dynamic index buffer.
 Log: Precaching: DM-Flux2.LevelInfo0
 Log: Preprocessing:  Vertex stream total vertices: 260 Orig wedges: 260
-Log: Preprocessing:  Vertex stream total vertices: 69 Orig wedges: 69
-Log: Finished precaching geometry in 0.024 seconds
-Log: Finished precaching textures in 0.071 seconds
+Log: Finished precaching geometry in 0.073 seconds
+Log: Finished precaching textures in 0.110 seconds
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MapVotingPage]
+ModAuthor: UT2K4GUIController CloseAll bCancel:True Forced:False (Currently 0 menus open)
+ScriptLog: Attempting to close a non-existing menu page
+ScriptLog: PreClientTravel
+Log: Browse: 172.232.9.14/DM-Flux2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?GAME=LumpysInvasion.LumpysInvasion
+Log: URL: Adding default option Name=Lumps
+Log: URL: Adding default option Class=Engine.Pawn
+Log: URL: Adding default option Character=Kragoth
+Log: URL: Adding default option team=255
+Log: Browse: Index.ut2?closed?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
+Log: Failed; returning to Entry
+ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
+Log: GP=TRUE
+Log: Spawning new actor for Viewport WindowsViewport
+ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
+ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
+Log: (Karma): Level Karma Terminated.
+NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/04/26 10:37:51
+Exit: Socket shut down
+Log: NetMode now NM_Client
+Log: Collecting garbage
+Log: Purging garbage
+Log: Garbage: objects: 50232->41606; refs: 509952
+Log: Bringing Level DM-Flux2.myLevel up for play (90) appSeconds: 178.039000...
+Log: (Karma): Autodetecting CPU for SSE
+Log: (Karma): Using SSE Optimizations
+Log: Spawning new actor for Viewport WindowsViewport
+ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
+Log: Collecting garbage
+Log: Purging garbage
+Log: Garbage: objects: 41999->41999; refs: 513310
+Log: xPlayer setplayer WindowsViewport
+Log: Precaching: DM-Flux2.LevelInfo0
+Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
+Log: Allocating 16384 byte dynamic index buffer.
+Log: Finished precaching geometry in 0.092 seconds
+Log: Finished precaching textures in 0.087 seconds
+Log: Viewport WindowsViewport: WM_DisplayChange
+Warning: RPGStatsInv DM-Flux2.RPGStatsInv (Function LumpysRPG.RPGStatsInv.ClientAdjustMaxAmmo:0043) Accessed None 'Instigator'
+Log: PlayAnim: Sequence 'Jump' not found for mesh 'Nali2'
+Log: Enter SetRes: 1920x1080 Fullscreen 1
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 77(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Allocating 16384 byte dynamic index buffer.
+Log: Preprocessing:  Vertex stream total vertices: 433 Orig wedges: 433
+Log: Precaching: DM-Flux2.LevelInfo0
+Log: Finished precaching geometry in 0.034 seconds
+Log: Finished precaching textures in 0.062 seconds
+Log: Viewport WindowsViewport: WM_DisplayChange
+Log: PlayAnim: Sequence 'Jump' not found for mesh 'Nali2'
+Log: Enter SetRes: 1920x1080 Fullscreen 1
+Log: Using back-buffer format 22(32-bit)
+Log: Using depth-buffer format 77(32-bit)
+Log: xD3DHelper::Init (QuadEmulation)
+Log: Allocating 16384 byte dynamic index buffer.
+Log: Precaching: DM-Flux2.LevelInfo0
+Log: Finished precaching geometry in 0.041 seconds
+Log: Finished precaching textures in 0.072 seconds
+Log: Preprocessing:  Vertex stream total vertices: 260 Orig wedges: 260
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
+ModAuthor: # # # # Game ShowPanel()  True
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4QuitPage]
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InGameChat] () ()
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InGameChat]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
+ModAuthor: # # # # Game ShowPanel()  True
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [xVoting.MapVotingPage] () ()
+ModAuthor: UT2K4GUIController CloseAll bCancel:True Forced:False (Currently 1 menus open)
+ModAuthor:    Menu[0]:MapVotingPage
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [MapVotingPage]
+ScriptLog: PreClientTravel
+Log: Browse: 172.232.9.14/DM-TrainingDay?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?GAME=LumpysInvasion.LumpysInvasion
+Log: URL: Adding default option Name=Lumps
+Log: URL: Adding default option Class=Engine.Pawn
+Log: URL: Adding default option Character=Kragoth
+Log: URL: Adding default option team=255
+Log: Browse: Index.ut2?closed?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
+Log: Failed; returning to Entry
+ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
+Log: GP=TRUE
+Log: Spawning new actor for Viewport WindowsViewport
+ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
+ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
+Log: NetMode now NM_Client
+Log: Collecting garbage
+Log: Purging garbage
+Log: (Karma): Level Karma Terminated.
+NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/04/26 10:45:29
+Exit: Socket shut down
+Log: Garbage: objects: 51770->39881; refs: 491334
+Log: Fixing up DM-TrainingDay
+Log: Bringing Level DM-TrainingDay.myLevel up for play (90) appSeconds: 635.747000...
+Log: (Karma): Autodetecting CPU for SSE
+Log: (Karma): Using SSE Optimizations
+Log: Spawning new actor for Viewport WindowsViewport
+ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
+Log: Collecting garbage
+Log: Purging garbage
+Log: Garbage: objects: 40189->40189; refs: 495045
+Log: xPlayer setplayer WindowsViewport
+Log: Precaching: DM-TrainingDay.LevelInfo0
+Log: Static mesh batches: 818064 vertex bytes, 110376 index bytes
+Log: Allocating 16384 byte dynamic index buffer.
+Log: Allocating 20412 byte dynamic index buffer.
+Log: Finished precaching geometry in 0.087 seconds
+Log: Finished precaching textures in 0.282 seconds
+Warning: RPGStatsInv DM-TrainingDay.RPGStatsInv (Function LumpysRPG.RPGStatsInv.ClientAdjustMaxAmmo:0043) Accessed None 'Instigator'
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [xVoting.MapVotingPage] () ()
 ModAuthor: UT2K4GUIController CloseAll bCancel:True Forced:False (Currently 1 menus open)
 ModAuthor:    Menu[0]:MapVotingPage
@@ -153,165 +263,110 @@ ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
 Log: NetMode now NM_Client
 Log: Collecting garbage
 Log: Purging garbage
-NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/02/26 23:27:49
-Exit: Socket shut down
+NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/04/26 10:45:52
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 55383->43590; refs: 850143
-Log: Bringing Level DM-BP2-GoopGod.myLevel up for play (90) appSeconds: 195.096000...
+Exit: Socket shut down
+Log: Garbage: objects: 52805->43616; refs: 850824
+Log: Bringing Level DM-BP2-GoopGod.myLevel up for play (90) appSeconds: 658.969000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 Log: Spawning new actor for Viewport WindowsViewport
 ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
 Log: Collecting garbage
 Log: Purging garbage
-Log: Garbage: objects: 44379->44325; refs: 853947
+Log: Garbage: objects: 44405->44351; refs: 854629
 Log: xPlayer setplayer WindowsViewport
 Log: Precaching: DM-BP2-GoopGod.LevelInfo0
 Log: Static mesh batches: 8127144 vertex bytes, 896304 index bytes
 Log: Allocating 16384 byte dynamic index buffer.
 Log: Allocating 32316 byte dynamic index buffer.
-Log: Finished precaching geometry in 0.609 seconds
-Log: Finished precaching textures in 0.219 seconds
+Log: Finished precaching geometry in 0.617 seconds
+Log: Finished precaching textures in 0.217 seconds
 Warning: RPGStatsInv DM-BP2-GoopGod.RPGStatsInv (Function LumpysRPG.RPGStatsInv.ClientAdjustMaxAmmo:0043) Accessed None 'Instigator'
+Log: Preprocessing:  Vertex stream total vertices: 260 Orig wedges: 260
+Log: Preprocessing:  Vertex stream total vertices: 69 Orig wedges: 69
 Log: Preprocessing:  Vertex stream total vertices: 433 Orig wedges: 433
 Log: Preprocessing:  Vertex stream total vertices: 185 Orig wedges: 185
-Log: Preprocessing:  Vertex stream total vertices: 260 Orig wedges: 260
-ScriptLog: Last Cred: 18 Stat Cred: 29
-ScriptLog: Last Cred: 29 Stat Cred: 33
-Log: Viewport WindowsViewport: WM_DisplayChange
-ScriptLog: xPlayer.ProgressCommand Cmd 'menu:GUI2K4.UT2K4DisconnectOptionPage'  Msg1 'Connection Lost'   Msg2 ''
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4DisconnectOptionPage] (Connection Lost) ()
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: Index.ut2?closed?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-Log: Failed; returning to Entry
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: GP=FALSE
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: Enter SetRes: 1920x1080 Fullscreen 1
-Log: Using back-buffer format 22(32-bit)
-Log: Using depth-buffer format 77(32-bit)
-Log: xD3DHelper::Init (QuadEmulation)
-Log: Allocating 16384 byte dynamic index buffer.
-Log: Precaching: Entry.LevelInfo0
-Log: Finished precaching geometry in 0.001 seconds
-Log: Finished precaching textures in 0.000 seconds
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4DisconnectOptionPage]
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 0 menus open)
-ScriptLog: Attempting to close a non-existing menu page
-Log: Browse: 172.232.9.14/DM-BP2-GoopGod?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?GAME=LumpysInvasion.LumpysInvasion
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
+ScriptLog: Last Cred: 4 Stat Cred: 15
+ScriptLog: Last Cred: 15 Stat Cred: 24
+ScriptLog: Last Cred: 24 Stat Cred: 35
+ScriptLog: Last Cred: 35 Stat Cred: 40
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Welcome ShowPanel()  True
+ModAuthor: # # # # Abilities ShowPanel()  True
+ModAuthor: # # # # Welcome ShowPanel()  False
+ModAuthor: # # # # Character ShowPanel()  True
+ModAuthor: # # # # Abilities ShowPanel()  False
+ScriptLog: AddClassPoint Called
+ModAuthor: # # # # Stats ShowPanel()  True
+ModAuthor: # # # # Character ShowPanel()  False
+ModAuthor: # # # # Abilities ShowPanel()  True
+LumpysInvasion: Owned Class #0: MM
+ModAuthor: # # # # Stats ShowPanel()  False
+LumpysInvasion: Owned Class #0: MM
+Warning: ArtifactMedicWeaponMaker DM-BP2-GoopGod.ArtifactMedicWeaponMaker (Function LumpysRPG.ArtifactMagicWeaponMaker.PostBeginPlay:001B) Accessed None 'Game'
+Warning: ArtifactSuperMedicWeaponMaker DM-BP2-GoopGod.ArtifactSuperMedicWeaponMaker (Function LumpysRPG.ArtifactMagicWeaponMaker.PostBeginPlay:001B) Accessed None 'Game'
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InGameChat] () ()
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InGameChat]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
+ModAuthor: # # # # Game ShowPanel()  True
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Abilities ShowPanel()  True
+LumpysInvasion: Owned Class #0: MM
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+ScriptLog: Last Cred: 40 Stat Cred: 59
+ScriptLog: Last Cred: 59 Stat Cred: 63
+ScriptLog: Last Cred: 63 Stat Cred: 64
+Log: Preprocessing:  Vertex stream total vertices: 502 Orig wedges: 502
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Abilities ShowPanel()  True
+LumpysInvasion: Owned Class #0: MM
+ModAuthor: # # # # Character ShowPanel()  True
+ModAuthor: # # # # Abilities ShowPanel()  False
+ModAuthor: # # # # Stats ShowPanel()  True
+ModAuthor: # # # # Character ShowPanel()  False
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
+ModAuthor: # # # # Stats ShowPanel()  True
+ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
+ModAuthor: # # # # Game ShowPanel()  True
+ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
+Log: appRequestExit(0)
+Localization: No localization: UT2004.General.Exit (int)
+Exit: Preparing to exit.
+Log: Purging garbage
+Log: Unbound to Window.dll
+Log: Unbound to Core.dll
+Log: Unbound to Engine.dll
+Exit: Game engine shut down
+Log: Unbound to WinDrv.dll
+Exit: Windows client shut down
+Log: Unbound to D3DDrv.dll
+Log: Unbound to XGame.dll
+Log: Unbound to IpDrv.dll
+Log: Unbound to Editor.dll
+Log: Unbound to Fire.dll
+Log: Unbound to XInterface.dll
+Log: Unbound to UWeb.dll
+Log: Unbound to Onslaught.dll
+Log: Unbound to ALAudio.dll
+Log: Waiting for file streaming thread to finish...
+Exit: OpenAL Audio subsystem shut down.
+NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/04/26 10:51:50
 Log: (Karma): Level Karma Terminated.
-NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/02/26 23:35:58
 Exit: Socket shut down
-Log: NetMode now NM_Client
-Log: Collecting garbage
-Log: Purging garbage
-Log: Garbage: objects: 51673->43655; refs: 851634
-Log: Bringing Level DM-BP2-GoopGod.myLevel up for play (90) appSeconds: 683.954000...
-Log: (Karma): Autodetecting CPU for SSE
-Log: (Karma): Using SSE Optimizations
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: Collecting garbage
-Log: Purging garbage
-Log: Garbage: objects: 44444->44390; refs: 855440
-Log: xPlayer setplayer WindowsViewport
-Log: Precaching: DM-BP2-GoopGod.LevelInfo0
-Log: Static mesh batches: 8127144 vertex bytes, 896304 index bytes
-Log: Allocating 16384 byte dynamic index buffer.
-Log: Allocating 32316 byte dynamic index buffer.
-Log: Finished precaching geometry in 0.608 seconds
-Log: Finished precaching textures in 0.094 seconds
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Log: Preprocessing:  Vertex stream total vertices: 69 Orig wedges: 69
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Log: Viewport WindowsViewport: WM_DisplayChange
-ScriptLog: xPlayer.ProgressCommand Cmd 'menu:GUI2K4.UT2K4DisconnectOptionPage'  Msg1 'Connection Lost'   Msg2 ''
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4DisconnectOptionPage] (Connection Lost) ()
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: Index.ut2?closed?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-Log: Failed; returning to Entry
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: GP=FALSE
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: Enter SetRes: 1920x1080 Fullscreen 1
-Log: Using back-buffer format 22(32-bit)
-Log: Using depth-buffer format 77(32-bit)
-Log: xD3DHelper::Init (QuadEmulation)
-Log: Allocating 16384 byte dynamic index buffer.
-Log: Precaching: Entry.LevelInfo0
-Log: Finished precaching geometry in 0.002 seconds
-Log: Finished precaching textures in 0.000 seconds
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4DisconnectOptionPage]
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 0 menus open)
-ScriptLog: Attempting to close a non-existing menu page
-Log: Browse: 172.232.9.14/DM-BP2-GoopGod?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?GAME=LumpysInvasion.LumpysInvasion
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: (Karma): Level Karma Terminated.
-NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/03/26 07:59:22
-Exit: Socket shut down
-Log: NetMode now NM_Client
-Log: Collecting garbage
-Log: Purging garbage
-Log: Garbage: objects: 51139->43662; refs: 851908
-Log: Bringing Level DM-BP2-GoopGod.myLevel up for play (90) appSeconds: 30888.640006...
-Log: (Karma): Autodetecting CPU for SSE
-Log: (Karma): Using SSE Optimizations
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: Collecting garbage
-Log: Purging garbage
-Log: Garbage: objects: 44451->44397; refs: 855714
-Log: xPlayer setplayer WindowsViewport
-Log: Precaching: DM-BP2-GoopGod.LevelInfo0
-Log: Static mesh batches: 8127144 vertex bytes, 896304 index bytes
-Log: Allocating 16384 byte dynamic index buffer.
-Log: Allocating 32316 byte dynamic index buffer.
-Log: Preprocessing:  Vertex stream total vertices: 260 Orig wedges: 260
-Log: Finished precaching geometry in 0.608 seconds
-Log: Finished precaching textures in 0.085 seconds
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionHUD (Function LumpysInvasion.LumpysInvasionHUD.ShowTeamScorePassA:022E) Accessed None 'PawnOwner'
-Warning: LumpysInvasionHUD DM-BP2-GoopGod.LumpysInvasionH
+Log: (Karma): MePoolMallocDestroy(): 195883392 structs still allocated
+Log: Garbage: objects: 53456->0; refs: 854629
+Exit: Object subsystem successfully closed.
+Exit: Exiting.
+Log: FileManager: Reading 0 GByte 795 MByte 125 KByte 658 Bytes from HD took 1.288997 seconds (1.179997 reading, 0.109000 seeking).
+Log: FileManager: 0.765997 seconds spent with misc. duties
+Uninitialized: Name subsystem shut down
+Uninitialized: Memory Allocation Status
+Uninitialized: Curr Memory  1.650M /  3.867M
+Uninitialized: Peak Memory  136.955M /  139.344M
+Uninitialized: Allocs         676 Current /  16742785 Total
+Uninitialized: Log file closed, 04/04/26 10:51:50

@@ -80,7 +80,6 @@ function UpdateMonster(Monster M, int ID)
 	{
 		M.Health = class'IPMonsterTable'.default.MonsterTable[ID].NewMaxHealth;
 		M.HealthMax = class'IPMonsterTable'.default.MonsterTable[ID].NewMaxHealth;
-		Log("M.Health is now: "$class'IPMonsterTable'.default.MonsterTable[ID].NewHealth$" M.HealthMax is now: "$class'IPMonsterTable'.default.MonsterTable[ID].NewMaxHealth,'LumpysInvasion');
 	}
 
 	if( class'IPMonsterTable'.default.MonsterTable[ID].bRandomSpeed )
