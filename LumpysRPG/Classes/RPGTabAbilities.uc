@@ -26,11 +26,10 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 function ShowPanel(bool bShow)
 {
   super.ShowPanel(bShow);
-	if(bShow)
-	{
-		RefreshAbilityBox();
-	}
-
+  if(bShow)
+    RefreshAbilityBox();
+  else if (StatsInv != None)
+    StatsInv.TabAbilities = None; // unregister when tab closes
 }
 
 function GetOwnedClasses()
@@ -59,6 +58,9 @@ function RefreshAbilityBox()
   //Get the stats inv
   PC = PlayerOwner();
   StatsInv = GetStatsInv(PC);
+  if (StatsInv == None)
+    return;
+  StatsInv.TabAbilities = self; // register so server callbacks can reach us
 
   if (StatsInv.Role < ROLE_Authority)
   {
@@ -162,8 +164,6 @@ function bool BuyAbility(GUIComponent Sender)
 {
 	Controls[1].MenuStateChange(MSAT_Disabled);
 	StatsInv.ServerAddAbility(class<RPGAbility>(Abilities.List.GetObject()));
-  RefreshAbilityBox();
-
 	return true;
 }
 
@@ -171,8 +171,6 @@ function bool RefundAbility(GUIComponent Sender)
 {
   Controls[3].MenuStateChange(MSAT_Disabled);
   StatsInv.ServerRefundAbility(class<RPGAbility>(Abilities.List.GetObject()));
-  RefreshAbilityBox();
-
   return true;
 }
 

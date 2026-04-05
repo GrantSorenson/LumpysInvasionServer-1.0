@@ -10,7 +10,9 @@ var RPGPlayerDataObject.RPGPlayerData Data; //struct version of data in DataObje
 var MutLumpysRPG RPGMut; //server side only
 var array<class<RPGAbility> > AllAbilities; //all abilities available
 var int StatCaps[6]; //curse the need for it
-var RPGStatsMenu StatsMenu; //clients only - pointer to stats menu if it exists so we don't have to do an iterator search
+var RPGStatsMenu StatsMenu;     //clients only - pointer to legacy stats menu
+var RPGTabStats TabStats;       //clients only - pointer to stats tab (mid-game menu)
+var RPGTabAbilities TabAbilities; //clients only - pointer to abilities tab (mid-game menu)
 var bool bGotInstigator; //netplay only - set to true first tick after Instigator has been replicated
 var bool bMagicWeapons; //does the server have magic weapons enabled?
 var bool bSentInitialData; //sent initial data that requires function replication (ability list, stat caps, etc)
@@ -419,6 +421,8 @@ simulated function ClientUpdateStatMenu(int Amount, EStatType Stat)
 
 	if (StatsMenu != None)
 		StatsMenu.InitFor(self);
+	if (TabStats != None)
+		TabStats.RefreshStats();
 }
 static function string GetLocalString(optional int Switch, optional PlayerReplicationInfo RelatedPRI_1, optional PlayerReplicationInfo RelatedPRI_2)
 {
@@ -600,6 +604,10 @@ simulated function ClientAddClass(class<RPGClass> SelectedClass, int Cost)
 
 	if (StatsMenu != None)
 		StatsMenu.InitFor(self);
+	if (TabStats != None)
+		TabStats.RefreshStats();
+	if (TabAbilities != None)
+		TabAbilities.RefreshAbilityBox();
 }
 
 //Called by owning player's stat menu to buy an ability
@@ -701,6 +709,10 @@ simulated function ClientAddAbility(class<RPGAbility> Ability, int Cost)
 
 	if (StatsMenu != None)
 		StatsMenu.InitFor(self);
+	if (TabStats != None)
+		TabStats.RefreshStats();
+	if (TabAbilities != None)
+		TabAbilities.RefreshAbilityBox();
 }
 
 function ServerRefundAbility(class<RPGAbility> Ability)
@@ -783,9 +795,12 @@ simulated function ClientRefundAbility(class<RPGAbility> Ability, int RefundAmou
 		//Data.AbilityLevels[Index]++;
 		Data.PointsAvailable += RefundAmount;
 		//Data.PointsAvailable -= Cost;
-
-
 	 }
+
+	if (TabStats != None)
+		TabStats.RefreshStats();
+	if (TabAbilities != None)
+		TabAbilities.RefreshAbilityBox();
 }
 
 simulated function Tick(float deltaTime)

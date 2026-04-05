@@ -74,7 +74,15 @@
       "Bash(ssh root@172.232.9.14 \"docker exec ut2004 grep -E ''\\\\[LI\\\\]|New Player|START MATCH|AllPlayers|EndGame|ServerTravel'' /root/.ut2004/System/ucc.log\")",
       "Bash(ssh root@172.232.9.14 \"docker exec ut2004 grep ''CollisionTestActor\\\\|Accessed None'' /root/.ut2004/System/ucc.log | head -5\")",
       "Bash(ssh root@172.232.9.14 \"docker exec ut2004 tail -30 /root/.ut2004/System/ucc.log\")",
-      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 wc -l /root/.ut2004/System/ucc.log\")"
+      "Bash(ssh root@172.232.9.14 \"docker exec ut2004 wc -l /root/.ut2004/System/ucc.log\")",
+      "WebFetch(domain:wiki.unrealadmin.org)",
+      "WebFetch(domain:www.unrealadmin.org)",
+      "WebFetch(domain:pingperfect.com)",
+      "WebFetch(domain:ut2004serverlist.com)",
+      "Bash(SSH=\"ssh\")",
+      "Bash(SERVER=\"root@172.232.9.14\")",
+      "Bash($SSH $SERVER \"grep -n ''UplinkToGamespy\\\\|DoUplink\\\\|SendStats\\\\|DefaultGameConfig\\\\|bDefaultToCurrentGameType\\\\|CurrentGameConfig'' /root/dedicatedserver3369.3-bonuspack/System/UT2004.ini\")",
+      "Bash($SSH $SERVER \"docker exec ut2004 grep -n ''UplinkToGamespy\\\\|DoUplink\\\\|SendStats\\\\|DefaultGameConfig\\\\|bDefaultToCurrentGameType\\\\|CurrentGameConfig\\\\|GameName'' /ut2004/System/UT2004.ini 2>/dev/null | head -20\")"
     ]
   }
 }

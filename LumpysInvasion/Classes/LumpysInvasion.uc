@@ -1608,6 +1608,11 @@ static event bool AcceptPlayInfoProperty(string PropName)
     return Super(xTeamGame).AcceptPlayInfoProperty(PropName);
 }
 
+function GetServerInfo(out ServerResponseLine ServerState)
+{
+    Super.GetServerInfo(ServerState);
+    ServerState.GameType = "Invasion";
+}
 
 defaultproperties
 {
@@ -1696,7 +1701,7 @@ defaultproperties
     DeathMessageClass=Class'SkaarjPack.InvasionDeathMessage'
     MutatorClass="LumpysInvasion.LumpysInvasionMutator"
     GameReplicationInfoClass=Class'LumpysInvasionGameReplicationInfo'
-    GameName="Lumpys Invasion"
+    GameName="Invasion"
     Description="Along side the other players, you must hold out as long as possible against the waves of attacking monsters."
     ScreenShotName="UT2004Thumbnails.InvasionShots"
     Acronym="INV"

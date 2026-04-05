@@ -29,25 +29,34 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 function RefreshStats()
 {
   local PlayerController PC;
-  PC = PlayerOwner();
-  //Could this be sent from RPGLumpyStatMenu?
-  StatsInv = GetStatsInv(PC);
+  // Only re-fetch StatsInv if we don't already have it.
+  // When called from a server callback (ClientUpdateStatMenu), PlayerOwner()
+  // may not work reliably, so we reuse the cached reference set on ShowPanel.
+  if (StatsInv == None)
+  {
+    PC = PlayerOwner();
+    StatsInv = GetStatsInv(PC);
+    if (StatsInv == None)
+      return;
+  }
+  StatsInv.TabStats = self;
 
   WepSpeedEdit.SetText(string(StatsInv.Data.WeaponSpeed));
-	HealthBonusEdit.SetText(string(StatsInv.Data.HealthBonus));
-	AdrenalineMaxEdit.SetText(string(StatsInv.Data.AdrenalineMax));
-	AttackEdit.SetText(string(StatsInv.Data.Attack));
-	DefenseEdit.SetText(string(StatsInv.Data.Defense));
-	AmmoMaxEdit.SetText(string(StatsInv.Data.AmmoMax));
-	PointsAvailableEdit.SetText(string(StatsInv.Data.PointsAvailable));
+  HealthBonusEdit.SetText(string(StatsInv.Data.HealthBonus));
+  AdrenalineMaxEdit.SetText(string(StatsInv.Data.AdrenalineMax));
+  AttackEdit.SetText(string(StatsInv.Data.Attack));
+  DefenseEdit.SetText(string(StatsInv.Data.Defense));
+  AmmoMaxEdit.SetText(string(StatsInv.Data.AmmoMax));
+  PointsAvailableEdit.SetText(string(StatsInv.Data.PointsAvailable));
 }
 
 function ShowPanel(bool bShow)
 {
     Super.ShowPanel(bShow);
     if(bShow)
-      RefreshStats();
-
+        RefreshStats();
+    else if (StatsInv != None)
+        StatsInv.TabStats = None; // unregister when tab closes
 }
 
 function RPGStatsInv GetStatsInv(PlayerController PC)
@@ -90,8 +99,6 @@ function bool StatPlusClick(GUIComponent Sender)
 	amount = int(GUIEditBox(Controls[SenderIndex]).GetText());
 	//DisablePlusButtons();
 	StatsInv.ServerAddPointTo(amount, EStatType(stat-7));
-  RefreshStats();
-	//InitFor(StatsInv);
 	return true;
 }
 
