@@ -1069,10 +1069,11 @@ function AddMonster()
             
 			Inv = NewMonster.FindInventoryType(class'IPMonsterIDInv');
 			if(IPMonsterIDInv(Inv) != None)
-			{		
+			{
 				IPMonsterIDInv(Inv).bSummoned = false;
 				IPMonsterIDInv(Inv).bBoss = false;
 				IPMonsterIDInv(Inv).bFriendly = false;
+				IPMonsterIDInv(Inv).MonsterName = WaveMonsterClasses.WaveMonsterName[index];
 			}
 			//UpdateNewMonsterClass(NewMonster);
 			//Log("New Monster Name"$NewMonster.MonsterName,'LumpysInvasion');

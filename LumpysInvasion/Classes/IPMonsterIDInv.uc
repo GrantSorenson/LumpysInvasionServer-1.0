@@ -125,7 +125,6 @@ function Timer()
 			if(!bBoss)
 			{
 				bFriendly = false;
-				MonsterName = "";
 			}
 		}
 

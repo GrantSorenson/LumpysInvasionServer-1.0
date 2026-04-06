@@ -21,6 +21,8 @@ function PreRender(Canvas Canvas)
 	local vector BarLoc, CameraLocation, X, Y, Z;
 	local rotator CameraRotation;
 	local Pawn Enemy;
+	local IPMonsterIDInv MonsterInv;
+	local string DisplayName;
 
 	if (ViewportOwner.Actor.Pawn == None || ViewportOwner.Actor.Pawn.Health <= 0)
 		return;
@@ -61,12 +63,22 @@ function PreRender(Canvas Canvas)
 		//Draw Enemy Name for level 1
 		if(AbilityLevel >= 1)
 		{
-			if(tk_Monster(Enemy) != None)
+			if(Monster(Enemy) != None)
 			{
+				DisplayName = "";
+				foreach ViewportOwner.Actor.DynamicActors(class'IPMonsterIDInv', MonsterInv)
+				{
+					if(MonsterInv.MyMonster == Enemy)
+					{
+						DisplayName = MonsterInv.MonsterName;
+						break;
+					}
+				}
+				if(DisplayName == "" && tk_Monster(Enemy) != None)
+					DisplayName = tk_Monster(Enemy).MonsterName;
 				Canvas.DrawColor = class'Colors'.default.White;
 				Canvas.SetPos(BarLoc.X, BarLoc.Y);
-				Canvas.DrawText(tk_Monster(Enemy).MonsterName);
-				
+				Canvas.DrawText(DisplayName);
 			}
 		}
 		if(AbilityLevel == 2)
