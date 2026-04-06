@@ -709,6 +709,7 @@ function SetupWave()
 			{
 				CurrentMonsterClass = class<tk_Monster>(DynamicLoadObject(class'IPMonsterTable'.default.MonsterTable[h].MonsterClassName, class'Class',true));
 				WaveMonsterClasses.WaveMonsterName[WaveNumClasses] = class'IPMonsterTable'.default.MonsterTable[h].MonsterName;
+				WaveMonsterClasses.WaveMonsterSkin[WaveNumClasses] = class'IPMonsterTable'.default.MonsterTable[h].CurrentSkin;
 			}
 		}
 
@@ -1056,8 +1057,9 @@ function AddMonster()
 				M = Texture(DynamicLoadObject(WaveMonsterClasses.WaveMonsterSkin[index],class'Texture'));
 				if(M != None)
 				{
-					NewMonster.default.Skins[0] = M;
-					NewMonster.default.Skins[1] = M;
+					NewMonster.RepSkin = M;
+					NewMonster.Skins[0] = M;
+					NewMonster.Skins[1] = M;
 				}
 			}
 			NewMonster.UpdatePrecacheMaterials();
