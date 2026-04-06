@@ -1,5 +1,5 @@
-#!/bin/bash
-# Rebuild and restart the UT2004 dedicated server.
+#!/bin/bash1
+# Rebuild and restart 1the UT2004 dedicated server.
 # Usage: ./rebuild_server.sh
 # Requires SSH key auth to be set up (see README or ask Claude).
 
