@@ -3,7 +3,8 @@
     "allow": [
       "Bash($SSH $SERVER \"docker exec ut2004 tail -50 /root/.ut2004/System/ucc.log 2>/dev/null || docker exec ut2004 tail -50 /ut2004/System/StdOut.log 2>/dev/null\")",
       "Bash(curl -s \"https://unreal.shaungoeppinger.com/uncodex-ut2004/Source_engine/gameinfo.html\")",
-      "Read(//g/LumpysInvasionServer/UT2004/**)"
+      "Read(//g/LumpysInvasionServer/UT2004/**)",
+      "Bash(grep -v \"^\\\\\\(.*\\\\\\):[[:space:]]*//\")"
     ]
   }
 }
