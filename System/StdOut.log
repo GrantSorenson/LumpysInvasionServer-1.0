@@ -1,4 +1,4 @@
-Log file open, 04/06/26 20:58:01
+Log file open, 04/06/26 22:11:31
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -92,6 +92,7 @@ Parsing ArtifactMagicWeaponMakerPickup
 Parsing ArtifactMonsterSummonPickup
 Parsing ArtifactSuperMagicWeaponMakerPickup
 Parsing ArtifactTripleDamagePickup
+Parsing CreditsPickup
 Parsing ExperiencePickup
 Parsing RPGWeaponLocker
 Parsing PickupEXPShard
@@ -200,6 +201,7 @@ Compiling ArtifactMagicWeaponMakerPickup
 Compiling ArtifactMonsterSummonPickup
 Compiling ArtifactSuperMagicWeaponMakerPickup
 Compiling ArtifactTripleDamagePickup
+Compiling CreditsPickup
 Compiling ExperiencePickup
 Compiling RPGWeaponLocker
 Compiling PickupEXPShard
@@ -309,6 +311,7 @@ Importing Defaults for ArtifactMagicWeaponMakerPickup
 Importing Defaults for ArtifactMonsterSummonPickup
 Importing Defaults for ArtifactSuperMagicWeaponMakerPickup
 Importing Defaults for ArtifactTripleDamagePickup
+Importing Defaults for CreditsPickup
 Importing Defaults for ExperiencePickup
 Importing Defaults for RPGWeaponLocker
 Importing Defaults for PickupEXPShard
@@ -376,4 +379,4 @@ Importing Defaults for STY_AbilityList
 ---------------------tk_HolyHandGrenade - Release---------------------
 Mutator exported successfully: LumpysRPG.MutLumpysRPG
 Success - 0 error(s), 0 warning(s)
-Log file closed, 04/06/26 20:58:08
+Log file closed, 04/06/26 22:11:35

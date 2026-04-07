@@ -59,90 +59,25 @@ function RPGStatsInv GetStatsInv(PlayerController PC)
 }
 function bool PurchaseItem(GUIComponent Sender)
 {
-  //Local string newName;
-  //local class<Weapon> WeaponClass;
-  //local class<RPGWeapon> RPGWeaponClass;
-  //local Weapon newWeapon;
-  //local RPGWeapon RPGWeapon;
-  local int x,cost,i;
-  local Pawn Other;
+  local int x, cost;
+  local array<string> ItemParts;
   local PlayerController PC;
-  local array<string> ItemParts;//0=cost,1=cost type,
 
   PC = PlayerOwner();
-  Other = PlayerOwner().Pawn;
   StatsInv = GetStatsInv(PC);
 
-  if(Other == None || Other.IsA('Monster')||StatsInv == None)
+  if (PC.Pawn == None || PC.Pawn.IsA('Monster') || StatsInv == None)
       return false;
 
   x = StoreListBox.List.CurrentListId();
   split(RPGStoreList(StoreListBox.List).default.StoreItems[x].ItemCost, " ", ItemParts);
   cost = int(ItemParts[0]);
-  //Log("Item Parts 1: " @ ItemParts[1]);
 
-  //of course StrCmp doesnt work, im sure living with this for now
-  i = InStr(ItemParts[1], "Credits");
-  //Log("i: " @ i);
-  if (i == 0)
-  {
-    if (StatsInv.DataObject.Credits < cost)
-    {
-      return false;
-    }
-    StatsInv.DataObject.Credits -= cost;
-    StatsInv.Data.Credits=StatsInv.DataObject.Credits;
-  }
-  i = InStr(ItemParts[1], "Stacks");
-  if (i== 1)
-  {
-    if (StatsInv.DataObject.Stacks < cost)
-    {
-      return false;
-    }
-   StatsInv.DataObject.Stacks -= cost;
-   StatsInv.Data.Stacks=StatsInv.DataObject.Stacks;
-  }
-  i = InStr(ItemParts[1], "Gold");
-  if(i == 1)
-  {
-    if (StatsInv.Data.Gold < cost)
-    {
-      return false;
-    }
-    StatsInv.DataObject.Gold -= cost;
-    StatsInv.Data.Gold=StatsInv.DataObject.Gold;
-  }
-
-  Other.GiveWeapon(RPGStoreList(StoreListBox.List).default.StoreItems[x].ItemClass);
-  StatsInv.DataObject.SaveConfig();
-  RefreshCurrency();
-
-
-  // if (Other.Level != None && Other.Level.Game != None && Other.Level.Game.BaseMutator != None)
-  // {
-  //     newName = Other.Level.Game.BaseMutator.GetInventoryClassOverride(RPGStoreList(StoreListBox.List).default.StoreItems[0].ItemClass);
-  //     WeaponClass = class<Weapon>(Other.DynamicLoadObject(newName, class'Class'));
-  // }
-  // else
-  //     WeaponClass = class<Weapon>(Other.DynamicLoadObject(RPGStoreList(StoreListBox.List).default.StoreItems[0].ItemClass, class'Class'));
-  //
-  // newWeapon = Other.spawn(WeaponClass, Other,,, rot(0,0,0));
-  // newWeapon = RPGWeapon(newWeapon).ModifiedWeapon;
-  // while(newWeapon.isA('RPGWeapon'))
-  // {
-  //   RPGWeapon = Other.spawn(RPGWeaponClass, Other,,, rot(0,0,0));
-  //   if(RPGWeapon == None)
-  //   {
-  //   Log("RPGWeapon is NONE");
-  //       return false;
-  //     }
-  //
-  //   RPGWeapon.Generate(None);
-  //   RPGWeapon.SetModifiedWeapon(newWeapon, true);
-  //   RPGWeapon.GiveTo(Other);
-  //   Log("We Gave the pawn the item");
-  //}
+  StatsInv.ServerBuyItem(
+      RPGStoreList(StoreListBox.List).default.StoreItems[x].ItemClass,
+      cost,
+      ItemParts[1]
+  );
 
   return true;
 }

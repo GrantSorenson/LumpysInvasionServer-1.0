@@ -58,7 +58,7 @@ replication
 	reliable if (bNetDirty && Role == ROLE_Authority)
 		Data;
 	reliable if (Role < ROLE_Authority)
-		ServerAddPointTo, ServerAddAbility, ServerAddClass, ServerRefundAbility, ServerRequestPlayerLevels, ServerResetData, ServerSetVersion;
+		ServerAddPointTo, ServerAddAbility, ServerAddClass, ServerRefundAbility, ServerRequestPlayerLevels, ServerResetData, ServerSetVersion, ServerBuyItem;
 	reliable if (Role == ROLE_Authority)
 		ClientUpdateStatMenu, ClientAddAbility, ClientAddClass, ClientRefundAbility, ClientAdjustFireRate, ClientSendPlayerLevel, ClientReInitMenu,
 		ClientResetData, ClientReceiveAbilityInfo, ClientReceiveAllowedAbility, ClientReceiveStatCap,
@@ -670,6 +670,47 @@ function ServerAddAbility(class<RPGAbility> Ability)
 
 	//Send to client
 	ClientAddAbility(Ability, Cost);
+}
+
+function ServerBuyItem(string ItemClass, int Cost, string CostType)
+{
+	local Pawn P;
+
+	if (GameRestarting())
+		return;
+
+	P = Pawn(Owner);
+	if (P == None)
+		P = Pawn(Owner.Owner);
+
+	if (InStr(CostType, "Credits") == 0)
+	{
+		if (DataObject.Credits < Cost)
+			return;
+		DataObject.Credits -= Cost;
+		Data.Credits = DataObject.Credits;
+	}
+	else if (InStr(CostType, "Stacks") >= 0)
+	{
+		if (DataObject.Stacks < Cost)
+			return;
+		DataObject.Stacks -= Cost;
+		Data.Stacks = DataObject.Stacks;
+	}
+	else if (InStr(CostType, "Gold") >= 0)
+	{
+		if (DataObject.Gold < Cost)
+			return;
+		DataObject.Gold -= Cost;
+		Data.Gold = DataObject.Gold;
+	}
+	else
+		return;
+
+	if (P != None)
+		P.GiveWeapon(ItemClass);
+
+	DataObject.SaveConfig();
 }
 
 //After server adds an ability, it calls this to do the same on the client

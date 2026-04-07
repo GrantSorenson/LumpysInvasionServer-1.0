@@ -1,4 +1,4 @@
-Log: Log file open, 04/06/26 20:58:00
+Log: Log file open, 04/06/26 22:11:30
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -175,6 +175,9 @@ Log: Imported: Class LumpysRPG.Colors
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\CredBonkTimer.uc)
 Log: Class: CredBonkTimer extends Actor
 Log: Imported: Class LumpysRPG.CredBonkTimer
+Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\CreditsPickup.uc)
+Log: Class: CreditsPickup extends TournamentPickUp
+Log: Imported: Class LumpysRPG.CreditsPickup
 Log: FactoryCreateText: Class with ClassFactoryUC (0 1 ..\LumpysRPG\Classes\DamTypeDronePlasma.uc)
 Log: Class: DamTypeDronePlasma extends DamageType
 Log: Imported: Class LumpysRPG.DamTypeDronePlasma
@@ -434,6 +437,7 @@ Log: Parsing ArtifactMagicWeaponMakerPickup
 Log: Parsing ArtifactMonsterSummonPickup
 Log: Parsing ArtifactSuperMagicWeaponMakerPickup
 Log: Parsing ArtifactTripleDamagePickup
+Log: Parsing CreditsPickup
 Log: Parsing ExperiencePickup
 Log: Parsing RPGWeaponLocker
 Log: Parsing PickupEXPShard
@@ -543,6 +547,7 @@ Log: Compiling ArtifactMagicWeaponMakerPickup
 Log: Compiling ArtifactMonsterSummonPickup
 Log: Compiling ArtifactSuperMagicWeaponMakerPickup
 Log: Compiling ArtifactTripleDamagePickup
+Log: Compiling CreditsPickup
 Log: Compiling ExperiencePickup
 Log: Compiling RPGWeaponLocker
 Log: Compiling PickupEXPShard
@@ -652,6 +657,7 @@ Log: Importing Defaults for ArtifactMagicWeaponMakerPickup
 Log: Importing Defaults for ArtifactMonsterSummonPickup
 Log: Importing Defaults for ArtifactSuperMagicWeaponMakerPickup
 Log: Importing Defaults for ArtifactTripleDamagePickup
+Log: Importing Defaults for CreditsPickup
 Log: Importing Defaults for ExperiencePickup
 Log: Importing Defaults for RPGWeaponLocker
 Log: Importing Defaults for PickupEXPShard
@@ -708,9 +714,9 @@ Log: Importing Defaults for ClassWeaponMaster
 Log: Importing Defaults for Colors
 Log: Importing Defaults for RPGPlayerDataObject
 Log: Importing Defaults for STY_AbilityList
-Log: Success: Compiled 22613 line(s), 2205 statement(s).
+Log: Success: Compiled 22614 line(s), 2217 statement(s).
 
-Log: Save=49.719779
+Log: Save=51.904014
 Log: Moving 'Save.tmp' to 'LumpysRPG.u'
 Heading: ------------------------LumpyJumping - Release------------------------
 Heading: --------------------------tK_BaseW - Release--------------------------
@@ -754,11 +760,11 @@ Log: Unbound to UWeb.dll
 Log: Unbound to XGame.dll
 Log: Unbound to XInterface.dll
 Log: Unbound to Onslaught.dll
-Log: Garbage: objects: 84990->0; refs: 0
+Log: Garbage: objects: 85006->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 136 MByte 17 KByte 1022 Bytes from HD took 1.169994 seconds (1.069994 reading, 0.100000 seeking).
-Log: FileManager: 3.121005 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 135 MByte 1000 KByte 96 Bytes from HD took 0.572998 seconds (0.471998 reading, 0.101000 seeking).
+Log: FileManager: 0.114000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 04/06/26 20:58:08
+Uninitialized: Log file closed, 04/06/26 22:11:35
