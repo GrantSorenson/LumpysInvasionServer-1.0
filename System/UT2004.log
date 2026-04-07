@@ -1,4 +1,4 @@
-Log: Log file open, 04/06/26 23:35:37
+Log: Log file open, 04/07/26 00:01:35
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -13,7 +13,7 @@ Log: Splash screen filename is '..\Help\UT2004Logo.bmp'
 Localization: No localization: UT2004.General.Start (int)
 Log: 	atidx9loader32.dll/AMD Radeon RX 9060 XT
 Log: Game class is 'GameInfo'
-Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.548000...
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.537000...
 Warning: Failed to load 'Class AccessPlus.UAccessControl': Failed to find object 'Class AccessPlus.UAccessControl'
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
 Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?SpectatorOnly=1?Sex=M
@@ -21,7 +21,7 @@ Log: Collecting garbage
 Log: Purging garbage
 Log: Garbage: objects: 27992->27978; refs: 284200
 Log: Game class is 'CinematicGame'
-Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 2.005000...
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.991000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 Warning: Failed to load 'Class AccessPlus.UAccessControl': Failed to find object 'Class AccessPlus.UAccessControl'
@@ -38,13 +38,13 @@ Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 77(32-bit)
 Log: Creating device
 Log: xD3DHelper::Init (QuadEmulation)
-Log: Startup time: 2.012000 seconds
+Log: Startup time: 1.889000 seconds
 Localization: No localization: UT2004.General.Run (int)
 Log: Precaching: NvidiaLogo.LevelInfo0
 Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
 Log: Allocating 16384 byte dynamic index buffer.
 Log: Finished precaching geometry in 0.013 seconds
-Log: Finished precaching textures in 0.016 seconds
+Log: Finished precaching textures in 0.014 seconds
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] () ()
 Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
 ModAuthor: Restoring previously open menus (0 menus to restore)
@@ -77,6 +77,12 @@ ModAuthor: # # # # News ShowPanel()  False
 Log: Resolving utmaster.openspy.net...
 Log: Resolved utmaster.openspy.net -> 134.122.16.249
 Log: Connection established.
+Log: Resolving utmaster.openspy.net...
+Log: Resolved utmaster.openspy.net -> 134.122.16.249
+Log: Connection established.
+Log: Resolving utmaster.openspy.net...
+Log: Resolved utmaster.openspy.net -> 134.122.16.249
+Log: Connection established.
 ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 2 menus open)
 ModAuthor:    Menu[0]:UT2k4MainMenu
 ModAuthor:    Menu[1]:UT2k4ServerBrowser
@@ -92,7 +98,7 @@ Log: FailCode NEEDPW
 Debug: Connect Failure:  NEEDPW[] (172.232.9.14/Index.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255)
 ScriptLog: PreClientTravel
 Log: Browse: 172.232.9.14/Index.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?PASSWORD=XXXXX
-NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/06/26 23:36:24
+NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/07/26 00:02:25
 Exit: Socket shut down
 ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
 ScriptLog: UT2k4Browser_ServerListPageFavorites Destroying ServerQueryClient 'ServerQueryClient'
@@ -100,43 +106,45 @@ Log: NetMode now NM_Client
 Log: Collecting garbage
 Log: Purging garbage
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 40065->39537; refs: 483974
-Log: Bringing Level DM-Flux2.myLevel up for play (90) appSeconds: 48.408000...
+Log: Garbage: objects: 40065->39529; refs: 483484
+Log: Bringing Level DM-Flux2.myLevel up for play (90) appSeconds: 51.562000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 Log: Spawning new actor for Viewport WindowsViewport
 ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
 Log: Collecting garbage
 Log: Purging garbage
-Log: Garbage: objects: 39930->39930; refs: 487090
+Log: Garbage: objects: 39922->39922; refs: 486600
 Log: xPlayer setplayer WindowsViewport
 Log: Precaching: DM-Flux2.LevelInfo0
 Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
 Log: Allocating 16384 byte dynamic index buffer.
-Log: Finished precaching geometry in 0.088 seconds
-Log: Finished precaching textures in 0.093 seconds
+Log: Finished precaching geometry in 0.085 seconds
+Log: Finished precaching textures in 0.092 seconds
 Warning: RPGStatsInv DM-Flux2.RPGStatsInv (Function LumpysRPG.RPGStatsInv.ClientAdjustMaxAmmo:0043) Accessed None 'Instigator'
+Log: Preprocessing:  Vertex stream total vertices: 433 Orig wedges: 433
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysRPG.RPGLumpyStatMenu] () ()
 ModAuthor: # # # # Welcome ShowPanel()  True
-ModAuthor: # # # # Character ShowPanel()  True
+ModAuthor: # # # # Store ShowPanel()  True
 ModAuthor: # # # # Welcome ShowPanel()  False
-ScriptLog: AddClassPoint Called
-LumpysInvasion: Owned Class #0: MM
-ScriptLog: AddClassPoint Called
-LumpysInvasion: Owned Class #0: MM
-ScriptLog: AddClassPoint Called
-LumpysInvasion: Owned Class #0: MM
-ModAuthor: # # # # Abilities ShowPanel()  True
-LumpysInvasion: Owned Class #0: MM
-ModAuthor: # # # # Character ShowPanel()  False
-Warning: ArtifactMedicWeaponMaker DM-Flux2.ArtifactMedicWeaponMaker (Function LumpysRPG.ArtifactMagicWeaponMaker.PostBeginPlay:001B) Accessed None 'Game'
-Warning: ArtifactSuperMedicWeaponMaker DM-Flux2.ArtifactSuperMedicWeaponMaker (Function LumpysRPG.ArtifactMagicWeaponMaker.PostBeginPlay:001B) Accessed None 'Game'
-LumpysInvasion: Owned Class #0: MM
-LumpysInvasion: Owned Class #0: MM
-LumpysInvasion: Owned Class #0: MM
 ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [RPGLumpyStatMenu]
+ScriptLog: Last Cred: 295 Stat Cred: 285
+ScriptLog: Last Cred: 285 Stat Cred: 293
 Log: Preprocessing:  Vertex stream total vertices: 260 Orig wedges: 260
 Log: Preprocessing:  Vertex stream total vertices: 69 Orig wedges: 69
+Log: Preprocessing:  Vertex stream total vertices: 62 Orig wedges: 62
+ScriptLog: Last Cred: 293 Stat Cred: 304
+ScriptLog: Last Cred: 304 Stat Cred: 314
+ScriptLog: Last Cred: 314 Stat Cred: 316
+ScriptLog: Last Cred: 316 Stat Cred: 328
+ScriptLog: Last Cred: 328 Stat Cred: 332
+ScriptLog: Last Cred: 332 Stat Cred: 337
+ScriptLog: Last Cred: 337 Stat Cred: 342
+Log: Preprocessing:  Vertex stream total vertices: 185 Orig wedges: 185
+Log: Preprocessing:  Vertex stream total vertices: 502 Orig wedges: 502
+ScriptLog: Last Cred: 342 Stat Cred: 349
+ScriptLog: Last Cred: 349 Stat Cred: 361
+ScriptLog: Last Cred: 361 Stat Cred: 380
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
 ModAuthor: # # # # Game ShowPanel()  True
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
@@ -161,17 +169,17 @@ Log: Unbound to Onslaught.dll
 Log: Unbound to ALAudio.dll
 Log: Waiting for file streaming thread to finish...
 Exit: OpenAL Audio subsystem shut down.
-NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/06/26 23:37:22
+NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/07/26 00:06:39
 Exit: Socket shut down
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 51181->0; refs: 487090
+Log: Garbage: objects: 53521->0; refs: 486600
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 208 MByte 1005 KByte 295 Bytes from HD took 0.443999 seconds (0.376999 reading, 0.067000 seeking).
-Log: FileManager: 0.299000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 244 MByte 666 KByte 838 Bytes from HD took 0.481999 seconds (0.408999 reading, 0.073000 seeking).
+Log: FileManager: 0.339999 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Memory Allocation Status
-Uninitialized: Curr Memory  0.211M /  3.559M
-Uninitialized: Peak Memory  110.646M /  112.773M
-Uninitialized: Allocs         675 Current /  78966358 Total
-Uninitialized: Log file closed, 04/06/26 23:37:23
+Uninitialized: Curr Memory  0.215M /  3.492M
+Uninitialized: Peak Memory  126.014M /  128.660M
+Uninitialized: Allocs         679 Current /  40297053 Total
+Uninitialized: Log file closed, 04/07/26 00:06:39
