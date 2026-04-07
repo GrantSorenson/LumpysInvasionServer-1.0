@@ -1058,7 +1058,7 @@ function CheckLevelUp(RPGPlayerDataObject data, PlayerReplicationInfo MessagePRI
 		}
 	}
 
-	if (Count > 0 && Count < 3 && MessagePRI != None)
+	if (Count > 0 && MessagePRI != None)
 		Level.Game.BroadCastLocalized(self, class'GainLevelMessage', data.Level, MessagePRI);
 
 	// Save player data so progress isn't lost on crash or wave end.

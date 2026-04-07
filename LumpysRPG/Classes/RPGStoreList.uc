@@ -91,7 +91,7 @@ function RPGStatsInv GetStatsInv(PlayerController PC)
 defaultproperties
 {
   OnDrawItem = RPGStoreList.MyOnDrawItem
- StoreItems(0)=(ItemName="Rainbow Shock Rfle",ItemClass="tk_RainbowShockRifle.RainbowShockRifle",ItemCost="1000 Credits")
+ StoreItems(0)=(ItemName="Rainbow Shock Rfle",ItemClass="tk_RainbowShockRifle.RainbowShockRifle",ItemCost="10 Credits")
  StoreItems(1)=(ItemName="AK-47",ItemClass="tk_AK47.AK47Weapon",ItemCost="10 Credits")
  StoreItems(2)=(ItemName="Holy Hand Grenade",ItemClass="tk_HolyHandGrenade.HolyHandGrenade",ItemCost="10 Credits")
  StoreItems(3)=(ItemName="UnHoly Hand Grenade",ItemClass="tk_HolyHandGrenade.UnHolyHandGrenade",ItemCost="10 Credits")

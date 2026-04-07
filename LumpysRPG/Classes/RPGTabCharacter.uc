@@ -30,6 +30,7 @@ struct AbilityInfo
 
 function InitComponent(GUIController MyController, GUIComponent MyOwner)
 {
+  local RPGStatsInv StatsInv;
   super.InitComponent(MyController, MyOwner);
 
   // Spawn spinning character actor
@@ -59,6 +60,10 @@ function InitComponent(GUIController MyController, GUIComponent MyOwner)
 
   RefreshClassListBox();
   FillCharacterDetails();
+
+  StatsInv = GetStatsInv(PlayerOwner());
+  if (StatsInv != None)
+      StatsInv.TabCharacter = self;
 }
 
 function RefreshClassListBox()

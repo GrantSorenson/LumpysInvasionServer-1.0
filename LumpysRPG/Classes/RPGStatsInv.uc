@@ -13,6 +13,7 @@ var int StatCaps[6]; //curse the need for it
 var RPGStatsMenu StatsMenu;     //clients only - pointer to legacy stats menu
 var RPGTabStats TabStats;       //clients only - pointer to stats tab (mid-game menu)
 var RPGTabAbilities TabAbilities; //clients only - pointer to abilities tab (mid-game menu)
+var RPGTabCharacter TabCharacter; //clients only - pointer to class tab (mid-game menu)
 var bool bGotInstigator; //netplay only - set to true first tick after Instigator has been replicated
 var bool bMagicWeapons; //does the server have magic weapons enabled?
 var bool bSentInitialData; //sent initial data that requires function replication (ability list, stat caps, etc)
@@ -608,6 +609,8 @@ simulated function ClientAddClass(class<RPGClass> SelectedClass, int Cost)
 		TabStats.RefreshStats();
 	if (TabAbilities != None)
 		TabAbilities.RefreshAbilityBox();
+	if (TabCharacter != None)
+		TabCharacter.RefreshClassListBox();
 }
 
 //Called by owning player's stat menu to buy an ability
