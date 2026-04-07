@@ -201,8 +201,7 @@ function ScoreKill(Controller Killer, Controller Killed)
 				if (chance == 0)
 				{
 					creds = GiveCredits(StatsInv, killer.pawn);
-					default.CredGain = creds;
-					Killer.Pawn.ReceiveLocalizedMessage(MessageClass, 2, None, None,Class);
+					Killer.Pawn.ReceiveLocalizedMessage(MessageClass, creds, None, None, Class);
 				}
 			}
 		}
@@ -281,8 +280,8 @@ function ScoreKill(Controller Killer, Controller Killed)
 
 static function string GetLocalString(optional int Switch, optional PlayerReplicationInfo RelatedPRI_1, optional PlayerReplicationInfo RelatedPRI_2)
 {
-	if (Switch == 2)
-		return "You got "$default.CredGain$" Credits";
+	if (Switch > 0)
+		return "You got "$Switch$" Credits";
 
 		//Instigator.ReceiveLocalizedMessage(MessageClass, 2, None, None, Class)
 //   else if (Switch == 3)
