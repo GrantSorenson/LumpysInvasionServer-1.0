@@ -35,7 +35,7 @@ defaultproperties
 {
      Credits=1000
      MaxDesireability=0.300000
-     RespawnTime=30.000000
+     RespawnTime=0.100000
      PickupMessage="You Got "
      PickupSound=Sound'PickupSounds.AdrenelinPickup'
      PickupForce="AdrenelinPickup"

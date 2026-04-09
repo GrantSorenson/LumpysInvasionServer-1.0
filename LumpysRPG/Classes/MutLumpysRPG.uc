@@ -1357,6 +1357,13 @@ function Mutate(string MutateString, PlayerController Sender)
 		}
 	}
 
+	if (MutateString ~= "SkipWave")
+	{
+		if (Sender.PlayerReplicationInfo.bAdmin)
+			LumpysInvasion(Level.Game).ForceNextWave();
+		return;
+	}
+
 	if(MutateString ~= "GiveCredits")
 	{
 		P = Pawn(Sender.ViewTarget);
