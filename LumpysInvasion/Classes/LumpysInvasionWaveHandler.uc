@@ -11,7 +11,9 @@ class LumpysInvasionWaveHandler extends Actor;
 replication
 {
     reliable if(bNetInitial && Role==ROLE_Authority)
-        WaveNames,WaveColor;
+        WaveNames;
+    reliable if(Role==ROLE_Authority)
+        WaveColor;
 }
 
 event PreBeginPlay()
