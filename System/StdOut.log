@@ -1,4 +1,4 @@
-Log file open, 04/10/26 08:14:00
+Log file open, 04/10/26 17:00:16
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -33,6 +33,8 @@ Log file open, 04/10/26 08:14:00
 --------------------------UTV2004c - Release--------------------------
 --------------------------UTV2004s - Release--------------------------
 --------------------------tk_BaseM - Release--------------------------
+--------------------------tk_Alien - Release--------------------------
+------------------------tk_Predator - Release-------------------------
 -----------------------LumpysInvasion - Release-----------------------
 Analyzing...
 Parsing LumpysInvasionGameReplicationInfo
@@ -143,4 +145,4 @@ Importing Defaults for IPMonsterTable
 ---------------------tk_HolyHandGrenade - Release---------------------
 Game exported successfully: LumpysInvasion.LumpysInvasion
 Success - 0 error(s), 2 warning(s)
-Log file closed, 04/10/26 08:14:03
+Log file closed, 04/10/26 17:00:19
