@@ -1,4 +1,4 @@
-Log: Log file open, 04/10/26 16:53:46
+Log: Log file open, 04/10/26 17:01:05
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -13,7 +13,7 @@ Log: Splash screen filename is '..\Help\UT2004Logo.bmp'
 Localization: No localization: UT2004.General.Start (int)
 Log: 	atidx9loader32.dll/AMD Radeon RX 9060 XT
 Log: Game class is 'GameInfo'
-Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.444000...
+Log: Bringing Level Entry.myLevel up for play (0) appSeconds: 1.395000...
 Warning: Failed to load 'Class AccessPlus.UAccessControl': Failed to find object 'Class AccessPlus.UAccessControl'
 ScriptLog: GameInfo::InitGame : bEnableStatLogging True
 Log: Browse: NvidiaLogo.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?SpectatorOnly=1?Sex=M
@@ -21,7 +21,7 @@ Log: Collecting garbage
 Log: Purging garbage
 Log: Garbage: objects: 27992->27978; refs: 284200
 Log: Game class is 'CinematicGame'
-Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.882000...
+Log: Bringing Level NvidiaLogo.myLevel up for play (0) appSeconds: 1.830000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 Warning: Failed to load 'Class AccessPlus.UAccessControl': Failed to find object 'Class AccessPlus.UAccessControl'
@@ -38,13 +38,13 @@ Log: Using back-buffer format 22(32-bit)
 Log: Using depth-buffer format 77(32-bit)
 Log: Creating device
 Log: xD3DHelper::Init (QuadEmulation)
-Log: Startup time: 1.732000 seconds
+Log: Startup time: 1.663000 seconds
 Localization: No localization: UT2004.General.Run (int)
 Log: Precaching: NvidiaLogo.LevelInfo0
 Log: Static mesh batches: 508608 vertex bytes, 110460 index bytes
 Log: Allocating 16384 byte dynamic index buffer.
 Log: Finished precaching geometry in 0.014 seconds
-Log: Finished precaching textures in 0.015 seconds
+Log: Finished precaching textures in 0.014 seconds
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] () ()
 Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
 ModAuthor: Restoring previously open menus (0 menus to restore)
@@ -69,167 +69,18 @@ Log: Defaulting to false
 Log: Resolving utmaster.openspy.net...
 Log: Resolved utmaster.openspy.net -> 134.122.16.249
 Log: Connection established.
-ModAuthor: # # # # Internet ShowPanel()  True
-Log: Resolving utmaster.openspy.net...
-Log: Resolved utmaster.openspy.net -> 134.122.16.249
-Log: Connection established.
-ModAuthor: # # # # News ShowPanel()  False
-Log: Resolving utmaster.openspy.net...
-Log: Resolved utmaster.openspy.net -> 134.122.16.249
-Log: Connection established.
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 2 menus open)
-ModAuthor:    Menu[0]:UT2k4MainMenu
-ModAuthor:    Menu[1]:UT2k4ServerBrowser
 ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2k4ServerBrowser]
 Debug: UT2k4MainMenu.Opened()   Sender:None
-ScriptLog: PreClientTravel
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: 172.232.9.14/Index.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-Log: FailCode NEEDPW 
-Debug: Connect Failure:  NEEDPW[] (172.232.9.14/Index.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255)
-ScriptLog: PreClientTravel
-Log: Browse: 172.232.9.14/Index.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?PASSWORD=XXXXX
-NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/10/26 16:53:59
-Exit: Socket shut down
-Warning: Failed to load 'LumpysInvasion': Package 'LumpysInvasion' version mismatch
-ScriptLog: PlayerController.ProgressCommand Cmd 'menu:GUI2K4.UT2K4DisconnectOptionPage'  Msg1 'Failed launching URL'   Msg2 'Package 'LumpysInvasion' version mismatch'
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4DisconnectOptionPage] (Failed launching URL) (Package 'LumpysInvasion' version mismatch)
-Log: Collecting garbage
-Log: Purging garbage
-Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 32783->32578; refs: 361374
-ModAuthor: UT2K4GUIController CloseAll bCancel:True Forced:True (Currently 1 menus open)
-ModAuthor:    Menu[0]:UT2K4DisconnectOptionPage
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4DisconnectOptionPage]
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4ServerBrowser] () ()
-ModAuthor: # # # # Internet ShowPanel()  True
-Log: Resolving utmaster.openspy.net...
-Log: Resolved utmaster.openspy.net -> 134.122.16.249
-Log: Connection established.
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 1 menus open)
-ModAuthor:    Menu[0]:UT2k4ServerBrowser
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2k4ServerBrowser]
-ScriptLog: PreClientTravel
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: 172.232.9.14/Index.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-Log: FailCode NEEDPW 
-Debug: Connect Failure:  NEEDPW[] (172.232.9.14/Index.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255)
-ScriptLog: PreClientTravel
-Log: Browse: 172.232.9.14/Index.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?PASSWORD=XXXXX
-NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/10/26 16:54:10
-Exit: Socket shut down
-Warning: Failed to load 'LumpysInvasion': Package 'LumpysInvasion' version mismatch
-ScriptLog: PlayerController.ProgressCommand Cmd 'menu:GUI2K4.UT2K4DisconnectOptionPage'  Msg1 'Failed launching URL'   Msg2 'Package 'LumpysInvasion' version mismatch'
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4DisconnectOptionPage] (Failed launching URL) (Package 'LumpysInvasion' version mismatch)
-Log: Collecting garbage
-Log: Purging garbage
-NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/10/26 16:54:10
-Exit: Socket shut down
-Log: Garbage: objects: 32597->32581; refs: 361407
-ModAuthor: UT2K4GUIController CloseAll bCancel:True Forced:True (Currently 1 menus open)
-ModAuthor:    Menu[0]:UT2K4DisconnectOptionPage
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4DisconnectOptionPage]
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4ServerBrowser] () ()
-ModAuthor: # # # # Internet ShowPanel()  True
-Log: Resolving utmaster.openspy.net...
-Log: Resolved utmaster.openspy.net -> 134.122.16.249
-Log: Connection established.
-Log: Resolving utmaster.openspy.net...
-Log: Resolved utmaster.openspy.net -> 134.122.16.249
-Log: Connection established.
-Log: Resolving utmaster.openspy.net...
-Log: Resolved utmaster.openspy.net -> 134.122.16.249
-Log: Connection established.
-Log: Resolving utmaster.openspy.net...
-Log: Resolved utmaster.openspy.net -> 134.122.16.249
-Log: Connection established.
-Log: Viewport WindowsViewport: WM_DisplayChange
-Log: Enter SetRes: 1920x1080 Fullscreen 1
-Log: Using back-buffer format 22(32-bit)
-Log: Using depth-buffer format 77(32-bit)
-Log: xD3DHelper::Init (QuadEmulation)
-Log: Precaching: Entry.LevelInfo0
-Log: Finished precaching geometry in 0.002 seconds
-Log: Finished precaching textures in 0.002 seconds
-Log: Resolving utmaster.openspy.net...
-Log: Resolved utmaster.openspy.net -> 134.122.16.249
-Log: Connection established.
-ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 1 menus open)
-ModAuthor:    Menu[0]:UT2k4ServerBrowser
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2k4ServerBrowser]
-ScriptLog: PreClientTravel
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: 172.232.9.14/Index.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-Log: Allocating 16384 byte dynamic index buffer.
-Log: FailCode NEEDPW 
-Debug: Connect Failure:  NEEDPW[] (172.232.9.14/Index.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255)
-ScriptLog: PreClientTravel
-Log: Browse: 172.232.9.14/Index.ut2?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255?PASSWORD=XXXXX
-NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/10/26 16:54:52
-Exit: Socket shut down
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-ScriptLog: UT2k4Browser_ServerListPageFavorites Destroying ServerQueryClient 'ServerQueryClient'
-Log: NetMode now NM_Client
-Log: Collecting garbage
-Log: Purging garbage
-NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/10/26 16:54:52
-Exit: Socket shut down
-Log: Garbage: objects: 39938->39383; refs: 480980
-Log: Bringing Level DM-Flux2.myLevel up for play (90) appSeconds: 66.218000...
-Log: (Karma): Autodetecting CPU for SSE
-Log: (Karma): Using SSE Optimizations
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: Collecting garbage
-Log: Purging garbage
-Log: Garbage: objects: 39776->39776; refs: 484071
-Log: xPlayer setplayer WindowsViewport
-Log: Precaching: DM-Flux2.LevelInfo0
-Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
-Log: Allocating 16384 byte dynamic index buffer.
-Log: Finished precaching geometry in 0.110 seconds
-Log: Finished precaching textures in 0.335 seconds
-Warning: RPGStatsInv DM-Flux2.RPGStatsInv (Function LumpysRPG.RPGStatsInv.ClientAdjustMaxAmmo:0043) Accessed None 'Instigator'
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
-ModAuthor: # # # # Game ShowPanel()  True
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2K4InvasionLoginMenu]
-Warning: UT2K4Tab_PlayerLoginControlsInvasion Package.UT2K4Tab_PlayerLoginControlsInvasion (Function GUI2K4.UT2K4Tab_PlayerLoginControls.ButtonClicked:01BD) Accessed None 'Game'
-Log: URL: Adding default option Name=Lumps
-Log: URL: Adding default option Class=Engine.Pawn
-Log: URL: Adding default option Character=Kragoth
-Log: URL: Adding default option team=255
-Log: Browse: Index.ut2?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
-Log: Failed; returning to Entry
-ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: GP=FALSE
-Log: Spawning new actor for Viewport WindowsViewport
-ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
-Log: MatchViewportsToActors: GUI2K4.UT2K4MainMenu
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4MainMenu] (?disconnect?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255) (MatchingViewport)
-Debug: UT2k4MainMenu.Opened()   Sender:Package.UT2k4MainMenu
-ModAuthor: Restoring previously open menus (1 menus to restore)
-ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2k4ServerBrowser] (Internet) ()
-ModAuthor: # # # # Internet ShowPanel()  True
-ModAuthor: # # # # Internet ShowPanel()  True
-ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [UT2k4ServerBrowser]
-Log: Defaulting to false
-Debug: UT2k4MainMenu.Opened()   Sender:None
+Log: Time=1133.347741 ms
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4GamePageSP] () ()
 ModAuthor: # # # # Gametype ShowPanel()  True
 MenuText: No description configured for property 'LWaveConfig'
 ModAuthor: # # # # Select Map ShowPanel()  True
 ModAuthor: # # # # Gametype ShowPanel()  False
-ModAuthor: # # # # Game Rules ShowPanel()  True
+ModAuthor: # # # # Mutators ShowPanel()  True
 ModAuthor: # # # # Select Map ShowPanel()  False
+ModAuthor: # # # # Game Rules ShowPanel()  True
+ModAuthor: # # # # Mutators ShowPanel()  False
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysInvasion.IPMonsterConfig] () ()
 Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:030B) Accessed None 'b_Play'
 Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:031A) Accessed None 'b_Pause'
@@ -237,7 +88,13 @@ Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMons
 Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:031A) Accessed None 'b_Pause'
 Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:030B) Accessed None 'b_Play'
 Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:031A) Accessed None 'b_Pause'
+Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:030B) Accessed None 'b_Play'
+Warning: IPMonsterConfig Package.IPMonsterConfig (Function LumpysInvasion.IPMonsterConfig.UpdateSpinnyDude:031A) Accessed None 'b_Pause'
 ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [IPMonsterConfig]
+ModAuthor: # # # # Mutators ShowPanel()  True
+ModAuthor: # # # # Game Rules ShowPanel()  False
+ModAuthor: # # # # Game Rules ShowPanel()  True
+ModAuthor: # # # # Mutators ShowPanel()  False
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [LumpysInvasion.IPWaveConfig] () ()
 ModAuthor: GUI2K4.UT2K4GUIController CloseMenu [IPWaveConfig]
 ModAuthor: UT2K4GUIController CloseAll bCancel:False Forced:True (Currently 2 menus open)
@@ -253,14 +110,13 @@ Log: URL: Adding default option Character=Kragoth
 Log: URL: Adding default option team=255
 Log: Browse: DM-Flux2?BonusVehicles=false?Game=LumpysInvasion.LumpysInvasion?Mutator=AccessPlus.AccessPlus,LumpyJumping.MutLumpyJumping,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim?bAutoNumBots=False?NumBots=0?Name=Lumps?Class=Engine.Pawn?Character=Kragoth?team=255
 ModAuthor: GUI2K4.UT2K4GUIController NotifyLevelChange()
-Log: (Karma): Level Karma Terminated.
-NetComeGo: Close TcpipConnection 172.232.9.14:7777 04/10/26 16:56:30
-Exit: Socket shut down
+ScriptLog: UT2k4Browser_ServerListPageFavorites Destroying ServerQueryClient 'ServerQueryClient'
 Log: Collecting garbage
 Log: Purging garbage
-Log: Garbage: objects: 54992->42707; refs: 514007
+Log: (Karma): Level Karma Terminated.
+Log: Garbage: objects: 44618->40423; refs: 483331
 Log: Game class is 'LumpysInvasion'
-Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 163.966000...
+Log: Bringing Level DM-Flux2.myLevel up for play (0) appSeconds: 111.010000...
 Log: (Karma): Autodetecting CPU for SSE
 Log: (Karma): Using SSE Optimizations
 ScriptLog: Mutators AccessPlus.AccessPlus,LumpyJumping.MutLumpyJumping,LumpysRPG.MutLumpysRPG,LumpyRPGWeapons.MutLumpyRPGWeapons,tK_BaseW.MutTKWeaponsShim
@@ -282,13 +138,13 @@ ScriptLog: New Player Lumps id=ee5ca7064cd04fc3da40cff9e0e8976d
 Log: Precaching: DM-Flux2.LevelInfo0
 Log: Static mesh batches: 1610856 vertex bytes, 221124 index bytes
 Log: Allocating 16384 byte dynamic index buffer.
-Log: Finished precaching geometry in 0.107 seconds
-Log: Finished precaching textures in 0.259 seconds
+Log: Finished precaching geometry in 0.088 seconds
+Log: Finished precaching textures in 0.107 seconds
 LumpysInvasion: [LI] MatchInProgress BeginState — InitialWave=0 FinalWave=13
 ScriptLog: START MATCH
-LumpysInvasion: [LI] Wave 0 started — MaxMonsters=15 WaveMaxMonsters=30 NumWaveClasses=2
+LumpysInvasion: [LI] Wave 0 started — MaxMonsters=15 WaveMaxMonsters=30 NumWaveClasses=6
 LumpysInvasion: [LI] CheckEndGame called -- Reason=LastMan WaveNum=0 FinalWave=13 EndTimeDelay=4.00
-LumpysInvasion: [LI] CheckEndGame result=True EndTime=29.93 Level.TimeSeconds=25.93
+LumpysInvasion: [LI] CheckEndGame result=True EndTime=36.23 Level.TimeSeconds=32.23
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4InvasionLoginMenu] () ()
 ModAuthor: # # # # Game ShowPanel()  True
 ModAuthor: GUI2K4.UT2K4GUIController OpenMenu [GUI2K4.UT2K4QuitPage] () ()
@@ -314,14 +170,14 @@ Log: Unbound to ALAudio.dll
 Log: Waiting for file streaming thread to finish...
 Exit: OpenAL Audio subsystem shut down.
 Log: (Karma): Level Karma Terminated.
-Log: Garbage: objects: 56832->0; refs: 514007
+Log: Garbage: objects: 57225->0; refs: 483331
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 353 MByte 569 KByte 105 Bytes from HD took 0.622998 seconds (0.527998 reading, 0.095000 seeking).
-Log: FileManager: 0.831997 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 243 MByte 976 KByte 585 Bytes from HD took 0.500999 seconds (0.427999 reading, 0.073000 seeking).
+Log: FileManager: 0.306000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Memory Allocation Status
-Uninitialized: Curr Memory  0.292M /  4.621M
-Uninitialized: Peak Memory  120.287M /  123.211M
-Uninitialized: Allocs        1025 Current /  54098612 Total
-Uninitialized: Log file closed, 04/10/26 16:57:00
+Uninitialized: Curr Memory  0.226M /  4.746M
+Uninitialized: Peak Memory  122.070M /  124.563M
+Uninitialized: Allocs        1027 Current /  32471654 Total
+Uninitialized: Log file closed, 04/10/26 17:03:32

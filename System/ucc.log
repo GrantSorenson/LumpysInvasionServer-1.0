@@ -1,4 +1,4 @@
-Log: Log file open, 04/10/26 17:00:15
+Log: Log file open, 04/10/26 17:03:42
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3369 (128.29)
@@ -240,7 +240,7 @@ Log: Importing Defaults for IPDefaultWaves
 Log: Importing Defaults for IPMonsterTable
 Log: Success: Compiled 11458 line(s), 1042 statement(s).
 
-Log: Save=30.612322
+Log: Save=29.756649
 Log: Moving 'Save.tmp' to 'LumpysInvasion.u'
 Heading: -------------------------LumpysRPG - Release--------------------------
 Heading: ------------------------LumpyJumping - Release------------------------
@@ -270,8 +270,8 @@ Log: Unbound to Onslaught.dll
 Log: Garbage: objects: 85704->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
-Log: FileManager: Reading 0 GByte 145 MByte 519 KByte 642 Bytes from HD took 0.547998 seconds (0.455998 reading, 0.092000 seeking).
-Log: FileManager: 0.071000 seconds spent with misc. duties
+Log: FileManager: Reading 0 GByte 145 MByte 519 KByte 642 Bytes from HD took 0.552998 seconds (0.464998 reading, 0.088000 seeking).
+Log: FileManager: 0.089000 seconds spent with misc. duties
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 04/10/26 17:00:19
+Uninitialized: Log file closed, 04/10/26 17:03:45
