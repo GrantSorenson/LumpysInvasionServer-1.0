@@ -76,6 +76,8 @@ function PreRender(Canvas Canvas)
 				}
 				if(DisplayName == "" && tk_Monster(Enemy) != None)
 					DisplayName = tk_Monster(Enemy).MonsterName;
+				else if(DisplayName == "")
+					DisplayName = string(Enemy.Class);
 				Canvas.DrawColor = class'Colors'.default.White;
 				Canvas.SetPos(BarLoc.X, BarLoc.Y);
 				Canvas.DrawText(DisplayName);

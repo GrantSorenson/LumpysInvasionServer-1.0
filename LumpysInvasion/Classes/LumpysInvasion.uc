@@ -18,7 +18,7 @@ var() config int Test;
 var() int WaveMaxMonsters;
 //var() int WaveMonsters; //how many monsters have been spawned on the wave so far
 var() int NumKilledMonsters; //how many monsters have died on the wave so far
-var() class<tk_Monster> WaveMonsterClass[30];
+var() class<Monster> WaveMonsterClass[30];
 var() NavigationPoint OldNode;
 var() config int MonsterSpawnDistance;
 var() config bool bSpawnAtBases;
@@ -49,7 +49,7 @@ var() float LastBossSpawnTime;
 
 struct WaveMonsterInfo
 {
-	var() class<tk_Monster> WaveMonsterClass[30];
+	var() class<Monster> WaveMonsterClass[30];
 	var() string WaveMonsterName[30];
 	var() string WaveMonsterSkin[30];
 };
@@ -678,7 +678,7 @@ function IPBossReplicationInfo GetBossReplicationInfo(Monster M)
 function SetupWave()
 {
     local int i,h;
-	local class<tk_Monster> CurrentMonsterClass; //current monster class being loaded
+	local class<Monster> CurrentMonsterClass; //current monster class being loaded
 	local string FallBackMonsterName; //short hand fallbackmonster, will be made into a full class in order to load
 
     WaveMonsters = 0;
@@ -707,7 +707,7 @@ function SetupWave()
 			//search for matching monster classes
 			if(class'IPConfigs'.default.Waves[WaveNum].Monsters[i] != "None" && class'IPConfigs'.default.Waves[WaveNum].Monsters[i] ~= class'IPMonsterTable'.default.MonsterTable[h].MonsterName)
 			{
-				CurrentMonsterClass = class<tk_Monster>(DynamicLoadObject(class'IPMonsterTable'.default.MonsterTable[h].MonsterClassName, class'Class',true));
+				CurrentMonsterClass = class<Monster>(DynamicLoadObject(class'IPMonsterTable'.default.MonsterTable[h].MonsterClassName, class'Class',true));
 				WaveMonsterClasses.WaveMonsterName[WaveNumClasses] = class'IPMonsterTable'.default.MonsterTable[h].MonsterName;
 				WaveMonsterClasses.WaveMonsterSkin[WaveNumClasses] = class'IPMonsterTable'.default.MonsterTable[h].CurrentSkin;
 			}
@@ -1023,8 +1023,8 @@ function UpdateMonsterTimer()
 function AddMonster()
 {
     local NavigationPoint StartSpot; //spawn location
-    local tk_Monster NewMonster; //the newly spawned monster
-    local class<tk_Monster> NewMonsterClass; //current monster to spawn
+    local Monster NewMonster; //the newly spawned monster
+    local class<Monster> NewMonsterClass; //current monster to spawn
     local Inventory Inv;
 	local int index,i;
 	local Material M;
@@ -1050,8 +1050,9 @@ function AddMonster()
 		{
 			//TotalSpawned++;
 			WaveMonsters++;
-			NewMonster.MonsterName = WaveMonsterClasses.WaveMonsterName[index];
-			UpdateNewMonsterClass(NewMonster);
+			if(tk_Monster(NewMonster) != None)
+				tk_Monster(NewMonster).MonsterName = WaveMonsterClasses.WaveMonsterName[index];
+			UpdateNewMonsterClass(NewMonster, WaveMonsterClasses.WaveMonsterName[index]);
 			if(WaveMonsterClasses.WaveMonsterSkin[index] != "" && WaveMonsterClasses.WaveMonsterSkin[index] != "None")
 			{
 				M = Texture(DynamicLoadObject(WaveMonsterClasses.WaveMonsterSkin[index],class'Texture'));
@@ -1082,7 +1083,7 @@ function AddMonster()
 		{
 			StartSpot = FindPlayerStart(None,0, string(FallBackMonster));
 			//else spawn the fall back using an average monsters size specifications
-			NewMonster = tK_Monster(Spawn(FallBackMonster,,,StartSpot.Location+(FallBackMonster.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation));
+			NewMonster = Spawn(FallBackMonster,,,StartSpot.Location+(FallBackMonster.Default.CollisionHeight - StartSpot.CollisionHeight) * vect(0,0,1),StartSpot.Rotation);
 		}
 	}//
 	else
@@ -1134,18 +1135,15 @@ function AddMonster()
     NumHostileMonsters();
 }
 
-function UpdateNewMonsterClass(tk_Monster MonsterClass)
+function UpdateNewMonsterClass(Monster MonsterClass, string TableName)
 {
     local int i;
     local int RandValue;
 	local int fRandValue;
-	//local tk_Monster M;
-
-	//M = tK_Monster(MonsterClass);
 
     for( i=0;i<class'IPMonsterTable'.default.MonsterTable.Length;i++ )
     {
-        if( class'IPMonsterTable'.default.MonsterTable[i].MonsterName ~= MonsterClass.MonsterName )
+        if( class'IPMonsterTable'.default.MonsterTable[i].MonsterName ~= TableName )
         {
             if( class'IPMonsterTable'.default.MonsterTable[i].bRandomHealth )
             {
