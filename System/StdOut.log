@@ -1,4 +1,4 @@
-Log file open, 04/10/26 17:03:42
+Log file open, 04/18/26 19:58:28
 ----------------------------Core - Release----------------------------
 ---------------------------Engine - Release---------------------------
 ----------------------------Fire - Release----------------------------
@@ -136,6 +136,7 @@ Importing Defaults for IPMonsterTable
 ------------------------LumpyJumping - Release------------------------
 --------------------------tK_BaseW - Release--------------------------
 ------------------------tk_StarWars - Release-------------------------
+------------------------2009Lucifer - Release-------------------------
 -----------------------tk_FHIWeapons - Release------------------------
 ------------------------tk_ZenCoders - Release------------------------
 --------------------tk_RainbowShockRifle - Release--------------------
@@ -145,4 +146,4 @@ Importing Defaults for IPMonsterTable
 ---------------------tk_HolyHandGrenade - Release---------------------
 Game exported successfully: LumpysInvasion.LumpysInvasion
 Success - 0 error(s), 2 warning(s)
-Log file closed, 04/10/26 17:03:45
+Log file closed, 04/18/26 19:58:31
